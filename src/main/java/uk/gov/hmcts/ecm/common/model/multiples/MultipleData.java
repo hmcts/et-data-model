@@ -143,6 +143,6 @@ public class MultipleData {
 
     @JsonProperty("bulkAddSingleCasesImportFile")
     private CaseImporterFile bulkAddSingleCasesImportFile;
+    @JsonProperty("isFixCase")
+    private String isFixCase;
 }
-
-
