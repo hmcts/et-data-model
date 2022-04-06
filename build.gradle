@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'uk.gov.hmcts.reform'
-version '0.0.4'
+group 'com.github.hmcts'
+version '0.1.118-RET1445'
 
 sourceCompatibility = '11.0'
 

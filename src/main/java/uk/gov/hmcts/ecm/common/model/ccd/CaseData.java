@@ -3,6 +3,7 @@ package uk.gov.hmcts.ecm.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.ecm.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.ecm.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.ecm.common.model.ccd.items.BFActionTypeItem;
@@ -18,10 +19,7 @@ import uk.gov.hmcts.ecm.common.model.ccd.types.AdditionalCaseInfoType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.CasePreAcceptType;
-import uk.gov.hmcts.ecm.common.model.ccd.types.ClaimantIndType;
-import uk.gov.hmcts.ecm.common.model.ccd.types.ClaimantOtherType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.ClaimantType;
-import uk.gov.hmcts.ecm.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.ecm.common.model.ccd.types.CorrespondenceType;
@@ -33,8 +31,8 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class CaseData {
-
+@EqualsAndHashCode(callSuper = true)
+public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalCorrespondenceAddress")
     private Address tribunalCorrespondenceAddress;
     @JsonProperty("tribunalCorrespondenceTelephone")
@@ -47,14 +45,10 @@ public class CaseData {
     private String tribunalCorrespondenceEmail;
     @JsonProperty("ethosCaseReference")
     private String ethosCaseReference;
-
-    @JsonProperty("caseType")
-    private String ecmCaseType;
     @JsonProperty("multipleReference")
     private String multipleReference;
     @JsonProperty("multipleReferenceLinkMarkUp")
     private String multipleReferenceLinkMarkUp;
-
     @JsonProperty("subMultipleName")
     private String subMultipleName;
     @JsonProperty("leadClaimant")
@@ -66,12 +60,8 @@ public class CaseData {
     private String claimantTypeOfClaimant;
     @JsonProperty("claimant_Company")
     private String claimantCompany;
-    @JsonProperty("claimantIndType")
-    private ClaimantIndType claimantIndType;
     @JsonProperty("claimantType")
     private ClaimantType claimantType;
-    @JsonProperty("claimantOtherType")
-    private ClaimantOtherType claimantOtherType;
     @JsonProperty("preAcceptCase")
     private CasePreAcceptType preAcceptCase;
     @JsonProperty("receiptDate")
@@ -86,10 +76,6 @@ public class CaseData {
     private String claimantWorkAddressQuestion;
     @JsonProperty("claimantWorkAddressQRespondent")
     private DynamicFixedListType claimantWorkAddressQRespondent;
-    @JsonProperty("representativeClaimantType")
-    private RepresentedTypeC representativeClaimantType;
-    @JsonProperty("respondentCollection")
-    private List<RespondentSumTypeItem> respondentCollection;
     @JsonProperty("repCollection")
     private List<RepresentedTypeRItem> repCollection;
     @JsonProperty("positionType")
@@ -114,8 +100,6 @@ public class CaseData {
     private List<DepositTypeItem> depositCollection;
     @JsonProperty("judgementCollection")
     private List<JudgementTypeItem> judgementCollection;
-    @JsonProperty("jurCodesCollection")
-    private List<JurCodesTypeItem> jurCodesCollection;
     @JsonProperty("bfActions")
     private List<BFActionTypeItem> bfActions;
     @JsonProperty("clerkResponsible")
@@ -125,8 +109,6 @@ public class CaseData {
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
     @JsonProperty("additionalCaseInfo")
-    private AdditionalCaseInfoType additionalCaseInfoType;
-    @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
     private CorrespondenceType correspondenceType;
@@ -136,18 +118,8 @@ public class CaseData {
     private List<AddressLabelTypeItem> addressLabelCollection;
     @JsonProperty("addressLabelsAttributesType")
     private AddressLabelsAttributesType addressLabelsAttributesType;
-    @JsonProperty("caseNotes")
-    private String caseNotes;
-    @JsonProperty("claimantWorkAddress")
-    private ClaimantWorkAddressType claimantWorkAddress;
-    @JsonProperty("claimantRepresentedQuestion")
-    private String claimantRepresentedQuestion;
-    @JsonProperty("managingOffice")
-    private String managingOffice;
     @JsonProperty("allocatedOffice")
     private String allocatedOffice;
-    @JsonProperty("caseSource")
-    private String caseSource;
     @JsonProperty("conciliationTrack")
     private String conciliationTrack;
     @JsonProperty("counterClaim")
