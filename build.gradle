@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-group 'com.github.hmcts'
-version '0.1.118-RET1445'
+group 'uk.gov.hmcts.reform'
+version '0.0.5'
 
 sourceCompatibility = '11.0'
 
@@ -11,6 +12,17 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven { url 'https://jitpack.io' }
+}
+
+publishing {
+    publications {
+        Main(MavenPublication) {
+            from components.java
+            groupId project.group
+            artifactId 'et-data-model'
+            version project.version
+        }
+    }
 }
 
 ext {

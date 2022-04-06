@@ -14,6 +14,4 @@ public class JurCodesType {
     private String judgmentOutcome;
     @JsonProperty("dateNotified")
     private String dateNotified;
-    @JsonProperty("juridictionCodesSubList1")
-    private String juridictionCodesSubList1;
 }
