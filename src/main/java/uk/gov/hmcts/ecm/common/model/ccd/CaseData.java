@@ -106,7 +106,7 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
-    @JsonProperty("additionalCaseInfo")
+    @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
     private CorrespondenceType correspondenceType;
