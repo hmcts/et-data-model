@@ -28,6 +28,10 @@ public class ClaimantIndType {
     private String claimantDateOfBirth;
     @JsonProperty("claimant_gender")
     private String claimantGender;
+    @JsonProperty("claimant_sex")
+    private String claimantSex;
+    @JsonProperty("claimant_gender_identity")
+    private String claimantGenderIdentity;
 
     public String claimantFullNames() {
         var title = "";
