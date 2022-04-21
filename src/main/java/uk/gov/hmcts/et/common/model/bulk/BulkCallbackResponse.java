@@ -1,7 +1,10 @@
 package uk.gov.hmcts.et.common.model.bulk;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.generic.GenericCallbackResponse;
 
