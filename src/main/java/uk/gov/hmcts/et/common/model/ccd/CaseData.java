@@ -16,7 +16,6 @@ import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
-import uk.gov.hmcts.et.common.model.ccd.types.ClaimantType;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
@@ -58,8 +57,6 @@ public class CaseData extends Et1CaseData {
     private String claimantTypeOfClaimant;
     @JsonProperty("claimant_Company")
     private String claimantCompany;
-    @JsonProperty("claimantType")
-    private ClaimantType claimantType;
     @JsonProperty("preAcceptCase")
     private CasePreAcceptType preAcceptCase;
     @JsonProperty("receiptDate")

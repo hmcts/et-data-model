@@ -6,6 +6,7 @@ import lombok.Data;
 import uk.gov.hmcts.et.common.model.ccd.types.AdditionalCaseInfoType;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantIndType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantType;
 import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantOtherType;
@@ -26,6 +27,8 @@ public class Et1CaseData {
     private List<JurCodesTypeItem> jurCodesCollection;
     @JsonProperty("claimantIndType")
     private ClaimantIndType claimantIndType;
+    @JsonProperty("claimantType")
+    private ClaimantType claimantType;
     @JsonProperty("representativeClaimantType")
     private RepresentedTypeC representativeClaimantType;
     @JsonProperty("claimantOtherType")
