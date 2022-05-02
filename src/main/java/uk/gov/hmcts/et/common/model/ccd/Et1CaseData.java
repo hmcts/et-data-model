@@ -43,4 +43,6 @@ public class Et1CaseData {
     private AdditionalCaseInfoType additionalCaseInfoType;
     @JsonProperty("managingOffice")
     private String managingOffice;
+    @JsonProperty("newEmploymentType")
+    private NewEmploymentType newEmploymentType;
 }
