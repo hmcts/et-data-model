@@ -11,6 +11,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantOtherType;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
+import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
 
 import java.util.List;
 
@@ -43,4 +44,6 @@ public class Et1CaseData {
     private AdditionalCaseInfoType additionalCaseInfoType;
     @JsonProperty("managingOffice")
     private String managingOffice;
+    @JsonProperty("newEmploymentType")
+    private NewEmploymentType newEmploymentType;
 }
