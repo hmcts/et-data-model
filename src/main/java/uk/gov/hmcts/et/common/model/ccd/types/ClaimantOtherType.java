@@ -20,6 +20,8 @@ public class ClaimantOtherType {
     private String claimantEmployedNoticePeriod;
     @JsonProperty("claimant_disabled")
     private String claimantDisabled;
+    @JsonProperty("claimant_disabled_details")
+    private String claimantDisabledDetails;
     @JsonProperty("claimant_notice_period")
     private String claimantNoticePeriod;
     @JsonProperty("claimant_notice_period_unit")
