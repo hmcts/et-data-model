@@ -42,4 +42,6 @@ public class Et1CaseData {
     private NewEmploymentType newEmploymentType;
     @JsonProperty("claimantRequests")
     private ClaimantRequestType claimantRequests;
+    @JsonProperty("claimantHearingPreference")
+    private ClaimantHearingPreference claimantHearingPreference;
 }
