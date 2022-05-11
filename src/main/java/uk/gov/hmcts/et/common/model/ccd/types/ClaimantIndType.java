@@ -61,14 +61,17 @@ public class ClaimantIndType {
 
     private String getInitials() {
         if (!isNullOrEmpty(claimantFirstNames)) {
-            return Arrays.stream(claimantFirstNames.split(" ")).map(str -> str.substring(0, 1)).collect(Collectors.joining(" "));
+            return Arrays.stream(claimantFirstNames.split(" ")).map(str -> str.substring(0, 1))
+                    .collect(Collectors.joining(" "));
         }
         return "";
     }
 
     private List<String> notNullOrEmptyAtt(List<String> fullClaimantName, List<String> attributes) {
         for (String aux : attributes) {
-            if (!isNullOrEmpty(aux)) fullClaimantName.add(aux);
+            if (!isNullOrEmpty(aux)) {
+                fullClaimantName.add(aux);
+            }
         }
         return fullClaimantName;
     }

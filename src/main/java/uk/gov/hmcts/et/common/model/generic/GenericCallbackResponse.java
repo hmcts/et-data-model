@@ -18,8 +18,8 @@ public class GenericCallbackResponse {
 
     private List<String> errors;
     private List<String> warnings;
-    private String confirmation_header;
-    private SignificantItem significant_item;
+    private String confirmationHeader;
+    private SignificantItem significantItem;
     private String state;
 }
 

@@ -36,7 +36,9 @@ public class Address {
 
     private List<String> notNullOrEmptyAddress(List<String> fullAddress, List<String> attributes) {
         for (String aux : attributes) {
-            if (!isNullOrEmpty(aux)) fullAddress.add(aux);
+            if (!isNullOrEmpty(aux)) {
+                fullAddress.add(aux);
+            }
         }
         return fullAddress;
     }

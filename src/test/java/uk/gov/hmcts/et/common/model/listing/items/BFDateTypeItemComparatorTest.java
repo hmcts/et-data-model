@@ -1,15 +1,17 @@
 package uk.gov.hmcts.et.common.model.listing.items;
 
-import java.util.ArrayList;
-import java.util.List;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import uk.gov.hmcts.et.common.model.listing.types.BFDateType;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
 public class BFDateTypeItemComparatorTest {
+
     @Test
     public void shouldSortBfDateTypeItemsInAscendingOrder() {
-        List<BFDateTypeItem> bfDateTypeItems = new ArrayList<>();
         var bfDateType = new BFDateType();
         bfDateType.setBroughtForwardEnteredDate("2019-12-08");
         bfDateType.setBroughtForwardDate("2019-12-08");
@@ -17,6 +19,7 @@ public class BFDateTypeItemComparatorTest {
         var bfDateTypeItem = new BFDateTypeItem();
         bfDateTypeItem.setId("123");
         bfDateTypeItem.setValue(bfDateType);
+        List<BFDateTypeItem> bfDateTypeItems = new ArrayList<>();
         bfDateTypeItems.add(bfDateTypeItem);
 
         var bfDateType2 = new BFDateType();
