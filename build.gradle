@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'uk.gov.hmcts.reform'
-version '1.0.2'
+version '2.0.0'
 
 sourceCompatibility = '11.0'
 
@@ -33,7 +33,7 @@ publishing {
 }
 
 ext {
-    lombokVersion = '1.18.22'
+    lombokVersion = '1.18.24'
 }
 
 dependencies {
