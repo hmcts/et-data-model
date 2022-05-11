@@ -205,7 +205,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("hearingStatus")
     private String hearingStatus;
     @JsonProperty("Postponed_by")
-    private String Postponed_by;
+    private String postponedBy;
     @JsonProperty("hearingRoom")
     private DynamicFixedListType hearingRoom;
     @JsonProperty("hearingClerk")

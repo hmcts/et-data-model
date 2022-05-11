@@ -26,7 +26,7 @@ public class RespondentSumType {
     @JsonProperty("responseNotes")
     private String responseNotes;
     @JsonProperty("response_referred_to_judge")
-    private String response_ReferredToJudge;
+    private String responseReferredToJudge;
     @JsonProperty("response_returned_from_judge")
     private String responseReturnedFromJudge;
     @JsonProperty("respondent_name")

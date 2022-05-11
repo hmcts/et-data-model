@@ -110,47 +110,47 @@ public class AdhocReportType {
     @JsonProperty("conciliationTrackNo")
     private String conciliationTrackNo;
     @JsonProperty("ConNoneCasesCompletedHearing")
-    private String ConNoneCasesCompletedHearing;
+    private String conNoneCasesCompletedHearing;
     @JsonProperty("ConNoneSessionDays")
-    private String ConNoneSessionDays;
+    private String conNoneSessionDays;
     @JsonProperty("ConNoneCompletedPerSession")
-    private String ConNoneCompletedPerSession;
+    private String conNoneCompletedPerSession;
     @JsonProperty("ConFastCasesCompletedHearing")
-    private String ConFastCasesCompletedHearing;
+    private String conFastCasesCompletedHearing;
     @JsonProperty("ConFastSessionDays")
-    private String ConFastSessionDays;
+    private String conFastSessionDays;
     @JsonProperty("ConFastCompletedPerSession")
-    private String ConFastCompletedPerSession;
+    private String conFastCompletedPerSession;
     @JsonProperty("ConStdCasesCompletedHearing")
-    private String ConStdCasesCompletedHearing;
+    private String conStdCasesCompletedHearing;
     @JsonProperty("ConStdSessionDays")
-    private String ConStdSessionDays;
+    private String conStdSessionDays;
     @JsonProperty("ConStdCompletedPerSession")
-    private String ConStdCompletedPerSession;
+    private String conStdCompletedPerSession;
     @JsonProperty("ConOpenCasesCompletedHearing")
-    private String ConOpenCasesCompletedHearing;
+    private String conOpenCasesCompletedHearing;
     @JsonProperty("ConOpenSessionDays")
-    private String ConOpenSessionDays;
+    private String conOpenSessionDays;
     @JsonProperty("ConOpenCompletedPerSession")
-    private String ConOpenCompletedPerSession;
+    private String conOpenCompletedPerSession;
     @JsonProperty("totalCases")
     private String totalCases;
     @JsonProperty("Total26wk")
-    private String Total26wk;
+    private String total26wk;
     @JsonProperty("Total26wkPerCent")
-    private String Total26wkPerCent;
+    private String total26wkPerCent;
     @JsonProperty("Totalx26wk")
-    private String Totalx26wk;
+    private String totalx26wk;
     @JsonProperty("Totalx26wkPerCent")
-    private String Totalx26wkPerCent;
+    private String totalx26wkPerCent;
     @JsonProperty("Total4wk")
-    private String Total4wk;
+    private String total4wk;
     @JsonProperty("Total4wkPerCent")
-    private String Total4wkPerCent;
+    private String total4wkPerCent;
     @JsonProperty("Totalx4wk")
-    private String Totalx4wk;
+    private String totalx4wk;
     @JsonProperty("Totalx4wkPerCent")
-    private String Totalx4wkPerCent;
+    private String totalx4wkPerCent;
     @JsonProperty("respondentName")
     private String respondentName;
     @JsonProperty("actioned")
@@ -210,29 +210,29 @@ public class AdhocReportType {
     @JsonProperty("listingHistory")
     private List<ReportListingsTypeItem> listingHistory;
     @JsonProperty("ConNoneTotal")
-    private String ConNoneTotal;
+    private String conNoneTotal;
     @JsonProperty("ConStdTotal")
-    private String ConStdTotal;
+    private String conStdTotal;
     @JsonProperty("ConFastTotal")
-    private String ConFastTotal;
+    private String conFastTotal;
     @JsonProperty("ConOpenTotal")
-    private String ConOpenTotal;
+    private String conOpenTotal;
     @JsonProperty("ConNone26wkTotal")
-    private String ConNone26wkTotal;
+    private String conNone26wkTotal;
     @JsonProperty("ConStd26wkTotal")
-    private String ConStd26wkTotal;
+    private String conStd26wkTotal;
     @JsonProperty("ConFast26wkTotal")
-    private String ConFast26wkTotal;
+    private String conFast26wkTotal;
     @JsonProperty("ConOpen26wkTotal")
-    private String ConOpen26wkTotal;
+    private String conOpen26wkTotal;
     @JsonProperty("ConNone26wkTotalPerCent")
-    private String ConNone26wkTotalPerCent;
+    private String conNone26wkTotalPerCent;
     @JsonProperty("ConStd26wkTotalPerCent")
-    private String ConStd26wkTotalPerCent;
+    private String conStd26wkTotalPerCent;
     @JsonProperty("ConFast26wkTotalPerCent")
-    private String ConFast26wkTotalPerCent;
+    private String conFast26wkTotalPerCent;
     @JsonProperty("ConOpen26wkTotalPerCent")
-    private String ConOpen26wkTotalPerCent;
+    private String conOpen26wkTotalPerCent;
     @JsonProperty("xConNone26wkTotal")
     private String xConNone26wkTotal;
     @JsonProperty("xConStd26wkTotal")
