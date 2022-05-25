@@ -43,6 +43,8 @@ public class CorrespondenceScotType {
     private String part14ScotDocuments;
     @JsonProperty("Part_15_Scot_Documents")
     private String part15ScotDocuments;
+    @JsonProperty("Part_16_Scot_Documents")
+    private String part16ScotDocuments;
     @JsonProperty("claimantORrespondent")
     private String claimantOrRespondent;
     @JsonProperty("hearingNumber")
