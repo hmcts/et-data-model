@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.*;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
@@ -44,4 +45,9 @@ public class Et1CaseData {
     private ClaimantRequestType claimantRequests;
     @JsonProperty("claimantHearingPreference")
     private ClaimantHearingPreference claimantHearingPreference;
+    @JsonProperty("servingDocumentCollection")
+    private List<DocumentTypeItem> servingDocumentCollection;
+    @JsonProperty("otherTypeDocumentName")
+    private String otherTypeDocumentName;
+
 }
