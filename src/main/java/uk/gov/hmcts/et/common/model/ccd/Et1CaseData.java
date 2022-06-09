@@ -49,5 +49,6 @@ public class Et1CaseData {
     private List<DocumentTypeItem> servingDocumentCollection;
     @JsonProperty("otherTypeDocumentName")
     private String otherTypeDocumentName;
-
+    @JsonProperty("claimantAndRespondentAddresses")
+    private String claimantAndRespondentAddresses;
 }
