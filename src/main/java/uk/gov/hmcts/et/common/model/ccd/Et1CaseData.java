@@ -51,4 +51,6 @@ public class Et1CaseData {
     private String otherTypeDocumentName;
     @JsonProperty("claimantAndRespondentAddresses")
     private String claimantAndRespondentAddresses;
+    @JsonProperty("emailLinkToAcas")
+    private String emailLinkToAcas;
 }
