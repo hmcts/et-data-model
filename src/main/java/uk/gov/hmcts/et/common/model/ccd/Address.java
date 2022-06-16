@@ -35,7 +35,7 @@ public class Address {
                 addressLine2, addressLine3, postTown, county, postCode, country)));
     }
 
-    public String toAddressString() {
+    public String toAddressHtml() {
         StringBuilder claimantAddressStr = new StringBuilder();
         claimantAddressStr.append("<br/>" + addressLine1);
         if (!Strings.isNullOrEmpty(addressLine2)) {
