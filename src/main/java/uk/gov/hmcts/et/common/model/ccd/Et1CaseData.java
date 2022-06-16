@@ -55,4 +55,8 @@ public class Et1CaseData {
     private String claimantAndRespondentAddresses;
     @JsonProperty("emailLinkToAcas")
     private String emailLinkToAcas;
+    @JsonProperty("vettingBeforeLink")
+    private String vettingBeforeLink;
+    @JsonProperty("vettingBeforeLinkLabel")
+    private String vettingBeforeLinkLabel;
 }
