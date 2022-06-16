@@ -53,4 +53,6 @@ public class Et1CaseData {
     private List<String> servingDocumentRecipient;
     @JsonProperty("claimantAndRespondentAddresses")
     private String claimantAndRespondentAddresses;
+    @JsonProperty("emailLinkToAcas")
+    private String emailLinkToAcas;
 }
