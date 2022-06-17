@@ -44,4 +44,8 @@ public class ClaimantOtherType {
     private String claimantBenefits;
     @JsonProperty("claimant_benefits_detail")
     private String claimantBenefitsDetail;
+    @JsonProperty("pastEmployer")
+    private String pastEmployer;
+    @JsonProperty("stillWorking")
+    private String stillWorking;
 }

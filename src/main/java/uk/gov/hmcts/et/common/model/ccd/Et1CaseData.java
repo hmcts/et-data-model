@@ -13,6 +13,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class Et1CaseData {
+    @JsonProperty("typeOfClaim")
+    private List<String> typeOfClaim;
     @JsonProperty("caseType")
     private String ecmCaseType;
     @JsonProperty("caseSource")
@@ -55,4 +57,6 @@ public class Et1CaseData {
     private String claimantAndRespondentAddresses;
     @JsonProperty("emailLinkToAcas")
     private String emailLinkToAcas;
+    @JsonProperty("claimantTaskListChecks")
+    private TaskListCheckType claimantTaskListChecks;
 }

@@ -19,4 +19,12 @@ public class ClaimantRequestType {
     private String claimantCompensationAmount;
     @JsonProperty("claimant_tribunal_recommendation")
     private String claimantTribunalRecommendation;
+    @JsonProperty("whistleblowing")
+    private String whistleblowing;
+    @JsonProperty("whistleblowing_authority")
+    private String whistleblowingAuthority;
+    @JsonProperty("claim_description")
+    private String claimDescription;
+    @JsonProperty("claim_description_document")
+    private UploadedDocumentType claimDescriptionDocument;
 }
