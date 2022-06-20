@@ -320,4 +320,11 @@ public class CaseData extends Et1CaseData {
     private String hearingDetailsTimingDuration;
     @JsonProperty("hearingDetailsHearingNotes2")
     private String hearingDetailsHearingNotes2;
+
+    // et3vetting
+    @JsonProperty("et3Date")
+    private String et3Date;
+
+    @JsonProperty("et3IsThereAnEt3Response")
+    private String et3IsThereAnEt3Response;
 }
