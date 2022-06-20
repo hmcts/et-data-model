@@ -325,8 +325,8 @@ public class CaseData extends Et1CaseData {
     private String hearingDetailsHearingNotes2;
 
     // ET1 Vetting
-    @JsonProperty("vettingBeforeLink")
-    private String vettingBeforeLink;
+    @JsonProperty("et1VettingBeforeYouStart")
+    private String et1VettingBeforeYouStart;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
