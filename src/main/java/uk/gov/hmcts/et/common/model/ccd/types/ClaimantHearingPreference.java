@@ -14,4 +14,8 @@ public class ClaimantHearingPreference {
     private String hearingPhone;
     @JsonProperty("hearing_assistance")
     private String hearingAssistance;
+    @JsonProperty("reasonable_adjustments")
+    private String reasonableAdjustments;
+    @JsonProperty("reasonable_adjustments_detail")
+    private String reasonableAdjustmentsDetail;
 }

@@ -19,4 +19,6 @@ public class ClaimantType {
     private String claimantEmailAddress;
     @JsonProperty("claimant_contact_preference")
     private String claimantContactPreference;
+    @JsonProperty("claimant_contact_language")
+    private String claimantContactLanguage;
 }
