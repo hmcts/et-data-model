@@ -59,4 +59,6 @@ public class Et1CaseData {
     private String emailLinkToAcas;
     @JsonProperty("claimantTaskListChecks")
     private TaskListCheckType claimantTaskListChecks;
+    @JsonProperty("vettingBeforeLink")
+    private String vettingBeforeLink;
 }
