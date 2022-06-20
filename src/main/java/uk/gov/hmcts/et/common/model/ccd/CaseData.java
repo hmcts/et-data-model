@@ -24,6 +24,9 @@ import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
 
+/**
+ * Employment Tribunal claim data. This class contains all the data for a citizen's claim.
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -320,4 +323,20 @@ public class CaseData extends Et1CaseData {
     private String hearingDetailsTimingDuration;
     @JsonProperty("hearingDetailsHearingNotes2")
     private String hearingDetailsHearingNotes2;
+
+    // ET1 Vetting
+    @JsonProperty("vettingBeforeLink")
+    private String vettingBeforeLink;
+
+    // ET1 Serving
+    @JsonProperty("servingDocumentCollection")
+    private List<DocumentTypeItem> servingDocumentCollection;
+    @JsonProperty("otherTypeDocumentName")
+    private String otherTypeDocumentName;
+    @JsonProperty("servingDocumentRecipient")
+    private List<String> servingDocumentRecipient;
+    @JsonProperty("claimantAndRespondentAddresses")
+    private String claimantAndRespondentAddresses;
+    @JsonProperty("emailLinkToAcas")
+    private String emailLinkToAcas;
 }
