@@ -339,4 +339,10 @@ public class CaseData extends Et1CaseData {
     private String claimantAndRespondentAddresses;
     @JsonProperty("emailLinkToAcas")
     private String emailLinkToAcas;
+
+    // et3vetting
+    @JsonProperty("et3Date")
+    private String et3Date;
+    @JsonProperty("et3IsThereAnEt3Response")
+    private String et3IsThereAnEt3Response;
 }
