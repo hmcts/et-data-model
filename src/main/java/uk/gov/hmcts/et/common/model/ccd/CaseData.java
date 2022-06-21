@@ -327,6 +327,10 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
+    @JsonProperty("et1VettingClaimantDetailsMarkUp")
+    private String et1VettingClaimantDetailsMarkUp;
+    @JsonProperty("et1VettingRespondentDetailsMarkUp")
+    private String et1VettingRespondentDetailsMarkUp;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
