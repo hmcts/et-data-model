@@ -344,7 +344,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("emailLinkToAcas")
     private String emailLinkToAcas;
 
-    // et3vetting
+    //    et3vetting
+    @JsonProperty("et3ChooseRespondent")
+    private DynamicFixedListType et3ChooseRespondent;
     @JsonProperty("et3Date")
     private String et3Date;
     @JsonProperty("et3IsThereAnEt3Response")
