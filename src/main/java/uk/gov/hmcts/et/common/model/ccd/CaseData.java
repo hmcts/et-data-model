@@ -331,6 +331,12 @@ public class CaseData extends Et1CaseData {
     private String et1VettingClaimantDetailsMarkUp;
     @JsonProperty("et1VettingRespondentDetailsMarkUp")
     private String et1VettingRespondentDetailsMarkUp;
+    @JsonProperty("et1VettingCanServeClaimYesOrNo")
+    private String et1VettingCanServeClaimYesOrNo;
+    @JsonProperty("et1VettingCanServeClaimNoReason")
+    private String et1VettingCanServeClaimNoReason;
+    @JsonProperty("et1VettingCanServeClaimGeneralNote")
+    private String et1VettingCanServeClaimGeneralNote;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
