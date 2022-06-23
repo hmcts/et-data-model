@@ -347,4 +347,8 @@ public class CaseData extends Et1CaseData {
     private String et3Date;
     @JsonProperty("et3IsThereAnEt3Response")
     private String et3IsThereAnEt3Response;
+    @JsonProperty("et3ResponseInTime")
+    private String et3ResponseInTime;
+    @JsonProperty("et3ResponseInTimeDetails")
+    private String et3ResponseInTimeDetails;
 }
