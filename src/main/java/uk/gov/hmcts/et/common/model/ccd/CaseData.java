@@ -232,17 +232,6 @@ public class CaseData extends Et1CaseData {
     private String attendeeRespAndRep;
     @JsonProperty("attendee_rep_only")
     private String attendeeRepOnly;
-    @JsonProperty("hearingTimingStart")
-    private String hearingTimingStart;
-    @JsonProperty("hearingTimingBreak")
-    private String hearingTimingBreak;
-    @JsonProperty("hearingTimingResume")
-    private String hearingTimingResume;
-    @JsonProperty("hearingTimingFinish")
-    private String hearingTimingFinish;
-    @JsonProperty("hearingTimingDuration")
-    private String hearingTimingDuration;
-
     @JsonProperty("companyPremises")
     private CompanyPremisesType companyPremises;
 
