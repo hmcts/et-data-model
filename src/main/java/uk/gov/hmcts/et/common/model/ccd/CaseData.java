@@ -345,8 +345,35 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType et3ChooseRespondent;
     @JsonProperty("et3Date")
     private String et3Date;
+    // ET3 Response Page
     @JsonProperty("et3IsThereAnEt3Response")
     private String et3IsThereAnEt3Response;
+    @JsonProperty("et3NoEt3Response")
+    private String et3NoEt3Response;
+    @JsonProperty("et3GeneralNotes")
+    private String et3GeneralNotes;
+    // ET3 Company House search document page
+    @JsonProperty("et3IsThereACompaniesHouseSearchDocument")
+    private String et3IsThereACompaniesHouseSearchDocument;
+    @JsonProperty("et3CompanyHouseDocument")
+    private DocumentTypeItem et3CompanyHouseDocument;
+    @JsonProperty("et3GeneralNotesCompanyHouse")
+    private String et3GeneralNotesCompanyHouse;
+    // ET3 Individual insolvency search document page
+    @JsonProperty("et3IsThereAnIndividualSearchDocument")
+    private String et3IsThereAnIndividualSearchDocument;
+    @JsonProperty("et3IndividualInsolvencyDocument")
+    private DocumentTypeItem et3IndividualInsolvencyDocument;
+    @JsonProperty("et3GeneralNotesIndividualInsolvency")
+    private String et3GeneralNotesIndividualInsolvency;
+    // ET3 Legal issue page
+    @JsonProperty("et3LegalIssue")
+    private DocumentTypeItem et3LegalIssue;
+    @JsonProperty("et3LegalIssueGiveDetails")
+    private String et3LegalIssueGiveDetails;
+    @JsonProperty("et3GeneralNotesLegalEntity")
+    private String et3GeneralNotesLegalEntity;
+    // ET3 Response in time page
     @JsonProperty("et3ResponseInTime")
     private String et3ResponseInTime;
     @JsonProperty("et3ResponseInTimeDetails")
