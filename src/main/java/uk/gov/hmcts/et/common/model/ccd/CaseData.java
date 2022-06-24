@@ -368,10 +368,23 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3ResponseInTimeDetails")
     private String et3ResponseInTimeDetails;
     // ET3 Respondents Name page
-    @JsonProperty("et3NameRespondentLabel")
-    private String et3NameRespondentLabel;
+    @JsonProperty("et3NameAddressRespondent")
+    private String et3NameAddressRespondent;
     @JsonProperty("et3DoWeHaveRespondentsName")
     private String et3DoWeHaveRespondentsName;
     @JsonProperty("et3GeneralNotesRespondentName")
     private String et3GeneralNotesRespondentName;
+    @JsonProperty("et3DoesRespondentsNameMatch")
+    private String et3DoesRespondentsNameMatch;
+    @JsonProperty("et3RespondentNameMismatchDetails")
+    private String et3RespondentNameMismatchDetails;
+    @JsonProperty("et3GeneralNotesRespondentNameMatch")
+    private String et3GeneralNotesRespondentNameMatch;
+    // ET3 Respondents Address page
+    @JsonProperty("et3DoWeHaveRespondentsAddress")
+    private String et3DoWeHaveRespondentsAddress;
+    @JsonProperty("et3RespondentAddressMismatchDetails")
+    private String et3RespondentAddressMismatchDetails;
+    @JsonProperty("et3GeneralNotesRespondentAddress")
+    private String et3GeneralNotesRespondentAddress;
 }
