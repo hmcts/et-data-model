@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.*;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
@@ -60,4 +61,10 @@ public class Et1CaseData {
     private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
     @JsonProperty("trackAllocation")
     private String trackAllocation;
+    @JsonProperty("tribunalAndOfficeLocation")
+    private String tribunalAndOfficeLocation;
+    @JsonProperty("regionalOffice")
+    private String regionalOffice;
+    @JsonProperty("regionalOfficeList")
+    private DynamicFixedListType regionalOfficeList;
 }
