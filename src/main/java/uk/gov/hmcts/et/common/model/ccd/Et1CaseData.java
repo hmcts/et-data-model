@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.*;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
@@ -10,7 +11,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
 import java.util.List;
 
 /**
- * Employment Tribunal claim data that is input on the ET1 form by a claimant.
+ * Employment Tribunal claim data that is input on the \ET1 form by a claimant.
  *
  * This class should only contain data that is specifically part of the ET1 form.
  */
@@ -53,4 +54,10 @@ public class Et1CaseData {
     private ClaimantHearingPreference claimantHearingPreference;
     @JsonProperty("claimantTaskListChecks")
     private TaskListCheckType claimantTaskListChecks;
+    @JsonProperty("existingJurisdictionCodes")
+    private String existingJurisdictionCodes;
+    @JsonProperty("vettingJurisdictionCodeCollection")
+    private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
+    @JsonProperty("trackAllocation")
+    private String trackAllocation;
 }
