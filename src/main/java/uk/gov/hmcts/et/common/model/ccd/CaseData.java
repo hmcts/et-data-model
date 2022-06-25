@@ -232,17 +232,6 @@ public class CaseData extends Et1CaseData {
     private String attendeeRespAndRep;
     @JsonProperty("attendee_rep_only")
     private String attendeeRepOnly;
-    @JsonProperty("hearingTimingStart")
-    private String hearingTimingStart;
-    @JsonProperty("hearingTimingBreak")
-    private String hearingTimingBreak;
-    @JsonProperty("hearingTimingResume")
-    private String hearingTimingResume;
-    @JsonProperty("hearingTimingFinish")
-    private String hearingTimingFinish;
-    @JsonProperty("hearingTimingDuration")
-    private String hearingTimingDuration;
-
     @JsonProperty("companyPremises")
     private CompanyPremisesType companyPremises;
 
@@ -327,6 +316,16 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
+    @JsonProperty("et1VettingClaimantDetailsMarkUp")
+    private String et1VettingClaimantDetailsMarkUp;
+    @JsonProperty("et1VettingRespondentDetailsMarkUp")
+    private String et1VettingRespondentDetailsMarkUp;
+    @JsonProperty("et1VettingCanServeClaimYesOrNo")
+    private String et1VettingCanServeClaimYesOrNo;
+    @JsonProperty("et1VettingCanServeClaimNoReason")
+    private String et1VettingCanServeClaimNoReason;
+    @JsonProperty("et1VettingCanServeClaimGeneralNote")
+    private String et1VettingCanServeClaimGeneralNote;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
@@ -345,6 +344,57 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType et3ChooseRespondent;
     @JsonProperty("et3Date")
     private String et3Date;
+    // ET3 Response Page
     @JsonProperty("et3IsThereAnEt3Response")
     private String et3IsThereAnEt3Response;
+    @JsonProperty("et3NoEt3Response")
+    private String et3NoEt3Response;
+    @JsonProperty("et3GeneralNotes")
+    private String et3GeneralNotes;
+    // ET3 Company House search document page
+    @JsonProperty("et3IsThereACompaniesHouseSearchDocument")
+    private String et3IsThereACompaniesHouseSearchDocument;
+    @JsonProperty("et3CompanyHouseDocument")
+    private DocumentTypeItem et3CompanyHouseDocument;
+    @JsonProperty("et3GeneralNotesCompanyHouse")
+    private String et3GeneralNotesCompanyHouse;
+    // ET3 Individual insolvency search document page
+    @JsonProperty("et3IsThereAnIndividualSearchDocument")
+    private String et3IsThereAnIndividualSearchDocument;
+    @JsonProperty("et3IndividualInsolvencyDocument")
+    private DocumentTypeItem et3IndividualInsolvencyDocument;
+    @JsonProperty("et3GeneralNotesIndividualInsolvency")
+    private String et3GeneralNotesIndividualInsolvency;
+    // ET3 Legal issue page
+    @JsonProperty("et3LegalIssue")
+    private DocumentTypeItem et3LegalIssue;
+    @JsonProperty("et3LegalIssueGiveDetails")
+    private String et3LegalIssueGiveDetails;
+    @JsonProperty("et3GeneralNotesLegalEntity")
+    private String et3GeneralNotesLegalEntity;
+    // ET3 Response in time page
+    @JsonProperty("et3ResponseInTime")
+    private String et3ResponseInTime;
+    @JsonProperty("et3ResponseInTimeDetails")
+    private String et3ResponseInTimeDetails;
+    // ET3 Respondents Name page
+    @JsonProperty("et3NameAddressRespondent")
+    private String et3NameAddressRespondent;
+    @JsonProperty("et3DoWeHaveRespondentsName")
+    private String et3DoWeHaveRespondentsName;
+    @JsonProperty("et3GeneralNotesRespondentName")
+    private String et3GeneralNotesRespondentName;
+    @JsonProperty("et3DoesRespondentsNameMatch")
+    private String et3DoesRespondentsNameMatch;
+    @JsonProperty("et3RespondentNameMismatchDetails")
+    private String et3RespondentNameMismatchDetails;
+    @JsonProperty("et3GeneralNotesRespondentNameMatch")
+    private String et3GeneralNotesRespondentNameMatch;
+    // ET3 Respondents Address page
+    @JsonProperty("et3DoWeHaveRespondentsAddress")
+    private String et3DoWeHaveRespondentsAddress;
+    @JsonProperty("et3RespondentAddressMismatchDetails")
+    private String et3RespondentAddressMismatchDetails;
+    @JsonProperty("et3GeneralNotesRespondentAddress")
+    private String et3GeneralNotesRespondentAddress;
 }
