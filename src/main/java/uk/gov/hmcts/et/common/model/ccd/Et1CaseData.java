@@ -55,16 +55,4 @@ public class Et1CaseData {
     private ClaimantHearingPreference claimantHearingPreference;
     @JsonProperty("claimantTaskListChecks")
     private TaskListCheckType claimantTaskListChecks;
-    @JsonProperty("existingJurisdictionCodes")
-    private String existingJurisdictionCodes;
-    @JsonProperty("vettingJurisdictionCodeCollection")
-    private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
-    @JsonProperty("trackAllocation")
-    private String trackAllocation;
-    @JsonProperty("tribunalAndOfficeLocation")
-    private String tribunalAndOfficeLocation;
-    @JsonProperty("regionalOffice")
-    private String regionalOffice;
-    @JsonProperty("regionalOfficeList")
-    private DynamicFixedListType regionalOfficeList;
 }

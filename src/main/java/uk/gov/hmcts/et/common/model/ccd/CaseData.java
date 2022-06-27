@@ -13,6 +13,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
+import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
@@ -326,6 +327,18 @@ public class CaseData extends Et1CaseData {
     private String et1VettingCanServeClaimNoReason;
     @JsonProperty("et1VettingCanServeClaimGeneralNote")
     private String et1VettingCanServeClaimGeneralNote;
+    @JsonProperty("existingJurisdictionCodes")
+    private String existingJurisdictionCodes;
+    @JsonProperty("vettingJurisdictionCodeCollection")
+    private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
+    @JsonProperty("trackAllocation")
+    private String trackAllocation;
+    @JsonProperty("tribunalAndOfficeLocation")
+    private String tribunalAndOfficeLocation;
+    @JsonProperty("regionalOffice")
+    private String regionalOffice;
+    @JsonProperty("regionalOfficeList")
+    private DynamicFixedListType regionalOfficeList;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
