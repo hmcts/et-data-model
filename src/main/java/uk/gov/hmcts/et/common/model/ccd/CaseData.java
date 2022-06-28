@@ -419,4 +419,15 @@ public class CaseData extends Et1CaseData {
     private String et3IsCaseListedForHearingDetails;
     @JsonProperty("et3GeneralNotesCaseListed")
     private String et3GeneralNotesCaseListed;
+    // ET3 Transfer Application
+    @JsonProperty("et3TribunalLocation")
+    private String et3TribunalLocation;
+    @JsonProperty("et3IsThisLocationCorrect")
+    private String et3IsThisLocationCorrect;
+    @JsonProperty("et3GeneralNotesTransferApplication")
+    private String et3GeneralNotesTransferApplication;
+    @JsonProperty("et3RegionalOffice")
+    private String et3RegionalOffice;
+    @JsonProperty("et3WhyWeShouldChangeTheOffice")
+    private String et3WhyWeShouldChangeTheOffice;
 }
