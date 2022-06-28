@@ -380,7 +380,7 @@ public class CaseData extends Et1CaseData {
     private String et3GeneralNotesIndividualInsolvency;
     // ET3 Legal issue page
     @JsonProperty("et3LegalIssue")
-    private DocumentTypeItem et3LegalIssue;
+    private String et3LegalIssue;
     @JsonProperty("et3LegalIssueGiveDetails")
     private String et3LegalIssueGiveDetails;
     @JsonProperty("et3GeneralNotesLegalEntity")
