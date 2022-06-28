@@ -317,6 +317,7 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
+    // ET1 Vetting - Can we serve the claim?
     @JsonProperty("et1VettingClaimantDetailsMarkUp")
     private String et1VettingClaimantDetailsMarkUp;
     @JsonProperty("et1VettingRespondentDetailsMarkUp")
@@ -327,6 +328,16 @@ public class CaseData extends Et1CaseData {
     private String et1VettingCanServeClaimNoReason;
     @JsonProperty("et1VettingCanServeClaimGeneralNote")
     private String et1VettingCanServeClaimGeneralNote;
+    // ET1 Vetting - Acas certificate?
+    @JsonProperty("et1VettingAcasCertListMarkUp")
+    private String et1VettingAcasCertListMarkUp;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo")
+    private String et1VettingAcasCertIsYesOrNo;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo")
+    private String et1VettingAcasCertExemptYesOrNo;
+    @JsonProperty("et1VettingAcasCertGeneralNote")
+    private String et1VettingAcasCertGeneralNote;
+    // ET1 Vetting - Jurisdiction codes
     @JsonProperty("existingJurisdictionCodes")
     private String existingJurisdictionCodes;
     @JsonProperty("vettingJurisdictionCodeCollection")
