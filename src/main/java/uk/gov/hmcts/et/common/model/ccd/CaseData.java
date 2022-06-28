@@ -329,12 +329,8 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et1VettingCanServeClaimGeneralNote")
     private String et1VettingCanServeClaimGeneralNote;
     // ET1 Vetting - Acas certificate?
-    @JsonProperty("et1VettingAcasCertListMarkUp")
-    private String et1VettingAcasCertListMarkUp;
-    @JsonProperty("et1VettingAcasCertIsYesOrNo")
-    private String et1VettingAcasCertIsYesOrNo;
-    @JsonProperty("et1VettingAcasCertExemptYesOrNo")
-    private String et1VettingAcasCertExemptYesOrNo;
+    @JsonProperty("et1VettingRespondentAcasCollection")
+    private List<Et1VettingRespondentAcasTypeItem> et1VettingRespondentAcasCollection;
     @JsonProperty("et1VettingAcasCertGeneralNote")
     private String et1VettingAcasCertGeneralNote;
     // ET1 Vetting - Jurisdiction codes
