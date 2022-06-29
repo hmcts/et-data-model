@@ -401,8 +401,8 @@ public class CaseData extends Et1CaseData {
     // ET Initial Consideration
     @JsonProperty("etInitialConsiderationRespondent")
     private String etInitialConsiderationRespondent;
-
-    // ET Initial Consideration
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
+    @JsonProperty("etInitialConsiderationJurisdictionCodes")
+    private String etInitialConsiderationJurisdictionCodes;
 }
