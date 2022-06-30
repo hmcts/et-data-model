@@ -441,4 +441,12 @@ public class CaseData extends Et1CaseData {
     private String et3RegionalOffice;
     @JsonProperty("et3WhyWeShouldChangeTheOffice")
     private String et3WhyWeShouldChangeTheOffice;
+
+    // ET Initial Consideration
+    @JsonProperty("etInitialConsiderationRespondent")
+    private String etInitialConsiderationRespondent;
+    @JsonProperty("etInitialConsiderationHearing")
+    private String etInitialConsiderationHearing;
+    @JsonProperty("etInitialConsiderationJurisdictionCodes")
+    private String etInitialConsiderationJurisdictionCodes;
 }
