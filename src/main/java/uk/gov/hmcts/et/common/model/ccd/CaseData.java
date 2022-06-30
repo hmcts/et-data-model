@@ -13,6 +13,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
+import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
@@ -316,6 +317,7 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
+    // ET1 Vetting - Can we serve the claim?
     @JsonProperty("et1VettingClaimantDetailsMarkUp")
     private String et1VettingClaimantDetailsMarkUp;
     @JsonProperty("et1VettingRespondentDetailsMarkUp")
@@ -326,6 +328,28 @@ public class CaseData extends Et1CaseData {
     private String et1VettingCanServeClaimNoReason;
     @JsonProperty("et1VettingCanServeClaimGeneralNote")
     private String et1VettingCanServeClaimGeneralNote;
+    // ET1 Vetting - Acas certificate?
+    @JsonProperty("et1VettingAcasCertListMarkUp")
+    private String et1VettingAcasCertListMarkUp;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo")
+    private String et1VettingAcasCertIsYesOrNo;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo")
+    private String et1VettingAcasCertExemptYesOrNo;
+    @JsonProperty("et1VettingAcasCertGeneralNote")
+    private String et1VettingAcasCertGeneralNote;
+    // ET1 Vetting - Jurisdiction codes
+    @JsonProperty("existingJurisdictionCodes")
+    private String existingJurisdictionCodes;
+    @JsonProperty("vettingJurisdictionCodeCollection")
+    private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
+    @JsonProperty("trackAllocation")
+    private String trackAllocation;
+    @JsonProperty("tribunalAndOfficeLocation")
+    private String tribunalAndOfficeLocation;
+    @JsonProperty("regionalOffice")
+    private String regionalOffice;
+    @JsonProperty("regionalOfficeList")
+    private DynamicFixedListType regionalOfficeList;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
@@ -367,7 +391,7 @@ public class CaseData extends Et1CaseData {
     private String et3GeneralNotesIndividualInsolvency;
     // ET3 Legal issue page
     @JsonProperty("et3LegalIssue")
-    private DocumentTypeItem et3LegalIssue;
+    private String et3LegalIssue;
     @JsonProperty("et3LegalIssueGiveDetails")
     private String et3LegalIssueGiveDetails;
     @JsonProperty("et3GeneralNotesLegalEntity")
@@ -397,6 +421,26 @@ public class CaseData extends Et1CaseData {
     private String et3RespondentAddressMismatchDetails;
     @JsonProperty("et3GeneralNotesRespondentAddress")
     private String et3GeneralNotesRespondentAddress;
+    // ET3 Case Listed Page
+    @JsonProperty("et3HearingDetails")
+    private String et3HearingDetails;
+    @JsonProperty("et3IsCaseListedForHearing")
+    private String et3IsCaseListedForHearing;
+    @JsonProperty("et3IsCaseListedForHearingDetails")
+    private String et3IsCaseListedForHearingDetails;
+    @JsonProperty("et3GeneralNotesCaseListed")
+    private String et3GeneralNotesCaseListed;
+    // ET3 Transfer Application
+    @JsonProperty("et3TribunalLocation")
+    private String et3TribunalLocation;
+    @JsonProperty("et3IsThisLocationCorrect")
+    private String et3IsThisLocationCorrect;
+    @JsonProperty("et3GeneralNotesTransferApplication")
+    private String et3GeneralNotesTransferApplication;
+    @JsonProperty("et3RegionalOffice")
+    private String et3RegionalOffice;
+    @JsonProperty("et3WhyWeShouldChangeTheOffice")
+    private String et3WhyWeShouldChangeTheOffice;
 
     // ET Initial Consideration
     @JsonProperty("etInitialConsiderationRespondent")
