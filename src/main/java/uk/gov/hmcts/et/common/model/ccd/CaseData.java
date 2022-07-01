@@ -461,7 +461,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3Rule26Details")
     private String et3Rule26Details;
     @JsonProperty("et3SuggestedIssues")
-    private String et3SuggestedIssues;
+    private List<String> et3SuggestedIssues;
     @JsonProperty("et3SuggestedIssuesStrikeOut")
     private String et3SuggestedIssuesStrikeOut;
     @JsonProperty("et3SuggestedIssueInterpreters")

@@ -6,6 +6,8 @@ import lombok.Data;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class Et3VettingType {
@@ -106,7 +108,7 @@ public class Et3VettingType {
     @JsonProperty("et3Rule26Details")
     private String et3Rule26Details;
     @JsonProperty("et3SuggestedIssues")
-    private String et3SuggestedIssues;
+    private List<String> et3SuggestedIssues;
     @JsonProperty("et3SuggestedIssuesStrikeOut")
     private String et3SuggestedIssuesStrikeOut;
     @JsonProperty("et3SuggestedIssueInterpreters")
