@@ -441,6 +441,44 @@ public class CaseData extends Et1CaseData {
     private String et3RegionalOffice;
     @JsonProperty("et3WhyWeShouldChangeTheOffice")
     private String et3WhyWeShouldChangeTheOffice;
+    // ET3 Resist the claim
+    @JsonProperty("et3ContestClaim")
+    private String et3ContestClaim;
+    @JsonProperty("et3ContestClaimGiveDetails")
+    private String et3ContestClaimGiveDetails;
+    @JsonProperty("et3GeneralNotesContestClaim")
+    private String et3GeneralNotesContestClaim;
+    // ET3 Contract claim section 7
+    @JsonProperty("et3ContractClaimSection7")
+    private String et3ContractClaimSection7;
+    @JsonProperty("et3ContractClaimSection7Details")
+    private String et3ContractClaimSection7Details;
+    @JsonProperty("et3GeneralNotesContractClaimSection7")
+    private String et3GeneralNotesContractClaimSection7;
+    // ET3 suggested issues
+    @JsonProperty("et3Rule26")
+    private String et3Rule26;
+    @JsonProperty("et3Rule26Details")
+    private String et3Rule26Details;
+    @JsonProperty("et3SuggestedIssues")
+    private String et3SuggestedIssues;
+    @JsonProperty("et3SuggestedIssuesStrikeOut")
+    private String et3SuggestedIssuesStrikeOut;
+    @JsonProperty("et3SuggestedIssueInterpreters")
+    private String et3SuggestedIssueInterpreters;
+    @JsonProperty("et3SuggestedIssueJurisdictional")
+    private String et3SuggestedIssueJurisdictional;
+    @JsonProperty("et3SuggestedIssueAdjustments")
+    private String et3SuggestedIssueAdjustments;
+    @JsonProperty("et3SuggestedIssueRule50")
+    private String et3SuggestedIssueRule50;
+    @JsonProperty("et3SuggestedIssueTimePoints")
+    private String et3SuggestedIssueTimePoints;
+    @JsonProperty("et3GeneralNotesRule26")
+    private String et3GeneralNotesRule26;
+    // ET3 Final notes
+    @JsonProperty("et3AdditionalInformation")
+    private String et3AdditionalInformation;
 
     // ET Initial Consideration
     @JsonProperty("etInitialConsiderationRespondent")
