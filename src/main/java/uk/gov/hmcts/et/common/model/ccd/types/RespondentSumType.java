@@ -79,4 +79,13 @@ public class RespondentSumType {
     private String responseCounterClaim;
     @JsonProperty("responseReference")
     private String responseReference;
+    @JsonProperty("extensionRequested")
+    private String extensionRequested;
+    @JsonProperty("extensionGranted")
+    private String extensionGranted;
+    @JsonProperty("extensionDate")
+    private String extensionDate;
+    @JsonProperty("et3Vetting")
+    private Et3VettingType at3Vetting;
+
 }
