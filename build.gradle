@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'com.github.hmcts'
+group 'uk.gov.hmcts.reform'
 version '1.0.29'
 
 sourceCompatibility = '11.0'
