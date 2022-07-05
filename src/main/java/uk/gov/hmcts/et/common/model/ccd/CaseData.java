@@ -351,6 +351,13 @@ public class CaseData extends Et1CaseData {
     private String regionalOffice;
     @JsonProperty("regionalOfficeList")
     private DynamicFixedListType regionalOfficeList;
+    // ET1 Vetting - Hearing venues
+    @JsonProperty("et1AddressDetails")
+    private String et1AddressDetails;
+    @JsonProperty("et1TribunalRegion")
+    private String et1TribunalRegion;
+    @JsonProperty("et1HearingVenues")
+    private DynamicFixedListType et1HearingVenues;
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
