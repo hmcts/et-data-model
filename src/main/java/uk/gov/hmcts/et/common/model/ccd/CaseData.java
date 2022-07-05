@@ -21,6 +21,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
+import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -379,14 +380,14 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3IsThereACompaniesHouseSearchDocument")
     private String et3IsThereACompaniesHouseSearchDocument;
     @JsonProperty("et3CompanyHouseDocument")
-    private DocumentTypeItem et3CompanyHouseDocument;
+    private UploadedDocumentType et3CompanyHouseDocument;
     @JsonProperty("et3GeneralNotesCompanyHouse")
     private String et3GeneralNotesCompanyHouse;
     // ET3 Individual insolvency search document page
     @JsonProperty("et3IsThereAnIndividualSearchDocument")
     private String et3IsThereAnIndividualSearchDocument;
     @JsonProperty("et3IndividualInsolvencyDocument")
-    private DocumentTypeItem et3IndividualInsolvencyDocument;
+    private UploadedDocumentType et3IndividualInsolvencyDocument;
     @JsonProperty("et3GeneralNotesIndividualInsolvency")
     private String et3GeneralNotesIndividualInsolvency;
     // ET3 Legal issue page
@@ -417,6 +418,8 @@ public class CaseData extends Et1CaseData {
     // ET3 Respondents Address page
     @JsonProperty("et3DoWeHaveRespondentsAddress")
     private String et3DoWeHaveRespondentsAddress;
+    @JsonProperty("et3DoesRespondentsAddressMatch")
+    private String et3DoesRespondentsAddressMatch;
     @JsonProperty("et3RespondentAddressMismatchDetails")
     private String et3RespondentAddressMismatchDetails;
     @JsonProperty("et3GeneralNotesRespondentAddress")
@@ -461,7 +464,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3Rule26Details")
     private String et3Rule26Details;
     @JsonProperty("et3SuggestedIssues")
-    private String et3SuggestedIssues;
+    private List<String> et3SuggestedIssues;
     @JsonProperty("et3SuggestedIssuesStrikeOut")
     private String et3SuggestedIssuesStrikeOut;
     @JsonProperty("et3SuggestedIssueInterpreters")
