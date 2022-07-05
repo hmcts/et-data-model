@@ -4,13 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtICListForPreliminaryHearing {
     @JsonProperty("etICTypeOfPreliminaryHearing")
-    private String etICTypeOfPreliminaryHearing;
+    private List<String> etICTypeOfPreliminaryHearing;
     @JsonProperty("etICPurposeOfPreliminaryHearing")
-    private String etICPurposeOfPreliminaryHearing;
+    private List<String> etICPurposeOfPreliminaryHearing;
     @JsonProperty("etICGiveDetailsOfHearingNotice")
     private String etICGiveDetailsOfHearingNotice;
     @JsonProperty("etICLengthOfPrelimHearing")

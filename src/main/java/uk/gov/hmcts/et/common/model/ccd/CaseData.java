@@ -492,7 +492,7 @@ public class CaseData extends Et1CaseData {
     private String etInitialConsiderationJurisdictionCodes;
     // ET Initial Consideration - Hearing Not Listed
     @JsonProperty("etICHearingNotListedList")
-    private String etICHearingNotListedList;
+    private List<String> etICHearingNotListedList;
     @JsonProperty("etICHearingNotListedSeekComments")
     private EtICSeekComments etICHearingNotListedSeekComments;
     @JsonProperty("etICHearingNotListedListForPrelimHearing")

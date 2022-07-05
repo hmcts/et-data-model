@@ -4,13 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtICUDLHearing {
     @JsonProperty("etICEJSitAlone")
     private String etICEJSitAlone;
     @JsonProperty("etICUDLGiveReasons")
-    private String etICUDLGiveReasons;
+    private List<String> etICUDLGiveReasons;
     @JsonProperty("etICUDLDisputeOnFacts")
     private String etICUDLDisputeOnFacts;
     @JsonProperty("etICUDLLittleOrNoAgreement")
@@ -28,9 +30,9 @@ public class EtICUDLHearing {
     @JsonProperty("etICUDLHearFormat")
     private String etICUDLHearFormat;
     @JsonProperty("etICUDLCVPIssue")
-    private String etICUDLCVPIssue;
+    private List<String> etICUDLCVPIssue;
     @JsonProperty("etICUDLFinalF2FIssue")
-    private String etICUDLFinalF2FIssue;
+    private List<String> etICUDLFinalF2FIssue;
     @JsonProperty("etICBUCheckComplianceOrders")
     private String etICBUCheckComplianceOrders;
 }

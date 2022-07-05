@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtICListForFinalHearing {
     @JsonProperty("etICTypeOfFinalHearing")
-    private String etICTypeOfFinalHearing;
+    private List<String> etICTypeOfFinalHearing;
     @JsonProperty("etICLengthOfFinalHearing")
     private String etICLengthOfFinalHearing;
 }
