@@ -12,8 +12,6 @@ import java.util.List;
 public class Et3VettingType {
     @JsonProperty("et3ChooseRespondent")
     private DynamicFixedListType et3ChooseRespondent;
-    @JsonProperty("et3Date")
-    private String et3Date;
     // ET3 Response Page
     @JsonProperty("et3IsThereAnEt3Response")
     private String et3IsThereAnEt3Response;
@@ -48,8 +46,6 @@ public class Et3VettingType {
     @JsonProperty("et3ResponseInTimeDetails")
     private String et3ResponseInTimeDetails;
     // ET3 Respondents Name page
-    @JsonProperty("et3NameAddressRespondent")
-    private String et3NameAddressRespondent;
     @JsonProperty("et3DoWeHaveRespondentsName")
     private String et3DoWeHaveRespondentsName;
     @JsonProperty("et3GeneralNotesRespondentName")
@@ -70,8 +66,6 @@ public class Et3VettingType {
     @JsonProperty("et3GeneralNotesRespondentAddress")
     private String et3GeneralNotesRespondentAddress;
     // ET3 Case Listed Page
-    @JsonProperty("et3HearingDetails")
-    private String et3HearingDetails;
     @JsonProperty("et3IsCaseListedForHearing")
     private String et3IsCaseListedForHearing;
     @JsonProperty("et3IsCaseListedForHearingDetails")
@@ -79,8 +73,6 @@ public class Et3VettingType {
     @JsonProperty("et3GeneralNotesCaseListed")
     private String et3GeneralNotesCaseListed;
     // ET3 Transfer Application
-    @JsonProperty("et3TribunalLocation")
-    private String et3TribunalLocation;
     @JsonProperty("et3IsThisLocationCorrect")
     private String et3IsThisLocationCorrect;
     @JsonProperty("et3GeneralNotesTransferApplication")
