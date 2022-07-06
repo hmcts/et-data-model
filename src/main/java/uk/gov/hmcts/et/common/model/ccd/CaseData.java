@@ -517,4 +517,17 @@ public class CaseData extends Et1CaseData {
     private String icOrderForFurtherInformation;
     @JsonProperty("icOtherIssuesOrFinalOrders")
     private String icOtherIssuesOrFinalOrders;
+    // ET Initial Consideration - Hearing Not Listed
+    @JsonProperty("etICHearingNotListedList")
+    private List<String> etICHearingNotListedList;
+    @JsonProperty("etICHearingNotListedSeekComments")
+    private EtICSeekComments etICHearingNotListedSeekComments;
+    @JsonProperty("etICHearingNotListedListForPrelimHearing")
+    private EtICListForPreliminaryHearing etICHearingNotListedListForPrelimHearing;
+    @JsonProperty("etICHearingNotListedListForFinalHearing")
+    private EtICListForFinalHearing etICHearingNotListedListForFinalHearing;
+    @JsonProperty("etICHearingNotListedUDLHearing")
+    private EtICUDLHearing etICHearingNotListedUDLHearing;
+    @JsonProperty("etICHearingNotListedAnyOtherDirections")
+    private String etICHearingNotListedAnyOtherDirections;
 }
