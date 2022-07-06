@@ -553,6 +553,12 @@ public class CaseData extends Et1CaseData {
     private String etICOtherGiveDetails;
     @JsonProperty("etICHearingAnyOtherDirections")
     private String etICHearingAnyOtherDirections;
+    @JsonProperty("etICPostponeGiveDetails")
+    private String etICPostponeGiveDetails;
+    @JsonProperty("etICConvertPreliminaryGiveDetails")
+    private String etICConvertPreliminaryGiveDetails;
+    @JsonProperty("etICConvertF2fGiveDetails")
+    private String etICConvertF2fGiveDetails;
     // ET Initial Consideration – Further Info
     @JsonProperty("etICFurtherInformation")
     private List<String> etICFurtherInformation;
