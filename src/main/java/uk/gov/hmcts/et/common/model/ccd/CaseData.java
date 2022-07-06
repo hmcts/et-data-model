@@ -503,6 +503,26 @@ public class CaseData extends Et1CaseData {
     private String etInitialConsiderationHearing;
     @JsonProperty("etInitialConsiderationJurisdictionCodes")
     private String etInitialConsiderationJurisdictionCodes;
+    @JsonProperty("icReceiptET3FormIssues")
+    private String icReceiptET3FormIssues;
+    @JsonProperty("icRespondentsNameIdentityIssues")
+    private String icRespondentsNameIdentityIssues;
+    @JsonProperty("icJurisdictionCodeIssues")
+    private String icJurisdictionCodeIssues;
+    @JsonProperty("icApplicationIssues")
+    private String icApplicationIssues;
+    @JsonProperty("icEmployersContractClaimIssues")
+    private String icEmployersContractClaimIssues;
+    @JsonProperty("icClaimProspectIssues")
+    private String icClaimProspectIssues;
+    @JsonProperty("icListingIssues")
+    private String icListingIssues;
+    @JsonProperty("icDdaDisabilityIssues")
+    private String icDdaDisabilityIssues;
+    @JsonProperty("icOrderForFurtherInformation")
+    private String icOrderForFurtherInformation;
+    @JsonProperty("icOtherIssuesOrFinalOrders")
+    private String icOtherIssuesOrFinalOrders;
     @JsonProperty("etICJuridictionCodesInvalid")
     private String etICJuridictionCodesInvalid;
     @JsonProperty("etICInvalidDetails")
