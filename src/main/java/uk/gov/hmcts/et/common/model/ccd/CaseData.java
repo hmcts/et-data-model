@@ -497,6 +497,14 @@ public class CaseData extends Et1CaseData {
     private String etInitialConsiderationHearing;
     @JsonProperty("etInitialConsiderationJurisdictionCodes")
     private String etInitialConsiderationJurisdictionCodes;
+    @JsonProperty("etICJuridictionCodesInvalid")
+    private String etICJuridictionCodesInvalid;
+    @JsonProperty("etICInvalidDetails")
+    private String etICInvalidDetails;
+    @JsonProperty("etICCanProceed")
+    private String etICCanProceed;
+    @JsonProperty("etICHearingAlreadyListed")
+    private String etICHearingAlreadyListed;
     // ET Initial Consideration - Hearing Not Listed
     @JsonProperty("etICHearingNotListedList")
     private List<String> etICHearingNotListedList;
@@ -510,4 +518,26 @@ public class CaseData extends Et1CaseData {
     private EtICUDLHearing etICHearingNotListedUDLHearing;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+    // ET Initial Consideration - Hearing already listed
+    @JsonProperty("etICHearingListed")
+    private List<String> etICHearingListed;
+    @JsonProperty("etICExtendDurationGiveDetails")
+    private String etICExtendDurationGiveDetails;
+    @JsonProperty("etICOtherGiveDetails")
+    private String etICOtherGiveDetails;
+    @JsonProperty("etICHearingAnyOtherDirections")
+    private String etICHearingAnyOtherDirections;
+    // ET Initial Consideration – Further Info
+    @JsonProperty("etICFurtherInformation")
+    private List<String> etICFurtherInformation;
+    @JsonProperty("etICFurtherInformationHearingAnyOtherDirections")
+    private String etICFurtherInformationHearingAnyOtherDirections;
+    @JsonProperty("etICFurtherInformationGiveDetails")
+    private String etICFurtherInformationGiveDetails;
+    @JsonProperty("etICFurtherInformationTimeToComply")
+    private String etICFurtherInformationTimeToComply;
+    @JsonProperty("etInitialConsiderationRule27")
+    private EtInitialConsiderationRule27 etInitialConsiderationRule27;
+    @JsonProperty("etInitialConsiderationRule28")
+    private EtInitialConsiderationRule28 etInitialConsiderationRule28;
 }
