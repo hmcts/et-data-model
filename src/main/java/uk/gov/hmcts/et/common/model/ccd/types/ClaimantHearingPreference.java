@@ -1,5 +1,6 @@
 package uk.gov.hmcts.et.common.model.ccd.types;
 
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -7,11 +8,8 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class ClaimantHearingPreference {
-
-    @JsonProperty("hearing_video")
-    private String hearingVideo;
-    @JsonProperty("hearing_phone")
-    private String hearingPhone;
+    @JsonProperty("hearing_preferences")
+    private List<String> hearingPreferences;
     @JsonProperty("hearing_assistance")
     private String hearingAssistance;
     @JsonProperty("reasonable_adjustments")
