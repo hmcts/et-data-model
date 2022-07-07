@@ -437,6 +437,8 @@ public class CaseData extends Et1CaseData {
     private String et3RespondentAddressMismatchDetails;
     @JsonProperty("et3GeneralNotesRespondentAddress")
     private String et3GeneralNotesRespondentAddress;
+    @JsonProperty("et3GeneralNotesAddressMatch")
+    private String et3GeneralNotesAddressMatch;
     // ET3 Case Listed Page
     @JsonProperty("et3HearingDetails")
     private String et3HearingDetails;

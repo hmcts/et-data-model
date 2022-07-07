@@ -65,6 +65,8 @@ public class Et3VettingType {
     private String et3RespondentAddressMismatchDetails;
     @JsonProperty("et3GeneralNotesRespondentAddress")
     private String et3GeneralNotesRespondentAddress;
+    @JsonProperty("et3GeneralNotesAddressMatch")
+    private String et3GeneralNotesAddressMatch;
     // ET3 Case Listed Page
     @JsonProperty("et3IsCaseListedForHearing")
     private String et3IsCaseListedForHearing;
