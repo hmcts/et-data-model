@@ -574,4 +574,28 @@ public class CaseData extends Et1CaseData {
     private EtInitialConsiderationRule27 etInitialConsiderationRule27;
     @JsonProperty("etInitialConsiderationRule28")
     private EtInitialConsiderationRule28 etInitialConsiderationRule28;
+
+    // ET3 Response
+    @JsonProperty("et3ResponseShowInset")
+    private String et3ResponseShowInset;
+    // ET3 Response - Claimaint name page
+    @JsonProperty("et3ResponseClaimantName")
+    private String et3ResponseClaimantName;
+    @JsonProperty("et3ResponseIsClaimantNameCorrect")
+    private String et3ResponseIsClaimantNameCorrect;
+    @JsonProperty("et3ResponseClaimantNameCorrection")
+    private String et3ResponseClaimantNameCorrection;
+    // ET3 Response - What is the respondent's name
+    @JsonProperty("et3ResponseNameShowInset")
+    private String et3ResponseNameShowInset;
+    @JsonProperty("et3ResponseRespondentLegalName")
+    private String et3ResponseRespondentLegalName;
+    @JsonProperty("et3ResponseRespondentCompanyNumber")
+    private String et3ResponseRespondentCompanyNumber;
+    @JsonProperty("et3ResponseRespondentEmployerType")
+    private String et3ResponseRespondentEmployerType;
+    @JsonProperty("et3ResponseRespondentPreferredTitle")
+    private String et3ResponseRespondentPreferredTitle;
+    @JsonProperty("et3ResponseRespondentContactName")
+    private String et3ResponseRespondentContactName;
 }
