@@ -688,8 +688,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3ResponseEmployerClaimDocument")
     private UploadedDocumentType et3ResponseEmployerClaimDocument;
     // ET3 Response - health conditions (23)
-    @JsonProperty("et3ResponseHealthShowInset")
-    private String et3ResponseHealthShowInset;
     @JsonProperty("et3ResponseRespondentSupportNeeded")
     private String et3ResponseRespondentSupportNeeded;
     // ET3 Response - Details on health conditions (24)
