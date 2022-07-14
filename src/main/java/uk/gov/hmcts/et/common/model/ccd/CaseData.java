@@ -342,13 +342,82 @@ public class CaseData extends Et1CaseData {
     private String et1VettingRespondentAcasDetails5;
     @JsonProperty("et1VettingRespondentAcasDetails6")
     private String et1VettingRespondentAcasDetails6;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo1")
+    private String et1VettingAcasCertIsYesOrNo1;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo1")
+    private String et1VettingAcasCertExemptYesOrNo1;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo2")
+    private String et1VettingAcasCertIsYesOrNo2;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo2")
+    private String et1VettingAcasCertExemptYesOrNo2;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo3")
+    private String et1VettingAcasCertIsYesOrNo3;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo3")
+    private String et1VettingAcasCertExemptYesOrNo3;
+    @JsonProperty("et1VettingRespondentAcasDetailsLabel4")
+    private String et1VettingRespondentAcasDetailsLabel4;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo4")
+    private String et1VettingAcasCertIsYesOrNo4;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo4")
+    private String et1VettingAcasCertExemptYesOrNo4;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo5")
+    private String et1VettingAcasCertIsYesOrNo5;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo5")
+    private String et1VettingAcasCertExemptYesOrNo5;
+    @JsonProperty("et1VettingAcasCertIsYesOrNo6")
+    private String et1VettingAcasCertIsYesOrNo6;
+    @JsonProperty("et1VettingAcasCertExemptYesOrNo6")
+    private String et1VettingAcasCertExemptYesOrNo6;
     @JsonProperty("et1VettingAcasCertGeneralNote")
     private String et1VettingAcasCertGeneralNote;
+
+    //ET1 Vetting -  Substantive Defects
+    @JsonProperty("substantiveDefectsList")
+    private List<String> substantiveDefectsList;
+    @JsonProperty("rule121aTextArea")
+    private String rule121aTextArea;
+    @JsonProperty("rule121bTextArea")
+    private String rule121bTextArea;
+    @JsonProperty("rule121cTextArea")
+    private String rule121cTextArea;
+    @JsonProperty("rule121dTextArea")
+    private String rule121dTextArea;
+    @JsonProperty("rule121daTextArea")
+    private String rule121daTextArea;
+    @JsonProperty("rule121eTextArea")
+    private String rule121eTextArea;
+    @JsonProperty("rule121fTextArea")
+    private String rule121fTextArea;
+    @JsonProperty("et1SubstantiveDefectsGeneralNotes")
+    private String et1SubstantiveDefectsGeneralNotes;
+
     // ET1 Vetting - Jurisdiction codes
+    @JsonProperty("areTheseCodesCorrect")
+    private String areTheseCodesCorrect;
+    @JsonProperty("codesCorrectGiveDetails")
+    private String codesCorrectGiveDetails;
+    @JsonProperty("et1JurisdictionCodeGeneralNotes")
+    private String et1JurisdictionCodeGeneralNotes;
     @JsonProperty("existingJurisdictionCodes")
     private String existingJurisdictionCodes;
     @JsonProperty("vettingJurisdictionCodeCollection")
     private List<VettingJurCodesTypeItem> vettingJurisdictionCodeCollection;
+
+    // ET1 Vetting - Track allocation
+    @JsonProperty("isTrackAllocationCorrect")
+    private String isTrackAllocationCorrect;
+    @JsonProperty("suggestAnotherTrack")
+    private String suggestAnotherTrack;
+    @JsonProperty("whyChangeTrackAllocation")
+    private String whyChangeTrackAllocation;
+    @JsonProperty("trackAllocationGeneralNotes")
+    private String trackAllocationGeneralNotes;
+    @JsonProperty("isLocationCorrect")
+    private String isLocationCorrect;
+    @JsonProperty("whyChangeOffice")
+    private String whyChangeOffice;
+    @JsonProperty("et1LocationGeneralNotes")
+    private String et1LocationGeneralNotes;
     @JsonProperty("trackAllocation")
     private String trackAllocation;
     @JsonProperty("tribunalAndOfficeLocation")
@@ -364,6 +433,93 @@ public class CaseData extends Et1CaseData {
     private String et1TribunalRegion;
     @JsonProperty("et1HearingVenues")
     private DynamicFixedListType et1HearingVenues;
+    @JsonProperty("et1SuggestHearingVenue")
+    private String et1SuggestHearingVenue;
+    @JsonProperty("et1HearingVenueGeneralNotes")
+    private String et1HearingVenueGeneralNotes;
+    @JsonProperty("et1GovOrMajorQuestion")
+    private String et1GovOrMajorQuestion;
+
+    // ET1 Vetting - Further questions
+    @JsonProperty("et1ReasonableAdjustmentsQuestion")
+    private String et1ReasonableAdjustmentsQuestion;
+    @JsonProperty("et1ReasonableAdjustmentsTextArea")
+    private String et1ReasonableAdjustmentsTextArea;
+    @JsonProperty("et1VideoHearingQuestion")
+    private String et1VideoHearingQuestion;
+    @JsonProperty("et1VideoHearingTextArea")
+    private String et1VideoHearingTextArea;
+    @JsonProperty("et1FurtherQuestionsGeneralNotes")
+    private String et1FurtherQuestionsGeneralNotes;
+
+    // ET1 Vetting - Referral to judge
+    @JsonProperty("referralToJudgeOrLOList")
+    private List<String> referralToJudgeOrLOList;
+    @JsonProperty("aClaimOfInterimReliefTextArea")
+    private String aClaimOfInterimReliefTextArea;
+    @JsonProperty("aStatutoryAppealTextArea")
+    private String aStatutoryAppealTextArea;
+    @JsonProperty("anAllegationOfCommissionOfSexualOffenceTextArea")
+    private String anAllegationOfCommissionOfSexualOffenceTextArea;
+    @JsonProperty("insolvencyTextArea")
+    private String insolvencyTextArea;
+    @JsonProperty("jurisdictionsUnclearTextArea")
+    private String jurisdictionsUnclearTextArea;
+    @JsonProperty("lengthOfServiceTextArea")
+    private String lengthOfServiceTextArea;
+    @JsonProperty("potentiallyLinkedCasesInTheEcmTextArea")
+    private String potentiallyLinkedCasesInTheEcmTextArea;
+    @JsonProperty("rule50IssuesTextArea")
+    private String rule50IssuesTextArea;
+    @JsonProperty("anotherReasonForJudicialReferralTextArea")
+    private String anotherReasonForJudicialReferralTextArea;
+    @JsonProperty("et1JudgeReferralGeneralNotes")
+    private String et1JudgeReferralGeneralNotes;
+    @JsonProperty("referralToREJOrVPList")
+    private List<String> referralToREJOrVPList;
+
+    // ET1 Vetting - Referral to Regional Employment judge
+    @JsonProperty("vexatiousLitigantOrderTextArea")
+    private String vexatiousLitigantOrderTextArea;
+    @JsonProperty("aNationalSecurityIssueTextArea")
+    private String aNationalSecurityIssueTextArea;
+    @JsonProperty("nationalMultipleOrPresidentialOrderTextArea")
+    private String nationalMultipleOrPresidentialOrderTextArea;
+    @JsonProperty("transferToOtherRegionTextArea")
+    private String transferToOtherRegionTextArea;
+    @JsonProperty("serviceAbroadTextArea")
+    private String serviceAbroadTextArea;
+    @JsonProperty("aSensitiveIssueTextArea")
+    private String aSensitiveIssueTextArea;
+    @JsonProperty("anyPotentialConflictTextArea")
+    private String anyPotentialConflictTextArea;
+    @JsonProperty("anotherReasonREJOrVPTextArea")
+    private String anotherReasonREJOrVPTextArea;
+    @JsonProperty("et1REJOrVPReferralGeneralNotes")
+    private String et1REJOrVPReferralGeneralNotes;
+    @JsonProperty("otherReferralList")
+    private List<String> otherReferralList;
+
+    // ET1 Vetting - Other Factors
+    @JsonProperty("claimOutOfTimeTextArea")
+    private String claimOutOfTimeTextArea;
+    @JsonProperty("multipleClaimTextArea")
+    private String multipleClaimTextArea;
+    @JsonProperty("employmentStatusIssuesTextArea")
+    private String employmentStatusIssuesTextArea;
+    @JsonProperty("pidJurisdictionRegulatorTextArea")
+    private String pidJurisdictionRegulatorTextArea;
+    @JsonProperty("videoHearingPreferenceTextArea")
+    private String videoHearingPreferenceTextArea;
+    @JsonProperty("rule50IssuesForOtherReferralTextArea")
+    private String rule50IssuesForOtherReferralTextArea;
+    @JsonProperty("anotherReasonForOtherReferralTextArea")
+    private String anotherReasonForOtherReferralTextArea;
+    @JsonProperty("et1OtherReferralGeneralNotes")
+    private String et1OtherReferralGeneralNotes;
+    @JsonProperty("et1VettingAdditionalInformationTextArea")
+    private String et1VettingAdditionalInformationTextArea;
+
 
     // ET1 Serving
     @JsonProperty("servingDocumentCollection")
