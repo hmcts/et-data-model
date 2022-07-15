@@ -851,4 +851,16 @@ public class CaseData extends Et1CaseData {
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
     private UploadedDocumentType et3ResponseRespondentSupportDocument;
+
+    // ET3 Notification
+    @JsonProperty("et3NotificationDocCollection")
+    private List<DocumentTypeItem> et3NotificationDocCollection;
+    @JsonProperty("et3OtherTypeDocumentName")
+    private String et3OtherTypeDocumentName;
+    @JsonProperty("et3NotificationDocRecipient")
+    private List<String> et3NotificationDocRecipient;
+    @JsonProperty("et3ClaimantAndRespondentAddresses")
+    private String et3ClaimantAndRespondentAddresses;
+    @JsonProperty("et3EmailLinkToAcas")
+    private String et3EmailLinkToAcas;
 }
