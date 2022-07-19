@@ -798,8 +798,8 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3ResponseContinuingEmployment")
     private String et3ResponseContinuingEmployment;
     // ET3 Response - Is claimant job title/description correct? (13)
-    @JsonProperty("et3ResponseIsJobCorrect")
-    private String et3ResponseIsJobCorrect;
+    @JsonProperty("et3ResponseIsJobTitleCorrect")
+    private String et3ResponseIsJobTitleCorrect;
     @JsonProperty("et3ResponseCorrectJobTitle")
     private String et3ResponseCorrectJobTitle;
     // ET3 Response - Claimant total weekly work hours (14)
