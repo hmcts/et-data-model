@@ -732,6 +732,9 @@ public class CaseData extends Et1CaseData {
     private EtInitialConsiderationRule28 etInitialConsiderationRule28;
 
     // ET3 Response
+    //ET3 Documents
+    @JsonProperty("et3ResponseDocumentCollection")
+    private List<DocumentTypeItem> et3ResponseDocumentCollection;
     @JsonProperty("et3ResponseShowInset")
     private String et3ResponseShowInset;
     // ET3 Response - Claimant name page (2)
