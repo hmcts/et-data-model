@@ -113,7 +113,7 @@ public class BulkData {
     @JsonProperty("flag2")
     private String flag2;
     @JsonProperty("EQP")
-    private String EQP;
+    private String eqp;
     @JsonProperty("submissionRef")
     private String submissionRef;
     @JsonProperty("claimantOrg")
@@ -128,7 +128,7 @@ public class BulkData {
     @JsonProperty("flag2Update")
     private String flag2Update;
     @JsonProperty("EQPUpdate")
-    private String EQPUpdate;
+    private String eqpUpdate;
 
     @JsonProperty("jurCodesDynamicList")
     private DynamicFixedListType jurCodesDynamicList;

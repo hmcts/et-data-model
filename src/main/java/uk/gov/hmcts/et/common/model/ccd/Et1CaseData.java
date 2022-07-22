@@ -3,15 +3,22 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import uk.gov.hmcts.et.common.model.ccd.types.*;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
-
+import uk.gov.hmcts.et.common.model.ccd.types.AdditionalCaseInfoType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantHearingPreference;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantIndType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantOtherType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantRequestType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantType;
+import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
+import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
+import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
+import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
 import java.util.List;
 
 /**
  * Employment Tribunal claim data that is input on the ET1 form by a claimant.
- *
  * This class should only contain data that is specifically part of the ET1 form.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)

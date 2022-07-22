@@ -8,31 +8,31 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class EtICUDLHearing {
+public class EtIcudlHearing {
     @JsonProperty("etICEJSitAlone")
-    private String etICEJSitAlone;
+    private String etIcejSitAlone;
     @JsonProperty("etICUDLGiveReasons")
-    private List<String> etICUDLGiveReasons;
+    private List<String> etIcudlGiveReasons;
     @JsonProperty("etICUDLDisputeOnFacts")
-    private String etICUDLDisputeOnFacts;
+    private String etIcudlDisputeOnFacts;
     @JsonProperty("etICUDLLittleOrNoAgreement")
-    private String etICUDLLittleOrNoAgreement;
+    private String etIcudlLittleOrNoAgreement;
     @JsonProperty("etICUDLIssueOfLawArising")
-    private String etICUDLIssueOfLawArising;
+    private String etIcudlIssueOfLawArising;
     @JsonProperty("etICUDLViewsOfParties")
-    private String etICUDLViewsOfParties;
+    private String etIcudlViewsOfParties;
     @JsonProperty("etICUDLNoViewsExpressedByParties")
-    private String etICUDLNoViewsExpressedByParties;
+    private String etIcudlNoViewsExpressedByParties;
     @JsonProperty("etICUDLConcurrentProceedings")
-    private String etICUDLConcurrentProceedings;
+    private String etIcudlConcurrentProceedings;
     @JsonProperty("etICUDLOther")
-    private String etICUDLOther;
+    private String etIcudlOther;
     @JsonProperty("etICUDLHearFormat")
-    private String etICUDLHearFormat;
+    private String etIcudlHearFormat;
     @JsonProperty("etICUDLCVPIssue")
-    private List<String> etICUDLCVPIssue;
+    private List<String> etIcudlCvpIssue;
     @JsonProperty("etICUDLFinalF2FIssue")
-    private List<String> etICUDLFinalF2FIssue;
+    private List<String> etIcudlFinalF2FIssue;
     @JsonProperty("etICBUCheckComplianceOrders")
-    private String etICBUCheckComplianceOrders;
+    private String etIcbuCheckComplianceOrders;
 }

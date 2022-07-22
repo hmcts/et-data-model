@@ -41,7 +41,7 @@ public class Address {
         if (!Strings.isNullOrEmpty(addressLine2)) {
             claimantAddressStr.append("<br/>" + addressLine2);
         }
-        if(!Strings.isNullOrEmpty(addressLine3)) {
+        if (!Strings.isNullOrEmpty(addressLine3)) {
             claimantAddressStr.append("<br/>" + addressLine3);
         }
         claimantAddressStr.append("<br/>" + postTown)
@@ -53,7 +53,9 @@ public class Address {
 
     private List<String> notNullOrEmptyAddress(List<String> fullAddress, List<String> attributes) {
         for (String aux : attributes) {
-            if (!isNullOrEmpty(aux)) fullAddress.add(aux);
+            if (!isNullOrEmpty(aux)) {
+                fullAddress.add(aux);
+            }
         }
         return fullAddress;
     }
