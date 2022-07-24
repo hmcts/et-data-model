@@ -37,7 +37,7 @@ public class CaseDataTest {
 
     @Test
     public void claimantFullNamesOthersTest() {
-        var claimantIndType = new ClaimantIndType();
+        ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Other");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantFirstNames("A");
@@ -48,7 +48,7 @@ public class CaseDataTest {
 
     @Test
     public void claimantFullNamesTest() {
-        var claimantIndType = new ClaimantIndType();
+        ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Mr");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantFirstNames("A");
