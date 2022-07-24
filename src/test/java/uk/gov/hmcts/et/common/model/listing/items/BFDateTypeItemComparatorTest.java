@@ -41,9 +41,9 @@ public class BFDateTypeItemComparatorTest {
 
         BFDateType firstBFDateTypeItem = bfDateTypeItems.get(0).getValue();
         assertEquals(bfDateType2.getBroughtForwardDate(), firstBFDateTypeItem.getBroughtForwardDate());
-        BFDateTypeItem secondBFDateTypeItem = bfDateTypeItems.get(1).getValue();
+        BFDateType secondBFDateTypeItem = bfDateTypeItems.get(1).getValue();
         assertEquals(bfDateType.getBroughtForwardDate(), secondBFDateTypeItem.getBroughtForwardDate());
-        BFDateTypeItem thirdBFDateTypeItem = bfDateTypeItems.get(2).getValue();
+        BFDateType thirdBFDateTypeItem = bfDateTypeItems.get(2).getValue();
         assertEquals(bfDateType3.getBroughtForwardDate(), thirdBFDateTypeItem.getBroughtForwardDate());
     }
 }
