@@ -26,17 +26,17 @@ public class RespondentSumType {
     @JsonProperty("responseNotes")
     private String responseNotes;
     @JsonProperty("response_referred_to_judge")
-    private String response_ReferredToJudge;
+    private String responseReferredToJudge;
     @JsonProperty("response_returned_from_judge")
     private String responseReturnedFromJudge;
     @JsonProperty("respondent_name")
     private String respondentName;
     @JsonProperty("respondent_ACAS_question")
-    private String respondentACASQuestion;
+    private String respondentAcasQuestion;
     @JsonProperty("respondent_ACAS")
-    private String respondentACAS;
+    private String respondentAcas;
     @JsonProperty("respondent_ACAS_no")
-    private String respondentACASNo;
+    private String respondentAcasNo;
     @JsonProperty("respondent_address")
     private Address respondentAddress;
     @JsonProperty("respondent_phone1")

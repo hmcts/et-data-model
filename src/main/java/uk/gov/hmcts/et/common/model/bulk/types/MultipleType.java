@@ -57,7 +57,7 @@ public class MultipleType {
     @JsonProperty("flag2M")
     private String flag2M;
     @JsonProperty("EQPM")
-    private String EQPM;
+    private String eqpm;
     @JsonProperty("respondentRepOrgM")
     private String respondentRepOrgM;
     @JsonProperty("claimantRepOrgM")

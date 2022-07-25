@@ -19,5 +19,6 @@ public class DynamicValueType {
         this.label = label;
     }
 
-    public DynamicValueType() {}
+    public DynamicValueType() {
+    }
 }

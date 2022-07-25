@@ -51,7 +51,7 @@ public class SearchType {
     @JsonProperty("flag2S")
     private String flag2S;
     @JsonProperty("EQPS")
-    private String EQPS;
+    private String eqps;
     @JsonProperty("respondentRepOrgS")
     private String respondentRepOrgS;
     @JsonProperty("claimantRepOrgS")

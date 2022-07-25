@@ -7,7 +7,6 @@ public class PaginatedSearchMetadata {
     private Integer totalResultsCount;
     private Integer totalPagesCount;
 
-
     public void setTotalResultsCount(Integer totalResultsCount) {
         this.totalResultsCount = totalResultsCount;
     }
