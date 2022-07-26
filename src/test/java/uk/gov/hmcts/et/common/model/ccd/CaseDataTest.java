@@ -34,9 +34,10 @@ public class CaseDataTest {
         assertEquals(caseData.getEcmCaseType(), "Single");
         assertEquals(caseData.getFeeGroupReference(), "1212");
     }
+
     @Test
     public void claimantFullNamesOthersTest() {
-        var claimantIndType = new ClaimantIndType();
+        ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Other");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantFirstNames("A");
@@ -44,9 +45,10 @@ public class CaseDataTest {
         caseData.setClaimantIndType(claimantIndType);
         assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mx A B");
     }
+
     @Test
     public void claimantFullNamesTest() {
-        var claimantIndType = new ClaimantIndType();
+        ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Mr");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantFirstNames("A");

@@ -1,12 +1,19 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'checkstyle'
 }
 
 group 'uk.gov.hmcts.reform'
 version '1.0.44'
 
 sourceCompatibility = '11.0'
+
+checkstyle {
+    maxWarnings = 0
+    toolVersion = '10.3.1'
+    getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
+}
 
 repositories {
     mavenLocal()

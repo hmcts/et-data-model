@@ -1,6 +1,10 @@
 package uk.gov.hmcts.et.common.model.multiples;
 
-public class MultipleConstants {
+public final class MultipleConstants {
+
+    private MultipleConstants() {
+        //utility class must have a private constructor
+    }
 
     public static final String CONSTRAINT_KEY = "qwer%yuiop_1234567890";
 

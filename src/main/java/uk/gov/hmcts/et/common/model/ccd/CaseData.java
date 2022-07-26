@@ -140,7 +140,7 @@ public class CaseData extends Et1CaseData {
     private String respondent;
 
     @JsonProperty("EQP")
-    private String EQP;
+    private String eqp;
     @JsonProperty("flag1")
     private String flag1;
     @JsonProperty("flag2")
@@ -210,7 +210,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("hearingStatus")
     private String hearingStatus;
     @JsonProperty("Postponed_by")
-    private String Postponed_by;
+    private String postponedBy;
     @JsonProperty("hearingRoom")
     private DynamicFixedListType hearingRoom;
     @JsonProperty("hearingClerk")
@@ -456,9 +456,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("referralToJudgeOrLOList")
     private List<String> referralToJudgeOrLOList;
     @JsonProperty("aClaimOfInterimReliefTextArea")
-    private String aClaimOfInterimReliefTextArea;
+    private String aclaimOfInterimReliefTextArea;
     @JsonProperty("aStatutoryAppealTextArea")
-    private String aStatutoryAppealTextArea;
+    private String astatutoryAppealTextArea;
     @JsonProperty("anAllegationOfCommissionOfSexualOffenceTextArea")
     private String anAllegationOfCommissionOfSexualOffenceTextArea;
     @JsonProperty("insolvencyTextArea")
@@ -482,7 +482,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("vexatiousLitigantOrderTextArea")
     private String vexatiousLitigantOrderTextArea;
     @JsonProperty("aNationalSecurityIssueTextArea")
-    private String aNationalSecurityIssueTextArea;
+    private String anationalSecurityIssueTextArea;
     @JsonProperty("nationalMultipleOrPresidentialOrderTextArea")
     private String nationalMultipleOrPresidentialOrderTextArea;
     @JsonProperty("transferToOtherRegionTextArea")
@@ -490,7 +490,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("serviceAbroadTextArea")
     private String serviceAbroadTextArea;
     @JsonProperty("aSensitiveIssueTextArea")
-    private String aSensitiveIssueTextArea;
+    private String asensitiveIssueTextArea;
     @JsonProperty("anyPotentialConflictTextArea")
     private String anyPotentialConflictTextArea;
     @JsonProperty("anotherReasonREJOrVPTextArea")
@@ -699,7 +699,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("etICHearingNotListedListForFinalHearing")
     private EtICListForFinalHearing etICHearingNotListedListForFinalHearing;
     @JsonProperty("etICHearingNotListedUDLHearing")
-    private EtICUDLHearing etICHearingNotListedUDLHearing;
+    private EtIcudlHearing etICHearingNotListedUDLHearing;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
     // ET Initial Consideration - Hearing already listed
