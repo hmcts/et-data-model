@@ -4,13 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.List;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtInitialConsiderationRule28 {
     @JsonProperty("etICRule28ClaimToBe")
-    private List<String> etICRule28ClaimToBe;
+    private String etICRule28ClaimToBe;
     @JsonProperty("etICRule28WhichPart")
     private String etICRule28WhichPart;
     @JsonProperty("etICRule28DirectionReason")
