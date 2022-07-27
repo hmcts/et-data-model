@@ -8,10 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 public class DynamicFixedListTypeTest {
 
@@ -20,7 +17,7 @@ public class DynamicFixedListTypeTest {
         DynamicFixedListType dynamicFixedListType = create(null);
         assertNull(dynamicFixedListType.getSelectedLabel());
         dynamicFixedListType = create(new DynamicValueType("code1", "label1"));
-        assertThat("label1", is(equalTo(dynamicFixedListType.getSelectedLabel())));
+        assertThat(dynamicFixedListType.getSelectedLabel(), is(equalTo("label1")));
     }
 
     @Test
@@ -28,18 +25,18 @@ public class DynamicFixedListTypeTest {
         DynamicFixedListType dynamicFixedListType = create(null);
         assertNull(dynamicFixedListType.getSelectedCode());
         dynamicFixedListType = create(new DynamicValueType("code1", "label1"));
-        assertThat("code1", is(equalTo(dynamicFixedListType.getSelectedCode())));
+        assertThat(dynamicFixedListType.getSelectedCode(), is(equalTo("code1")));
     }
 
     @Test
     public void testIsValidCodeForList() {
         DynamicFixedListType dynamicFixedListType = create(null);
-        assertTrue(dynamicFixedListType.isValidCodeForList("code1"));
-        assertTrue(dynamicFixedListType.isValidCodeForList("code2"));
-        assertTrue(dynamicFixedListType.isValidCodeForList("code3"));
-        assertFalse(dynamicFixedListType.isValidCodeForList("code4"));
-        assertFalse(dynamicFixedListType.isValidCodeForList(null));
-        assertFalse(dynamicFixedListType.isValidCodeForList(""));
+        assertThat(dynamicFixedListType.isValidCodeForList("code1"), is(true));
+        assertThat(dynamicFixedListType.isValidCodeForList("code2"), is(true));
+        assertThat(dynamicFixedListType.isValidCodeForList("code3"), is(true));
+        assertThat(dynamicFixedListType.isValidCodeForList("code4"), is(true));
+        assertThat(dynamicFixedListType.isValidCodeForList(null), is(false));
+        assertThat(dynamicFixedListType.isValidCodeForList(""), is(false));
     }
 
     @Test
@@ -68,7 +65,7 @@ public class DynamicFixedListTypeTest {
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
         verifyListItems(dynamicFixedListType);
         assertThat(dynamicFixedListType.getListItems(), hasSize(4));
-        assertEquals(original.getValue(), dynamicFixedListType.getValue());
+        assertThat(dynamicFixedListType.getValue(), is(equalTo(original.getValue())));
     }
 
     @Test
@@ -78,8 +75,8 @@ public class DynamicFixedListTypeTest {
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
         verifyListItems(dynamicFixedListType);
         assertThat(dynamicFixedListType.getListItems(), hasSize(3));
-        assertThat("code2", is(equalTo(dynamicFixedListType.getValue().getCode())));
-        assertThat("Code 2", is(equalTo(dynamicFixedListType.getValue().getLabel())));
+        assertThat(dynamicFixedListType.getValue().getCode(), is(equalTo("code2")));
+        assertThat(dynamicFixedListType.getValue().getLabel(), is(equalTo("Code 2")));
     }
 
     @Test
@@ -88,16 +85,17 @@ public class DynamicFixedListTypeTest {
         DynamicFixedListType original = DynamicFixedListType.of(new DynamicValueType("code2", "Code X"));
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
         verifyListItems(dynamicFixedListType);
-        assertEquals("code2", dynamicFixedListType.getValue().getCode());
-        assertEquals("Code 2", dynamicFixedListType.getValue().getLabel());
+        assertThat(dynamicFixedListType.getValue().getCode(), is(equalTo("code2")));
+        assertThat(dynamicFixedListType.getValue().getLabel(), is(equalTo("Code 2")));
     }
 
     private DynamicFixedListType create(DynamicValueType selectedValue) {
         DynamicFixedListType dynamicFixedListType = new DynamicFixedListType();
         dynamicFixedListType.setListItems(List.of(
-                new DynamicValueType("code1", "label1"),
-                new DynamicValueType("code2", "label2"),
-                new DynamicValueType("code3", "label3")));
+            new DynamicValueType("code1", "label1"),
+            new DynamicValueType("code2", "label2"),
+            new DynamicValueType("code3", "label3"),
+            new DynamicValueType("code4", "label4")));
         dynamicFixedListType.setValue(selectedValue);
         return dynamicFixedListType;
     }
@@ -109,11 +107,11 @@ public class DynamicFixedListTypeTest {
     }
 
     private void verifyListItems(DynamicFixedListType dynamicFixedListType) {
-        assertEquals("code1", dynamicFixedListType.getListItems().get(0).getCode());
-        assertEquals("Code 1", dynamicFixedListType.getListItems().get(0).getLabel());
-        assertEquals("code2", dynamicFixedListType.getListItems().get(1).getCode());
-        assertEquals("Code 2", dynamicFixedListType.getListItems().get(1).getLabel());
-        assertEquals("code3", dynamicFixedListType.getListItems().get(2).getCode());
-        assertEquals("Code 3", dynamicFixedListType.getListItems().get(2).getLabel());
+        assertThat(dynamicFixedListType.getListItems().get(0).getCode(), is(equalTo("code1")));
+        assertThat(dynamicFixedListType.getListItems().get(0).getLabel(), is(equalTo("Code 1")));
+        assertThat(dynamicFixedListType.getListItems().get(1).getCode(), is(equalTo("code2")));
+        assertThat(dynamicFixedListType.getListItems().get(1).getLabel(), is(equalTo("Code 2")));
+        assertThat(dynamicFixedListType.getListItems().get(2).getCode(), is(equalTo("code3")));
+        assertThat(dynamicFixedListType.getListItems().get(2).getLabel(), is(equalTo("Code 3")));
     }
 }
