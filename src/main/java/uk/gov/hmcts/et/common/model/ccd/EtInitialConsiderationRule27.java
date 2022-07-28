@@ -17,6 +17,8 @@ public class EtInitialConsiderationRule27 {
     private List<String> etICRule27Direction;
     @JsonProperty("etICRule27DirectionReason")
     private String etICRule27DirectionReason;
+    @JsonProperty("etICRule27DirectionNoJurisdictionReason")
+    private String etICRule27DirectionNoJurisdictionReason;
     @JsonProperty("etICRule27NumberOfDays")
     private String etICRule27NumberOfDays;
 }
