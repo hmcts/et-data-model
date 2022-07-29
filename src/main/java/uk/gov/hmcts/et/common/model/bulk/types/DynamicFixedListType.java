@@ -13,22 +13,29 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Builds DynamicFixedListType instance. It offers complementary static factory methods for setting
- * the selected element(i.e. value) and list items fields of the instance.
+ * Organizes/structures data that populates a single-select list, i.e. select one item from
+ * a drop-down selection list when rendered in a user interface.
+ *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class DynamicFixedListType {
+    /**
+     * The currently selected item(key-value/code-label pair).
+     */
 
     private DynamicValueType value;
+    /**
+     * The list of items to select from.
+     */
     @JsonProperty("list_items")
     private List<DynamicValueType> listItems;
 
     /**
-     * Creates DynamicFixedListType instance and set only the value field.
+     * Creates an instance and sets only the currently selected item.
      *
-     * @param value contains the selected value DynamicValueType instance
-     * @return DynamicFixedListType instance with only value field set
+     * @param value the item to set as currently selected
+     * @return an instance with only currently selected field set
      */
     public static DynamicFixedListType of(DynamicValueType value) {
         Objects.requireNonNull(value);
@@ -38,10 +45,10 @@ public class DynamicFixedListType {
     }
 
     /**
-     * Creates DynamicFixedListType instance and set only the listItems field.
+     * Creates an instance and sets only the list of items to select from.
      *
-     * @param listItems contains the source list of DynamicValueType instances
-     * @return a DynamicFixedListType instance with only the listItems field set
+     * @param listItems items to select one item from
+     * @return an instance with only the list of items field set
      */
     public static DynamicFixedListType from(List<DynamicValueType> listItems) {
         DynamicFixedListType dynamicFixedListType = new DynamicFixedListType();
@@ -50,11 +57,13 @@ public class DynamicFixedListType {
     }
 
     /**
-     * Creates DynamicFixedListType instance and sets both the value and listItems fields.
+     * Creates an instance and sets both the list of items to select from and the currently selected item.
+     * It sets currently selected element from the original parameter. Depending on the parameters,
+     * this might involve copying, newly adding, or correcting the currently selected item details(i.e. code & label).
      *
-     * @param selectListItems list items that may or may not contain the selected value
-     * @param original a DynamicFixedListType instance that contains existing selected value
-     * @return DynamicFixedListType instance with selected value and list items set
+     * @param selectListItems list of items that may or may not contain the currently selected value
+     * @param original a source of selected value to set in the new dynamic fixed list instance it creates
+     * @return an instance with the currently selected item and list of items set
      */
     public static DynamicFixedListType from(List<DynamicValueType> selectListItems, DynamicFixedListType original) {
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(selectListItems);
@@ -65,7 +74,8 @@ public class DynamicFixedListType {
 
         Optional<DynamicValueType> selectedValue = DynamicFixedListType.getSelectedValue(original);
         if (selectedValue.isPresent()) {
-            //when selectListItems contains the original value - full match, i.e. code & label
+            // when the list of items to select from contains the selected item from the original fixed list -
+            // full match, i.e. code & label
             List<DynamicValueType> originalCodeAndLabelItems = getListItemsWithOriginalCodeAndLabel(selectListItems,
                 selectedValue.get());
             if (!originalCodeAndLabelItems.isEmpty()) {
@@ -73,7 +83,8 @@ public class DynamicFixedListType {
                 return dynamicFixedListType;
             }
 
-            //when selectListItems contains the original value - partial match, i.e. code only
+            // when the list of items to select from contains the selected item from the original fixed list -
+            // partial match, i.e. code only
             List<DynamicValueType> listWithOnlyOriginalCode = getListItemsWithOnlyOriginalCode(selectListItems,
                 selectedValue.get());
             if (!listWithOnlyOriginalCode.isEmpty()) {
@@ -82,7 +93,7 @@ public class DynamicFixedListType {
                 return dynamicFixedListType;
             }
 
-            //when selectListItems does not contain the original value
+            // when the list of items to select from does not contain the selected item from the original fixed list
             boolean itemsListHasNoOriginalValue = dynamicFixedListType.listItems.stream()
                 .noneMatch(i -> i.getCode().equals(selectedValue.get().getCode()));
             if (itemsListHasNoOriginalValue) {
@@ -123,34 +134,29 @@ public class DynamicFixedListType {
     }
 
     /**
-     * A one argument constructor used to set value field of DynamicFixedListType instance by
-     * creating a DynamicValueType instance.
+     * Creates an instance and sets the currently selected item to the value passed in.
      */
     public DynamicFixedListType(String value) {
         this.value = new DynamicValueType(value, value);
     }
 
-    /**
-     * No argument constructor used by the static factory methods('of' and 'from', for example) to create
-     * an instance of this type/class.
-     */
     public DynamicFixedListType() {
     }
 
     /**
-     * Extracts the selected value of a DynamicFixedListType instance, if one exists.
-     * If not, returns an optional empty object.
+     * Extracts the currently selected item, if one exists, from the dynamic fixed list.
+     * If not, it returns an optional empty object.
      *
-     * @param dynamicFixedListType an instance to check for selected value field
-     * @return an optional DynamicValueType type
+     * @param dynamicFixedListType a source dynamic fixed list that may contain the currently selected item
+     * @return an optional instance that contains the selected item
      */
     public static Optional<DynamicValueType> getSelectedValue(DynamicFixedListType dynamicFixedListType) {
         return dynamicFixedListType != null ? Optional.ofNullable(dynamicFixedListType.getValue()) : Optional.empty();
     }
 
     /**
-     * Extracts the selected Label of the child DynamicValueType selected value field of the
-     * DynamicFixedListType instance, if it is set. If not, returns an optional empty String object.
+     * Extracts the label(i.e. text that gets displayed in user interface) from the currently selected
+     * item, if it is set. If not, it returns an optional empty String object.
      *
      * @param dynamicFixedListType an instance to check for selected value field
      * @return an optional String type
@@ -172,13 +178,15 @@ public class DynamicFixedListType {
     }
 
     /**
-     * Validates the specified code by checking if it matches the codes of list items.
-     * @param code contains code to check in code list
-     * @return result indicating if a match is found or not
+     * Validates the specified code of a selected item by checking if it exists(matches the code field of an item)
+     * in the list of selectable items. If no match is found, the specified code is then invalid.
+     *
+     * @param code a text value to search for in the list of items by matching with the code field of each item
+     * @return confirmation if the code is valid or not
      */
     public boolean isValidCodeForList(String code) {
         if (CollectionUtils.isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
-            for (var dynamicValueType : listItems) {
+            for (DynamicValueType dynamicValueType : listItems) {
                 if (dynamicValueType.getCode().equals(code)) {
                     return true;
                 }
