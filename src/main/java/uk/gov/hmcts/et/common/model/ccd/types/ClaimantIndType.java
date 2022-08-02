@@ -16,6 +16,8 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 @Data
 public class ClaimantIndType {
 
+    @JsonProperty("claimant_preferred_title")
+    private String claimantPreferredTitle;
     @JsonProperty("claimant_title1")
     private String claimantTitle;
     @JsonProperty("claimant_title_other")
@@ -30,6 +32,8 @@ public class ClaimantIndType {
     private String claimantGender;
     @JsonProperty("claimant_sex")
     private String claimantSex;
+    @JsonProperty("claimant_gender_identity_same")
+    private String claimantGenderIdentitySame;
     @JsonProperty("claimant_gender_identity")
     private String claimantGenderIdentity;
 
