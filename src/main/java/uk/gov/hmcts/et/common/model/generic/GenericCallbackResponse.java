@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown = true)
+@SuppressWarnings("checkstyle:MemberName")
 public class GenericCallbackResponse {
 
     private List<String> errors;
