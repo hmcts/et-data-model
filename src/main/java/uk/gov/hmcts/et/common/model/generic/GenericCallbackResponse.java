@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown = true)
+// Suppression required as the confirmation_header, body and siginificant_item need to be in this format
 @SuppressWarnings("checkstyle:MemberName")
 public class GenericCallbackResponse {
 
