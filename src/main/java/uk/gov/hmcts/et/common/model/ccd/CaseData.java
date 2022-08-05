@@ -316,6 +316,8 @@ public class CaseData extends Et1CaseData {
     private String hearingDetailsHearingNotes2;
 
     // ET1 Vetting
+    @JsonProperty("trackType")
+    private String trackType;
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
     // ET1 Vetting - Can we serve the claim?
@@ -863,4 +865,24 @@ public class CaseData extends Et1CaseData {
     private String et3ClaimantAndRespondentAddresses;
     @JsonProperty("et3EmailLinkToAcas")
     private String et3EmailLinkToAcas;
+
+    //Referral
+    @JsonProperty("referralHearingDetails")
+    private String referralHearingDetails;
+    @JsonProperty("referCaseTo")
+    private String referCaseTo;
+    @JsonProperty("referentEmail")
+    private String referentEmail;
+    @JsonProperty("isUrgent")
+    private String isUrgent;
+    @JsonProperty("referralSubject")
+    private String referralSubject;
+    @JsonProperty("referralSubjectSpecify")
+    private String referralSubjectSpecify;
+    @JsonProperty("referralDetails")
+    private String referralDetails;
+    @JsonProperty("referralDocument")
+    private String referralDocument;
+    @JsonProperty("referralInstruction")
+    private String referralInstruction;
 }
