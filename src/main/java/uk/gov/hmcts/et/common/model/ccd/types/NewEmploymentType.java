@@ -8,9 +8,12 @@ import lombok.Data;
 @Data
 public class NewEmploymentType {
 
+    @JsonProperty("new_job")
+    private String newJob;
     @JsonProperty("newly_employed_from")
     private String newlyEmployedFrom;
     @JsonProperty("new_pay_before_tax")
     private String newPayBeforeTax;
-
+    @JsonProperty("new_job_pay_interval")
+    private String newJobPayInterval;
 }
