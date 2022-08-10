@@ -21,7 +21,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
-import uk.gov.hmcts.et.common.model.ccd.types.ReferralType;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
