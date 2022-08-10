@@ -12,6 +12,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
@@ -867,12 +868,15 @@ public class CaseData extends Et1CaseData {
     private String et3EmailLinkToAcas;
 
     //Referral
+    @JsonProperty("referralCollection")
+    private List<ReferralTypeItem> referralCollection;
     @JsonProperty("referralHearingDetails")
     private String referralHearingDetails;
+    //Referral Type
     @JsonProperty("referCaseTo")
     private String referCaseTo;
-    @JsonProperty("referentEmail")
-    private String referentEmail;
+    @JsonProperty("referrerEmail")
+    private String referrerEmail;
     @JsonProperty("isUrgent")
     private String isUrgent;
     @JsonProperty("referralSubject")
@@ -882,7 +886,11 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("referralDetails")
     private String referralDetails;
     @JsonProperty("referralDocument")
-    private String referralDocument;
+    private List<DocumentTypeItem> referralDocument;
     @JsonProperty("referralInstruction")
     private String referralInstruction;
+    @JsonProperty("referredBy")
+    private String referredBy;
+    @JsonProperty("referralDate")
+    private String referralDate;
 }
