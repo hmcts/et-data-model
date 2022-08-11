@@ -10,6 +10,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class ReferralType {
+    @JsonProperty("referralNumber")
+    private String referralNumber;
     @JsonProperty("referCaseTo")
     private String referCaseTo;
     @JsonProperty("referrerEmail")
@@ -30,5 +32,7 @@ public class ReferralType {
     private String referredBy;
     @JsonProperty("referralDate")
     private String referralDate;
+    @JsonProperty("referralStatus")
+    private String referralStatus;
 }
 
