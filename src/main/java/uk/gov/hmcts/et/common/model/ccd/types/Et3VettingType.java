@@ -121,4 +121,6 @@ public class Et3VettingType {
     // ET3 Final notes
     @JsonProperty("et3AdditionalInformation")
     private String et3AdditionalInformation;
+    @JsonProperty("et3VettingDocument")
+    private UploadedDocumentType et3VettingDocument;
 }
