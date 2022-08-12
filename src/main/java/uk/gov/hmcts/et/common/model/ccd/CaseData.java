@@ -317,7 +317,8 @@ public class CaseData extends Et1CaseData {
     private String hearingDetailsHearingNotes2;
 
     // ET1 Vetting
-
+    @JsonProperty("trackType")
+    private String trackType;
     @JsonProperty("et1VettingDocument")
     private UploadedDocumentType et1VettingDocument;
     @JsonProperty("et1VettingBeforeYouStart")
