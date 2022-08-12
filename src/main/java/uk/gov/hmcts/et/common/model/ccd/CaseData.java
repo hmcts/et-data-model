@@ -873,6 +873,8 @@ public class CaseData extends Et1CaseData {
     private List<ReferralTypeItem> referralCollection;
     @JsonProperty("referralHearingDetails")
     private String referralHearingDetails;
+    @JsonProperty("selectReferralToReply")
+    private DynamicFixedListType selectReferralToReply;
     //Referral Type
     @JsonProperty("referCaseTo")
     private String referCaseTo;
