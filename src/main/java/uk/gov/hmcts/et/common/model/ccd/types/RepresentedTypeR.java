@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.Address;
+import uk.gov.hmcts.et.common.model.ccd.Organisation;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -34,5 +35,8 @@ public class RepresentedTypeR {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
+    @JsonProperty("organisation")
+    private Organisation organisation;
+
 
 }

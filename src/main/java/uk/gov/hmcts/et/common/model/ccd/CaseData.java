@@ -21,7 +21,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
-import uk.gov.hmcts.et.common.model.ccd.types.ReferralType;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
@@ -320,6 +319,8 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("trackType")
     private String trackType;
+    @JsonProperty("et1VettingDocument")
+    private UploadedDocumentType et1VettingDocument;
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
     // ET1 Vetting - Can we serve the claim?
@@ -659,6 +660,9 @@ public class CaseData extends Et1CaseData {
     private String et3AdditionalInformation;
 
     // ET Initial Consideration
+
+    @JsonProperty("etInitialConsiderationDocument")
+    private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
     private String etInitialConsiderationRespondent;
     @JsonProperty("etInitialConsiderationHearing")
