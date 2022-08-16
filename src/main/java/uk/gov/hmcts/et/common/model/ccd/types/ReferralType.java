@@ -12,10 +12,12 @@ import java.util.List;
 public class ReferralType {
     @JsonProperty("referralNumber")
     private String referralNumber;
+    @JsonProperty("referralHearingDate")
+    private String referralHearingDate;
     @JsonProperty("referCaseTo")
     private String referCaseTo;
-    @JsonProperty("referrerEmail")
-    private String referrerEmail;
+    @JsonProperty("referentEmail")
+    private String referentEmail;
     @JsonProperty("isUrgent")
     private String isUrgent;
     @JsonProperty("referralSubject")

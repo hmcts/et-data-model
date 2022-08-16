@@ -882,8 +882,8 @@ public class CaseData extends Et1CaseData {
     //Referral Type
     @JsonProperty("referCaseTo")
     private String referCaseTo;
-    @JsonProperty("referrerEmail")
-    private String referrerEmail;
+    @JsonProperty("referentEmail")
+    private String referentEmail;
     @JsonProperty("isUrgent")
     private String isUrgent;
     @JsonProperty("referralSubject")
