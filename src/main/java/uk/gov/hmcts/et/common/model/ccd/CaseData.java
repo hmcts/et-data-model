@@ -318,6 +318,8 @@ public class CaseData extends Et1CaseData {
     // ET1 Vetting
     @JsonProperty("et1VettingBeforeYouStart")
     private String et1VettingBeforeYouStart;
+    @JsonProperty("et1VettingDocument")
+    private UploadedDocumentType et1VettingDocument;
     // ET1 Vetting - Can we serve the claim?
     @JsonProperty("et1VettingClaimantDetailsMarkUp")
     private String et1VettingClaimantDetailsMarkUp;
@@ -730,7 +732,8 @@ public class CaseData extends Et1CaseData {
     private EtInitialConsiderationRule27 etInitialConsiderationRule27;
     @JsonProperty("etInitialConsiderationRule28")
     private EtInitialConsiderationRule28 etInitialConsiderationRule28;
-
+    @JsonProperty("etInitialConsiderationDocument")
+    private UploadedDocumentType etInitialConsiderationDocument;
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
     private String et3ResponseShowInset;
