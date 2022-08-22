@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 public class EtInitialConsiderationRule27 {
     @JsonProperty("etICRule27ClaimToBe")
-    private List<String> etICRule27ClaimToBe;
+    private String etICRule27ClaimToBe;
     @JsonProperty("etICRule27WhichPart")
     private String etICRule27WhichPart;
     @JsonProperty("etICRule27Direction")
