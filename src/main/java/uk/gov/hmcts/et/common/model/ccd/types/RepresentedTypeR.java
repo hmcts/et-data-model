@@ -37,6 +37,8 @@ public class RepresentedTypeR {
     private String representativePreference;
     @JsonProperty("organisation")
     private Organisation organisation;
+    @JsonProperty("myHmctsYesNo")
+    private String myHmctsYesNo;
 
 
 }
