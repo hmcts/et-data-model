@@ -877,8 +877,8 @@ public class CaseData extends Et1CaseData {
     private List<ReferralTypeItem> referralCollection;
     @JsonProperty("referralHearingDetails")
     private String referralHearingDetails;
-    @JsonProperty("selectReferralToReply")
-    private DynamicFixedListType selectReferralToReply;
+    @JsonProperty("selectReferral")
+    private DynamicFixedListType selectReferral;
     //Referral Type
     @JsonProperty("referCaseTo")
     private String referCaseTo;
@@ -900,4 +900,35 @@ public class CaseData extends Et1CaseData {
     private String referredBy;
     @JsonProperty("referralDate")
     private String referralDate;
+
+    //Referral Reply
+    @JsonProperty("hearingAndReferralDetails")
+    private String hearingAndReferralDetails;
+    @JsonProperty("directionTo")
+    private String directionTo;
+    @JsonProperty("replyToEmailAddress")
+    private String replyToEmailAddress;
+    @JsonProperty("isUrgentReply")
+    private String isUrgentReply;
+    @JsonProperty("directionDetails")
+    private String directionDetails;
+    @JsonProperty("replyDocument")
+    private List<DocumentTypeItem> replyDocument;
+    @JsonProperty("replyGeneralNotes")
+    private String replyGeneralNotes;
+    @JsonProperty("replyTo")
+    private String replyTo;
+    @JsonProperty("replyDetails")
+    private String replyDetails;
+    @JsonProperty("isJudge")
+    private String isJudge;
+
+    //Close Referral
+    @JsonProperty("closeReferralHearingDetails")
+    private String closeReferralHearingDetails;
+    @JsonProperty("confirmCloseReferral")
+    private List<String> confirmCloseReferral;
+    @JsonProperty("closeReferralGeneralNotes")
+    private String closeReferralGeneralNotes;
+
 }
