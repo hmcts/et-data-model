@@ -34,6 +34,8 @@ public class Et1CaseData {
     private String caseSource;
     @JsonProperty("claimantRepresentedQuestion")
     private String claimantRepresentedQuestion;
+    @JsonProperty("claimantWorkAddressQuestion")
+    private String claimantWorkAddressQuestion;
     @JsonProperty("jurCodesCollection")
     private List<JurCodesTypeItem> jurCodesCollection;
     @JsonProperty("claimantIndType")
