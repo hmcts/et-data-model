@@ -857,8 +857,6 @@ public class CaseData extends Et1CaseData {
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
     private UploadedDocumentType et3ResponseRespondentSupportDocument;
-    @JsonProperty("et3ResponseDocument")
-    private UploadedDocumentType et3ResponseDocument;
 
     // ET3 Notification
     @JsonProperty("et3NotificationDocCollection")
