@@ -73,8 +73,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("feeGroupReference")
     private String feeGroupReference;
-    @JsonProperty("claimantWorkAddressQuestion")
-    private String claimantWorkAddressQuestion;
     @JsonProperty("claimantWorkAddressQRespondent")
     private DynamicFixedListType claimantWorkAddressQRespondent;
     @JsonProperty("repCollection")
