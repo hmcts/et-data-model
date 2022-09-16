@@ -15,7 +15,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
-import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinks;
+import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
 
 import java.util.List;
 
@@ -69,5 +69,5 @@ public class Et1CaseData {
 
     // Citizen hub
     @JsonProperty("hubLinks")
-    private HubLinks hubLinks;
+    private HubLinksStatuses hubLinksStatuses;
 }

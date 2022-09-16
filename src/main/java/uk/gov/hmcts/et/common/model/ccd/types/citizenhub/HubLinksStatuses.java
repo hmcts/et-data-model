@@ -6,25 +6,25 @@ import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class HubLinks {
+public class HubLinksStatuses {
     @JsonProperty("personalDetails")
-    private HubLink personalDetails;
+    private String personalDetails;
     @JsonProperty("et1ClaimForm")
-    private HubLink et1ClaimForm;
+    private String et1ClaimForm;
     @JsonProperty("respondentResponse")
-    private HubLink respondentResponse;
+    private String respondentResponse;
     @JsonProperty("hearingDetails")
-    private HubLink hearingDetails;
+    private String hearingDetails;
     @JsonProperty("requestsAndApplications")
-    private HubLink requestsAndApplications;
+    private String requestsAndApplications;
     @JsonProperty("respondentApplications")
-    private HubLink respondentApplications;
+    private String respondentApplications;
     @JsonProperty("contactTribunal")
-    private HubLink contactTribunal;
+    private String contactTribunal;
     @JsonProperty("tribunalOrders")
-    private HubLink tribunalOrders;
+    private String tribunalOrders;
     @JsonProperty("tribunalJudgements")
-    private HubLink tribunalJudgements;
+    private String tribunalJudgements;
     @JsonProperty("documents")
-    private HubLink documents;
+    private String documents;
 }
