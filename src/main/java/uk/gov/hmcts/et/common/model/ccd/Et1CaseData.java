@@ -68,6 +68,6 @@ public class Et1CaseData {
     private TaskListCheckType claimantTaskListChecks;
 
     // Citizen hub
-    @JsonProperty("hubLinks")
+    @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
 }
