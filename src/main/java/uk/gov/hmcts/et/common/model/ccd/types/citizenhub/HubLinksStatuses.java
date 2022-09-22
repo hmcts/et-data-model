@@ -27,4 +27,13 @@ public class HubLinksStatuses {
     private String tribunalJudgements;
     @JsonProperty("documents")
     private String documents;
+    @JsonProperty("alertViewClaimRejection")
+    private String alertViewClaimRejection;
+    @JsonProperty("alertViewClaimAcknowledged")
+    private String alertViewClaimAcknowledged;
+    @JsonProperty("alertViewResponseRejection")
+    private String alertViewResponseRejection;
+    @JsonProperty("alertViewResponseAcknowledged")
+    private String alertViewResponseAcknowledged;
+
 }
