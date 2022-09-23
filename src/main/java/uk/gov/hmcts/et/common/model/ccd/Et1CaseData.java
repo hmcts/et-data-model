@@ -66,6 +66,8 @@ public class Et1CaseData {
     private ClaimantHearingPreference claimantHearingPreference;
     @JsonProperty("claimantTaskListChecks")
     private TaskListCheckType claimantTaskListChecks;
+    @JsonProperty("receiptDate")
+    private String receiptDate;
 
     // Citizen hub
     @JsonProperty("hubLinksStatuses")

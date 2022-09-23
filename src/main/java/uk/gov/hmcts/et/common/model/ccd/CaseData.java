@@ -65,8 +65,6 @@ public class CaseData extends Et1CaseData {
     private String claimantCompany;
     @JsonProperty("preAcceptCase")
     private CasePreAcceptType preAcceptCase;
-    @JsonProperty("receiptDate")
-    private String receiptDate;
 
     @JsonProperty("claimServedDate")
     private String claimServedDate;
