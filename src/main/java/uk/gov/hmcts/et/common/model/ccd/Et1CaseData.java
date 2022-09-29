@@ -28,6 +28,8 @@ import java.util.List;
 public class Et1CaseData {
     @JsonProperty("typeOfClaim")
     private List<String> typeOfClaim;
+    @JsonProperty("typesOfClaim")
+    private List<String> typesOfClaim;
     @JsonProperty("caseType")
     private String ecmCaseType;
     @JsonProperty("caseSource")
