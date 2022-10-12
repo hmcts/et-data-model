@@ -927,4 +927,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("closeReferralGeneralNotes")
     private String closeReferralGeneralNotes;
 
+    // Upload Documents Rejection
+    @JsonProperty("caseRejectedEmailSent")
+    private String caseRejectedEmailSent;
 }
