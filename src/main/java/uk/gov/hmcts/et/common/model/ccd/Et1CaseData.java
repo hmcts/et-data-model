@@ -15,7 +15,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
-import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinks;
+import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
 
 import java.util.List;
 
@@ -28,6 +28,8 @@ import java.util.List;
 public class Et1CaseData {
     @JsonProperty("typeOfClaim")
     private List<String> typeOfClaim;
+    @JsonProperty("typesOfClaim")
+    private List<String> typesOfClaim;
     @JsonProperty("caseType")
     private String ecmCaseType;
     @JsonProperty("caseSource")
@@ -36,6 +38,8 @@ public class Et1CaseData {
     private String claimantRepresentedQuestion;
     @JsonProperty("claimantWorkAddressQuestion")
     private String claimantWorkAddressQuestion;
+    @JsonProperty("ClaimantPcqId")
+    private String claimantPcqId;
     @JsonProperty("jurCodesCollection")
     private List<JurCodesTypeItem> jurCodesCollection;
     @JsonProperty("claimantIndType")
@@ -64,8 +68,10 @@ public class Et1CaseData {
     private ClaimantHearingPreference claimantHearingPreference;
     @JsonProperty("claimantTaskListChecks")
     private TaskListCheckType claimantTaskListChecks;
+    @JsonProperty("receiptDate")
+    private String receiptDate;
 
     // Citizen hub
-    @JsonProperty("hubLinks")
-    private HubLinks hubLinks;
+    @JsonProperty("hubLinksStatuses")
+    private HubLinksStatuses hubLinksStatuses;
 }
