@@ -21,6 +21,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
+import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
@@ -930,4 +931,26 @@ public class CaseData extends Et1CaseData {
     // Upload Documents Rejection
     @JsonProperty("caseRejectedEmailSent")
     private String caseRejectedEmailSent;
+
+    // Respondent Organisation Policies
+    @JsonProperty("respondentOrganisationPolicy0")
+    private OrganisationPolicy respondentOrganisationPolicy0;
+    @JsonProperty("respondentOrganisationPolicy1")
+    private OrganisationPolicy respondentOrganisationPolicy1;
+    @JsonProperty("respondentOrganisationPolicy2")
+    private OrganisationPolicy respondentOrganisationPolicy2;
+    @JsonProperty("respondentOrganisationPolicy3")
+    private OrganisationPolicy respondentOrganisationPolicy3;
+    @JsonProperty("respondentOrganisationPolicy4")
+    private OrganisationPolicy respondentOrganisationPolicy4;
+    @JsonProperty("respondentOrganisationPolicy5")
+    private OrganisationPolicy respondentOrganisationPolicy5;
+    @JsonProperty("respondentOrganisationPolicy6")
+    private OrganisationPolicy respondentOrganisationPolicy6;
+    @JsonProperty("respondentOrganisationPolicy7")
+    private OrganisationPolicy respondentOrganisationPolicy7;
+    @JsonProperty("respondentOrganisationPolicy8")
+    private OrganisationPolicy respondentOrganisationPolicy8;
+    @JsonProperty("respondentOrganisationPolicy9")
+    private OrganisationPolicy respondentOrganisationPolicy9;
 }

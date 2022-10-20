@@ -2,12 +2,14 @@ package uk.gov.hmcts.et.common.model.ccd.types;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.Address;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
+@Builder
 public class RepresentedTypeR {
 
     @JsonProperty("dynamic_resp_rep_name")
@@ -34,8 +36,8 @@ public class RepresentedTypeR {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
-    @JsonProperty("respondentOrganisationPolicy")
-    private OrganisationPolicy respondentOrganisationPolicy;
+    @JsonProperty("respondentOrganisation")
+    private Organisation respondentOrganisation;
     @JsonProperty("myHmctsYesNo")
     private String myHmctsYesNo;
 }
