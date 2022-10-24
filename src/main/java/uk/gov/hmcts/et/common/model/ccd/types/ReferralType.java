@@ -38,7 +38,7 @@ public class ReferralType {
     private String referralStatus;
     @JsonProperty("referralReplyCollection")
     private List<ReferralReplyTypeItem> referralReplyCollection;
-    @JsonProperty("ReferralSummaryPdf")
+    @JsonProperty("referralSummaryPdf")
     private UploadedDocumentType referralSummaryPdf;
 }
 
