@@ -28,4 +28,10 @@ public class CostsType {
     private String wastedCostAwardedAgainst;
     @JsonProperty("wasted_cost_amount_awarded")
     private String wastedCostAmountAwarded;
+    @JsonProperty("pro_bono_costs_awarded_to")
+    private String proBonoCostsAwardedTo;
+    @JsonProperty("pro_bono_costs_awarded_against")
+    private String proBonoCostsAwardedAgainst;
+    @JsonProperty("pro_bono_costs_amount_awarded")
+    private String proBonoCostsAmountAwarded;
 }
