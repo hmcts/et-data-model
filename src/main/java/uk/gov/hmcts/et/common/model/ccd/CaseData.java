@@ -953,4 +953,7 @@ public class CaseData extends Et1CaseData {
     private OrganisationPolicy respondentOrganisationPolicy8;
     @JsonProperty("respondentOrganisationPolicy9")
     private OrganisationPolicy respondentOrganisationPolicy9;
+
+    @JsonProperty("suggestedHearingVenues")
+    private DynamicFixedListType suggestedHearingVenues;
 }
