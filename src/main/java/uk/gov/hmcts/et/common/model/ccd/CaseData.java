@@ -18,6 +18,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
+import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
@@ -974,4 +975,6 @@ public class CaseData extends Et1CaseData {
     private NoticeOfChangeAnswers noticeOfChangeAnswers8;
     @JsonProperty("noticeOfChangeAnswers9")
     private NoticeOfChangeAnswers noticeOfChangeAnswers9;
+    @JsonProperty("changeOrganisationRequestField")
+    private ChangeOrganisationRequest changeOrganisationRequestField;
 }
