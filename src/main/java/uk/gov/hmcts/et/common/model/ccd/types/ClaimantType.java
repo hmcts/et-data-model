@@ -21,4 +21,6 @@ public class ClaimantType {
     private String claimantContactPreference;
     @JsonProperty("claimant_contact_language")
     private String claimantContactLanguage;
+    @JsonProperty("claimant_hearing_language")
+    private String claimantHearingLanguage;
 }
