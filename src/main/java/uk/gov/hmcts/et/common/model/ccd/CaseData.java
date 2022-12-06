@@ -14,7 +14,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
-import uk.gov.hmcts.et.common.model.ccd.items.RespondentTseGiveDetailsTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.RespondentTseTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
@@ -963,10 +963,17 @@ public class CaseData extends Et1CaseData {
     private String resTseSelectApplication;
     @JsonProperty("resTseVariableContent")
     private String resTseVariableContent;
-    @JsonProperty("resTseGiveDetails")
-    private List<RespondentTseGiveDetailsTypeItem> resTseGiveDetails;
+    @JsonProperty("resTseGuidanceLabel1")
+    private String resTseGuidanceLabel1;
+    @JsonProperty("resTseDocument1")
+    private String resTseDocument1;
+    @JsonProperty("resTseTextBox1")
+    private String resTseTextBox1;
+
     @JsonProperty("resTseCopyToOtherPartyYesOrNo")
     private String resTseCopyToOtherPartyYesOrNo;
     @JsonProperty("resTseCopyToOtherPartyTextArea")
     private String resTseCopyToOtherPartyTextArea;
+    @JsonProperty("resTseCollection")
+    private List<RespondentTseTypeItem> resTseCollection;
 }
