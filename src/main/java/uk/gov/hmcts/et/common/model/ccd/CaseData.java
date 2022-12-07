@@ -964,51 +964,51 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("resTseVariableContent")
     private String resTseVariableContent;
     @JsonProperty("resTseDocument1")
-    private String resTseDocument1;
+    private UploadedDocumentType resTseDocument1;
     @JsonProperty("resTseTextBox1")
     private String resTseTextBox1;
     @JsonProperty("resTseDocument2")
-    private String resTseDocument2;
+    private UploadedDocumentType resTseDocument2;
     @JsonProperty("resTseTextBox2")
     private String resTseTextBox2;
     @JsonProperty("resTseDocument3")
-    private String resTseDocument3;
+    private UploadedDocumentType resTseDocument3;
     @JsonProperty("resTseTextBox3")
     private String resTseTextBox3;
     @JsonProperty("resTseDocument4")
-    private String resTseDocument4;
+    private UploadedDocumentType resTseDocument4;
     @JsonProperty("resTseTextBox4")
     private String resTseTextBox4;
     @JsonProperty("resTseDocument5")
-    private String resTseDocument5;
+    private UploadedDocumentType resTseDocument5;
     @JsonProperty("resTseTextBox5")
     private String resTseTextBox5;
     @JsonProperty("resTseDocument6")
-    private String resTseDocument6;
+    private UploadedDocumentType resTseDocument6;
     @JsonProperty("resTseTextBox6")
     private String resTseTextBox6;
     @JsonProperty("resTseDocument7")
-    private String resTseDocument7;
+    private UploadedDocumentType resTseDocument7;
     @JsonProperty("resTseTextBox7")
     private String resTseTextBox7;
     @JsonProperty("resTseDocument8")
-    private String resTseDocument8;
+    private UploadedDocumentType resTseDocument8;
     @JsonProperty("resTseTextBox8")
     private String resTseTextBox8;
     @JsonProperty("resTseDocument9")
-    private String resTseDocument9;
+    private UploadedDocumentType resTseDocument9;
     @JsonProperty("resTseTextBox9")
     private String resTseTextBox9;
     @JsonProperty("resTseDocument10")
-    private String resTseDocument10;
+    private UploadedDocumentType resTseDocument10;
     @JsonProperty("resTseTextBox10")
     private String resTseTextBox10;
     @JsonProperty("resTseDocument11")
-    private String resTseDocument11;
+    private UploadedDocumentType resTseDocument11;
     @JsonProperty("resTseTextBox11")
     private String resTseTextBox11;
     @JsonProperty("resTseDocument12")
-    private String resTseDocument12;
+    private UploadedDocumentType resTseDocument12;
     @JsonProperty("resTseTextBox12")
     private String resTseTextBox12;
     @JsonProperty("resTseCopyToOtherPartyYesOrNo")
