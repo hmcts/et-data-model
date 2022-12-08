@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.extern.jackson.Jacksonized;
 
-import java.util.List;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @Jacksonized
@@ -24,7 +22,4 @@ public class OrganisationPolicy {
 
     @JsonProperty("PrepopulateToUsersOrganisation")
     private String prepopulateToUsersOrganisation;
-
-    @JsonProperty("PreviousOrganisations")
-    private List<Organisation> previousOrganisations;
 }
