@@ -10,11 +10,11 @@ import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
-import uk.gov.hmcts.et.common.model.ccd.items.RespondentTseTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
@@ -1015,6 +1015,6 @@ public class CaseData extends Et1CaseData {
     private String resTseCopyToOtherPartyYesOrNo;
     @JsonProperty("resTseCopyToOtherPartyTextArea")
     private String resTseCopyToOtherPartyTextArea;
-    @JsonProperty("resTseCollection")
-    private List<RespondentTseTypeItem> resTseCollection;
+    @JsonProperty("genericTseApplicationCollection")
+    private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
 }
