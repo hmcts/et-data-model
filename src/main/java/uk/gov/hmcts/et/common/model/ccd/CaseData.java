@@ -1017,4 +1017,16 @@ public class CaseData extends Et1CaseData {
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
+    @JsonProperty("tseRespondSelectApplication")
+    private DynamicFixedListType tseRespondSelectApplication;
+    @JsonProperty("tseResponseIntro")
+    private String tseResponseIntro;
+    @JsonProperty("tseResponseTable")
+    private String tseResponseTable;
+    @JsonProperty("tseResponseText")
+    private String tseResponseText;
+    @JsonProperty("tseResponseHasSupportingMaterial")
+    private String tseResponseHasSupportingMaterial;
+    @JsonProperty("tseResponseSupportingMaterial")
+    private List<DocumentTypeItem> tseResponseSupportingMaterial;
 }
