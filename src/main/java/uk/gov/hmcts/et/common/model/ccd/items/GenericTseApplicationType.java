@@ -25,9 +25,17 @@ public class GenericTseApplicationType {
     private String copyToOtherPartyYesOrNo;
     @JsonProperty("copyToOtherPartyText")
     private String copyToOtherPartyText;
+    @JsonProperty("status")
+    private String status;
 
+//    @JsonProperty("adminReply")
+//    private TseApplicationAdminReplyType adminReply;
+//
+//    // Only applicable to applications created by Respondent
 //    @JsonProperty("claimantReply")
-//    private ClaimantApplicationResponseType claimantReply;
+//    private TseApplicationClaimantReplyType claimantReply;
+//
+//    // Only applicable to applications created by Claimant
 //    @JsonProperty("respondentReply")
-//    private RespondentApplicationResponseType respondentReply;
+//    private TseApplicationRespondentReplyType respondentReply;
 }

@@ -1017,4 +1017,8 @@ public class CaseData extends Et1CaseData {
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
+
+    //Respondent TSE display table
+    @JsonProperty("resTseTableMarkUp")
+    private String resTseTableMarkUp;
 }
