@@ -20,4 +20,8 @@ public class TseRespondentReplyType {
   private String hasSupportingMaterial;
   @JsonProperty("supportingMaterial")
   private List<DocumentTypeItem> supportingMaterial;
+  @JsonProperty("copyToOtherParty")
+  private String copyToOtherParty;
+  @JsonProperty("copyNoGiveDetails")
+  private String copyNoGiveDetails;
 }

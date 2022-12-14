@@ -1029,4 +1029,8 @@ public class CaseData extends Et1CaseData {
     private String tseResponseHasSupportingMaterial;
     @JsonProperty("tseResponseSupportingMaterial")
     private List<DocumentTypeItem> tseResponseSupportingMaterial;
+    @JsonProperty("tseResponseCopyToOtherParty")
+    private String tseResponseCopyToOtherParty;
+    @JsonProperty("tseResponseCopyNoGiveDetails")
+    private String tseResponseCopyNoGiveDetails;
 }
