@@ -1019,6 +1019,8 @@ public class CaseData extends Et1CaseData {
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
     @JsonProperty("tseRespondSelectApplication")
     private DynamicFixedListType tseRespondSelectApplication;
+    @JsonProperty("tseAdminSelectApplication")
+    private DynamicFixedListType tseAdminSelectApplication;
     @JsonProperty("tseResponseIntro")
     private String tseResponseIntro;
     @JsonProperty("tseResponseTable")
