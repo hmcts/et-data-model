@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class GenericTseApplicationType {
@@ -27,6 +29,10 @@ public class GenericTseApplicationType {
     private String copyToOtherPartyText;
     @JsonProperty("status")
     private String status;
+    @JsonProperty("due")
+    private String due;
+    @JsonProperty("responsesCount")
+    private String responsesCount;
 
 //    @JsonProperty("adminReply")
 //    private TseApplicationAdminReplyType adminReply;
@@ -35,7 +41,6 @@ public class GenericTseApplicationType {
 //    @JsonProperty("claimantReply")
 //    private TseApplicationClaimantReplyType claimantReply;
 //
-//    // Only applicable to applications created by Claimant
-//    @JsonProperty("respondentReply")
-//    private TseApplicationRespondentReplyType respondentReply;
+    @JsonProperty("respondentReply")
+    private List<TseRespondentReplyTypeItem> respondentReply;
 }
