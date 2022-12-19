@@ -1017,10 +1017,40 @@ public class CaseData extends Et1CaseData {
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
-    @JsonProperty("tseRespondSelectApplication")
-    private DynamicFixedListType tseRespondSelectApplication;
+
+    //TSE Admin Record a Decision
     @JsonProperty("tseAdminSelectApplication")
     private DynamicFixedListType tseAdminSelectApplication;
+    @JsonProperty("tseAdminTableMarkUp")
+    private String tseAdminTableMarkUp;
+    @JsonProperty("tseAdminEnterNotificationTitle")
+    private String tseAdminEnterNotificationTitle;
+    @JsonProperty("tseAdminDecision")
+    private String tseAdminDecision;
+    @JsonProperty("tseAdminDecisionDetails")
+    private String tseAdminDecisionDetails;
+    @JsonProperty("tseAdminTypeOfDecision")
+    private String tseAdminTypeOfDecision;
+    @JsonProperty("tseAdminIsResponseRequired")
+    private String tseAdminIsResponseRequired;
+    @JsonProperty("tseAdminSelectPartyRespond")
+    private String tseAdminSelectPartyRespond;
+    @JsonProperty("tseAdminAdditionalInformation")
+    private String tseAdminAdditionalInformation;
+    @JsonProperty("tseAdminResponseRequiredYesDoc")
+    private String tseAdminResponseRequiredYesDoc;
+    @JsonProperty("tseAdminResponseRequiredNoDoc")
+    private String tseAdminResponseRequiredNoDoc;
+    @JsonProperty("tseAdminDecisionMadeBy")
+    private String tseAdminDecisionMadeBy;
+    @JsonProperty("tseAdminDecisionMadeByFullName")
+    private String tseAdminDecisionMadeByFullName;
+    @JsonProperty("tseAdminSelectPartyNotify")
+    private String tseAdminSelectPartyNotify;
+
+    //TSE Response
+    @JsonProperty("tseRespondSelectApplication")
+    private DynamicFixedListType tseRespondSelectApplication;
     @JsonProperty("tseResponseIntro")
     private String tseResponseIntro;
     @JsonProperty("tseResponseTable")
@@ -1035,4 +1065,5 @@ public class CaseData extends Et1CaseData {
     private String tseResponseCopyToOtherParty;
     @JsonProperty("tseResponseCopyNoGiveDetails")
     private String tseResponseCopyNoGiveDetails;
+
 }
