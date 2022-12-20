@@ -1018,7 +1018,53 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("genericTseApplicationCollection")
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
 
-    //Respondent TSE display table
+    //TSE Admin Record a Decision
+    @JsonProperty("tseAdminSelectApplication")
+    private DynamicFixedListType tseAdminSelectApplication;
+    @JsonProperty("tseAdminTableMarkUp")
+    private String tseAdminTableMarkUp;
+    @JsonProperty("tseAdminEnterNotificationTitle")
+    private String tseAdminEnterNotificationTitle;
+    @JsonProperty("tseAdminDecision")
+    private String tseAdminDecision;
+    @JsonProperty("tseAdminDecisionDetails")
+    private String tseAdminDecisionDetails;
+    @JsonProperty("tseAdminTypeOfDecision")
+    private String tseAdminTypeOfDecision;
+    @JsonProperty("tseAdminIsResponseRequired")
+    private String tseAdminIsResponseRequired;
+    @JsonProperty("tseAdminSelectPartyRespond")
+    private String tseAdminSelectPartyRespond;
+    @JsonProperty("tseAdminAdditionalInformation")
+    private String tseAdminAdditionalInformation;
+    @JsonProperty("tseAdminResponseRequiredYesDoc")
+    private String tseAdminResponseRequiredYesDoc;
+    @JsonProperty("tseAdminResponseRequiredNoDoc")
+    private String tseAdminResponseRequiredNoDoc;
+    @JsonProperty("tseAdminDecisionMadeBy")
+    private String tseAdminDecisionMadeBy;
+    @JsonProperty("tseAdminDecisionMadeByFullName")
+    private String tseAdminDecisionMadeByFullName;
+    @JsonProperty("tseAdminSelectPartyNotify")
+    private String tseAdminSelectPartyNotify;
+
+    //TSE Response
+    @JsonProperty("tseRespondSelectApplication")
+    private DynamicFixedListType tseRespondSelectApplication;
+    @JsonProperty("tseResponseIntro")
+    private String tseResponseIntro;
+    @JsonProperty("tseResponseTable")
+    private String tseResponseTable;
+    @JsonProperty("tseResponseText")
+    private String tseResponseText;
+    @JsonProperty("tseResponseHasSupportingMaterial")
+    private String tseResponseHasSupportingMaterial;
+    @JsonProperty("tseResponseSupportingMaterial")
+    private List<DocumentTypeItem> tseResponseSupportingMaterial;
+    @JsonProperty("tseResponseCopyToOtherParty")
+    private String tseResponseCopyToOtherParty;
+    @JsonProperty("tseResponseCopyNoGiveDetails")
+    private String tseResponseCopyNoGiveDetails;
     @JsonProperty("resTseTableMarkUp")
     private String resTseTableMarkUp;
     @JsonProperty("tseRespondSelectApplication")

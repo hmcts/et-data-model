@@ -27,6 +27,10 @@ public class GenericTseApplicationType {
     private String copyToOtherPartyYesOrNo;
     @JsonProperty("copyToOtherPartyText")
     private String copyToOtherPartyText;
+    @JsonProperty("due")
+    private String due;
+    @JsonProperty("responsesCount")
+    private String responsesCount;
     @JsonProperty("status")
     private String status;
     @JsonProperty("due")
