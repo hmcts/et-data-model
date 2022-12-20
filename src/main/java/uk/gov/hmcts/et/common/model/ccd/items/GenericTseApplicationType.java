@@ -33,10 +33,6 @@ public class GenericTseApplicationType {
     private String responsesCount;
     @JsonProperty("status")
     private String status;
-    @JsonProperty("due")
-    private String due;
-    @JsonProperty("responsesCount")
-    private String responsesCount;
 
 //    @JsonProperty("adminReply")
 //    private TseApplicationAdminReplyType adminReply;
