@@ -1065,5 +1065,7 @@ public class CaseData extends Et1CaseData {
     private String tseResponseCopyToOtherParty;
     @JsonProperty("tseResponseCopyNoGiveDetails")
     private String tseResponseCopyNoGiveDetails;
+    @JsonProperty("resTseTableMarkUp")
+    private String resTseTableMarkUp;
 
 }

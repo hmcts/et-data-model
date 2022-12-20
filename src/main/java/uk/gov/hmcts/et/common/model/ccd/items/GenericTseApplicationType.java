@@ -31,11 +31,17 @@ public class GenericTseApplicationType {
     private String due;
     @JsonProperty("responsesCount")
     private String responsesCount;
-
-//    @JsonProperty("claimantReply")
-//    private ClaimantApplicationResponseType claimantReply;
-    @JsonProperty("respondentReply")
-    private List<TseRespondentReplyTypeItem> respondentReply;
     @JsonProperty("status")
     private String status;
+
+//    @JsonProperty("adminReply")
+//    private TseApplicationAdminReplyType adminReply;
+//
+//    // Only applicable to applications created by Respondent
+//    @JsonProperty("claimantReply")
+//    private ClaimantApplicationResponseType claimantReply;
+
+    @JsonProperty("respondentReply")
+    private List<TseRespondentReplyTypeItem> respondentReply;
+
 }
