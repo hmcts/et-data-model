@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd.items;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecisionType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
 import java.util.List;
@@ -43,4 +44,8 @@ public class GenericTseApplicationType {
 //
     @JsonProperty("respondentReply")
     private List<TseRespondentReplyTypeItem> respondentReply;
+
+    @JsonProperty("adminDecision")
+    private List<TseAdminRecordDecisionTypeItem> adminDecision;
+
 }
