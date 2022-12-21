@@ -19,9 +19,11 @@ import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
+import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
+import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -954,9 +956,30 @@ public class CaseData extends Et1CaseData {
     private OrganisationPolicy respondentOrganisationPolicy8;
     @JsonProperty("respondentOrganisationPolicy9")
     private OrganisationPolicy respondentOrganisationPolicy9;
-
     @JsonProperty("suggestedHearingVenues")
     private DynamicFixedListType suggestedHearingVenues;
+    @JsonProperty("noticeOfChangeAnswers0")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers0;
+    @JsonProperty("noticeOfChangeAnswers1")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers1;
+    @JsonProperty("noticeOfChangeAnswers2")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers2;
+    @JsonProperty("noticeOfChangeAnswers3")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers3;
+    @JsonProperty("noticeOfChangeAnswers4")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers4;
+    @JsonProperty("noticeOfChangeAnswers5")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers5;
+    @JsonProperty("noticeOfChangeAnswers6")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers6;
+    @JsonProperty("noticeOfChangeAnswers7")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers7;
+    @JsonProperty("noticeOfChangeAnswers8")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers8;
+    @JsonProperty("noticeOfChangeAnswers9")
+    private NoticeOfChangeAnswers noticeOfChangeAnswers9;
+    @JsonProperty("changeOrganisationRequestField")
+    private ChangeOrganisationRequest changeOrganisationRequestField;
 
     //Respondent Tell Something Else
     @JsonProperty("resTseSelectApplication")
