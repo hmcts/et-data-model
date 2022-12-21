@@ -12,7 +12,7 @@ import java.util.List;
 public class GenericTseApplicationType {
 
     @JsonProperty("number")
-    private String number;
+    private String number; // Unique, incremented value for each application
     @JsonProperty("type")
     private String type; // Amend details
     @JsonProperty("applicant")
