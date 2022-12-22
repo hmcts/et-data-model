@@ -1061,9 +1061,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminAdditionalInformation")
     private String tseAdminAdditionalInformation;
     @JsonProperty("tseAdminResponseRequiredYesDoc")
-    private String tseAdminResponseRequiredYesDoc;
+    private UploadedDocumentType tseAdminResponseRequiredYesDoc;
     @JsonProperty("tseAdminResponseRequiredNoDoc")
-    private String tseAdminResponseRequiredNoDoc;
+    private UploadedDocumentType tseAdminResponseRequiredNoDoc;
     @JsonProperty("tseAdminDecisionMadeBy")
     private String tseAdminDecisionMadeBy;
     @JsonProperty("tseAdminDecisionMadeByFullName")
