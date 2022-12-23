@@ -12,6 +12,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 public class TseAdminRecordDecisionType {
 
+    @JsonProperty("date")
+    private String date;
     @JsonProperty("enterNotificationTitle")
     private String enterNotificationTitle;
     @JsonProperty("decision")
