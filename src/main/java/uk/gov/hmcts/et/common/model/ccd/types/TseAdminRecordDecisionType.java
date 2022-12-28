@@ -28,10 +28,8 @@ public class TseAdminRecordDecisionType {
     private String selectPartyRespond;
     @JsonProperty("additionalInformation")
     private String additionalInformation;
-    @JsonProperty("responseRequiredYesDoc")
-    private UploadedDocumentType responseRequiredYesDoc;
-    @JsonProperty("responseRequiredNoDoc")
-    private UploadedDocumentType responseRequiredNoDoc;
+    @JsonProperty("responseRequiredDoc")
+    private UploadedDocumentType responseRequiredDoc;
     @JsonProperty("decisionMadeBy")
     private String decisionMadeBy;
     @JsonProperty("decisionMadeByFullName")
