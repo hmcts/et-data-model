@@ -5,17 +5,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRespondApplicationType;
+import uk.gov.hmcts.et.common.model.ccd.types.TseAdminReplyType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseAdminRespondApplicationTypeItem {
+public class TseAdminReplyTypeItem {
 
     @JsonProperty("id")
     private String id;
     @JsonProperty("value")
-    private TseAdminRespondApplicationType value;
+    private TseAdminReplyType value;
 
 }

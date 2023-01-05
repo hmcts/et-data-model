@@ -34,9 +34,6 @@ public class GenericTseApplicationType {
     @JsonProperty("status")
     private String status;
 
-//    @JsonProperty("adminReply")
-//    private TseApplicationAdminReplyType adminReply;
-//
 //    // Only applicable to applications created by Respondent
 //    @JsonProperty("claimantReply")
 //    private TseApplicationClaimantReplyType claimantReply;
@@ -47,7 +44,7 @@ public class GenericTseApplicationType {
     @JsonProperty("adminDecision")
     private List<TseAdminRecordDecisionTypeItem> adminDecision;
 
-    @JsonProperty("adminRespondApplication")
-    private List<TseAdminRespondApplicationTypeItem> adminRespondApplication;
+    @JsonProperty("adminReply")
+    private List<TseAdminReplyTypeItem> adminReply;
 
 }
