@@ -47,4 +47,7 @@ public class GenericTseApplicationType {
     @JsonProperty("adminDecision")
     private List<TseAdminRecordDecisionTypeItem> adminDecision;
 
+    @JsonProperty("adminRespondApplication")
+    private List<TseAdminRespondApplicationTypeItem> adminRespondApplication;
+
 }
