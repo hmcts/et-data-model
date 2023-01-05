@@ -14,20 +14,20 @@ import java.util.List;
 @SuperBuilder
 @NoArgsConstructor
 public class TseRespondentReplyType {
-  @JsonProperty("from")
-  private String from;
-  @JsonProperty("date")
-  private String date;
-  @JsonProperty("response")
-  private String response;
-  @JsonProperty("hasSupportingMaterial")
-  private String hasSupportingMaterial;
-  @JsonProperty("supportingMaterial")
-  private List<DocumentTypeItem> supportingMaterial;
-  @JsonProperty("copyToOtherParty")
-  private String copyToOtherParty;
-  @JsonProperty("copyNoGiveDetails")
-  private String copyNoGiveDetails;
-  @JsonProperty("summaryPdf")
-  private UploadedDocumentType summaryPdf;
+    @JsonProperty("from")
+    private String from;
+    @JsonProperty("date")
+    private String date;
+    @JsonProperty("response")
+    private String response;
+    @JsonProperty("hasSupportingMaterial")
+    private String hasSupportingMaterial;
+    @JsonProperty("supportingMaterial")
+    private List<DocumentTypeItem> supportingMaterial;
+    @JsonProperty("copyToOtherParty")
+    private String copyToOtherParty;
+    @JsonProperty("copyNoGiveDetails")
+    private String copyNoGiveDetails;
+    @JsonProperty("summaryPdf")
+    private UploadedDocumentType summaryPdf;
 }
