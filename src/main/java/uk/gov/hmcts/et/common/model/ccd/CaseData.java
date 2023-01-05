@@ -1092,6 +1092,8 @@ public class CaseData extends Et1CaseData {
     private String resTseTableMarkUp;
 
     //TSE Admin Respond to an application
+    @JsonProperty("tseAdmReplyTableMarkUp")
+    private String tseAdmReplyTableMarkUp;
     @JsonProperty("tseAdmReplyEnterResponseTitle")
     private String tseAdmReplyEnterResponseTitle;
     @JsonProperty("tseAdmReplyAdditionalInformation")
