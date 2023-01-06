@@ -1094,28 +1094,28 @@ public class CaseData extends Et1CaseData {
     //TSE Admin Respond to an application
     @JsonProperty("tseAdmReplyTableMarkUp")
     private String tseAdmReplyTableMarkUp;
-    @JsonProperty("tseAdmRespondEnterResponseTitle")
-    private String tseAdmRespondEnterResponseTitle;
-    @JsonProperty("tseAdmRespondAdditionalInformation")
-    private String tseAdmRespondAdditionalInformation;
-    @JsonProperty("tseAdmRespondAddDocumentMandatory")
-    private UploadedDocumentType tseAdmRespondAddDocumentMandatory;
-    @JsonProperty("tseAdmRespondAddDocumentOptional")
-    private UploadedDocumentType tseAdmRespondAddDocumentOptional;
-    @JsonProperty("tseAdmRespondIsCmoOrRequest")
-    private String tseAdmRespondIsCmoOrRequest;
-    @JsonProperty("tseAdmRespondCmoMadeBy")
-    private String tseAdmRespondCmoMadeBy;
-    @JsonProperty("tseAdmRespondRequestMadeBy")
-    private String tseAdmRespondRequestMadeBy;
-    @JsonProperty("tseAdmRespondEnterFullName")
-    private String tseAdmRespondEnterFullName;
-    @JsonProperty("tseAdmRespondIsResponseRequired")
-    private String tseAdmRespondIsResponseRequired;
-    @JsonProperty("tseAdmRespondSelectPartyRespond")
-    private String tseAdmRespondSelectPartyRespond;
-    @JsonProperty("tseAdmRespondSelectPartyNotify")
-    private String tseAdmRespondSelectPartyNotify;
+    @JsonProperty("tseAdmReplyEnterResponseTitle")
+    private String tseAdmReplyEnterResponseTitle;
+    @JsonProperty("tseAdmReplyAdditionalInformation")
+    private String tseAdmReplyAdditionalInformation;
+    @JsonProperty("tseAdmReplyAddDocumentMandatory")
+    private UploadedDocumentType tseAdmReplyAddDocumentMandatory;
+    @JsonProperty("tseAdmReplyAddDocumentOptional")
+    private UploadedDocumentType tseAdmReplyAddDocumentOptional;
+    @JsonProperty("tseAdmReplyIsCmoOrRequest")
+    private String tseAdmReplyIsCmoOrRequest;
+    @JsonProperty("tseAdmReplyCmoMadeBy")
+    private String tseAdmReplyCmoMadeBy;
+    @JsonProperty("tseAdmReplyRequestMadeBy")
+    private String tseAdmReplyRequestMadeBy;
+    @JsonProperty("tseAdmReplyEnterFullName")
+    private String tseAdmReplyEnterFullName;
+    @JsonProperty("tseAdmReplyIsResponseRequired")
+    private String tseAdmReplyIsResponseRequired;
+    @JsonProperty("tseAdmReplySelectPartyRespond")
+    private String tseAdmReplySelectPartyRespond;
+    @JsonProperty("tseAdmReplySelectPartyNotify")
+    private String tseAdmReplySelectPartyNotify;
 
     // TSe Admin Close an application
     @JsonProperty("tseAdminCloseApplicationTable")
