@@ -11,9 +11,17 @@ import uk.gov.hmcts.et.common.model.ccd.types.TseRespondentReplyType;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseRespondentReplyTypeItem {
+public class TseRespondentReplyTypeItem implements TseReplyTypeItem {
     @JsonProperty("id")
     private String id;
     @JsonProperty("value")
     private TseRespondentReplyType value;
+
+    public String getDate() {
+        return this.value.getDate();
+    }
+
+    public TseRespondentReplyType getValue() {
+        return this.value;
+    }
 }

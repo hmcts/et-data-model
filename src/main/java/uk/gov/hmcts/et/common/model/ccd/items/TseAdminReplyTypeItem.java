@@ -6,16 +6,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.ccd.types.TseAdminReplyType;
+import uk.gov.hmcts.et.common.model.ccd.types.TseReplyType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseAdminReplyTypeItem {
+public class TseAdminReplyTypeItem implements TseReplyTypeItem {
 
     @JsonProperty("id")
     private String id;
     @JsonProperty("value")
     private TseAdminReplyType value;
+
+    public String getDate() {
+        return this.value.getDate();
+    }
+
+    public TseAdminReplyType getValue() {
+        return this.value;
+    }
 
 }

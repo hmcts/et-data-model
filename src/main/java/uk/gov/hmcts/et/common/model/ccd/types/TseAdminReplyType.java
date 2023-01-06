@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd.types;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
@@ -10,7 +11,8 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseAdminReplyType {
+@EqualsAndHashCode(callSuper = false)
+public class TseAdminReplyType extends TseReplyType {
 
     @JsonProperty("date")
     private String date;
