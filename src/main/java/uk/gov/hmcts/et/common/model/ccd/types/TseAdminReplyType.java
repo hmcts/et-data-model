@@ -12,7 +12,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class TseAdminReplyType extends TseReplyType {
+public class TseAdminReplyType {
 
     @JsonProperty("date")
     private String date;

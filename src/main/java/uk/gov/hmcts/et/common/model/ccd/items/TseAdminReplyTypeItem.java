@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.ccd.types.TseAdminReplyType;
-import uk.gov.hmcts.et.common.model.ccd.types.TseReplyType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
