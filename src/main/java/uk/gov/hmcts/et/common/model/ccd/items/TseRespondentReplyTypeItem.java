@@ -20,8 +20,4 @@ public class TseRespondentReplyTypeItem implements TseReplyTypeItem {
     public String getDate() {
         return this.value.getDate();
     }
-
-    public TseRespondentReplyType getValue() {
-        return this.value;
-    }
 }

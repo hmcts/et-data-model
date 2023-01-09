@@ -22,8 +22,4 @@ public class TseAdminReplyTypeItem implements TseReplyTypeItem {
         return this.value.getDate();
     }
 
-    public TseAdminReplyType getValue() {
-        return this.value;
-    }
-
 }

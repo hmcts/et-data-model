@@ -41,10 +41,10 @@ public class GenericTseApplicationType {
     @JsonProperty("respondentReply")
     private List<TseRespondentReplyTypeItem> respondentReply;
 
-    @JsonProperty("adminDecision")
-    private List<TseAdminRecordDecisionTypeItem> adminDecision;
-
     @JsonProperty("adminReply")
     private List<TseAdminReplyTypeItem> adminReply;
+
+    @JsonProperty("adminDecision")
+    private List<TseAdminRecordDecisionTypeItem> adminDecision;
 
 }
