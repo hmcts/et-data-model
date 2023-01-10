@@ -1098,10 +1098,8 @@ public class CaseData extends Et1CaseData {
     private String tseAdmReplyEnterResponseTitle;
     @JsonProperty("tseAdmReplyAdditionalInformation")
     private String tseAdmReplyAdditionalInformation;
-    @JsonProperty("tseAdmReplyAddDocumentMandatory")
-    private UploadedDocumentType tseAdmReplyAddDocumentMandatory;
-    @JsonProperty("tseAdmReplyAddDocumentOptional")
-    private UploadedDocumentType tseAdmReplyAddDocumentOptional;
+    @JsonProperty("tseAdmReplyAddDocument")
+    private UploadedDocumentType tseAdmReplyAddDocument;
     @JsonProperty("tseAdmReplyIsCmoOrRequest")
     private String tseAdmReplyIsCmoOrRequest;
     @JsonProperty("tseAdmReplyCmoMadeBy")
