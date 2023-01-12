@@ -249,6 +249,8 @@ public class CaseData extends Et1CaseData {
     private String linkedCaseCT;
     @JsonProperty("ecmOfficeCT")
     private String ecmOfficeCT;
+    @JsonProperty("assignOffice")
+    private DynamicFixedListType assignOffice;
 
     @JsonProperty("stateAPI")
     private String stateAPI;
