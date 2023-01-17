@@ -15,8 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 public class TseRespondType {
 
-    @JsonProperty("dateTime")
-    private String dateTime;
+    @JsonProperty("date")
+    private String date;
     @JsonProperty("from")
     private String from;
 
