@@ -9,7 +9,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 @Data
 public class ClaimantTse {
 
-    @JsonProperty("numberOfSelectedLabels")
+    @JsonProperty("contactApplicationType")
     private String contactApplicationType;
     @JsonProperty("contactApplicationText")
     private String contactApplicationText;
