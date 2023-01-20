@@ -2,8 +2,10 @@ package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
@@ -37,6 +39,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
 public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalCorrespondenceAddress")
     private Address tribunalCorrespondenceAddress;
