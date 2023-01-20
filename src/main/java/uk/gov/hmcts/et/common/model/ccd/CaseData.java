@@ -39,7 +39,6 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
 @NoArgsConstructor
 public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalCorrespondenceAddress")
