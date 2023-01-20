@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
+import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
@@ -981,4 +982,9 @@ public class CaseData extends Et1CaseData {
     private NoticeOfChangeAnswers noticeOfChangeAnswers9;
     @JsonProperty("changeOrganisationRequestField")
     private ChangeOrganisationRequest changeOrganisationRequestField;
+
+    @JsonProperty("bundleConfiguration")
+    private String bundleConfiguration;
+    @JsonProperty("caseBundles")
+    private List<Bundle> caseBundles;
 }
