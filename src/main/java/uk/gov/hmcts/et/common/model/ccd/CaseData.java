@@ -40,7 +40,6 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
 public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalCorrespondenceAddress")
     private Address tribunalCorrespondenceAddress;
