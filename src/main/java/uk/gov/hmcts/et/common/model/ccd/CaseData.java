@@ -1134,4 +1134,6 @@ public class CaseData extends Et1CaseData {
     private String pseRespondentOrdReqResponseText;
     @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
     private String pseRespondentOrdReqHasSupportingMaterial;
+    @JsonProperty("pseRespondentOrdReqUploadDocument")
+    private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
 }
