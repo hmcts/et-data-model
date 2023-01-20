@@ -1,4 +1,4 @@
-package uk.gov.hmcts.et.common.model.bundle;
+package uk.gov.hmcts.et.common.model.ccd.bundle;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

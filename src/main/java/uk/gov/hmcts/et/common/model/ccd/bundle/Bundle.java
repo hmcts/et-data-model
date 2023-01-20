@@ -1,4 +1,4 @@
-package uk.gov.hmcts.et.common.model.bundle;
+package uk.gov.hmcts.et.common.model.ccd.bundle;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -9,11 +9,12 @@ import lombok.Value;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Value
 @Builder(toBuilder = true)
-public class BundleSubfolder {
-    private BundleSubfolderDetails value;
+public class Bundle {
+    private BundleDetails value;
 
     @JsonCreator
-    public BundleSubfolder(@JsonProperty("value") BundleSubfolderDetails value) {
+    public Bundle(@JsonProperty("value") BundleDetails value) {
         this.value = value;
     }
+
 }
