@@ -13,4 +13,10 @@ import lombok.extern.jackson.Jacksonized;
 public class NoticeOfChangeAnswers {
     @JsonProperty("respondentName")
     private final String respondentName;
+
+    @JsonProperty("claimantFirstName")
+    private final String claimantFirstName;
+    
+    @JsonProperty("claimantLastName")
+    private final String claimantLastName;
 }
