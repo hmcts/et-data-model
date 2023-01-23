@@ -15,4 +15,8 @@ public class ClaimantTse {
     private String contactApplicationText;
     @JsonProperty("contactApplicationFile")
     private UploadedDocumentType contactApplicationFile;
+    @JsonProperty("copyCorrespondence")
+    private String copyCorrespondence;
+    @JsonProperty("noCopyReason")
+    private String noCopyReason;
 }
