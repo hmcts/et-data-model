@@ -1125,7 +1125,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
 
-    // Provide Something Else to tribunal - Respondent
+    // Provide Something Else to tribunal - Respondent - Respond to an order or request from the tribunal
     @JsonProperty("pseRespondentSelectOrderOrRequest")
     private DynamicFixedListType pseRespondentSelectOrderOrRequest;
     @JsonProperty("pseRespondentOrdReqTableMarkUp")
@@ -1136,4 +1136,9 @@ public class CaseData extends Et1CaseData {
     private String pseRespondentOrdReqHasSupportingMaterial;
     @JsonProperty("pseRespondentOrdReqUploadDocument")
     private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
+
+    // Provide Something Else to tribunal - Respondent - View a judgment, order or notification
+    @JsonProperty("pseRespondentSelectJudgmentOrderNotification")
+    private DynamicFixedListType pseRespondentSelectJudgmentOrderNotification;
+
 }
