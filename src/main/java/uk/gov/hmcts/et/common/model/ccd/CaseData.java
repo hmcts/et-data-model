@@ -27,6 +27,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -982,6 +983,10 @@ public class CaseData extends Et1CaseData {
     private NoticeOfChangeAnswers noticeOfChangeAnswers9;
     @JsonProperty("changeOrganisationRequestField")
     private ChangeOrganisationRequest changeOrganisationRequestField;
+
+    // Claimant TSE
+    @JsonProperty("claimantTse")
+    private ClaimantTse claimantTse;
 
     //Respondent Tell Something Else
     @JsonProperty("resTseSelectApplication")
