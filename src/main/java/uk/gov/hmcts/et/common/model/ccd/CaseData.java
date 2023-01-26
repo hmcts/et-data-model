@@ -10,6 +10,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
@@ -26,6 +27,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -249,6 +251,8 @@ public class CaseData extends Et1CaseData {
     private String linkedCaseCT;
     @JsonProperty("ecmOfficeCT")
     private String ecmOfficeCT;
+    @JsonProperty("assignOffice")
+    private DynamicFixedListType assignOffice;
 
     @JsonProperty("stateAPI")
     private String stateAPI;
@@ -979,4 +983,150 @@ public class CaseData extends Et1CaseData {
     private NoticeOfChangeAnswers noticeOfChangeAnswers9;
     @JsonProperty("changeOrganisationRequestField")
     private ChangeOrganisationRequest changeOrganisationRequestField;
+
+    // Claimant TSE
+    @JsonProperty("claimantTse")
+    private ClaimantTse claimantTse;
+
+    //Respondent Tell Something Else
+    @JsonProperty("resTseSelectApplication")
+    private String resTseSelectApplication;
+    @JsonProperty("resTseVariableContent")
+    private String resTseVariableContent;
+    @JsonProperty("resTseDocument1")
+    private UploadedDocumentType resTseDocument1;
+    @JsonProperty("resTseTextBox1")
+    private String resTseTextBox1;
+    @JsonProperty("resTseDocument2")
+    private UploadedDocumentType resTseDocument2;
+    @JsonProperty("resTseTextBox2")
+    private String resTseTextBox2;
+    @JsonProperty("resTseDocument3")
+    private UploadedDocumentType resTseDocument3;
+    @JsonProperty("resTseTextBox3")
+    private String resTseTextBox3;
+    @JsonProperty("resTseDocument4")
+    private UploadedDocumentType resTseDocument4;
+    @JsonProperty("resTseTextBox4")
+    private String resTseTextBox4;
+    @JsonProperty("resTseDocument5")
+    private UploadedDocumentType resTseDocument5;
+    @JsonProperty("resTseTextBox5")
+    private String resTseTextBox5;
+    @JsonProperty("resTseDocument6")
+    private UploadedDocumentType resTseDocument6;
+    @JsonProperty("resTseTextBox6")
+    private String resTseTextBox6;
+    @JsonProperty("resTseDocument7")
+    private UploadedDocumentType resTseDocument7;
+    @JsonProperty("resTseTextBox7")
+    private String resTseTextBox7;
+    @JsonProperty("resTseDocument8")
+    private UploadedDocumentType resTseDocument8;
+    @JsonProperty("resTseTextBox8")
+    private String resTseTextBox8;
+    @JsonProperty("resTseDocument9")
+    private UploadedDocumentType resTseDocument9;
+    @JsonProperty("resTseTextBox9")
+    private String resTseTextBox9;
+    @JsonProperty("resTseDocument10")
+    private UploadedDocumentType resTseDocument10;
+    @JsonProperty("resTseTextBox10")
+    private String resTseTextBox10;
+    @JsonProperty("resTseDocument11")
+    private UploadedDocumentType resTseDocument11;
+    @JsonProperty("resTseTextBox11")
+    private String resTseTextBox11;
+    @JsonProperty("resTseDocument12")
+    private UploadedDocumentType resTseDocument12;
+    @JsonProperty("resTseTextBox12")
+    private String resTseTextBox12;
+    @JsonProperty("resTseCopyToOtherPartyYesOrNo")
+    private String resTseCopyToOtherPartyYesOrNo;
+    @JsonProperty("resTseCopyToOtherPartyTextArea")
+    private String resTseCopyToOtherPartyTextArea;
+    @JsonProperty("genericTseApplicationCollection")
+    private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
+
+    //TSE Admin Record a Decision
+    @JsonProperty("tseAdminSelectApplication")
+    private DynamicFixedListType tseAdminSelectApplication;
+    @JsonProperty("tseAdminTableMarkUp")
+    private String tseAdminTableMarkUp;
+    @JsonProperty("tseAdminEnterNotificationTitle")
+    private String tseAdminEnterNotificationTitle;
+    @JsonProperty("tseAdminDecision")
+    private String tseAdminDecision;
+    @JsonProperty("tseAdminDecisionDetails")
+    private String tseAdminDecisionDetails;
+    @JsonProperty("tseAdminTypeOfDecision")
+    private String tseAdminTypeOfDecision;
+    @JsonProperty("tseAdminIsResponseRequired")
+    private String tseAdminIsResponseRequired;
+    @JsonProperty("tseAdminSelectPartyRespond")
+    private String tseAdminSelectPartyRespond;
+    @JsonProperty("tseAdminAdditionalInformation")
+    private String tseAdminAdditionalInformation;
+    @JsonProperty("tseAdminResponseRequiredYesDoc")
+    private UploadedDocumentType tseAdminResponseRequiredYesDoc;
+    @JsonProperty("tseAdminResponseRequiredNoDoc")
+    private UploadedDocumentType tseAdminResponseRequiredNoDoc;
+    @JsonProperty("tseAdminDecisionMadeBy")
+    private String tseAdminDecisionMadeBy;
+    @JsonProperty("tseAdminDecisionMadeByFullName")
+    private String tseAdminDecisionMadeByFullName;
+    @JsonProperty("tseAdminSelectPartyNotify")
+    private String tseAdminSelectPartyNotify;
+
+    //TSE Response
+    @JsonProperty("tseRespondSelectApplication")
+    private DynamicFixedListType tseRespondSelectApplication;
+    @JsonProperty("tseResponseIntro")
+    private String tseResponseIntro;
+    @JsonProperty("tseResponseTable")
+    private String tseResponseTable;
+    @JsonProperty("tseResponseText")
+    private String tseResponseText;
+    @JsonProperty("tseResponseHasSupportingMaterial")
+    private String tseResponseHasSupportingMaterial;
+    @JsonProperty("tseResponseSupportingMaterial")
+    private List<DocumentTypeItem> tseResponseSupportingMaterial;
+    @JsonProperty("tseResponseCopyToOtherParty")
+    private String tseResponseCopyToOtherParty;
+    @JsonProperty("tseResponseCopyNoGiveDetails")
+    private String tseResponseCopyNoGiveDetails;
+    @JsonProperty("resTseTableMarkUp")
+    private String resTseTableMarkUp;
+
+    //TSE Admin Respond to an application
+    @JsonProperty("tseAdmReplyTableMarkUp")
+    private String tseAdmReplyTableMarkUp;
+    @JsonProperty("tseAdmReplyEnterResponseTitle")
+    private String tseAdmReplyEnterResponseTitle;
+    @JsonProperty("tseAdmReplyAdditionalInformation")
+    private String tseAdmReplyAdditionalInformation;
+    @JsonProperty("tseAdmReplyAddDocument")
+    private UploadedDocumentType tseAdmReplyAddDocument;
+    @JsonProperty("tseAdmReplyIsCmoOrRequest")
+    private String tseAdmReplyIsCmoOrRequest;
+    @JsonProperty("tseAdmReplyCmoMadeBy")
+    private String tseAdmReplyCmoMadeBy;
+    @JsonProperty("tseAdmReplyRequestMadeBy")
+    private String tseAdmReplyRequestMadeBy;
+    @JsonProperty("tseAdmReplyEnterFullName")
+    private String tseAdmReplyEnterFullName;
+    @JsonProperty("tseAdmReplyIsResponseRequired")
+    private String tseAdmReplyIsResponseRequired;
+    @JsonProperty("tseAdmReplySelectPartyRespond")
+    private String tseAdmReplySelectPartyRespond;
+    @JsonProperty("tseAdmReplySelectPartyNotify")
+    private String tseAdmReplySelectPartyNotify;
+
+    // TSe Admin Close an application
+    @JsonProperty("tseAdminCloseApplicationTable")
+    private String tseAdminCloseApplicationTable;
+    @JsonProperty("tseAdminCloseApplicationYes")
+    private String tseAdminCloseApplicationYes;
+    @JsonProperty("tseAdminCloseApplicationText")
+    private String tseAdminCloseApplicationText;
 }
