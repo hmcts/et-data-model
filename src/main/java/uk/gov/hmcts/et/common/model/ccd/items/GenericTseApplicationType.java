@@ -33,6 +33,8 @@ public class GenericTseApplicationType {
     private String responsesCount;
     @JsonProperty("status")
     private String status;
+    @JsonProperty("closeApplicationNotes")
+    private String closeApplicationNotes;
 
     @JsonProperty("respondCollection")
     private List<TseRespondTypeItem> respondCollection;
