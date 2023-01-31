@@ -1126,8 +1126,6 @@ public class CaseData extends Et1CaseData {
     // TSe Admin Close an application
     @JsonProperty("tseAdminCloseApplicationTable")
     private String tseAdminCloseApplicationTable;
-    @JsonProperty("tseAdminCloseApplicationYes")
-    private String tseAdminCloseApplicationYes;
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
 
