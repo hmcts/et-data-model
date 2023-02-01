@@ -1124,4 +1124,32 @@ public class CaseData extends Et1CaseData {
     private String tseAdminCloseApplicationYes;
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
+
+    // Send Notfifaction
+    @JsonProperty("sendNotificationTitle")
+    private String sendNotificationTitle;
+    @JsonProperty("sendNotificationLetter")
+    private String sendNotificationLetter;
+    @JsonProperty("sendNotificationUploadDocument")
+    private List<DocumentTypeItem> sendNotificationUploadDocument;
+    @JsonProperty("sendNotificationSubject")
+    private List<String> sendNotificationSubject;
+    @JsonProperty("sendNotificationAdditionalInfo")
+    private String sendNotificationAdditionalInfo;
+    @JsonProperty("sendNotificationNotify")
+    private String sendNotificationNotify;
+    @JsonProperty("sendNotificationAnotherLetter")
+    private String sendNotificationAnotherLetter;
+    @JsonProperty("sendNotificationSelectHearing")
+    private DynamicFixedListType sendNotificationSelectHearing;
+    @JsonProperty("sendNotificationCaseManagement")
+    private String sendNotificationCaseManagement;
+    @JsonProperty("sendNotificationResponseTribunal")
+    private String sendNotificationResponseTribunal;
+    @JsonProperty("sendNotificationWhoCaseOrder")
+    private String sendNotificationWhoCaseOrder;
+    @JsonProperty("sendNotificationSelectParties")
+    private String sendNotificationSelectParties;
+    @JsonProperty("sendNotificationFullName")
+    private String sendNotificationFullName;
 }
