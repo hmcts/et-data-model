@@ -18,6 +18,6 @@ public class TriageQuestions {
     private String acasMultiple;
     @JsonProperty("validNoAcasReason")
     private String validNoAcasReason;
-    @JsonProperty("typeOfClaims")
-    private List<String> typeOfClaims;
+    @JsonProperty("typesOfClaim")
+    private List<String> typesOfClaim;
 }
