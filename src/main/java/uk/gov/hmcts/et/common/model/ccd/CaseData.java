@@ -16,7 +16,17 @@ import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.types.*;
+import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
+import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
+import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
+import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
+import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
+import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
+import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
+import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
+import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
+import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
+import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -1144,6 +1154,12 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationSelectParties;
     @JsonProperty("sendNotificationFullName")
     private String sendNotificationFullName;
+    @JsonProperty("sendNotificationFullName2")
+    private String sendNotificationFullName2;
+    @JsonProperty("sendNotificationDetails")
+    private String sendNotificationDetails;
+    @JsonProperty("sendNotificationRequestMadeBy")
+    private String sendNotificationRequestMadeBy;
 
 
 
