@@ -8,7 +8,6 @@ import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 
 import java.util.List;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class SendNotificationType {
