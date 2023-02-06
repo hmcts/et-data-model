@@ -26,6 +26,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
+import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
@@ -1127,4 +1128,43 @@ public class CaseData extends Et1CaseData {
     private String tseAdminCloseApplicationTable;
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
+
+    //sendNotification
+    @JsonProperty("sendNotificationCollection")
+    private List<SendNotificationTypeItem> sendNotificationCollection;
+    @JsonProperty("sendNotificationTitle")
+    private String sendNotificationTitle;
+    @JsonProperty("sendNotificationLetter")
+    private String sendNotificationLetter;
+    @JsonProperty("sendNotificationUploadDocument")
+    private List<DocumentTypeItem> sendNotificationUploadDocument;
+    @JsonProperty("sendNotificationSubject")
+    private List<String> sendNotificationSubject;
+    @JsonProperty("sendNotificationAdditionalInfo")
+    private String sendNotificationAdditionalInfo;
+    @JsonProperty("sendNotificationNotify")
+    private String sendNotificationNotify;
+    @JsonProperty("sendNotificationAnotherLetter")
+    private String sendNotificationAnotherLetter;
+    @JsonProperty("sendNotificationSelectHearing")
+    private DynamicFixedListType sendNotificationSelectHearing;
+    @JsonProperty("sendNotificationCaseManagement")
+    private String sendNotificationCaseManagement;
+    @JsonProperty("sendNotificationResponseTribunal")
+    private String sendNotificationResponseTribunal;
+    @JsonProperty("sendNotificationWhoCaseOrder")
+    private String sendNotificationWhoCaseOrder;
+    @JsonProperty("sendNotificationSelectParties")
+    private String sendNotificationSelectParties;
+    @JsonProperty("sendNotificationFullName")
+    private String sendNotificationFullName;
+    @JsonProperty("sendNotificationFullName2")
+    private String sendNotificationFullName2;
+    @JsonProperty("sendNotificationDetails")
+    private String sendNotificationDetails;
+    @JsonProperty("sendNotificationRequestMadeBy")
+    private String sendNotificationRequestMadeBy;
+
+
+
 }
