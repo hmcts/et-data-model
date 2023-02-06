@@ -20,6 +20,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
+import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
@@ -28,7 +29,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
-
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -985,6 +985,10 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("changeOrganisationRequestField")
     private ChangeOrganisationRequest changeOrganisationRequestField;
 
+    // Claimant TSE
+    @JsonProperty("claimantTse")
+    private ClaimantTse claimantTse;
+
     //Respondent Tell Something Else
     @JsonProperty("resTseSelectApplication")
     private String resTseSelectApplication;
@@ -1122,8 +1126,6 @@ public class CaseData extends Et1CaseData {
     // TSe Admin Close an application
     @JsonProperty("tseAdminCloseApplicationTable")
     private String tseAdminCloseApplicationTable;
-    @JsonProperty("tseAdminCloseApplicationYes")
-    private String tseAdminCloseApplicationYes;
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
 
