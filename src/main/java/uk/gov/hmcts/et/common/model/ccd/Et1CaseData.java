@@ -15,6 +15,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
+import uk.gov.hmcts.et.common.model.ccd.types.TriageQuestions;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
 
 import java.util.List;
@@ -70,7 +71,8 @@ public class Et1CaseData {
     private TaskListCheckType claimantTaskListChecks;
     @JsonProperty("receiptDate")
     private String receiptDate;
-
+    @JsonProperty("triageQuestions")
+    private TriageQuestions triageQuestions;
     // Citizen hub
     @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
