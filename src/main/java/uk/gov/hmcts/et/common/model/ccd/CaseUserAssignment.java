@@ -11,6 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CaseUserAssignment {
+    @JsonProperty("organisation_id")
+    private String organisationId;
+
     @JsonProperty("case_id")
     private String caseId;
 
