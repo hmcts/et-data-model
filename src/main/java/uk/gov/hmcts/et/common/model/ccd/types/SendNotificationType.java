@@ -24,8 +24,6 @@ public class SendNotificationType {
     private String sendNotificationAdditionalInfo;
     @JsonProperty("sendNotificationNotify")
     private String sendNotificationNotify;
-    @JsonProperty("sendNotificationAnotherLetter")
-    private String sendNotificationAnotherLetter;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
