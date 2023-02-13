@@ -11,7 +11,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.PseResponseType;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class PseResponseItem {
+public class PseResponseTypeItem {
 
     @JsonProperty("id")
     private String id;

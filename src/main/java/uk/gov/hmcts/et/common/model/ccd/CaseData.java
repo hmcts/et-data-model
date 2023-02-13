@@ -13,7 +13,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.PseResponseItem;
+import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
@@ -1129,10 +1129,6 @@ public class CaseData extends Et1CaseData {
     private String tseAdminCloseApplicationTable;
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
-
-    // Provide Something Else to tribunal - Responses
-    @JsonProperty("pseOrdReqResponses")
-    private List<PseResponseItem> pseOrdReqResponses; // Collection of JON responses
 
     // Provide Something Else to tribunal - Respondent - Respond to an order or request from the tribunal
     @JsonProperty("pseRespondentSelectOrderOrRequest")
