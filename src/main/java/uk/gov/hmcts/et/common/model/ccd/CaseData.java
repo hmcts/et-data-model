@@ -1130,6 +1130,12 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
 
+    // Tell something else - view an application
+    @JsonProperty("tseViewApplicationOpenOrClosed")
+    private String tseViewApplicationOpenOrClosed;
+    @JsonProperty("tseViewApplicationSelect")
+    private DynamicFixedListType tseViewApplicationSelect;
+
     // Provide Something Else to tribunal - Respondent - Respond to an order or request from the tribunal
     @JsonProperty("pseRespondentSelectOrderOrRequest")
     private DynamicFixedListType pseRespondentSelectOrderOrRequest;
