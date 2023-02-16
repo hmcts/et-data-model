@@ -1134,7 +1134,27 @@ public class CaseData extends Et1CaseData {
     private String tseViewApplicationOpenOrClosed;
     @JsonProperty("tseViewApplicationSelect")
     private DynamicFixedListType tseViewApplicationSelect;
-    
+
+    // Provide Something Else to tribunal - Respondent - Respond to an order or request from the tribunal
+    @JsonProperty("pseRespondentSelectOrderOrRequest")
+    private DynamicFixedListType pseRespondentSelectOrderOrRequest;
+    @JsonProperty("pseRespondentOrdReqTableMarkUp")
+    private String pseRespondentOrdReqTableMarkUp;
+    @JsonProperty("pseRespondentOrdReqResponseText")
+    private String pseRespondentOrdReqResponseText;
+    @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
+    private String pseRespondentOrdReqHasSupportingMaterial;
+    @JsonProperty("pseRespondentOrdReqUploadDocument")
+    private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
+    @JsonProperty("pseRespondentOrdReqCopyToOtherParty")
+    private String pseRespondentOrdReqCopyToOtherParty;
+    @JsonProperty("pseRespondentOrdReqCopyNoGiveDetails")
+    private String pseRespondentOrdReqCopyNoGiveDetails;
+
+    // Provide Something Else to tribunal - Respondent - View a judgment, order or notification
+    @JsonProperty("pseRespondentSelectJudgmentOrderNotification")
+    private DynamicFixedListType pseRespondentSelectJudgmentOrderNotification;
+
     //sendNotification
     @JsonProperty("sendNotificationCollection")
     private List<SendNotificationTypeItem> sendNotificationCollection;
