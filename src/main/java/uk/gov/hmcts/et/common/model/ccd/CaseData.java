@@ -379,6 +379,10 @@ public class CaseData extends Et1CaseData {
     private String et1VettingAcasCertExemptYesOrNo6;
     @JsonProperty("et1VettingAcasCertGeneralNote")
     private String et1VettingAcasCertGeneralNote;
+    @JsonProperty("et1VettingCompletedBy")
+    private String et1VettingCompletedBy;
+    @JsonProperty("et1DateCompleted")
+    private String et1DateCompleted;
 
     //ET1 Vetting -  Substantive Defects
     @JsonProperty("substantiveDefectsList")
