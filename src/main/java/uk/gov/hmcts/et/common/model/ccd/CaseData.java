@@ -379,6 +379,14 @@ public class CaseData extends Et1CaseData {
     private String et1VettingAcasCertExemptYesOrNo6;
     @JsonProperty("et1VettingAcasCertGeneralNote")
     private String et1VettingAcasCertGeneralNote;
+    @JsonProperty("et1VettingCompletedBy")
+    private String et1VettingCompletedBy;
+    @JsonProperty("et1DateCompleted")
+    private String et1DateCompleted;
+    @JsonProperty("icCompletedBy")
+    private String icCompletedBy;
+    @JsonProperty("icDateCompleted")
+    private String icDateCompleted;
 
     //ET1 Vetting -  Substantive Defects
     @JsonProperty("substantiveDefectsList")
@@ -1129,6 +1137,32 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminCloseApplicationText")
     private String tseAdminCloseApplicationText;
 
+    // Tell something else - view an application
+    @JsonProperty("tseViewApplicationOpenOrClosed")
+    private String tseViewApplicationOpenOrClosed;
+    @JsonProperty("tseViewApplicationSelect")
+    private DynamicFixedListType tseViewApplicationSelect;
+
+    // Provide Something Else to tribunal - Respondent - Respond to an order or request from the tribunal
+    @JsonProperty("pseRespondentSelectOrderOrRequest")
+    private DynamicFixedListType pseRespondentSelectOrderOrRequest;
+    @JsonProperty("pseRespondentOrdReqTableMarkUp")
+    private String pseRespondentOrdReqTableMarkUp;
+    @JsonProperty("pseRespondentOrdReqResponseText")
+    private String pseRespondentOrdReqResponseText;
+    @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
+    private String pseRespondentOrdReqHasSupportingMaterial;
+    @JsonProperty("pseRespondentOrdReqUploadDocument")
+    private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
+    @JsonProperty("pseRespondentOrdReqCopyToOtherParty")
+    private String pseRespondentOrdReqCopyToOtherParty;
+    @JsonProperty("pseRespondentOrdReqCopyNoGiveDetails")
+    private String pseRespondentOrdReqCopyNoGiveDetails;
+
+    // Provide Something Else to tribunal - Respondent - View a judgment, order or notification
+    @JsonProperty("pseRespondentSelectJudgmentOrderNotification")
+    private DynamicFixedListType pseRespondentSelectJudgmentOrderNotification;
+
     //sendNotification
     @JsonProperty("sendNotificationCollection")
     private List<SendNotificationTypeItem> sendNotificationCollection;
@@ -1144,8 +1178,6 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationAdditionalInfo;
     @JsonProperty("sendNotificationNotify")
     private String sendNotificationNotify;
-    @JsonProperty("sendNotificationAnotherLetter")
-    private String sendNotificationAnotherLetter;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
@@ -1167,7 +1199,4 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
-
-
-
 }
