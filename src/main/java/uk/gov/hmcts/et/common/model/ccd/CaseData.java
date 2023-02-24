@@ -74,6 +74,8 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("claimServedDate")
     private String claimServedDate;
+    @JsonProperty("et3DueDate")
+    private String et3DueDate;
 
     @JsonProperty("feeGroupReference")
     private String feeGroupReference;
