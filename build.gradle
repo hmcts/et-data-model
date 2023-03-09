@@ -4,8 +4,8 @@ plugins {
     id 'checkstyle'
 }
 
-group 'com.github.hmcts'
 version '1.9.0'
+
 
 sourceCompatibility = '11.0'
 
