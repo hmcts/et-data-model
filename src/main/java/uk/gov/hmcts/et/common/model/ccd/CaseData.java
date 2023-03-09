@@ -1199,4 +1199,9 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
+
+
+
+    @JsonProperty("notificationMarkdown")
+    private String notificationMarkdown;
 }
