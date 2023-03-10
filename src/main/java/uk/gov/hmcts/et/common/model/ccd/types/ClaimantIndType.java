@@ -56,7 +56,6 @@ public class ClaimantIndType {
                 !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ? claimantPreferredTitle :
                         !Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)) ? claimantTitleOther : "";
 
-
         var fullNameList = List.of(title, getInitials(), claimantLastName);
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
     }
