@@ -38,29 +38,36 @@ public class ClaimantIndType {
     private String claimantGenderIdentity;
 
     public String claimantFullNames() {
-        var title = "";
-        if (!Strings.isNullOrEmpty(claimantTitle)) {
-            if (claimantTitle.trim().equals("Other")) {
-                title = claimantTitleOther;
-            } else {
-                title = claimantTitle;
-            }
-        }
+        String title =  !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? claimantTitle :
+                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ? claimantPreferredTitle :
+                        !Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)) ? claimantTitleOther : "";
+
         var fullNameList = List.of(title, claimantFirstNames, claimantLastName);
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
     }
 
+    /**
+     * Used to return claimant's full name with his/her title
+     * Used while creating hearings, reports and docmosis documents.
+     * @return claimant's full name
+     */
     public String claimantFullName() {
-        var title = "";
-        if (!Strings.isNullOrEmpty(claimantTitle)) {
-            if (claimantTitle.trim().equals("Other")) {
-                title = claimantTitleOther;
-            } else {
-                title = claimantTitle;
-            }
-        }
+        String title =  !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? claimantTitle :
+                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ? claimantPreferredTitle :
+                        !Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)) ? claimantTitleOther : "";
+
+
         var fullNameList = List.of(title, getInitials(), claimantLastName);
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
+    }
+
+    /**
+     * Implemented to ignore blank title values.
+     * @param val string value to be trimmed
+     * @return trimmed string value or null
+     */
+    private String trimStringValue(String val) {
+        return val == null ? null : val.trim();
     }
 
     private String getInitials() {
