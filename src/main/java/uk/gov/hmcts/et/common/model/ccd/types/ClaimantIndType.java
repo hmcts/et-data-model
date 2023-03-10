@@ -70,11 +70,12 @@ public class ClaimantIndType {
      * @return title according to conditions defined above
      */
     private String getTitle() {
-        return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ?
-                Other.equals(claimantTitle) ? !Strings.isNullOrEmpty(claimantTitleOther) ? claimantTitleOther : "" :
-                        claimantTitle : !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ?
-                Other.equals(claimantPreferredTitle) ? !Strings.isNullOrEmpty(claimantTitleOther) ?
-                        claimantTitleOther : "" : claimantPreferredTitle : "";
+        return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? Other.equals(claimantTitle)
+                ? !Strings.isNullOrEmpty(claimantTitleOther)
+                ? claimantTitleOther : "" : claimantTitle
+                : !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))
+                ? Other.equals(claimantPreferredTitle) ? !Strings.isNullOrEmpty(claimantTitleOther)
+                ? claimantTitleOther : "" : claimantPreferredTitle : "";
     }
 
     /**
