@@ -56,4 +56,28 @@ public class CaseDataTest {
         caseData.setClaimantIndType(claimantIndType);
         assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mr A B");
     }
+
+    @Test
+    public void claimantFullNamesPreferredTitleOtherTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantTitle("");
+        claimantIndType.setClaimantTitleOther("Mx");
+        claimantIndType.setClaimantPreferredTitle("Other");
+        claimantIndType.setClaimantFirstNames("A");
+        claimantIndType.setClaimantLastName("B");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mx A B");
+    }
+
+    @Test
+    public void claimantFullNamesPreferredTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantTitle(" ");
+        claimantIndType.setClaimantTitleOther("Mx");
+        claimantIndType.setClaimantPreferredTitle("Miss");
+        claimantIndType.setClaimantFirstNames("A");
+        claimantIndType.setClaimantLastName("B");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Miss A B");
+    }
 }

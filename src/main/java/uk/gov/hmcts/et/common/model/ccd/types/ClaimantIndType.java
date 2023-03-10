@@ -37,10 +37,10 @@ public class ClaimantIndType {
     @JsonProperty("claimant_gender_identity")
     private String claimantGenderIdentity;
 
+    private static final String Other = "Other";
+
     public String claimantFullNames() {
-        String title =  !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? claimantTitle :
-                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ? claimantPreferredTitle :
-                        !Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)) ? claimantTitleOther : "";
+        String title = getTitle();
 
         var fullNameList = List.of(title, claimantFirstNames, claimantLastName);
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
@@ -52,12 +52,23 @@ public class ClaimantIndType {
      * @return claimant's full name
      */
     public String claimantFullName() {
-        String title =  !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? claimantTitle :
-                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ? claimantPreferredTitle :
-                        !Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)) ? claimantTitleOther : "";
+        String title = getTitle();
 
         var fullNameList = List.of(title, getInitials(), claimantLastName);
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
+    }
+
+    private String getTitle() {
+        return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ?
+                Other.equals(claimantTitle) ?
+                        !Strings.isNullOrEmpty(claimantTitleOther) ?
+                                claimantTitleOther : "" :
+                        claimantTitle :
+                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ?
+                        Other.equals(claimantPreferredTitle) ?
+                                !Strings.isNullOrEmpty(claimantTitleOther) ?
+                                        claimantTitleOther : "" :
+                                claimantPreferredTitle : "";
     }
 
     /**
