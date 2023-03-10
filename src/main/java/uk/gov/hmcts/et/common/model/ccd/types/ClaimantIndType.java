@@ -58,17 +58,23 @@ public class ClaimantIndType {
         return String.join(" ", notNullOrEmptyAtt(new ArrayList<>(), fullNameList));
     }
 
+    /**
+     * Used to return title according to following conditions:
+     * 1. If claimantTitle is not null or empty and not Other, then returns claimant title
+     * 2. If claimantTitle is Other and claimantTitleOther is not null then returns claimantTitleOther
+     * 3. If claimantTitle is null or empty and claimantPreferredTitle is not null or empty and not Other, then returns
+     *    claimantPreferredTitle.
+     * 4. If claimantTitle is null or empty and claimantPreferredTitle is Other and claimantTitleOther is not null then
+     *    returns claimantTitleOther
+     * 5. In any other case returns an empty string as ""
+     * @return title according to conditions defined above
+     */
     private String getTitle() {
         return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ?
-                Other.equals(claimantTitle) ?
-                        !Strings.isNullOrEmpty(claimantTitleOther) ?
-                                claimantTitleOther : "" :
-                        claimantTitle :
-                !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ?
-                        Other.equals(claimantPreferredTitle) ?
-                                !Strings.isNullOrEmpty(claimantTitleOther) ?
-                                        claimantTitleOther : "" :
-                                claimantPreferredTitle : "";
+                Other.equals(claimantTitle) ? !Strings.isNullOrEmpty(claimantTitleOther) ? claimantTitleOther : "" :
+                        claimantTitle : !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle)) ?
+                Other.equals(claimantPreferredTitle) ? !Strings.isNullOrEmpty(claimantTitleOther) ?
+                        claimantTitleOther : "" : claimantPreferredTitle : "";
     }
 
     /**
