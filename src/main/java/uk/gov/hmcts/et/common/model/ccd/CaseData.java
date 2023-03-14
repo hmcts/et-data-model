@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.AllocateHearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
@@ -101,6 +102,8 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType fileLocationEdinburgh;
     @JsonProperty("hearingCollection")
     private List<HearingTypeItem> hearingCollection;
+    @JsonProperty("allocateHearingCollection")
+    private List<AllocateHearingTypeItem> allocateHearingCollection;
     @JsonProperty("depositType")
     private List<DepositTypeItem> depositCollection;
     @JsonProperty("judgementCollection")
