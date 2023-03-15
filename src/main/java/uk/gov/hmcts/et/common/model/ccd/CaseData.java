@@ -25,6 +25,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
+import uk.gov.hmcts.et.common.model.ccd.types.RespondNotificationType;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -1209,5 +1210,26 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("pseViewNotifications")
     private String pseViewNotifications;
+
+    @JsonProperty("respondNotificationTypeCollection")
+    private List<RespondNotificationType> respondNotificationTypeCollection;
+    @JsonProperty("respondNotificationTitle")
+    private String respondNotificationTitle;
+    @JsonProperty("respondNotificationAdditionalInfo")
+    private String respondNotificationAdditionalInfo;
+    @JsonProperty("respondNotificationUploadDocument")
+    private List<DocumentTypeItem> respondNotificationUploadDocument;
+    @JsonProperty("respondNotificationIsThis")
+    private String respondNotificationIsThis;
+    @JsonProperty("respondNotificationResponseRequired")
+    private String respondNotificationResponseRequired;
+    @JsonProperty("respondNotificationWhoRespond")
+    private String respondNotificationWhoRespond;
+    @JsonProperty("respondNotificationCaseManagementMadeBy")
+    private String respondNotificationCaseManagementMadeBy;
+    @JsonProperty("respondNotificationFullName")
+    private String respondNotificationFullName;
+    @JsonProperty("respondNotificationPartyToNotify")
+    private String respondNotificationPartyToNotify;
 
 }
