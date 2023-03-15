@@ -24,9 +24,9 @@ public class AllocateHearingType {
     @JsonProperty("allocateHearingEmployeeMember")
     private DynamicFixedListType allocateHearingEmployeeMember;
     @JsonProperty("allocateHearingPostponedBy")
-    private List<String> allocateHearingPostponedBy;
+    private String allocateHearingPostponedBy;
     @JsonProperty("allocateHearingStatus")
-    private List<String> allocateHearingStatus;
+    private String allocateHearingStatus;
 
     public boolean hasAllocateHearingEmployerMember() {
         return allocateHearingEmployerMember != null && allocateHearingEmployerMember.getValue() != null;
