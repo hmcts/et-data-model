@@ -9,6 +9,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
@@ -1203,11 +1204,14 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
-    
+
     @JsonProperty("notificationMarkdown")
     private String notificationMarkdown;
 
     @JsonProperty("pseViewNotifications")
     private String pseViewNotifications;
+
+    @JsonProperty("et3RepresentingRespondent")
+    private List<DynamicListTypeItem> et3RepresentingRespondent;
 
 }
