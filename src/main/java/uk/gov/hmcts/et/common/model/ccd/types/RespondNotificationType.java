@@ -15,7 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 public class RespondNotificationType {
 
-
     @JsonProperty("respondNotificationDate")
     private String respondNotificationDate;
     @JsonProperty("respondNotificationTitle")
