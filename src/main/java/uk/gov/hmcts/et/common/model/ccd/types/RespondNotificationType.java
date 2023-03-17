@@ -36,5 +36,4 @@ public class RespondNotificationType {
     @JsonProperty("respondNotificationPartyToNotify")
     private String respondNotificationPartyToNotify;
 
-
 }
