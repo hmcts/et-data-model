@@ -1226,8 +1226,8 @@ public class CaseData extends Et1CaseData {
     private String respondNotificationAdditionalInfo;
     @JsonProperty("respondNotificationUploadDocument")
     private List<DocumentTypeItem> respondNotificationUploadDocument;
-    @JsonProperty("respondNotificationIsThis")
-    private String respondNotificationIsThis;
+    @JsonProperty("respondNotificationCmoOrRequest")
+    private String respondNotificationCmoOrRequest;
     @JsonProperty("respondNotificationResponseRequired")
     private String respondNotificationResponseRequired;
     @JsonProperty("respondNotificationWhoRespond")

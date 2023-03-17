@@ -23,8 +23,8 @@ public class RespondNotificationType {
     private String respondNotificationAdditionalInfo;
     @JsonProperty("respondNotificationUploadDocument")
     private List<DocumentTypeItem> respondNotificationUploadDocument;
-    @JsonProperty("respondNotificationCMOorRequest")
-    private String respondNotificationCMOorRequest;
+    @JsonProperty("respondNotificationCmoOrRequest")
+    private String respondNotificationCmoOrRequest;
     @JsonProperty("respondNotificationResponseRequired")
     private String respondNotificationResponseRequired;
     @JsonProperty("respondNotificationWhoRespond")
