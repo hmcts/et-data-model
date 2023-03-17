@@ -12,6 +12,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
@@ -104,6 +105,8 @@ public class CaseData extends Et1CaseData {
     private List<HearingTypeItem> hearingCollection;
     @JsonProperty("allocateHearingCollection")
     private List<AllocateHearingTypeItem> allocateHearingCollection;
+    @JsonProperty("hearingDetailsCollection")
+    private List<HearingDetailTypeItem> hearingDetailsCollection;
     @JsonProperty("depositType")
     private List<DepositTypeItem> depositCollection;
     @JsonProperty("judgementCollection")
