@@ -12,6 +12,10 @@ public class AllocateHearingType {
     private String allocateHearingDate;
     @JsonProperty("allocateHearingVenue")
     private DynamicFixedListType allocateHearingVenue;
+    @JsonProperty("allocateHearingManagingOffice")
+    private String allocateHearingManagingOffice;
+    @JsonProperty("allocateHearingReadingDeliberation")
+    private String allocateHearingReadingDeliberation;
     @JsonProperty("allocateHearingRoom")
     private DynamicFixedListType allocateHearingRoom;
     @JsonProperty("allocateHearingClerk")
