@@ -1211,8 +1211,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("pseViewNotifications")
     private String pseViewNotifications;
 
-    @JsonProperty("respondNotificationTypeCollection")
-    private List<RespondNotificationType> respondNotificationTypeCollection;
+
     @JsonProperty("respondNotificationTitle")
     private String respondNotificationTitle;
     @JsonProperty("respondNotificationAdditionalInfo")
