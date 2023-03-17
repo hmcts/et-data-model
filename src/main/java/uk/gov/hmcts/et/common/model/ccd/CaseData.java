@@ -10,6 +10,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.AllocateHearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
@@ -1130,12 +1131,18 @@ public class CaseData extends Et1CaseData {
     private String tseAdmReplyCmoMadeBy;
     @JsonProperty("tseAdmReplyRequestMadeBy")
     private String tseAdmReplyRequestMadeBy;
-    @JsonProperty("tseAdmReplyEnterFullName")
-    private String tseAdmReplyEnterFullName;
-    @JsonProperty("tseAdmReplyIsResponseRequired")
-    private String tseAdmReplyIsResponseRequired;
-    @JsonProperty("tseAdmReplySelectPartyRespond")
-    private String tseAdmReplySelectPartyRespond;
+    @JsonProperty("tseAdmReplyCmoEnterFullName")
+    private String tseAdmReplyCmoEnterFullName;
+    @JsonProperty("tseAdmReplyCmoIsResponseRequired")
+    private String tseAdmReplyCmoIsResponseRequired;
+    @JsonProperty("tseAdmReplyRequestEnterFullName")
+    private String tseAdmReplyRequestEnterFullName;
+    @JsonProperty("tseAdmReplyRequestIsResponseRequired")
+    private String tseAdmReplyRequestIsResponseRequired;
+    @JsonProperty("tseAdmReplyRequestSelectPartyRespond")
+    private String tseAdmReplyRequestSelectPartyRespond;
+    @JsonProperty("tseAdmReplyCmoSelectPartyRespond")
+    private String tseAdmReplyCmoSelectPartyRespond;
     @JsonProperty("tseAdmReplySelectPartyNotify")
     private String tseAdmReplySelectPartyNotify;
 
@@ -1209,11 +1216,14 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
-    
+
     @JsonProperty("notificationMarkdown")
     private String notificationMarkdown;
 
     @JsonProperty("pseViewNotifications")
     private String pseViewNotifications;
+
+    @JsonProperty("et3RepresentingRespondent")
+    private List<DynamicListTypeItem> et3RepresentingRespondent;
 
 }
