@@ -15,7 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 public class RespondNotificationType {
 
-
     @JsonProperty("respondNotificationDate")
     private String respondNotificationDate;
     @JsonProperty("respondNotificationTitle")
@@ -24,8 +23,8 @@ public class RespondNotificationType {
     private String respondNotificationAdditionalInfo;
     @JsonProperty("respondNotificationUploadDocument")
     private List<DocumentTypeItem> respondNotificationUploadDocument;
-    @JsonProperty("respondNotificationIsThis")
-    private String respondNotificationIsThis;
+    @JsonProperty("respondNotificationCMOorRequest")
+    private String respondNotificationCMOorRequest;
     @JsonProperty("respondNotificationResponseRequired")
     private String respondNotificationResponseRequired;
     @JsonProperty("respondNotificationWhoRespond")
