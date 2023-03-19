@@ -36,6 +36,8 @@ public class ReferralType {
     private String referralDate;
     @JsonProperty("referralStatus")
     private String referralStatus;
+    @JsonProperty("closeReferralGeneralNotes")
+    private String closeReferralGeneralNotes;
     @JsonProperty("referralReplyCollection")
     private List<ReferralReplyTypeItem> referralReplyCollection;
     @JsonProperty("referralSummaryPdf")
