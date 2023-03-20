@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
 
 import java.util.List;
@@ -55,5 +56,8 @@ public class SendNotificationType {
 
     @JsonProperty("respondCollection")
     private List<PseResponseTypeItem> respondCollection;
+
+    @JsonProperty("respondNotificationTypeCollection")
+    private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
 
 }
