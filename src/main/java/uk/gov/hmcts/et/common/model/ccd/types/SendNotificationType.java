@@ -56,8 +56,6 @@ public class SendNotificationType {
     @JsonProperty("sendNotificationEccQuestion")
     private String sendNotificationEccQuestion;
 
-
-
     @JsonProperty("respondCollection")
     private List<PseResponseTypeItem> respondCollection;
 
