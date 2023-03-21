@@ -55,7 +55,8 @@ public class SendNotificationType {
     private String sendNotificationRequestMadeBy;
     @JsonProperty("sendNotificationEccQuestion")
     private String sendNotificationEccQuestion;
-
+    @JsonProperty("sendNotificationWhoMadeJudgement")
+    private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
     private List<PseResponseTypeItem> respondCollection;
 

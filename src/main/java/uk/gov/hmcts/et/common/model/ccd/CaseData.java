@@ -1207,9 +1207,10 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationDetails;
     @JsonProperty("sendNotificationRequestMadeBy")
     private String sendNotificationRequestMadeBy;
-
     @JsonProperty("sendNotificationEccQuestion")
     private String sendNotificationEccQuestion;
+    @JsonProperty("sendNotificationWhoMadeJudgement")
+    private String sendNotificationWhoMadeJudgement;
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
