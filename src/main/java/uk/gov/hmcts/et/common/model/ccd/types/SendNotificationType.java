@@ -59,8 +59,9 @@ public class SendNotificationType {
     private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
     private List<PseResponseTypeItem> respondCollection;
-
     @JsonProperty("respondNotificationTypeCollection")
     private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
+    @JsonProperty("notificationState")
+    private String notificationState;
 
 }
