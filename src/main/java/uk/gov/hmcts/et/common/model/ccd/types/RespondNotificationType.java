@@ -31,6 +31,8 @@ public class RespondNotificationType {
     private String respondNotificationWhoRespond;
     @JsonProperty("respondNotificationCaseManagementMadeBy")
     private String respondNotificationCaseManagementMadeBy;
+    @JsonProperty("respondNotificationRequestMadeBy")
+    private String respondNotificationRequestMadeBy;
     @JsonProperty("respondNotificationFullName")
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
