@@ -4,9 +4,10 @@ plugins {
     id 'checkstyle'
 }
 
-group 'uk.gov.hmcts.reform'
-version '1.13.0'
 
+group 'com.github.hmcts'
+
+version '1.13.0'
 
 sourceCompatibility = '11.0'
 
