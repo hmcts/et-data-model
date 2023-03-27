@@ -63,5 +63,12 @@ public class SendNotificationType {
     private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
     private String notificationState;
-
+    @JsonProperty("sendNotificationSubjectString")
+    private String sendNotificationSubjectString;
+    @JsonProperty("sendNotificationResponseTribunalTable")
+    private String sendNotificationResponseTribunalTable;
+    @JsonProperty("sendNotificationResponsesCount")
+    private String sendNotificationResponsesCount;
+    @JsonProperty("sendNotificationSentBy")
+    private String sendNotificationSentBy;
 }

@@ -1241,6 +1241,8 @@ public class CaseData extends Et1CaseData {
     private String respondNotificationWhoRespond;
     @JsonProperty("respondNotificationCaseManagementMadeBy")
     private String respondNotificationCaseManagementMadeBy;
+    @JsonProperty("respondNotificationRequestMadeBy")
+    private String respondNotificationRequestMadeBy;
     @JsonProperty("respondNotificationFullName")
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
