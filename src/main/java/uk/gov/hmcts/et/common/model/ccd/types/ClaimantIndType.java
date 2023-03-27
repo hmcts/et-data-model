@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Strings;
 import lombok.Data;
+import lombok.val;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +38,8 @@ public class ClaimantIndType {
     @JsonProperty("claimant_gender_identity")
     private String claimantGenderIdentity;
 
-    private static final String Other = "Other";
+    private static final String OTHER = "Other";
+    private static final String PREFER_NOT_TO_SAY = "Prefer not to say";
 
     public String claimantFullNames() {
         String title = getTitle();
@@ -70,12 +72,37 @@ public class ClaimantIndType {
      * @return title according to conditions defined above
      */
     private String getTitle() {
-        return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? Other.equals(claimantTitle)
-                ? !Strings.isNullOrEmpty(claimantTitleOther)
-                ? claimantTitleOther : "" : claimantTitle
-                : !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))
-                ? Other.equals(claimantPreferredTitle) ? !Strings.isNullOrEmpty(claimantTitleOther)
-                ? claimantTitleOther : "" : claimantPreferredTitle : "";
+        //Title is set as expected
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantTitle))
+            && !OTHER.equals(trimStringValue(claimantTitle))
+            && (!PREFER_NOT_TO_SAY.equals(trimStringValue(claimantTitle)))) {
+            return claimantTitle;
+        }
+
+        //If title is Other & custom title is added
+        if (OTHER.equals(trimStringValue(claimantTitle))
+            && (!Strings.isNullOrEmpty(claimantTitleOther))) {
+            return claimantTitleOther;
+        }
+
+        //Preferred title is set rather than the normal title
+        if (Strings.isNullOrEmpty(trimStringValue(claimantTitle))
+            && OTHER.equals(trimStringValue(claimantPreferredTitle))) {
+            return claimantTitleOther;
+        }
+
+        //If title is "Prefer Not to Say"
+        if (PREFER_NOT_TO_SAY.equals(trimStringValue(claimantTitle))) {
+            return "";
+        }
+
+        //If title is set from the preferred title list
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))) {
+            return claimantPreferredTitle;
+        }
+
+        //Else default to an empty String
+        return "";
     }
 
     /**
