@@ -74,28 +74,29 @@ public class ClaimantIndType {
     private String getTitle() {
         // When Ecm legacy Title is set rather than the Reform ET Title field
         if (!Strings.isNullOrEmpty(trimStringValue(claimantTitle))) {
-            return getEcmClaimantTitle();
+            return getCorrectClaimantTitle(claimantTitle);
         }
 
         // When the Reform ET Title field is set rather than the Ecm legacy Title
         if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))) {
-            return getEtClaimantTitle();
+            return getCorrectClaimantTitle(claimantPreferredTitle);
         }
 
         // Fallback default
         return "";
     }
 
-    private String getEtClaimantTitle() {
+    private String getCorrectClaimantTitle(String currentTitle) {
         //Title is set as expected
-        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))
-            && !OTHER.equals(trimStringValue(claimantPreferredTitle))
-            && (!PREFER_NOT_TO_SAY.equals(trimStringValue(claimantPreferredTitle)))) {
-            return claimantPreferredTitle;
+        String adjustedClaimantTitle = trimStringValue(currentTitle);
+        if (!Strings.isNullOrEmpty(adjustedClaimantTitle)
+            && !OTHER.equals(adjustedClaimantTitle)
+            && (!PREFER_NOT_TO_SAY.equals(adjustedClaimantTitle))) {
+            return adjustedClaimantTitle;
         }
 
         //If title is Other & custom title is added
-        if (OTHER.equals(trimStringValue(claimantPreferredTitle))
+        if (OTHER.equals(trimStringValue(currentTitle))
             && (!Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)))) {
             return claimantTitleOther;
         }
@@ -104,25 +105,6 @@ public class ClaimantIndType {
         return "";
     }
 
-    private String getEcmClaimantTitle() {
-        // The claimantTitle field is set as expected
-        String adjustedClaimantTitle = trimStringValue(claimantTitle);
-        if (!Strings.isNullOrEmpty(adjustedClaimantTitle)
-            && !OTHER.equals(adjustedClaimantTitle)
-            && (!PREFER_NOT_TO_SAY.equals(adjustedClaimantTitle))) {
-            return adjustedClaimantTitle;
-        }
-
-        //If title is Other & custom title is added
-        if (OTHER.equals(trimStringValue(claimantTitle))
-            && (!Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)))) {
-            return claimantTitleOther;
-        }
-
-        //If claimantTitle is set to "Prefer Not to Say" or else fallback default
-        return "";
-    }
-    
     /**
      * Implemented to ignore blank title values.
      * @param val string value to be trimmed
