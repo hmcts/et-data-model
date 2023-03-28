@@ -40,10 +40,10 @@ public class CaseDataTest {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Other");
         claimantIndType.setClaimantTitleOther("Mx");
-        claimantIndType.setClaimantFirstNames("A");
-        claimantIndType.setClaimantLastName("B");
+        claimantIndType.setClaimantFirstNames("Andy");
+        claimantIndType.setClaimantLastName("Brown");
         caseData.setClaimantIndType(claimantIndType);
-        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mx A B");
+        assertEquals("Mx A Brown", caseData.getClaimantIndType().claimantFullName());
     }
 
     @Test
@@ -51,10 +51,10 @@ public class CaseDataTest {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Mr");
         claimantIndType.setClaimantTitleOther("Mx");
-        claimantIndType.setClaimantFirstNames("A");
-        claimantIndType.setClaimantLastName("B");
+        claimantIndType.setClaimantFirstNames("Andy");
+        claimantIndType.setClaimantLastName("Brown");
         caseData.setClaimantIndType(claimantIndType);
-        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mr A B");
+        assertEquals("Mr A Brown", caseData.getClaimantIndType().claimantFullName());
     }
 
     @Test
@@ -63,10 +63,42 @@ public class CaseDataTest {
         claimantIndType.setClaimantTitle("");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantPreferredTitle("Other");
-        claimantIndType.setClaimantFirstNames("A");
-        claimantIndType.setClaimantLastName("B");
+        claimantIndType.setClaimantFirstNames("Andy");
+        claimantIndType.setClaimantLastName("Brown");
         caseData.setClaimantIndType(claimantIndType);
-        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Mx A B");
+        assertEquals("Mx A Brown", caseData.getClaimantIndType().claimantFullName());
+    }
+
+    @Test
+    public void claimantFullNamePreferredTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantTitle(" ");
+        claimantIndType.setClaimantTitleOther("Mx");
+        claimantIndType.setClaimantPreferredTitle("Miss");
+        claimantIndType.setClaimantFirstNames("Anna");
+        claimantIndType.setClaimantLastName("Hans");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals("Miss A Hans", caseData.getClaimantIndType().claimantFullName());
+    }
+
+    @Test
+    public void claimantFullNamePreferNotToSayTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantTitle("Prefer not to say");
+        claimantIndType.setClaimantFirstNames("Anna");
+        claimantIndType.setClaimantLastName("Hans");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals("A Hans", caseData.getClaimantIndType().claimantFullName());
+    }
+
+    @Test
+    public void claimantFullNamesPreferNotToSayTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantTitle("Prefer not to say");
+        claimantIndType.setClaimantFirstNames("Harvey");
+        claimantIndType.setClaimantLastName("Karry");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals("Harvey Karry", caseData.getClaimantIndType().claimantFullNames());
     }
 
     @Test
@@ -75,9 +107,19 @@ public class CaseDataTest {
         claimantIndType.setClaimantTitle(" ");
         claimantIndType.setClaimantTitleOther("Mx");
         claimantIndType.setClaimantPreferredTitle("Miss");
-        claimantIndType.setClaimantFirstNames("A");
-        claimantIndType.setClaimantLastName("B");
+        claimantIndType.setClaimantFirstNames("Danna");
+        claimantIndType.setClaimantLastName("Summer");
         caseData.setClaimantIndType(claimantIndType);
-        assertEquals(caseData.getClaimantIndType().claimantFullName(), "Miss A B");
+        assertEquals("Miss Danna Summer", caseData.getClaimantIndType().claimantFullNames());
+    }
+
+    @Test
+    public void claimantFullNamesPreferNotToSayClaimantPreferredTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantPreferredTitle("Prefer not to say");
+        claimantIndType.setClaimantFirstNames("Marcelo");
+        claimantIndType.setClaimantLastName("Peter");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals("Marcelo Peter", caseData.getClaimantIndType().claimantFullNames());
     }
 }

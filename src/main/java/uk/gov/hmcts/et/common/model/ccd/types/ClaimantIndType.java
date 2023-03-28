@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Strings;
 import lombok.Data;
+import lombok.val;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +38,8 @@ public class ClaimantIndType {
     @JsonProperty("claimant_gender_identity")
     private String claimantGenderIdentity;
 
-    private static final String Other = "Other";
+    private static final String OTHER = "Other";
+    private static final String PREFER_NOT_TO_SAY = "Prefer not to say";
 
     public String claimantFullNames() {
         String title = getTitle();
@@ -70,12 +72,37 @@ public class ClaimantIndType {
      * @return title according to conditions defined above
      */
     private String getTitle() {
-        return !Strings.isNullOrEmpty(trimStringValue(claimantTitle)) ? Other.equals(claimantTitle)
-                ? !Strings.isNullOrEmpty(claimantTitleOther)
-                ? claimantTitleOther : "" : claimantTitle
-                : !Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))
-                ? Other.equals(claimantPreferredTitle) ? !Strings.isNullOrEmpty(claimantTitleOther)
-                ? claimantTitleOther : "" : claimantPreferredTitle : "";
+        // When Ecm legacy Title is set rather than the Reform ET Title field
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantTitle))) {
+            return getCorrectClaimantTitle(claimantTitle);
+        }
+
+        // When the Reform ET Title field is set rather than the Ecm legacy Title
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))) {
+            return getCorrectClaimantTitle(claimantPreferredTitle);
+        }
+
+        // Fallback default
+        return "";
+    }
+
+    private String getCorrectClaimantTitle(String currentTitle) {
+        //Title is set as expected
+        String adjustedClaimantTitle = trimStringValue(currentTitle);
+        if (!Strings.isNullOrEmpty(adjustedClaimantTitle)
+            && !OTHER.equals(adjustedClaimantTitle)
+            && (!PREFER_NOT_TO_SAY.equals(adjustedClaimantTitle))) {
+            return adjustedClaimantTitle;
+        }
+
+        //If title is Other & custom title is added
+        if (OTHER.equals(trimStringValue(currentTitle))
+            && (!Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)))) {
+            return claimantTitleOther;
+        }
+
+        //If title is "Prefer Not to Say" or else as fallback default
+        return "";
     }
 
     /**
