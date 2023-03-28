@@ -72,39 +72,57 @@ public class ClaimantIndType {
      * @return title according to conditions defined above
      */
     private String getTitle() {
+        // When Ecm legacy Title is set rather than the Reform ET Title field
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantTitle))) {
+            return getEcmClaimantTitle();
+        }
+
+        // When the Reform ET Title field is set rather than the Ecm legacy Title
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))) {
+            return getEtClaimantTitle();
+        }
+
+        // Fallback default
+        return "";
+    }
+
+    private String getEtClaimantTitle() {
         //Title is set as expected
-        if (!Strings.isNullOrEmpty(trimStringValue(claimantTitle))
-            && !OTHER.equals(trimStringValue(claimantTitle))
-            && (!PREFER_NOT_TO_SAY.equals(trimStringValue(claimantTitle)))) {
-            return claimantTitle;
+        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))
+            && !OTHER.equals(trimStringValue(claimantPreferredTitle))
+            && (!PREFER_NOT_TO_SAY.equals(trimStringValue(claimantPreferredTitle)))) {
+            return claimantPreferredTitle;
+        }
+
+        //If title is Other & custom title is added
+        if (OTHER.equals(trimStringValue(claimantPreferredTitle))
+            && (!Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)))) {
+            return claimantTitleOther;
+        }
+
+        //If title is "Prefer Not to Say" or else as fallback default
+        return "";
+    }
+
+    private String getEcmClaimantTitle() {
+        // The claimantTitle field is set as expected
+        String adjustedClaimantTitle = trimStringValue(claimantTitle);
+        if (!Strings.isNullOrEmpty(adjustedClaimantTitle)
+            && !OTHER.equals(adjustedClaimantTitle)
+            && (!PREFER_NOT_TO_SAY.equals(adjustedClaimantTitle))) {
+            return adjustedClaimantTitle;
         }
 
         //If title is Other & custom title is added
         if (OTHER.equals(trimStringValue(claimantTitle))
-            && (!Strings.isNullOrEmpty(claimantTitleOther))) {
+            && (!Strings.isNullOrEmpty(trimStringValue(claimantTitleOther)))) {
             return claimantTitleOther;
         }
 
-        //Preferred title is set rather than the normal title
-        if (Strings.isNullOrEmpty(trimStringValue(claimantTitle))
-            && OTHER.equals(trimStringValue(claimantPreferredTitle))) {
-            return claimantTitleOther;
-        }
-
-        //If title is "Prefer Not to Say"
-        if (PREFER_NOT_TO_SAY.equals(trimStringValue(claimantTitle))) {
-            return "";
-        }
-
-        //If title is set from the preferred title list
-        if (!Strings.isNullOrEmpty(trimStringValue(claimantPreferredTitle))) {
-            return claimantPreferredTitle;
-        }
-
-        //Else default to an empty String
+        //If claimantTitle is set to "Prefer Not to Say" or else fallback default
         return "";
     }
-
+    
     /**
      * Implemented to ignore blank title values.
      * @param val string value to be trimmed

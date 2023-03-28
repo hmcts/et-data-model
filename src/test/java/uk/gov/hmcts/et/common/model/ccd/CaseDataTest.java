@@ -112,4 +112,14 @@ public class CaseDataTest {
         caseData.setClaimantIndType(claimantIndType);
         assertEquals("Miss Danna Summer", caseData.getClaimantIndType().claimantFullNames());
     }
+
+    @Test
+    public void claimantFullNamesPreferNotToSayClaimantPreferredTitleTest() {
+        ClaimantIndType claimantIndType = new ClaimantIndType();
+        claimantIndType.setClaimantPreferredTitle("Prefer not to say");
+        claimantIndType.setClaimantFirstNames("Marcelo");
+        claimantIndType.setClaimantLastName("Peter");
+        caseData.setClaimantIndType(claimantIndType);
+        assertEquals("Marcelo Peter", caseData.getClaimantIndType().claimantFullNames());
+    }
 }
