@@ -49,6 +49,8 @@ public class SendNotificationType {
     private String sendNotificationFullName;
     @JsonProperty("sendNotificationFullName2")
     private String sendNotificationFullName2;
+    @JsonProperty("sendNotificationDecision")
+    private String sendNotificationDecision;
     @JsonProperty("sendNotificationDetails")
     private String sendNotificationDetails;
     @JsonProperty("sendNotificationRequestMadeBy")

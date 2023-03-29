@@ -1208,6 +1208,8 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationFullName2;
     @JsonProperty("sendNotificationDetails")
     private String sendNotificationDetails;
+    @JsonProperty("sendNotificationDecision")
+    private String sendNotificationDecision;
     @JsonProperty("sendNotificationRequestMadeBy")
     private String sendNotificationRequestMadeBy;
     @JsonProperty("sendNotificationEccQuestion")
@@ -1223,7 +1225,7 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("pseViewNotifications")
     private String pseViewNotifications;
-    
+
     @JsonProperty("et3RepresentingRespondent")
     private List<DynamicListTypeItem> et3RepresentingRespondent;
 
