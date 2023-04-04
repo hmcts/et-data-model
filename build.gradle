@@ -7,7 +7,7 @@ plugins {
 
 group 'com.github.hmcts'
 
-version '1.13.2'
+version '1.14.0'
 
 sourceCompatibility = '11.0'
 

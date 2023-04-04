@@ -1,16 +1,25 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 @Data
-public class DocumentTypeItem {
+@NoArgsConstructor
+public class DocumentTypeItem extends GenericTypeItem<DocumentType> {
+    public static DocumentTypeItem fromTypeItem(GenericTypeItem<DocumentType> item) {
+        var documentTypeItem = new DocumentTypeItem();
+        documentTypeItem.setId(item.getId());
+        documentTypeItem.setValue(item.getValue());
+        return documentTypeItem;
+    }
 
-    @JsonProperty("id")
-    private String id;
-    @JsonProperty("value")
-    private DocumentType value;
+    public static DocumentTypeItem fromUploadedDocument(UploadedDocumentType uploadedDocumentType) {
+        return fromTypeItem(GenericTypeItem.from(DocumentType.from(uploadedDocumentType)));
+    }
 }
