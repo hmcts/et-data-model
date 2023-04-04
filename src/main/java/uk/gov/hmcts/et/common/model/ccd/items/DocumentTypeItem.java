@@ -19,7 +19,7 @@ public class DocumentTypeItem extends GenericTypeItem<DocumentType> {
         return fromTypeItem(GenericTypeItem.from(DocumentType.from(uploadedDocumentType)));
     }
 
-     @Override public String toString() {
+    @Override public String toString() {
         return super.toString();
-     }
+    }
 }
