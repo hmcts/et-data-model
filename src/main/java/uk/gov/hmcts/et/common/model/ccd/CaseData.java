@@ -976,6 +976,8 @@ public class CaseData extends Et1CaseData {
     private OrganisationPolicy respondentOrganisationPolicy9;
     @JsonProperty("suggestedHearingVenues")
     private DynamicFixedListType suggestedHearingVenues;
+    @JsonProperty("listedDateInPastWarning")
+    private String listedDateInPastWarning;
     @JsonProperty("noticeOfChangeAnswers0")
     private NoticeOfChangeAnswers noticeOfChangeAnswers0;
     @JsonProperty("noticeOfChangeAnswers1")
