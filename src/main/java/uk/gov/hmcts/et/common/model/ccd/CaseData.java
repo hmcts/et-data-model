@@ -1251,4 +1251,8 @@ public class CaseData extends Et1CaseData {
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
     private String respondNotificationPartyToNotify;
+
+    // Bundles Respondent
+    @JsonProperty("bundlesRespondentPrepareDocNotesShow")
+    private String bundlesRespondentPrepareDocNotesShow;
 }
