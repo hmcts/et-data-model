@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.util.UUID;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
@@ -17,4 +19,10 @@ public class GenericTypeItem<T> {
     @JsonProperty("value")
     private T value;
 
+    public static <T> GenericTypeItem<T> from(T value) {
+        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
+        typeItem.id = UUID.randomUUID().toString();
+        typeItem.value = value;
+        return typeItem;
+    }
 }
