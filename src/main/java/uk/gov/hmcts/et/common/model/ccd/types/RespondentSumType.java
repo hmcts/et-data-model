@@ -181,4 +181,6 @@ public class RespondentSumType {
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
     private UploadedDocumentType et3ResponseRespondentSupportDocument;
+    @JsonProperty("et3Form")
+    private UploadedDocumentType et3Form;
 }
