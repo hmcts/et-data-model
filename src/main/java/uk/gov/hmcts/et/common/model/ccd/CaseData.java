@@ -1255,4 +1255,10 @@ public class CaseData extends Et1CaseData {
     // Bundles Respondent
     @JsonProperty("bundlesRespondentPrepareDocNotesShow")
     private String bundlesRespondentPrepareDocNotesShow;
+    @JsonProperty("bundlesRespondentAgreedDocWithOtherParty")
+    private String bundlesRespondentAgreedDocWithOtherParty;
+    @JsonProperty("bundlesRespondentAgreedDocWithOtherPartyBut")
+    private String bundlesRespondentAgreedDocWithOtherPartyBut;
+    @JsonProperty("bundlesRespondentAgreedDocWithOtherPartyNo")
+    private String bundlesRespondentAgreedDocWithOtherPartyNo;
 }
