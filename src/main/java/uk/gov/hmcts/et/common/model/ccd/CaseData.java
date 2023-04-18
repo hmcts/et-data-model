@@ -1257,5 +1257,5 @@ public class CaseData extends Et1CaseData {
     private String bundlesRespondentPrepareDocNotesShow;
 
     @JsonProperty("bundlesRespondentSelectHearing")
-    private DynamicRadioList bundlesRespondentSelectHearing;
+    private DynamicFixedListType bundlesRespondentSelectHearing;
 }
