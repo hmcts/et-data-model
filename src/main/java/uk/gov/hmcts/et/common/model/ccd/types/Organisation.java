@@ -15,4 +15,6 @@ public class Organisation {
     private String organisationID;
     @JsonProperty("OrganisationName")
     private String organisationName;
+    @JsonProperty("OrganisationAddress")
+    private OrganisationAddress organisationAddress;
 }
