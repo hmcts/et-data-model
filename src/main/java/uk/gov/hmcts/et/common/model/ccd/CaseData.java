@@ -1256,12 +1256,12 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentPrepareDocNotesShow")
     private String bundlesRespondentPrepareDocNotesShow;
 
-    @JsonProperty("bundlesRespondentAgreedDocWithOtherParty")
-    private String bundlesRespondentAgreedDocWithOtherParty;
-    @JsonProperty("bundlesRespondentAgreedDocWithOtherPartyBut")
-    private String bundlesRespondentAgreedDocWithOtherPartyBut;
-    @JsonProperty("bundlesRespondentAgreedDocWithOtherPartyNo")
-    private String bundlesRespondentAgreedDocWithOtherPartyNo;
+    @JsonProperty("bundlesRespondentAgreedDocWith")
+    private String bundlesRespondentAgreedDocWith;
+    @JsonProperty("bundlesRespondentAgreedDocWithBut")
+    private String bundlesRespondentAgreedDocWithBut;
+    @JsonProperty("bundlesRespondentAgreedDocWithNo")
+    private String bundlesRespondentAgreedDocWithNo;
 
     @JsonProperty("bundlesRespondentSelectHearing")
     private DynamicFixedListType bundlesRespondentSelectHearing;
