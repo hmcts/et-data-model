@@ -25,5 +25,4 @@ public class OrganisationAddress {
     private String country;
     @JsonProperty("postCode")
     private String postCode;
-    // todo add dx array of something
 }
