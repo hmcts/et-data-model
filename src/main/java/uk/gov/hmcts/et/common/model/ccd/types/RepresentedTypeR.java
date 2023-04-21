@@ -21,7 +21,7 @@ public class RepresentedTypeR {
     private String respondentId;
     @JsonProperty("dynamic_resp_rep_name")
     private DynamicFixedListType dynamicRespRepName;
-    @JsonProperty("resp_rep_name")
+    @JsonProperty("resp_rep_name") // Respondent who is being represented
     private String respRepName;
     @JsonProperty("name_of_representative")
     private String nameOfRepresentative;
