@@ -183,4 +183,11 @@ public class RespondentSumType {
     private UploadedDocumentType et3ResponseRespondentSupportDocument;
     @JsonProperty("et3Form")
     private UploadedDocumentType et3Form;
+
+    @JsonProperty("personalDetailsSection")
+    private String personalDetailsSection;
+    @JsonProperty("employmentDetailsSection")
+    private String employmentDetailsSection;
+    @JsonProperty("claimDetailsSection")
+    private String claimDetailsSection;
 }
