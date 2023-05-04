@@ -5,31 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
-import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
-import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
-import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
-import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
-import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
-import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
-import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
-import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
-import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
-import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
-import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
-import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
+import uk.gov.hmcts.et.common.model.ccd.items.*;
+import uk.gov.hmcts.et.common.model.ccd.types.*;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -1085,9 +1062,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminAdditionalInformation")
     private String tseAdminAdditionalInformation;
     @JsonProperty("tseAdminResponseRequiredYesDoc")
-    private UploadedDocumentType tseAdminResponseRequiredYesDoc;
+    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredYesDoc;
     @JsonProperty("tseAdminResponseRequiredNoDoc")
-    private UploadedDocumentType tseAdminResponseRequiredNoDoc;
+    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredNoDoc;
     @JsonProperty("tseAdminDecisionMadeBy")
     private String tseAdminDecisionMadeBy;
     @JsonProperty("tseAdminDecisionMadeByFullName")
@@ -1107,7 +1084,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseResponseHasSupportingMaterial")
     private String tseResponseHasSupportingMaterial;
     @JsonProperty("tseResponseSupportingMaterial")
-    private List<DocumentTypeItem> tseResponseSupportingMaterial;
+    private List<GenericTypeItem<DocumentType>> tseResponseSupportingMaterial;
     @JsonProperty("tseResponseCopyToOtherParty")
     private String tseResponseCopyToOtherParty;
     @JsonProperty("tseResponseCopyNoGiveDetails")
@@ -1123,7 +1100,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdmReplyAdditionalInformation")
     private String tseAdmReplyAdditionalInformation;
     @JsonProperty("tseAdmReplyAddDocument")
-    private UploadedDocumentType tseAdmReplyAddDocument;
+    private List<GenericTypeItem<DocumentType>> tseAdmReplyAddDocument;
     @JsonProperty("tseAdmReplyIsCmoOrRequest")
     private String tseAdmReplyIsCmoOrRequest;
     @JsonProperty("tseAdmReplyCmoMadeBy")
@@ -1169,7 +1146,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
     private String pseRespondentOrdReqHasSupportingMaterial;
     @JsonProperty("pseRespondentOrdReqUploadDocument")
-    private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
+    private List<GenericTypeItem<DocumentType>> pseRespondentOrdReqUploadDocument;
     @JsonProperty("pseRespondentOrdReqCopyToOtherParty")
     private String pseRespondentOrdReqCopyToOtherParty;
     @JsonProperty("pseRespondentOrdReqCopyNoGiveDetails")
