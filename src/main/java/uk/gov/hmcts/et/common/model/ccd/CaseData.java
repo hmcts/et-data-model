@@ -1268,4 +1268,7 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("submitEt3Respondent")
     private DynamicFixedListType submitEt3Respondent;
+
+    @JsonProperty("bundlesRespondentUploadFile")
+    private UploadedDocumentType bundlesRespondentUploadFile;
 }
