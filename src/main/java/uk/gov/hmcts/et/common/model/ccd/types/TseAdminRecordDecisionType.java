@@ -39,5 +39,6 @@ public class TseAdminRecordDecisionType {
     private String decisionMadeByFullName;
     @JsonProperty("selectPartyNotify")
     private String selectPartyNotify;
-
+    @JsonProperty("decisionState")
+    private String decisionState;
 }
