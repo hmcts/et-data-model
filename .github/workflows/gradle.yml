@@ -22,8 +22,10 @@ jobs:
         with:
           java-version: 11
       - name: Build
+        uses: nick-fields/retry@v2
         with:
           max_attempts: 10
           retry_on: error
           timeout_seconds: 60
           command: ./gradlew check
+
