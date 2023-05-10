@@ -791,8 +791,8 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("et3ResponsePhone")
     private String et3ResponsePhone;
     // ET3 Response - What is your reference number (7)
-    @JsonProperty("et3ResponseReferenceNumber")
-    private String et3ResponseReferenceNumber;
+    @JsonProperty("et3ResponseReference")
+    private String et3ResponseReference;
     // ET3 Response - Contact method page (8)
     @JsonProperty("et3ResponseContactPreference")
     private String et3ResponseContactPreference;
