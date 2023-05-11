@@ -27,6 +27,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
@@ -1268,6 +1269,14 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentSelectHearing")
     private DynamicFixedListType bundlesRespondentSelectHearing;
 
+    @JsonProperty("bundlesRespondentWhatDocuments")
+    private String bundlesRespondentWhatDocuments;
+
+    @JsonProperty("bundlesRespondentWhoseDocuments")
+    private String bundlesRespondentWhoseDocuments;
+
     @JsonProperty("bundlesRespondentUploadFile")
     private UploadedDocumentType bundlesRespondentUploadFile;
+    @JsonProperty("bundlesRespondentCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
 }
