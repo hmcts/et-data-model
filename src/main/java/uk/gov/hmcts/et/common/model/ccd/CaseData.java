@@ -762,14 +762,14 @@ public class CaseData extends Et1CaseData {
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
     private String et3ResponseShowInset;
-    // ET3 Response - Claimant name page (2)
+    // ET3 Response - Claimant name page (3)
     @JsonProperty("et3ResponseClaimantName")
     private String et3ResponseClaimantName;
     @JsonProperty("et3ResponseIsClaimantNameCorrect")
     private String et3ResponseIsClaimantNameCorrect;
     @JsonProperty("et3ResponseClaimantNameCorrection")
     private String et3ResponseClaimantNameCorrection;
-    // ET3 Response - What is the respondent's name (3)
+    // ET3 Response - What is the respondent's name (4)
     @JsonProperty("et3ResponseNameShowInset")
     private String et3ResponseNameShowInset;
     @JsonProperty("et3ResponseRespondentLegalName")
@@ -782,99 +782,102 @@ public class CaseData extends Et1CaseData {
     private String et3ResponseRespondentPreferredTitle;
     @JsonProperty("et3ResponseRespondentContactName")
     private String et3ResponseRespondentContactName;
-    // ET3 Response - Respondent address (4)
+    // ET3 Response - Respondent address (5)
     @JsonProperty("et3RespondentAddress")
     private Address et3RespondentAddress;
     @JsonProperty("et3ResponseDXAddress")
     private String et3ResponseDXAddress;
-    // ET3 Response - Phone number page (5)
+    // ET3 Response - Phone number page (6)
     @JsonProperty("et3ResponsePhone")
     private String et3ResponsePhone;
-    // ET3 Response - Contact method page (6)
+    // ET3 Response - What is your reference number (7)
+    @JsonProperty("et3ResponseReference")
+    private String et3ResponseReference;
+    // ET3 Response - Contact method page (8)
     @JsonProperty("et3ResponseContactPreference")
     private String et3ResponseContactPreference;
     @JsonProperty("et3ResponseContactReason")
     private String et3ResponseContactReason;
-    // ET3 Response - Hearing format page (7)
+    // ET3 Response - Hearing format page (9)
     @JsonProperty("et3ResponseHearingRepresentative")
     private List<String> et3ResponseHearingRepresentative;
     @JsonProperty("et3ResponseHearingRespondent")
     private List<String> et3ResponseHearingRespondent;
-    // ET3 Response - Respondent's workforce page (8)
+    // ET3 Response - Respondent's workforce page (10)
     @JsonProperty("et3ResponseEmploymentCount")
     private String et3ResponseEmploymentCount;
     @JsonProperty("et3ResponseMultipleSites")
     private String et3ResponseMultipleSites;
     @JsonProperty("et3ResponseSiteEmploymentCount")
     private String et3ResponseSiteEmploymentCount;
-    // ET3 Response - Acas page (9)
+    // ET3 Response - Acas page (11)
     @JsonProperty("et3ResponseAcasAgree")
     private String et3ResponseAcasAgree;
     @JsonProperty("et3ResponseAcasAgreeReason")
     private String et3ResponseAcasAgreeReason;
-    // ET3 Response - Are the employment dates correct page (10)
+    // ET3 Response - Are the employment dates correct page (12)
     @JsonProperty("et3ResponseAreDatesCorrect")
     private String et3ResponseAreDatesCorrect;
-    // ET3 Response - Employment dates page (11)
+    // ET3 Response - Employment dates page (13)
     @JsonProperty("et3ResponseEmploymentStartDate")
     private String et3ResponseEmploymentStartDate;
     @JsonProperty("et3ResponseEmploymentEndDate")
     private String et3ResponseEmploymentEndDate;
     @JsonProperty("et3ResponseEmploymentInformation")
     private String et3ResponseEmploymentInformation;
-    // ET3 Response - Is employment continuing page (12)
+    // ET3 Response - Is employment continuing page (14)
     @JsonProperty("et3ResponseContinuingEmployment")
     private String et3ResponseContinuingEmployment;
-    // ET3 Response - Is claimant job title/description correct? (13)
+    // ET3 Response - Is claimant job title/description correct? (15)
     @JsonProperty("et3ResponseIsJobTitleCorrect")
     private String et3ResponseIsJobTitleCorrect;
     @JsonProperty("et3ResponseCorrectJobTitle")
     private String et3ResponseCorrectJobTitle;
-    // ET3 Response - Claimant total weekly work hours (14)
+    // ET3 Response - Claimant total weekly work hours (16)
     @JsonProperty("et3ResponseClaimantWeeklyHours")
     private String et3ResponseClaimantWeeklyHours;
     @JsonProperty("et3ResponseClaimantCorrectHours")
     private String et3ResponseClaimantCorrectHours;
-    // ET3 Response - Earning details (15)
+    // ET3 Response - Earning details (17)
     @JsonProperty("et3ResponseEarningDetailsCorrect")
     private String et3ResponseEarningDetailsCorrect;
-    // ET3 Response - Correct pay details (16)
+    // ET3 Response - Correct pay details (18)
     @JsonProperty("et3ResponsePayFrequency")
     private String et3ResponsePayFrequency;
     @JsonProperty("et3ResponsePayBeforeTax")
     private String et3ResponsePayBeforeTax;
     @JsonProperty("et3ResponsePayTakehome")
     private String et3ResponsePayTakehome;
-    // ET3 Response - Notice given (17)
+    // ET3 Response - Notice given (19)
     @JsonProperty("et3ResponseIsNoticeCorrect")
     private String et3ResponseIsNoticeCorrect;
     @JsonProperty("et3ResponseCorrectNoticeDetails")
     private String et3ResponseCorrectNoticeDetails;
-    // ET3 Response - pension details (18)
+    // ET3 Response - pension details (20)
     @JsonProperty("et3ResponseIsPensionCorrect")
     private String et3ResponseIsPensionCorrect;
     @JsonProperty("et3ResponsePensionCorrectDetails")
     private String et3ResponsePensionCorrectDetails;
-    // ET3 Response - contest claim (19)
+    // ET3 Response - contest claim (21)
     @JsonProperty("et3ResponseRespondentContestClaim")
     private String et3ResponseRespondentContestClaim;
-    // ET3 Response - explain contest claim (20)
+    // ET3 Response - explain contest claim (22)
     @JsonProperty("et3ResponseContestClaimDocument")
     private List<DocumentTypeItem> et3ResponseContestClaimDocument;
     @JsonProperty("et3ResponseContestClaimDetails")
     private String et3ResponseContestClaimDetails;
-    // ET3 Response - employer claim (21)
+    // ET3 Response - employer claim (23)
     @JsonProperty("et3ResponseEmployerClaim")
     private String et3ResponseEmployerClaim;
-    // ET3 Response - explain employer claim (22)
+    // ET3 Response - explain employer claim (24)
     @JsonProperty("et3ResponseEmployerClaimDetails")
     private String et3ResponseEmployerClaimDetails;
     @JsonProperty("et3ResponseEmployerClaimDocument")
     private UploadedDocumentType et3ResponseEmployerClaimDocument;
-    // ET3 Response - health conditions (23)
+    // ET3 Response - health conditions (25)
     @JsonProperty("et3ResponseRespondentSupportNeeded")
     private String et3ResponseRespondentSupportNeeded;
-    // ET3 Response - Details on health conditions (24)
+    // ET3 Response - Details on health conditions (26)
     @JsonProperty("et3ResponseRespondentSupportDetails")
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
