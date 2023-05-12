@@ -1282,4 +1282,6 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
+    @JsonProperty("legalrepDocumentCollection")
+    private List<DocumentTypeItem> legalrepDocumentCollection;
 }
