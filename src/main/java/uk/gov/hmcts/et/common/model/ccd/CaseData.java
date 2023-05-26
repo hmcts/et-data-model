@@ -33,6 +33,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
+//import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantBundles;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -1284,4 +1285,8 @@ public class CaseData extends Et1CaseData {
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    // Claimant Bundles
+    @JsonProperty("claimantBundles")
+    private HearingBundleType claimantBundles;
 }
