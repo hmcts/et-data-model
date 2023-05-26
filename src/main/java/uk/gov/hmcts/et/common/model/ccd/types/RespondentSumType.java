@@ -93,6 +93,8 @@ public class RespondentSumType {
     private String extensionGranted;
     @JsonProperty("extensionDate")
     private String extensionDate;
+    @JsonProperty("extensionResubmitted")
+    private String extensionResubmitted;
     @JsonProperty("et3Vetting")
     private Et3VettingType et3Vetting;
     @JsonProperty("et3VettingCompleted")
