@@ -1,11 +1,13 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
 import java.util.Locale;
 
 @Getter
+@RequiredArgsConstructor
 public enum DayOfWeekUnavailable {
     MONDAY("Monday"),
     TUESDAY("Tuesday"),
@@ -17,14 +19,9 @@ public enum DayOfWeekUnavailable {
 
     public final String label;
 
-    DayOfWeekUnavailable(String label) {
-        this.label = label;
-    }
-
     public static DayOfWeekUnavailable getByLabel(String label) {
-        DayOfWeekUnavailable dow = Arrays.stream(DayOfWeekUnavailable.values())
+        return Arrays.stream(DayOfWeekUnavailable.values())
                 .filter(eachDow -> eachDow.toString().toLowerCase(Locale.ROOT)
                         .equals(label.toLowerCase(Locale.ROOT))).findAny().orElse(null);
-        return dow;
     }
 }

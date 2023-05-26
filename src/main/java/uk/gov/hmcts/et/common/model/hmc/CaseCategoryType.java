@@ -1,10 +1,12 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
 import java.util.Locale;
 
+@RequiredArgsConstructor
 @Getter
 public enum CaseCategoryType {
     CASETYPE("caseType"),
@@ -12,14 +14,9 @@ public enum CaseCategoryType {
 
     public final String label;
 
-    CaseCategoryType(String label) {
-        this.label = label;
-    }
-
     public static CaseCategoryType getByLabel(String label) {
-        CaseCategoryType category = Arrays.stream(CaseCategoryType.values())
+        return Arrays.stream(CaseCategoryType.values())
                 .filter(eachCategory -> eachCategory.toString().toLowerCase(Locale.ROOT)
                         .equals(label.toLowerCase(Locale.ROOT))).findAny().orElse(null);
-        return category;
     }
 }

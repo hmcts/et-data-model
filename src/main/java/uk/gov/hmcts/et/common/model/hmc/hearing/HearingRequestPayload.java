@@ -23,6 +23,7 @@ import javax.validation.constraints.NotNull;
 public class HearingRequestPayload {
     @NotNull(message = ValidationError.INVALID_REQUEST_DETAILS)
     private RequestDetails requestDetails;
+
     @Valid
     @NotNull(message = ValidationError.INVALID_HEARING_DETAILS)
     private HearingDetails hearingDetails;

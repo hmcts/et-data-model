@@ -24,7 +24,6 @@ import static uk.gov.hmcts.et.common.model.hmc.ValidationError.FACILITIES_REQUIR
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class HearingDetails {
-
     @JsonProperty("autolistFlag")
     @NotNull(message = ValidationError.AUTO_LIST_FLAG_NULL_EMPTY)
     private Boolean autoListFlag;

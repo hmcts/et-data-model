@@ -18,10 +18,7 @@ public class EnumPatternValidator implements ConstraintValidator<EnumPattern, St
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        if (value == null) {
-            return false;
-        }
-        return acceptedValues.contains(value.toUpperCase());
+        return value != null && acceptedValues.contains(value.toUpperCase());
     }
 
 }

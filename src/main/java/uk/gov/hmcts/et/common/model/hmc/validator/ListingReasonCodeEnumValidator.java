@@ -18,10 +18,7 @@ public class ListingReasonCodeEnumValidator implements ConstraintValidator<Listi
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        if (value == null) {
-            return true;
-        }
-        return acceptedValues.contains(value);
+        return value == null || acceptedValues.contains(value);
     }
 
 }

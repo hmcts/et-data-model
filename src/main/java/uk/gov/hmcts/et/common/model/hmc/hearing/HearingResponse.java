@@ -13,7 +13,6 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class HearingResponse {
-
     @JsonProperty("hearingRequestID")
     @Size(max = 30)
     @NotNull

@@ -15,7 +15,6 @@ import javax.validation.constraints.Size;
 @Data
 @NoArgsConstructor
 public class PartyDetails {
-
     @NotEmpty(message = ValidationError.PARTY_DETAILS_NULL_EMPTY)
     @Size(max = 40, message = ValidationError.PARTY_DETAILS_MAX_LENGTH)
     private String partyID;

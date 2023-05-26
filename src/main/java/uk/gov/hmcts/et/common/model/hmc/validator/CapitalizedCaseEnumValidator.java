@@ -21,9 +21,6 @@ public class CapitalizedCaseEnumValidator implements ConstraintValidator<Capital
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        if (value == null) {
-            return false;
-        }
-        return acceptedValues.contains(value);
+        return value != null && acceptedValues.contains(value);
     }
 }
