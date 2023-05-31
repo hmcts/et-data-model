@@ -1272,6 +1272,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentSelectHearing")
     private DynamicFixedListType bundlesRespondentSelectHearing;
 
+    @JsonProperty("submitEt3Respondent")
+    private DynamicFixedListType submitEt3Respondent;
+
     @JsonProperty("bundlesRespondentWhatDocuments")
     private String bundlesRespondentWhatDocuments;
 
