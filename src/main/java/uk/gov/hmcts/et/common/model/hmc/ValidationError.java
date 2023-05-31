@@ -116,4 +116,8 @@ public final class ValidationError {
     public static final String AMEND_REASON_CODE_MAX_LENGTH = "Amend reason code must be at least 1 but no more than "
             + "70 " + CHARACTERS_LONG;
     public static final String INVALID_CASE_REFERENCE = "Invalid case reference";
+    public static final String LIST_ASSIST_TRANSACTION_ID_MAX_LENGTH =
+            "List assist transaction id length cannot be greater than 40 " + CHARACTERS_LONG;
+    public static final String HEARING_CANCELLATION_REASON_MAX_LENGTH =
+            "Hearing cancellation reason length cannot be greater than 40 " + CHARACTERS_LONG;
 }

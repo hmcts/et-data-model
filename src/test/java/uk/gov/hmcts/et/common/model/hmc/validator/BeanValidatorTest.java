@@ -3,25 +3,43 @@ package uk.gov.hmcts.et.common.model.hmc.validator;
 import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import uk.gov.hmcts.et.common.model.hmc.Attendee;
 import uk.gov.hmcts.et.common.model.hmc.CaseCategory;
 import uk.gov.hmcts.et.common.model.hmc.CaseCategoryType;
 import uk.gov.hmcts.et.common.model.hmc.CaseDetails;
+import uk.gov.hmcts.et.common.model.hmc.CaseHearing;
+import uk.gov.hmcts.et.common.model.hmc.DayOfWeekUnavailable;
+import uk.gov.hmcts.et.common.model.hmc.DayOfWeekUnavailableType;
+import uk.gov.hmcts.et.common.model.hmc.HearingDaySchedule;
 import uk.gov.hmcts.et.common.model.hmc.HearingDetails;
 import uk.gov.hmcts.et.common.model.hmc.HearingLocation;
+import uk.gov.hmcts.et.common.model.hmc.HearingResponse;
 import uk.gov.hmcts.et.common.model.hmc.HearingWindow;
+import uk.gov.hmcts.et.common.model.hmc.ListAssistCaseStatus;
 import uk.gov.hmcts.et.common.model.hmc.ListingReasonCode;
+import uk.gov.hmcts.et.common.model.hmc.ListingStatus;
 import uk.gov.hmcts.et.common.model.hmc.LocationType;
+import uk.gov.hmcts.et.common.model.hmc.OrganisationDetails;
+import uk.gov.hmcts.et.common.model.hmc.PanelPreference;
 import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
 import uk.gov.hmcts.et.common.model.hmc.PartyType;
-import uk.gov.hmcts.et.common.model.hmc.RequestDetails;
+import uk.gov.hmcts.et.common.model.hmc.RelatedParty;
+import uk.gov.hmcts.et.common.model.hmc.RequestDetailsGet;
+import uk.gov.hmcts.et.common.model.hmc.RequestDetailsPost;
+import uk.gov.hmcts.et.common.model.hmc.RequirementType;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityDow;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.ValidationError;
-import uk.gov.hmcts.et.common.model.hmc.hearing.HearingRequestPayload;
+import uk.gov.hmcts.et.common.model.hmc.hearing.PostHearingPayload;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
@@ -214,8 +232,8 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsRequestDetailsVersionNumberNotPresent() {
-        RequestDetails requestDetails = new RequestDetails();
-        Set<ConstraintViolation<RequestDetails>> violations = validator.validate(requestDetails);
+        RequestDetailsPost requestDetails = new RequestDetailsPost();
+        Set<ConstraintViolation<RequestDetailsPost>> violations = validator.validate(requestDetails);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -225,10 +243,10 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsHearingDetailsNotPresent() {
-        HearingRequestPayload hearingRequest = new HearingRequestPayload();
+        PostHearingPayload hearingRequest = new PostHearingPayload();
         hearingRequest.setCaseDetails(caseDetails());
-        hearingRequest.setRequestDetails(new RequestDetails());
-        Set<ConstraintViolation<HearingRequestPayload>> violations = validator.validate(hearingRequest);
+        hearingRequest.setRequestDetails(new RequestDetailsPost());
+        Set<ConstraintViolation<PostHearingPayload>> violations = validator.validate(hearingRequest);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -238,13 +256,13 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsCaseDetailsCaseCategoriesNotPresent() {
-        HearingRequestPayload hearingRequest = new HearingRequestPayload();
+        PostHearingPayload hearingRequest = new PostHearingPayload();
         hearingRequest.setHearingDetails(hearingDetails());
         hearingRequest.getHearingDetails().setPanelRequirements(panelRequirements());
         hearingRequest.setCaseDetails(caseDetails());
         hearingRequest.getCaseDetails().setCaseCategories(new ArrayList<>());
-        hearingRequest.setRequestDetails(new RequestDetails());
-        Set<ConstraintViolation<HearingRequestPayload>> violations = validator.validate(hearingRequest);
+        hearingRequest.setRequestDetails(new RequestDetailsPost());
+        Set<ConstraintViolation<PostHearingPayload>> violations = validator.validate(hearingRequest);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -254,11 +272,11 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsPanelRequirementsNotPresent() {
-        HearingRequestPayload hearingRequest = new HearingRequestPayload();
+        PostHearingPayload hearingRequest = new PostHearingPayload();
         hearingRequest.setHearingDetails(hearingDetails());
         hearingRequest.setCaseDetails(caseDetails());
-        hearingRequest.setRequestDetails(new RequestDetails());
-        Set<ConstraintViolation<HearingRequestPayload>> violations = validator.validate(hearingRequest);
+        hearingRequest.setRequestDetails(new RequestDetailsPost());
+        Set<ConstraintViolation<PostHearingPayload>> violations = validator.validate(hearingRequest);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -268,11 +286,11 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsCaseDetailsNotPresent() {
-        HearingRequestPayload hearingRequest = new HearingRequestPayload();
+        PostHearingPayload hearingRequest = new PostHearingPayload();
         hearingRequest.setHearingDetails(hearingDetails());
         hearingRequest.getHearingDetails().setPanelRequirements(panelRequirements());
-        hearingRequest.setRequestDetails(new RequestDetails());
-        Set<ConstraintViolation<HearingRequestPayload>> violations = validator.validate(hearingRequest);
+        hearingRequest.setRequestDetails(new RequestDetailsPost());
+        Set<ConstraintViolation<PostHearingPayload>> violations = validator.validate(hearingRequest);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -283,13 +301,13 @@ class BeanValidatorTest {
 
     @Test
     void shouldFailAsHearingLocationsNotPresent() {
-        HearingRequestPayload hearingRequest = new HearingRequestPayload();
+        PostHearingPayload hearingRequest = new PostHearingPayload();
         hearingRequest.setHearingDetails(hearingDetails());
         hearingRequest.setCaseDetails(caseDetails());
         hearingRequest.getHearingDetails().setHearingLocations(new ArrayList<>());
         hearingRequest.getHearingDetails().setPanelRequirements(panelRequirements());
-        hearingRequest.setRequestDetails(new RequestDetails());
-        Set<ConstraintViolation<HearingRequestPayload>> violations = validator.validate(hearingRequest);
+        hearingRequest.setRequestDetails(new RequestDetailsPost());
+        Set<ConstraintViolation<PostHearingPayload>> violations = validator.validate(hearingRequest);
         List<String> validationErrors = new ArrayList<>();
         violations.forEach(e -> validationErrors.add(e.getMessage()));
         assertFalse(violations.isEmpty());
@@ -334,7 +352,7 @@ class BeanValidatorTest {
     void whenInvalidCaseCategoryValueIsNull() {
         CaseCategory category = new CaseCategory();
         category.setCategoryValue(null);
-        category.setCategoryType(CaseCategoryType.CASETYPE.getLabel());
+        category.setCategoryType(CaseCategoryType.CASETYPE.toString());
         Set<ConstraintViolation<CaseCategory>> violations = validator.validate(category);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -349,7 +367,7 @@ class BeanValidatorTest {
     void whenInvalidCaseCategoryValueIsEmpty() {
         CaseCategory category = new CaseCategory();
         category.setCategoryValue("");
-        category.setCategoryType(CaseCategoryType.CASETYPE.getLabel());
+        category.setCategoryType(CaseCategoryType.CASETYPE.toString());
         Set<ConstraintViolation<CaseCategory>> violations = validator.validate(category);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -364,7 +382,7 @@ class BeanValidatorTest {
     void whenInvalidPartyIdIsNull() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID(null);
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("role1");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
@@ -380,7 +398,7 @@ class BeanValidatorTest {
     void whenInvalidPartyIdIsEmpty() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("role1");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
@@ -430,7 +448,7 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIsNull() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole(null);
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
@@ -446,7 +464,7 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIsEmpty() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
@@ -462,7 +480,7 @@ class BeanValidatorTest {
     void whenValidPartyRoleIs6Characters() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("abcdef");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertTrue(violations.isEmpty());
@@ -472,7 +490,7 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIs7Characters() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertEquals(1, violations.size());
@@ -503,10 +521,277 @@ class BeanValidatorTest {
         assertTrue(violations.isEmpty());
     }
 
+    @Test
+    void attendee_partyIdShouldFailValidationOver40Characters() {
+        Attendee attendee = attendee();
+        attendee.setPartyId(String.format("%041d", 0));
+        Set<ConstraintViolation<Attendee>> violations = validator.validate(attendee);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 1);
+        assertEquals(validationErrors.get(0), "size must be between 0 and 40");
+    }
+
+    @Test
+    void attendee_partyIdShouldFailValidationWhenEmpty() {
+        Attendee attendee = attendee();
+        attendee.setPartyId(null);
+        Set<ConstraintViolation<Attendee>> violations = validator.validate(attendee);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 1);
+        assertEquals(validationErrors.get(0), "must not be null");
+    }
+
+    @Test
+    void attendee_hearingSubChannelShouldFailValidationOver60Characters() {
+        Attendee attendee = attendee();
+        attendee.setHearingSubChannel(String.format("%061d", 0));
+        Set<ConstraintViolation<Attendee>> violations = validator.validate(attendee);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(1, validationErrors.size());
+        assertEquals("size must be between 0 and 60", validationErrors.get(0));
+    }
+
+    @Test
+    void attendee_hearingSubChannelShouldFailValidationWhenEmpty() {
+        Attendee attendee = attendee();
+        attendee.setHearingSubChannel(null);
+        Set<ConstraintViolation<Attendee>> violations = validator.validate(attendee);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(1, validationErrors.size());
+        assertEquals("must not be null", validationErrors.get(0));
+    }
+
+    @Test
+    void attendee_valid() {
+        Attendee value = Attendee.builder().partyId("12345").hearingSubChannel("1234").build();
+        Set<ConstraintViolation<Attendee>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void hearingResponse_valid() {
+        HearingResponse response = HearingResponse.builder().build();
+        response.setLaCaseStatus(ListAssistCaseStatus.CASE_CLOSED.toString());
+        response.setListingStatus(ListingStatus.DRAFT.toString());
+        Set<ConstraintViolation<HearingResponse>> violations = validator.validate(response);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void caseHearing_valid() {
+        CaseHearing value = CaseHearing.builder()
+                .hearingId("1")
+                .hearingType("type")
+                .hearingIsLinkedFlag(false)
+                .hearingListingStatus("status")
+                .hearingGroupRequestId("1")
+                .hearingRequestDateTime(LocalDateTime.now())
+                .lastResponseReceivedDateTime(LocalDateTime.now())
+                .listAssistCaseStatus("status")
+                .responseVersion(1)
+                .hmcStatus("status")
+                .hearingDaySchedule(Collections.emptyList())
+                .build();
+
+        Set<ConstraintViolation<CaseHearing>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void hearingDaySchedule_valid() {
+        HearingDaySchedule value = HearingDaySchedule.builder()
+                .attendees(Collections.emptyList())
+                .hearingJudgeId("1")
+                .hearingRoomId("1")
+                .hearingVenueId("1")
+                .hearingEndDateTime(LocalDateTime.now())
+                .hearingStartDateTime(LocalDateTime.now())
+                .listAssistSessionId("1")
+                .panelMemberIds(Collections.emptyList())
+                .build();
+
+        Set<ConstraintViolation<HearingDaySchedule>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void hearingLocation_valid() {
+        HearingLocation value = HearingLocation.builder()
+                .locationId("123")
+                .locationType(LocationType.CLUSTER.toString())
+                .build();
+
+        Set<ConstraintViolation<HearingLocation>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void hearingWindow_valid() {
+        HearingWindow value = HearingWindow.builder()
+                .dateRangeEnd(LocalDate.now())
+                .dateRangeStart(LocalDate.now())
+                .firstDateTimeMustBe(LocalDateTime.now())
+                .build();
+
+        Set<ConstraintViolation<HearingWindow>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void organisationDetails_valid() {
+        OrganisationDetails value = OrganisationDetails.builder()
+                .cftOrganisationID("123")
+                .organisationType("type")
+                .name("name")
+                .build();
+
+        Set<ConstraintViolation<OrganisationDetails>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void panelPreference_valid() {
+        PanelPreference value = PanelPreference.builder()
+                .memberID("1234")
+                .memberType("type")
+                .requirementType(RequirementType.EXCLUDE.toString())
+                .build();
+
+        Set<ConstraintViolation<PanelPreference>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void panelRequirements_valid() {
+        PanelRequirements value = PanelRequirements.builder()
+                .roleType(List.of("type"))
+                .authorisationSubType(List.of("subType"))
+                .panelPreferences(Collections.emptyList())
+                .panelSpecialisms(List.of("nothing"))
+                .build();
+
+        Set<ConstraintViolation<PanelRequirements>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void partyDetails_valid() {
+        PartyDetails value = PartyDetails.builder()
+                .partyID("123")
+                .partyType(PartyType.IND.toString())
+                .partyRole("role")
+                .unavailabilityDow(Collections.emptyList())
+                .unavailabilityRanges(Collections.emptyList())
+                .build();
+
+        Set<ConstraintViolation<PartyDetails>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void relatedParty_valid() {
+        RelatedParty value = RelatedParty.builder()
+                .relatedPartyID("123")
+                .relationshipType("max10")
+                .build();
+
+        Set<ConstraintViolation<RelatedParty>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void requestDetailsGet_valid() {
+        RequestDetailsGet value = RequestDetailsGet.builder()
+                .hearingRequestId("1234")
+                .versionNumber(1)
+                .status("status")
+                .timeStamp(LocalDateTime.now())
+                .hearingGroupRequestId("123")
+                .partiesNotifiedDateTime(LocalDateTime.now())
+                .build();
+
+        Set<ConstraintViolation<RequestDetailsGet>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void requestDetailsPost_valid() {
+        RequestDetailsPost value = RequestDetailsPost.builder()
+                .versionNumber(1)
+                .build();
+
+        Set<ConstraintViolation<RequestDetailsPost>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void unavailabilityDow_valid() {
+        UnavailabilityDow value = UnavailabilityDow.builder()
+                .dow(DayOfWeekUnavailable.FRIDAY.toString())
+                .dowUnavailabilityType(DayOfWeekUnavailableType.ALL.toString())
+                .build();
+
+        Set<ConstraintViolation<UnavailabilityDow>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    @Test
+    void unavailabilityRanges_valid() {
+        UnavailabilityRanges value = UnavailabilityRanges.builder()
+                .unavailableFromDate(LocalDate.now())
+                .unavailableToDate(LocalDate.now())
+                .unavailabilityType(DayOfWeekUnavailableType.AM.toString())
+                .build();
+
+        Set<ConstraintViolation<UnavailabilityRanges>> violations = validator.validate(value);
+        List<String> validationErrors = new ArrayList<>();
+        violations.forEach(e -> validationErrors.add(e.getMessage()));
+        assertEquals(validationErrors.size(), 0);
+    }
+
+    public Attendee attendee() {
+        return Attendee.builder()
+                .partyId("123456")
+                .hearingSubChannel("subchannel")
+                .build();
+    }
+
     public HearingDetails hearingDetails() {
         HearingDetails hearingDetails = new HearingDetails();
         hearingDetails.setAutoListFlag(false);
-        hearingDetails.setListingAutoChangeReasonCode(ListingReasonCode.NO_MAPPING_AVAILABLE.getLabel());
+        hearingDetails.setListingAutoChangeReasonCode(ListingReasonCode.NO_MAPPING_AVAILABLE.toString());
         hearingDetails.setHearingType("Some hearing type");
         HearingWindow hearingWindow = new HearingWindow();
         hearingWindow.setDateRangeEnd(LocalDate.parse("2017-03-01"));
@@ -518,7 +803,7 @@ class BeanValidatorTest {
         hearingDetails.setHearingIsLinkedFlag(Boolean.TRUE);
         hearingDetails.setHearingChannels(getHearingChannelsList());
         HearingLocation location1 = new HearingLocation();
-        location1.setLocationType(LocationType.CLUSTER.getLabel());
+        location1.setLocationType(LocationType.CLUSTER.toString());
         location1.setLocationId("Location Id");
         List<HearingLocation> hearingLocations = new ArrayList<>();
         hearingLocations.add(location1);

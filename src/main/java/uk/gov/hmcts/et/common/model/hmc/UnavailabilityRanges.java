@@ -1,5 +1,7 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
@@ -8,9 +10,10 @@ import java.time.LocalDate;
 import javax.validation.constraints.NotNull;
 
 @Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class UnavailabilityRanges {
-
     @NotNull(message = ValidationError.UNAVAILABLE_FROM_DATE_EMPTY)
     private LocalDate unavailableFromDate;
 

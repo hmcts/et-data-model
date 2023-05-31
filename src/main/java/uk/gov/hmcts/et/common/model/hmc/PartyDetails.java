@@ -1,9 +1,10 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 
 import java.util.List;
@@ -11,8 +12,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@SuperBuilder
+@Builder
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class PartyDetails {
     @NotEmpty(message = ValidationError.PARTY_DETAILS_NULL_EMPTY)

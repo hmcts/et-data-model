@@ -1,28 +1,27 @@
 package uk.gov.hmcts.et.common.model.hmc.hearing;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.hmc.CaseDetails;
 import uk.gov.hmcts.et.common.model.hmc.HearingDetails;
+import uk.gov.hmcts.et.common.model.hmc.HearingResponse;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
-import uk.gov.hmcts.et.common.model.hmc.RequestDetails;
+import uk.gov.hmcts.et.common.model.hmc.RequestDetailsGet;
 import uk.gov.hmcts.et.common.model.hmc.ValidationError;
 
-import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class HearingRequestPayload {
+@AllArgsConstructor
+@NoArgsConstructor
+public class GetHearingResponse {
     @NotNull(message = ValidationError.INVALID_REQUEST_DETAILS)
-    private RequestDetails requestDetails;
+    private RequestDetailsGet requestDetails;
 
     @Valid
     @NotNull(message = ValidationError.INVALID_HEARING_DETAILS)
@@ -34,4 +33,7 @@ public class HearingRequestPayload {
 
     @Valid
     private List<PartyDetails> partyDetails;
+
+    @Valid
+    private HearingResponse hearingResponse;
 }

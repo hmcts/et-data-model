@@ -1,14 +1,16 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@SuperBuilder
+@Builder
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class RelatedParty {
     @NotEmpty(message = ValidationError.RELATED_PARTY_EMPTY)
