@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '2.1.1-et3'
+version '2.2.1'
 
 sourceCompatibility = '11.0'
 
@@ -37,6 +37,8 @@ ext {
 }
 
 dependencies {
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.hibernate.validator:hibernate-validator:6.0.21.Final'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.14.1'
@@ -49,8 +51,13 @@ dependencies {
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
 jar {
     enabled = true
+}
+
+test {
+    useJUnitPlatform()
 }
