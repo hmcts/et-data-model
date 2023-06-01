@@ -1012,6 +1012,12 @@ public class CaseData extends Et1CaseData {
     private ClaimantTse claimantTse;
 
     //Respondent Tell Something Else
+    @JsonProperty("resTseNotAvailableWarning")
+    private String resTseNotAvailableWarning;
+    @JsonProperty("tseRespondNotAvailableWarning")
+    private String tseRespondNotAvailableWarning;
+    @JsonProperty("respondToTribunalNotAvailableWarning")
+    private String respondToTribunalNotAvailableWarning;
     @JsonProperty("resTseSelectApplication")
     private String resTseSelectApplication;
     @JsonProperty("resTseVariableContent")
