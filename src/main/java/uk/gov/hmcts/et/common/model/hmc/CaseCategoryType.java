@@ -1,6 +1,5 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

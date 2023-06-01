@@ -7,9 +7,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 
-import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
+import javax.validation.constraints.Size;
 
 @Builder
 @Data
