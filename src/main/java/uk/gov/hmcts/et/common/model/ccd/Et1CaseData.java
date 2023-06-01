@@ -73,6 +73,8 @@ public class Et1CaseData {
     private String receiptDate;
     @JsonProperty("triageQuestions")
     private TriageQuestions triageQuestions;
+    @JsonProperty("et1OnlineSubmission")
+    private String et1OnlineSubmission;
     // Citizen hub
     @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
