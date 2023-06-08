@@ -55,7 +55,7 @@ public final class ValidationError {
     public static final String PARTY_DETAILS_NULL_EMPTY = "Party id can not be empty";
     public static final String PARTY_DETAILS_MAX_LENGTH = "Party id must not be more than 40 " + CHARACTERS_LONG;
     public static final String PARTY_ROLE_MAX_LENGTH = "Party role must not be more than 40 " + CHARACTERS_LONG;
-    public static final String NAME_NULL_EMPTY = "Name can not be empty";
+    public static final String NAME_NULL_EMPTY = "Party name can not be empty";
     public static final String NAME_MAX_LENGTH = "Name must not be more than 2000 " + CHARACTERS_LONG;
     public static final String ORGANISATION_TYPE_NULL_EMPTY = "Organisation type can not be empty";
     public static final String ORGANISATION_TYPE_MAX_LENGTH = "Organisation type must not be more than 60 "
@@ -95,6 +95,9 @@ public final class ValidationError {
             + CHARACTERS_LONG;
     public static final String AUTHORISATION_SUB_TYPE_MAX_LENGTH_MSG = "Authorisation sub type length cannot be "
             + "greater than 70 " + CHARACTERS_LONG;
+
+    public static final String AUTHORISATION_TYPES_MAX_LENGTH_MSG = "Authorisation sub type length cannot be "
+            + "greater than 70 " + CHARACTERS_LONG;
     public static final String PANEL_SPECIALISMS_MAX_LENGTH_MSG = "Panel Specialisms length cannot be greater than 70 "
             + CHARACTERS_LONG;
     public static final String FACILITIES_REQUIRED_MAX_LENGTH_MSG = "Facilities required length cannot be greater "
@@ -110,6 +113,7 @@ public final class ValidationError {
     public static final String CATEGORY_VALUE_EMPTY = "Category value must be present";
     public static final String PARTY_TYPE_EMPTY = "Party type must be present";
     public static final String PARTY_ROLE_EMPTY = "Party role must be present";
+    public static final String PARTY_NAME_NULL_EMPTY = "Party name must be present";
     public static final String OTHER_REASON_LENGTH = "Other reasonable adjustment details cannot be greater than 200 "
             + CHARACTERS_LONG;
     public static final String CUSTODY_STATUS_LENGTH = "Custody status cannot be greater than 80 " + CHARACTERS_LONG;
