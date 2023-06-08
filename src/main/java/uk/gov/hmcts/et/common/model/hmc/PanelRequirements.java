@@ -2,7 +2,8 @@ package uk.gov.hmcts.et.common.model.hmc;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 import java.util.List;
 import javax.validation.Valid;
@@ -12,10 +13,12 @@ import static uk.gov.hmcts.et.common.model.hmc.ValidationError.AUTHORISATION_SUB
 import static uk.gov.hmcts.et.common.model.hmc.ValidationError.PANEL_SPECIALISMS_MAX_LENGTH_MSG;
 import static uk.gov.hmcts.et.common.model.hmc.ValidationError.ROLE_TYPE_MAX_LENGTH_MSG;
 
-@SuperBuilder
+@Builder
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class PanelRequirements {
+
     private List<@Size(max = 70, message = ROLE_TYPE_MAX_LENGTH_MSG) String> roleType;
 
     private List<@Size(max = 70, message = AUTHORISATION_SUB_TYPE_MAX_LENGTH_MSG) String> authorisationSubType;
@@ -24,4 +27,8 @@ public class PanelRequirements {
     private List<PanelPreference> panelPreferences;
 
     private List<@Size(max = 70, message = PANEL_SPECIALISMS_MAX_LENGTH_MSG) String> panelSpecialisms;
+
+    private List<@Size(max = 70, message = AUTHORISATION_TYPES_MAX_LENGTH_MSG) String> authorisationTypes;
+
+    private List<@Size(max = 70, message = ROLE_TYPE_MAX_LENGTH_MSG) String> roleType;
 }

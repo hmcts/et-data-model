@@ -3,7 +3,9 @@ package uk.gov.hmcts.et.common.model.hmc;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 
 import java.util.List;
@@ -11,10 +13,12 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@SuperBuilder
+@Builder
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class PartyDetails {
+
     @NotEmpty(message = ValidationError.PARTY_DETAILS_NULL_EMPTY)
     @Size(max = 40, message = ValidationError.PARTY_DETAILS_MAX_LENGTH)
     private String partyID;
@@ -40,4 +44,10 @@ public class PartyDetails {
 
     @Valid
     private List<UnavailabilityRanges> unavailabilityRanges;
+
+    @NotEmpty(message = ValidationError.PARTY_PARTYNAME_NULL_EMPTY)
+    @Size(max = 40, message = ValidationError.PARTY_NAME_MAX_LENGTH)
+    private String partyName;
+
+    private String hearingsSubChannel;
 }

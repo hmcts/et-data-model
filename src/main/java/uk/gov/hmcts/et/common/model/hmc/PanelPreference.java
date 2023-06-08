@@ -1,15 +1,18 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-@SuperBuilder
+@Builder
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class PanelPreference {
     @NotEmpty(message = ValidationError.MEMBER_ID_EMPTY)
