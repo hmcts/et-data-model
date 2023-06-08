@@ -21,7 +21,7 @@ public class Judiciary {
     private List<String> roleType;
     private List<String> authorisationTypes;
     private List<String> authorisationSubType;
-//    private List<PanelComposition> panelComposition; this does not exist in the code base currently
+//  private List<PanelComposition> panelComposition; this does not exist in the code base currently
     private List<PanelPreference> judiciaryPreferences;
     private List<String> judiciarySpecialisms;
 }

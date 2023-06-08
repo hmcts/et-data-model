@@ -1,15 +1,16 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
-import lombok.Data;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
+import lombok.Data;
 
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 import static uk.gov.hmcts.et.common.model.hmc.ValidationError.*;
+
 
 @Builder
 @Data
@@ -26,6 +27,6 @@ public class PanelRequirements {
 
     private List<@Size(max = 70, message = PANEL_SPECIALISMS_MAX_LENGTH_MSG) String> panelSpecialisms;
 
-    private List<@Size(max = 70,message = AUTHORISATION_TYPES_MAX_LENGTH_MSG) String> authorisationTypes;
+    private List<@Size(max = 70, message = AUTHORISATION_TYPES_MAX_LENGTH_MSG) String> authorisationTypes;
 
 }
