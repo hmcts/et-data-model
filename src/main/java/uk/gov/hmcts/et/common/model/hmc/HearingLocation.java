@@ -1,9 +1,8 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
-
+import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.Data;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 

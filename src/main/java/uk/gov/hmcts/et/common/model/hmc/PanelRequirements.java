@@ -1,16 +1,15 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
 
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
 import static uk.gov.hmcts.et.common.model.hmc.ValidationError.*;
-
 
 @Builder
 @Data

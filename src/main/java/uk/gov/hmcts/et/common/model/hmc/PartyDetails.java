@@ -2,10 +2,10 @@ package uk.gov.hmcts.et.common.model.hmc;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.Builder;
+import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
 import uk.gov.hmcts.et.common.model.hmc.validator.EnumPattern;
 
 import java.util.List;
