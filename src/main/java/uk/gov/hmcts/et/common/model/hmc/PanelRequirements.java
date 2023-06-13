@@ -1,15 +1,18 @@
 package uk.gov.hmcts.et.common.model.hmc;
 
-import lombok.Data;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
-import static uk.gov.hmcts.et.common.model.hmc.ValidationError.*;
+import static uk.gov.hmcts.et.common.model.hmc.ValidationError.AUTHORISATION_SUB_TYPE_MAX_LENGTH_MSG;
+import static uk.gov.hmcts.et.common.model.hmc.ValidationError.AUTHORISATION_TYPES_MAX_LENGTH_MSG;
+import static uk.gov.hmcts.et.common.model.hmc.ValidationError.PANEL_SPECIALISMS_MAX_LENGTH_MSG;
+import static uk.gov.hmcts.et.common.model.hmc.ValidationError.ROLE_TYPE_MAX_LENGTH_MSG;
 
 @Builder
 @Data
