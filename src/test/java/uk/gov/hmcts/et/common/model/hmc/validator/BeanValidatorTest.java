@@ -418,6 +418,7 @@ class BeanValidatorTest {
         partyDetails.setPartyID("XXX1");
         partyDetails.setPartyType("");
         partyDetails.setPartyRole("role1");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
