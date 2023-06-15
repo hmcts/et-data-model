@@ -364,8 +364,9 @@ class BeanValidatorTest {
     void whenInvalidPartyIdIsNull() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID(null);
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("role1");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -380,8 +381,9 @@ class BeanValidatorTest {
     void whenInvalidPartyIdIsEmpty() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("role1");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -398,6 +400,7 @@ class BeanValidatorTest {
         partyDetails.setPartyID("XXX1");
         partyDetails.setPartyType(null);
         partyDetails.setPartyRole("role1");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -415,6 +418,7 @@ class BeanValidatorTest {
         partyDetails.setPartyID("XXX1");
         partyDetails.setPartyType("");
         partyDetails.setPartyRole("role1");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -430,8 +434,9 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIsNull() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole(null);
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -446,8 +451,9 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIsEmpty() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertFalse(violations.isEmpty());
         List<String> validationErrors = new ArrayList<>();
@@ -462,8 +468,9 @@ class BeanValidatorTest {
     void whenValidPartyRoleIs6Characters() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("abcdef");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertTrue(violations.isEmpty());
     }
@@ -472,8 +479,9 @@ class BeanValidatorTest {
     void whenInvalidPartyRoleIs7Characters() {
         PartyDetails partyDetails = new PartyDetails();
         partyDetails.setPartyID("XXX1");
-        partyDetails.setPartyType(PartyType.IND.getLabel());
+        partyDetails.setPartyType(PartyType.IND.toString());
         partyDetails.setPartyRole("abcdefg");
+        partyDetails.setPartyName("abcdefg");
         Set<ConstraintViolation<PartyDetails>> violations = validator.validate(partyDetails);
         assertEquals(1, violations.size());
         assertTrue(violations.stream()

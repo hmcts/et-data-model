@@ -95,6 +95,9 @@ public final class ValidationError {
             + CHARACTERS_LONG;
     public static final String AUTHORISATION_SUB_TYPE_MAX_LENGTH_MSG = "Authorisation sub type length cannot be "
             + "greater than 70 " + CHARACTERS_LONG;
+
+    public static final String AUTHORISATION_TYPES_MAX_LENGTH_MSG = "Authorisation sub type length cannot be "
+            + "greater than 70 " + CHARACTERS_LONG;
     public static final String PANEL_SPECIALISMS_MAX_LENGTH_MSG = "Panel Specialisms length cannot be greater than 70 "
             + CHARACTERS_LONG;
     public static final String FACILITIES_REQUIRED_MAX_LENGTH_MSG = "Facilities required length cannot be greater "
@@ -110,6 +113,7 @@ public final class ValidationError {
     public static final String CATEGORY_VALUE_EMPTY = "Category value must be present";
     public static final String PARTY_TYPE_EMPTY = "Party type must be present";
     public static final String PARTY_ROLE_EMPTY = "Party role must be present";
+    public static final String PARTY_NAME_NULL_EMPTY = "Party name must be present";
     public static final String OTHER_REASON_LENGTH = "Other reasonable adjustment details cannot be greater than 200 "
             + CHARACTERS_LONG;
     public static final String CUSTODY_STATUS_LENGTH = "Custody status cannot be greater than 80 " + CHARACTERS_LONG;

@@ -34,6 +34,15 @@ import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
+import uk.gov.hmcts.et.common.model.hmc.CaseCategory;
+import uk.gov.hmcts.et.common.model.hmc.CaseFlags;
+import uk.gov.hmcts.et.common.model.hmc.HearingLocation;
+import uk.gov.hmcts.et.common.model.hmc.HearingWindow;
+import uk.gov.hmcts.et.common.model.hmc.Judiciary;
+import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
+import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
+import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -1293,4 +1302,85 @@ public class CaseData extends Et1CaseData {
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    //et-hearings-api
+    @JsonProperty("autoListFlag")
+    private boolean autoListFlag;
+
+    @JsonProperty("caseAdditionalSecurityFlag")
+    private boolean caseAdditionalSecurityFlag;
+    @JsonProperty("caseCategories")
+    private List<CaseCategory> caseCategories;
+    @JsonProperty("caseDeepLink")
+    private String caseDeepLink;
+    @JsonProperty("caseFlags")
+    private List<CaseFlags> caseflags;
+    @JsonProperty("caseInterpreterRequiredFlag")
+    private boolean caseInterpreterRequiredFlag;
+    @JsonProperty("caseManagementLocationCode")
+    private String caseManagementLocationCode;
+    @JsonProperty("caseSLAStartDate")
+    private String caseSLAStartDate;
+    @JsonProperty("caseRestrictedFlag")
+    private boolean caseRestrictedFlag;
+
+    @JsonProperty("duration")
+    private Integer duration;
+
+    @JsonProperty("externalCaseReference")
+    private String externalCaseReference;
+
+    @JsonProperty("facilitiesRequiredList")
+    private List<String> facilitiesRequiredList;
+
+    @JsonProperty("hearingChannels")
+    private List<String> hearingChannels;
+    @JsonProperty("hearingInWelshFlag")
+    private boolean hearingInWelshFlag;
+    @JsonProperty("hearingIsLinkedFlag")
+    private boolean hearingIsLinkedFlag;
+    @JsonProperty("hearingLocations")
+    private List<HearingLocation> hearingLocations;
+    @JsonProperty("hearingPriorityType")
+    private String hearingPriorityType;
+    @JsonProperty("hearingRequester")
+    private String hearingRequester;
+    @JsonProperty("hearingType")
+    private String hearingType;
+    @JsonProperty("hearingWindow")
+    private HearingWindow hearingWindow;
+
+    @JsonProperty("hmctsInternalCaseName")
+    private String hmctsInternalCaseName;
+    @JsonProperty("hmctsServiceID")
+    private String hmctsServiceID;
+
+    @JsonProperty("judiciary")
+    private Judiciary judiciary;
+    @JsonProperty("leadJudgeContractType")
+    private String leadJudgeContractType;
+
+    @JsonProperty("listingComments")
+    private String listingComments;
+
+    @JsonProperty("numberOfPhysicalAttendees")
+    private Integer numberOfPhysicalAttendees;
+
+    @JsonProperty("panelRequirements")
+    private PanelRequirements panelRequirements;
+
+    @JsonProperty("parties")
+    private List<PartyDetails> parties;
+
+    @JsonProperty("privateHearingRequiredFlag")
+    private boolean privateHearingRequiredFlag;
+
+    @JsonProperty("publicCaseName")
+    private String publicCaseName;
+
+    @JsonProperty("screenFlow")
+    private List<ScreenNavigation> screenFlow;
+
+    @JsonProperty("vocabulary")
+    private List<Vocabulary> vocabulary;
 }
