@@ -1383,4 +1383,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("vocabulary")
     private List<Vocabulary> vocabulary;
+
+    private CaseFlags caseFlagsXui;
 }
