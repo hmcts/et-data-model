@@ -41,6 +41,12 @@ public class GenericTseApplicationType {
     private String closeApplicationNotes;
     @JsonProperty("applicationState")
     private String applicationState;
+    // If there are tribunal requests/orders that required a response from Respondent
+    @JsonProperty("respondentRespondRequired")
+    private String respondentRespondRequired;
+    // If there are tribunal requests/orders that required a response from Claimant
+    @JsonProperty("claimantRespondedRequired")
+    private String claimantRespondedRequired;
 
     @JsonProperty("respondCollection")
     private List<TseRespondTypeItem> respondCollection;
