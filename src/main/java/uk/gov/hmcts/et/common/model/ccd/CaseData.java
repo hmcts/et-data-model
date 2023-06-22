@@ -1299,3 +1299,4 @@ public class CaseData extends Et1CaseData {
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
     private CaseFlagsType respondentFlags;
+}
