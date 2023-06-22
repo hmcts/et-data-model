@@ -22,7 +22,7 @@ public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
         return typeItem;
     }
 
-    @SafeVarargs public static <T> ListTypeItem<T> from(T ...values) {
+    @SafeVarargs public static <T> ListTypeItem<T> from(T...values) {
         return Arrays.stream(values)
                 .map(GenericTypeItem::from)
                 .collect(Collectors.toCollection(ListTypeItem::new));
@@ -34,7 +34,7 @@ public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
         return typeItem;
     }
 
-    @SafeVarargs public static <T> ListTypeItem<T> from(GenericTypeItem<T> ...values) {
+    @SafeVarargs public static <T> ListTypeItem<T> from(GenericTypeItem<T>...values) {
         return Arrays.stream(values).collect(Collectors.toCollection(ListTypeItem::new));
     }
 }
