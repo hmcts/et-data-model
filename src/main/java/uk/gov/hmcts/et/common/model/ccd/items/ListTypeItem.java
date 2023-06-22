@@ -10,6 +10,12 @@ import java.util.stream.Collectors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor
 public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
+    public static <T> ListTypeItem<T> from(GenericTypeItem<T> value) {
+        ListTypeItem<T> typeItem = new ListTypeItem<>();
+        typeItem.add(value);
+        return typeItem;
+    }
+    
     public static <T> ListTypeItem<T> from(T value) {
         ListTypeItem<T> typeItem = new ListTypeItem<>();
         typeItem.add(GenericTypeItem.from(value));
@@ -22,19 +28,15 @@ public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
         return typeItem;
     }
 
-    @SafeVarargs public static <T> ListTypeItem<T> from(T...values) {
+    @SafeVarargs
+    public static <T> ListTypeItem<T> from(T...values) {
         return Arrays.stream(values)
                 .map(GenericTypeItem::from)
                 .collect(Collectors.toCollection(ListTypeItem::new));
     }
 
-    public static <T> ListTypeItem<T> from(GenericTypeItem<T> value) {
-        ListTypeItem<T> typeItem = new ListTypeItem<>();
-        typeItem.add(value);
-        return typeItem;
-    }
-
-    @SafeVarargs public static <T> ListTypeItem<T> from(GenericTypeItem<T>...values) {
+    @SafeVarargs
+    public static <T> ListTypeItem<T> from(GenericTypeItem<T>...values) {
         return Arrays.stream(values).collect(Collectors.toCollection(ListTypeItem::new));
     }
 }
