@@ -21,6 +21,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
@@ -1293,4 +1294,9 @@ public class CaseData extends Et1CaseData {
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    // Case Flags
+    private CaseFlagsType caseFlags;
+    private CaseFlagsType claimantFlags;
+    private CaseFlagsType respondentFlags;
 }

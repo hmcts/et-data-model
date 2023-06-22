@@ -25,4 +25,11 @@ public class GenericTypeItem<T> {
         typeItem.value = value;
         return typeItem;
     }
+
+    public static <T> GenericTypeItem<T> from(String id, T value) {
+        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
+        typeItem.id = id;
+        typeItem.value = value;
+        return typeItem;
+    }
 }
