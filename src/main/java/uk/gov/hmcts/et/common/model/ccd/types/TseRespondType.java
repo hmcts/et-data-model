@@ -55,5 +55,4 @@ public class TseRespondType {
     private String selectPartyRespond;
     @JsonProperty("selectPartyNotify")
     private String selectPartyNotify;
-
 }

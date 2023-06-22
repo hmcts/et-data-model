@@ -35,15 +35,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
-import uk.gov.hmcts.et.common.model.hmc.CaseCategory;
-import uk.gov.hmcts.et.common.model.hmc.CaseFlags;
-import uk.gov.hmcts.et.common.model.hmc.HearingLocation;
-import uk.gov.hmcts.et.common.model.hmc.HearingWindow;
-import uk.gov.hmcts.et.common.model.hmc.Judiciary;
-import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
-import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
-import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
-import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -1304,9 +1295,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
-    
-
+    // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
     private CaseFlagsType respondentFlags;
-}
