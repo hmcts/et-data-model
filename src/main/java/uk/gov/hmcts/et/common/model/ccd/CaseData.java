@@ -1138,6 +1138,8 @@ public class CaseData extends Et1CaseData {
     //  if Respondent is responding to Tribunal
     @JsonProperty("tseRespondingToTribunal")
     private String tseRespondingToTribunal;
+    @JsonProperty("tseRespondingToTribunalText")
+    private String tseRespondingToTribunalText;
 
     //TSE Admin Respond to an application
     @JsonProperty("tseAdmReplyTableMarkUp")
