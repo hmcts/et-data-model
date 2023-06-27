@@ -1313,23 +1313,23 @@ public class CaseData extends Et1CaseData {
 
     //et-hearings-api
     @JsonProperty("autoListFlag")
-    private boolean autoListFlag;
+    private Boolean autoListFlag;
 
     @JsonProperty("caseAdditionalSecurityFlag")
-    private boolean caseAdditionalSecurityFlag;
+    private Boolean caseAdditionalSecurityFlag;
     @JsonProperty("caseCategories")
     private List<CaseCategory> caseCategories;
     @JsonProperty("caseDeepLink")
     private String caseDeepLink;
 
     @JsonProperty("caseInterpreterRequiredFlag")
-    private boolean caseInterpreterRequiredFlag;
+    private Boolean caseInterpreterRequiredFlag;
     @JsonProperty("caseManagementLocationCode")
     private String caseManagementLocationCode;
     @JsonProperty("caseSLAStartDate")
     private String caseSLAStartDate;
     @JsonProperty("caseRestrictedFlag")
-    private boolean caseRestrictedFlag;
+    private Boolean caseRestrictedFlag;
 
     @JsonProperty("duration")
     private Integer duration;
@@ -1343,9 +1343,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("hearingChannels")
     private List<String> hearingChannels;
     @JsonProperty("hearingInWelshFlag")
-    private boolean hearingInWelshFlag;
+    private Boolean hearingInWelshFlag;
     @JsonProperty("hearingIsLinkedFlag")
-    private boolean hearingIsLinkedFlag;
+    private Boolean hearingIsLinkedFlag;
     @JsonProperty("hearingLocations")
     private List<HearingLocation> hearingLocations;
     @JsonProperty("hearingPriorityType")
@@ -1380,7 +1380,7 @@ public class CaseData extends Et1CaseData {
     private List<PartyDetails> parties;
 
     @JsonProperty("privateHearingRequiredFlag")
-    private boolean privateHearingRequiredFlag;
+    private Boolean privateHearingRequiredFlag;
 
     @JsonProperty("publicCaseName")
     private String publicCaseName;
