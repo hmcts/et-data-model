@@ -26,5 +26,5 @@ jobs:
         with:
           max_attempts: 5
           retry_on: error
-          timeout_seconds: 45
+          timeout_seconds: 90
           command: ./gradlew check
