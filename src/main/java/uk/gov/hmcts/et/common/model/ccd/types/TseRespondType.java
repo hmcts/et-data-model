@@ -55,4 +55,6 @@ public class TseRespondType {
     private String selectPartyRespond;
     @JsonProperty("selectPartyNotify")
     private String selectPartyNotify;
+    @JsonProperty("viewedByClaimant")
+    private String viewedByClaimant;
 }
