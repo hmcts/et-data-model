@@ -18,7 +18,8 @@ public enum EntityRoleCode {
     INTERPRETER("INTP", "Interpreter", "Interpreter", "", PartyRelationshipType.INTERPRETER),
     REPRESENTATIVE("RPTT", Constants.REPRESENTATIVE, "Barrister", "", PartyRelationshipType.SOLICITOR),
     SUPPORT("SUPP", "Support", "Support", "", null),
-    APPLICANT("APPL", Constants.APPLICANT, Constants.APPLICANT, "", null);
+    APPLICANT("APPL", Constants.APPLICANT, Constants.APPLICANT, "", null),
+    CLAIMANT("CLAI", "", "Claimant", "", null);
 
     @JsonValue
     private final String hmcReference;
