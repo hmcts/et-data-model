@@ -1392,4 +1392,8 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("vocabulary")
     private List<Vocabulary> vocabulary;
+
+    private String respondentOrganisation;
+    private String respondentFirstName;
+    private String respondentLastName;
 }

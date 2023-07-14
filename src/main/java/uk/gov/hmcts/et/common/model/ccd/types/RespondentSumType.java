@@ -192,4 +192,8 @@ public class RespondentSumType {
     private String employmentDetailsSection;
     @JsonProperty("claimDetailsSection")
     private String claimDetailsSection;
+    @JsonProperty("respondentOrganisation")
+    private String respondentOrganisation;
+    private String respondentFirstName;
+    private String respondentLastName;
 }
