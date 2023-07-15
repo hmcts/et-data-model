@@ -43,6 +43,6 @@ public class ReferralType {
     @JsonProperty("referralSummaryPdf")
     private UploadedDocumentType referralSummaryPdf;
     @JsonProperty("referralLinks")
-    private UploadedDocumentType referralLinks;
+    private String referralLinks;
 }
 
