@@ -2,9 +2,9 @@ package uk.gov.hmcts.et.common.model.ccd.types;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.List;
 import lombok.Data;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
