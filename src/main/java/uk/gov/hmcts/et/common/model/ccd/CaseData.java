@@ -941,7 +941,7 @@ public class CaseData extends Et1CaseData {
     private String updateReferentEmail;
     @JsonProperty("updateIsUrgent")
     private String updateIsUrgent;
-    @JsonProperty("referralSubject")
+    @JsonProperty("updateReferralSubject")
     private String updateReferralSubject;
     @JsonProperty("updateReferralSubjectSpecify")
     private String updateReferralSubjectSpecify;
