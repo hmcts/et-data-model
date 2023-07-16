@@ -6,6 +6,7 @@ import lombok.Data;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralReplyTypeItem;
 import java.util.List;
+import uk.gov.hmcts.et.common.model.ccd.items.UpdateReferralTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -40,6 +41,8 @@ public class ReferralType {
     private String closeReferralGeneralNotes;
     @JsonProperty("referralReplyCollection")
     private List<ReferralReplyTypeItem> referralReplyCollection;
+    @JsonProperty("updateReferralCollection")
+    private List<UpdateReferralTypeItem> updateReferralCollection;
     @JsonProperty("referralSummaryPdf")
     private UploadedDocumentType referralSummaryPdf;
 }
