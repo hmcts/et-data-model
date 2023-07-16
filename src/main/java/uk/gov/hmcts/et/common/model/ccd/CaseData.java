@@ -953,6 +953,8 @@ public class CaseData extends Et1CaseData {
     private String updateReferralInstruction;
     @JsonProperty("updateReferredBy")
     private String updateReferredBy;
+    @JsonProperty("updateReferralHearingDetails")
+    private String updateReferralHearingDetails;
     @JsonProperty("updateReferralDate")
     private String updateReferralDate;
 
