@@ -55,6 +55,8 @@ public class Et1CaseData {
     private List<RespondentSumTypeItem> respondentCollection;
     @JsonProperty("claimantWorkAddress")
     private ClaimantWorkAddressType claimantWorkAddress;
+    @JsonProperty("nextListedDate")
+    private String nextListedDate;
     @JsonProperty("caseNotes")
     private String caseNotes;
     @JsonProperty("additionalCaseInfo")
