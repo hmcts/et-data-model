@@ -1360,7 +1360,8 @@ public class CaseData extends Et1CaseData {
     private String hearingType;
     @JsonProperty("hearingWindow")
     private HearingWindow hearingWindow;
-
+    @JsonProperty("nextListedDate")
+    private String nextListedDate;
     @JsonProperty("hmctsInternalCaseName")
     private String hmctsInternalCaseName;
     @JsonProperty("hmctsServiceID")
