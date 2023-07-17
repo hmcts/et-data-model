@@ -2,6 +2,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
