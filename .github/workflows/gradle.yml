@@ -16,15 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - name: Set up JDK 11
+        uses: actions/checkout@v3
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
-          java-version: 11
+          java-version: 17
       - name: Build
         uses: nick-fields/retry@v2
         with:
           max_attempts: 5
           retry_on: error
-          timeout_seconds: 45
+          timeout_seconds: 90
           command: ./gradlew check
