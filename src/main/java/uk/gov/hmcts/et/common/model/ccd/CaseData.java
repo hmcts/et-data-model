@@ -713,6 +713,8 @@ public class CaseData extends Et1CaseData {
     private String icClaimProspectIssues;
     @JsonProperty("icListingIssues")
     private String icListingIssues;
+    @JsonProperty("icListingPreliminaryHearing")
+    private String icListingPreliminaryHearing;
     @JsonProperty("icDdaDisabilityIssues")
     private String icDdaDisabilityIssues;
     @JsonProperty("icOrderForFurtherInformation")
