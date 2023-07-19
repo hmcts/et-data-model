@@ -10,9 +10,9 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class CaseLink {
-    @JsonProperty(value = "CaseReference")
+    @JsonProperty("CaseReference")
     private String caseReference;
-    @JsonProperty(value = "CaseType")
+    @JsonProperty("CaseType")
     private String caseType;
     @JsonProperty("CreatedDateTime")
     private LocalDateTime createdDateTime;

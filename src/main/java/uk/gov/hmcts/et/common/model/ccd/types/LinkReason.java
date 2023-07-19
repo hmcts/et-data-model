@@ -7,8 +7,8 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class LinkReason {
-    @JsonProperty(value = "Reason")
+    @JsonProperty("Reason")
     private  String reason;
-    @JsonProperty(value = "OtherDescription")
+    @JsonProperty("OtherDescription")
     private String otherDescription;
 }
