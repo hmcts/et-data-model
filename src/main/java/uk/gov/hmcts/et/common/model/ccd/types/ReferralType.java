@@ -42,7 +42,7 @@ public class ReferralType {
     @JsonProperty("referralReplyCollection")
     private List<ReferralReplyTypeItem> referralReplyCollection;
     @JsonProperty("updateReferralCollection")
-    private List<UpdateReferralTypeItem> updateReferralCollection;
+    private ListTypeItem<UpdateReferralType> updateReferralCollection;
     @JsonProperty("referralSummaryPdf")
     private UploadedDocumentType referralSummaryPdf;
 }
