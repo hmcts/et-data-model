@@ -713,6 +713,8 @@ public class CaseData extends Et1CaseData {
     private String icClaimProspectIssues;
     @JsonProperty("icListingIssues")
     private String icListingIssues;
+    @JsonProperty("icListingPreliminaryHearing")
+    private String icListingPreliminaryHearing;
     @JsonProperty("icDdaDisabilityIssues")
     private String icDdaDisabilityIssues;
     @JsonProperty("icOrderForFurtherInformation")
@@ -1358,7 +1360,8 @@ public class CaseData extends Et1CaseData {
     private String hearingType;
     @JsonProperty("hearingWindow")
     private HearingWindow hearingWindow;
-
+    @JsonProperty("nextListedDate")
+    private String nextListedDate;
     @JsonProperty("hmctsInternalCaseName")
     private String hmctsInternalCaseName;
     @JsonProperty("hmctsServiceID")
