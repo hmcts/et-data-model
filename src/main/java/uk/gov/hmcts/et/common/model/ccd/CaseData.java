@@ -939,8 +939,6 @@ public class CaseData extends Et1CaseData {
     //Referral Update
     @JsonProperty("updateReferralNumber")
     private String updateReferralNumber;
-    @JsonProperty("updateReferralHearingDate")
-    private String updateReferralHearingDate;
     @JsonProperty("updateReferCaseTo")
     private String updateReferCaseTo;
     @JsonProperty("updateReferentEmail")
@@ -957,10 +955,6 @@ public class CaseData extends Et1CaseData {
     private List<DocumentTypeItem> updateReferralDocument;
     @JsonProperty("updateReferralInstruction")
     private String updateReferralInstruction;
-    @JsonProperty("updateReferredBy")
-    private String updateReferredBy;
-    @JsonProperty("updateReferralDate")
-    private String updateReferralDate;
 
     //Referral Reply
     @JsonProperty("hearingAndReferralDetails")
