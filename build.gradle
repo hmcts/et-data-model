@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '2.3.3'
+version '2.5.0'
 
 java {
     toolchain {
@@ -37,7 +37,7 @@ publishing {
 }
 
 ext {
-    lombokVersion = '1.18.22'
+    lombokVersion = '1.18.28'
 }
 
 dependencies {
