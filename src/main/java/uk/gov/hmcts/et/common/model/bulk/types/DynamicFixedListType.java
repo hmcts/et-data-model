@@ -7,6 +7,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,6 +26,21 @@ public class DynamicFixedListType {
         DynamicFixedListType dynamicFixedListType = new DynamicFixedListType();
         dynamicFixedListType.value = value;
         return dynamicFixedListType;
+    }
+
+    /**
+     * Create a new DynamicFixedListType with one item and optionally select it.
+     * @param label Label to show for the selected option
+     * @param code Code to be used to identify the selected option
+     * @param selected Optionally set the first item as selected
+     * @return newly created DynamicFixedListType
+     */
+    public static DynamicFixedListType from(String label, String code, boolean selected) {
+        DynamicFixedListType listType = DynamicFixedListType.from(List.of(DynamicValueType.create(label, code)));
+        if (selected) {
+            listType.setValue(listType.getListItems().get(0));
+        }
+        return listType;
     }
 
     public static DynamicFixedListType from(List<DynamicValueType> listItems) {
