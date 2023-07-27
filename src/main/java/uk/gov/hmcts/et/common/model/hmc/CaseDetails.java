@@ -44,7 +44,7 @@ public class CaseDetails {
 
     @NotEmpty(message = ValidationError.HMCTS_INTERNAL_CASE_NAME_EMPTY)
     @Size(max = 1024, message = ValidationError.HMCTS_INTERNAL_CASE_NAME_MAX_LENGTH)
-    private String hmctsInternalCaseName;
+    private String caseNameHmctsInternal;
 
     @NotEmpty(message = ValidationError.PUBLIC_CASE_NAME_EMPTY)
     @Size(max = 1024, message = ValidationError.PUBLIC_CASE_NAME_MAX_LENGTH)
