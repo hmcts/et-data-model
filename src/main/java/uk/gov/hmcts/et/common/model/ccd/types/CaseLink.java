@@ -6,8 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -22,5 +21,5 @@ public class CaseLink {
     @JsonProperty("CreatedDateTime")
     private String createdDateTime;
     @JsonProperty("ReasonForLink")
-    private List<LinkReason> reasonForLink;
+    private ListTypeItem<LinkReason> reasonForLink;
 }
