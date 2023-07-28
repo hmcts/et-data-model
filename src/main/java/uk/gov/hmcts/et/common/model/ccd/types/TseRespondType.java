@@ -57,4 +57,8 @@ public class TseRespondType {
     private String selectPartyNotify;
     @JsonProperty("viewedByClaimant")
     private String viewedByClaimant;
+
+    // Work Allocation enabler, to sort ALL responses across all Applications
+    @JsonProperty("dateTime")
+    private String dateTime;
 }
