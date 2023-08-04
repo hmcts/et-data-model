@@ -172,7 +172,7 @@ class BeanValidatorTest {
         caseDetails.setExternalCaseReference("externalCaseReferenceexternalCaseReferenceexternalCaseReferenceexternal"
                 + "CaseReference");
         caseDetails.setCaseDeepLink("abc");
-        caseDetails.setHmctsInternalCaseName("");
+        caseDetails.setCaseNameHmctsInternal("");
         caseDetails.setPublicCaseName("");
         caseDetails.setCaseCategories(new ArrayList<>());
         caseDetails.setCaseManagementLocationCode("");
@@ -551,7 +551,7 @@ class BeanValidatorTest {
         caseDetails.setHmctsServiceCode("ABA1");
         caseDetails.setCaseRef("1111222233334444");
         caseDetails.setCaseDeepLink("https://www.google.com");
-        caseDetails.setHmctsInternalCaseName("Internal case name");
+        caseDetails.setCaseNameHmctsInternal("Internal case name");
         caseDetails.setPublicCaseName("Public case name");
         caseDetails.setCaseManagementLocationCode("CMLC123");
         caseDetails.setCaseRestrictedFlag(false);

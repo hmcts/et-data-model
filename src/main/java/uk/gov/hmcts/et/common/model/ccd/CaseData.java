@@ -16,12 +16,14 @@ import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLink;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
@@ -936,6 +938,26 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("referralDate")
     private String referralDate;
 
+    //Referral Update
+    @JsonProperty("updateReferralNumber")
+    private String updateReferralNumber;
+    @JsonProperty("updateReferCaseTo")
+    private String updateReferCaseTo;
+    @JsonProperty("updateReferentEmail")
+    private String updateReferentEmail;
+    @JsonProperty("updateIsUrgent")
+    private String updateIsUrgent;
+    @JsonProperty("updateReferralSubject")
+    private String updateReferralSubject;
+    @JsonProperty("updateReferralSubjectSpecify")
+    private String updateReferralSubjectSpecify;
+    @JsonProperty("updateReferralDetails")
+    private String updateReferralDetails;
+    @JsonProperty("updateReferralDocument")
+    private List<DocumentTypeItem> updateReferralDocument;
+    @JsonProperty("updateReferralInstruction")
+    private String updateReferralInstruction;
+
     //Referral Reply
     @JsonProperty("hearingAndReferralDetails")
     private String hearingAndReferralDetails;
@@ -1362,8 +1384,8 @@ public class CaseData extends Et1CaseData {
     private HearingWindow hearingWindow;
     @JsonProperty("nextListedDate")
     private String nextListedDate;
-    @JsonProperty("hmctsInternalCaseName")
-    private String hmctsInternalCaseName;
+    @JsonProperty("caseNameHmctsInternal")
+    private String caseNameHmctsInternal;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
 
@@ -1395,4 +1417,7 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("vocabulary")
     private List<Vocabulary> vocabulary;
+
+    @JsonProperty("caseLinks")
+    private ListTypeItem<CaseLink> caseLinks;
 }

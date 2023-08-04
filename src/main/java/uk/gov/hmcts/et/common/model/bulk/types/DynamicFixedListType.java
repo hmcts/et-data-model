@@ -27,6 +27,21 @@ public class DynamicFixedListType {
         return dynamicFixedListType;
     }
 
+    /**
+     * Create a new DynamicFixedListType with one item and optionally select it.
+     * @param label Label to show for the selected option
+     * @param code Code to be used to identify the selected option
+     * @param selected Optionally set the first item as selected
+     * @return newly created DynamicFixedListType
+     */
+    public static DynamicFixedListType from(String label, String code, boolean selected) {
+        DynamicFixedListType listType = DynamicFixedListType.from(List.of(DynamicValueType.create(label, code)));
+        if (selected) {
+            listType.setValue(listType.getListItems().get(0));
+        }
+        return listType;
+    }
+
     public static DynamicFixedListType from(List<DynamicValueType> listItems) {
         DynamicFixedListType dynamicFixedListType = new DynamicFixedListType();
         dynamicFixedListType.listItems = listItems;
