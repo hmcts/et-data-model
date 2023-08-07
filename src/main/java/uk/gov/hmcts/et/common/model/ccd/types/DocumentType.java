@@ -45,6 +45,8 @@ public class DocumentType {
     private String miscDocuments;
     @JsonProperty("documentType")
     private String documentType;
+    @JsonProperty("dateOfCorrespondence")
+    private String dateOfCorrespondence;
 
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
