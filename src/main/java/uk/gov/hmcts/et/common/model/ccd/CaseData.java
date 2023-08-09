@@ -16,6 +16,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
@@ -1383,8 +1384,8 @@ public class CaseData extends Et1CaseData {
     private HearingWindow hearingWindow;
     @JsonProperty("nextListedDate")
     private String nextListedDate;
-    @JsonProperty("hmctsInternalCaseName")
-    private String hmctsInternalCaseName;
+    @JsonProperty("caseNameHmctsInternal")
+    private String caseNameHmctsInternal;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
 
@@ -1418,5 +1419,5 @@ public class CaseData extends Et1CaseData {
     private List<Vocabulary> vocabulary;
 
     @JsonProperty("caseLinks")
-    private List<CaseLink> caseLinks;
+    private ListTypeItem<CaseLink> caseLinks;
 }
