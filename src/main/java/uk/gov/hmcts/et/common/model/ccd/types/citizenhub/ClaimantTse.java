@@ -12,6 +12,10 @@ import java.util.Map;
 @Data
 public class ClaimantTse {
 
+    @JsonProperty("contactApplicationDate")
+    private String contactApplicationDate;
+    @JsonProperty("contactApplicant")
+    private String contactApplicant;
     @JsonProperty("contactApplicationType")
     private String contactApplicationType;
     @JsonProperty("contactApplicationText")

@@ -1053,6 +1053,8 @@ public class CaseData extends Et1CaseData {
     private String respondToTribunalNotAvailableWarning;
     @JsonProperty("resTseSelectApplication")
     private String resTseSelectApplication;
+    @JsonProperty("resTseApplicationDate")
+    private String resTseApplicationDate;
     @JsonProperty("resTseVariableContent")
     private String resTseVariableContent;
     @JsonProperty("resTseDocument1")
