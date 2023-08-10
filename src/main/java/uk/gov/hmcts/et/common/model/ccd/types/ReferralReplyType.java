@@ -28,7 +28,9 @@ public class ReferralReplyType {
     @JsonProperty("replyDate")
     private String replyDate;
 
-    // Work Allocation enabler, to sort ALL responses across all Referrals
+    // Work Allocation enablers
     @JsonProperty("replyDateTime")
     private String replyDateTime;
+    @JsonProperty("referralSubject")
+    private String referralSubject;
 }
