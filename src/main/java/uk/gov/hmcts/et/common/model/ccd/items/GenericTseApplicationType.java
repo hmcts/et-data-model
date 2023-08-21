@@ -47,6 +47,9 @@ public class GenericTseApplicationType {
     // If there are tribunal requests/orders that required a response from Claimant
     @JsonProperty("claimantResponseRequired")
     private String claimantResponseRequired;
+    // Claimant stored and pending to submit
+    @JsonProperty("storedPending")
+    private String storedPending;
 
     @JsonProperty("respondCollection")
     private List<TseRespondTypeItem> respondCollection;
