@@ -45,6 +45,7 @@ import uk.gov.hmcts.et.common.model.hmc.Judiciary;
 import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
 import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -1427,4 +1428,11 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
+
+    @JsonProperty("claimantUnavailabilityCollection")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailabilityCollection;
+
+    @JsonProperty("respUnavailCollection")
+    private ListTypeItem<UnavailabilityRanges> respUnavailCollection;
+
 }
