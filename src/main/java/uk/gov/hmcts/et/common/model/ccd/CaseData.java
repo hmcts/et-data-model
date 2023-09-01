@@ -1428,6 +1428,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
 
-    @JsonProperty("isSystemUser")
+    @JsonProperty("systemUser")
     private boolean systemUser;
 }
