@@ -1429,10 +1429,13 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
 
-    @JsonProperty("claimantUnavailabilityCollection")
-    private ListTypeItem<UnavailabilityRanges> claimantUnavailabilityCollection;
+    @JsonProperty("partySelection")
+    private List<String> partySelection;
 
-    @JsonProperty("respUnavailCollection")
-    private ListTypeItem<UnavailabilityRanges> respUnavailCollection;
+    @JsonProperty("claimantUnavailability")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailability;
+
+    @JsonProperty("respondentUnavailability")
+    private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
 
 }
