@@ -24,6 +24,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseLink;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
@@ -44,6 +45,7 @@ import uk.gov.hmcts.et.common.model.hmc.Judiciary;
 import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
 import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -1388,6 +1390,10 @@ public class CaseData extends Et1CaseData {
     private String nextListedDate;
     @JsonProperty("caseNameHmctsInternal")
     private String caseNameHmctsInternal;
+    @JsonProperty("caseManagementCategory")
+    private DynamicFixedListType caseManagementCategory;
+    @JsonProperty("caseManagementLocation")
+    private CaseLocation caseManagementLocation;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
 
@@ -1422,4 +1428,16 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
+
+    @JsonProperty("systemUserYesOrNo")
+    private String systemUserYesOrNo;
+
+    @JsonProperty("partySelection")
+    private List<String> partySelection;
+
+    @JsonProperty("claimantUnavailability")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailability;
+
+    @JsonProperty("respondentUnavailability")
+    private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
 }
