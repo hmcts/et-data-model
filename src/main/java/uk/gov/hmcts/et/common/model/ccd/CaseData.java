@@ -1109,7 +1109,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("resTseTextBox12")
     private String resTseTextBox12;
     @JsonProperty("resTseCopyToOtherPartyYesOrNo")
-    private DynamicListType resTseCopyToOtherPartyYesOrNo;
+    private String resTseCopyToOtherPartyYesOrNo;
+    @JsonProperty("resTseCopyToOtherPartyYesOrNoDynamic")
+    private DynamicListType resTseCopyToOtherPartyYesOrNoDynamic;
     @JsonProperty("resTseCopyToOtherPartyTextArea")
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
