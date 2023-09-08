@@ -1437,7 +1437,4 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("respondentUnavailability")
     private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
-
-    @JsonProperty("resTseCopyToOtherPartyYesOrNoOptions")
-    private List<String> resTseCopyToOtherPartyYesOrNoOptions;
 }
