@@ -49,7 +49,7 @@ public class GenericTseApplicationType {
     private String claimantResponseRequired;
 
     @JsonProperty("respondCollection")
-    private List<TseRespondTypeItem> respondCollection;
+    private ListTypeItem<TseRespondTypeItem> respondCollection;
 
     @JsonProperty("adminDecision")
     private List<TseAdminRecordDecisionTypeItem> adminDecision;

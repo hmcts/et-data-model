@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
 
 import java.util.List;
@@ -60,7 +59,7 @@ public class SendNotificationType {
     @JsonProperty("sendNotificationWhoMadeJudgement")
     private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
-    private List<PseResponseTypeItem> respondCollection;
+    private List<TypeItem<PseResponseType>> respondCollection;
     @JsonProperty("respondNotificationTypeCollection")
     private List<TypeItem<RespondNotificationType>> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
