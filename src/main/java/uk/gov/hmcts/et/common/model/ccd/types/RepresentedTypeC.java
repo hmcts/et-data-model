@@ -9,6 +9,8 @@ import uk.gov.hmcts.et.common.model.ccd.Address;
 @Data
 public class RepresentedTypeC {
 
+    @JsonProperty("representative_id")
+    private String representativeId;
     @JsonProperty("name_of_representative")
     private String nameOfRepresentative;
     @JsonProperty("name_of_organisation")
