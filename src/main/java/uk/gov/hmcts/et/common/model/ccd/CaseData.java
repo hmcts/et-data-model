@@ -163,6 +163,8 @@ public class CaseData extends Et1CaseData {
     private String targetHearingDate;
     @JsonProperty("claimant")
     private String claimant;
+    @JsonProperty("claimantId")
+    private String claimantId;
     @JsonProperty("respondent")
     private String respondent;
 
