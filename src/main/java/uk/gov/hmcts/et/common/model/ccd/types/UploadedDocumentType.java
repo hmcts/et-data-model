@@ -18,4 +18,8 @@ public class UploadedDocumentType {
     private String documentFilename;
     @JsonProperty("document_url")
     private String documentUrl;
+    @JsonProperty("category_id")
+    private String categoryId;
+    @JsonProperty("upload_timestamp")
+    private String uploadTimestamp;
 }
