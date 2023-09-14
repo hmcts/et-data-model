@@ -47,6 +47,7 @@ import uk.gov.hmcts.et.common.model.hmc.Judiciary;
 import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
 import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -165,6 +166,8 @@ public class CaseData extends Et1CaseData {
     private String targetHearingDate;
     @JsonProperty("claimant")
     private String claimant;
+    @JsonProperty("claimantId")
+    private String claimantId;
     @JsonProperty("respondent")
     private String respondent;
 
@@ -1431,13 +1434,22 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
 
-    @JsonProperty("systemUserYesOrNo")
-    private String systemUserYesOrNo;
-
     @JsonProperty("bundleConfiguration")
     private String bundleConfiguration;
     @JsonProperty("caseBundles")
     private List<Bundle> caseBundles;
     @JsonProperty("digitalCaseFile")
     private List<DocumentTypeItem> digitalCaseFile;
+
+    @JsonProperty("partySelection")
+    private List<String> partySelection;
+
+    @JsonProperty("claimantUnavailability")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailability;
+
+    @JsonProperty("respondentUnavailability")
+    private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
+    @JsonProperty("acasCertificate")
+    private String acasCertificate;
+
 }

@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '2.6.2-RET3898-bundle'
+version '2.6.7-RET3898-bundle'
 
 java {
     toolchain {
