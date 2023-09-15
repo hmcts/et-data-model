@@ -1,4 +1,4 @@
-package uk.gov.hmcts.et.common.model.ccd.types;
+package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,17 +6,18 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-@Builder(toBuilder = true)
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CaseLocation {
+public class SearchCriteria {
 
-    @JsonProperty("baseLocation")
-    private String baseLocation;
+    @JsonProperty("otherCaseReference")
+    private String otherCaseReference;
 
-    @JsonProperty("region")
-    private String region;
+    @JsonProperty("SearchParties")
+    private ListTypeItem<SearchParty> searchParties;
 }
