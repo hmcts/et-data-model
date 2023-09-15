@@ -23,6 +23,8 @@ To build project please execute the following command:
 
 ## Developing
 
+Be responsible and speak in teams before merging.
+
 ### Coding style tests
 
 To run all checks please execute the following command:
