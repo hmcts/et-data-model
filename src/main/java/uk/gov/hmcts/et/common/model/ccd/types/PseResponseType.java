@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class PseResponseType {
     @JsonProperty("hasSupportingMaterial")
     private String hasSupportingMaterial;
     @JsonProperty("supportingMaterial")
-    private List<GenericTypeItem<DocumentType>> supportingMaterial;
+    private List<TypeItem<DocumentType>> supportingMaterial;
     @JsonProperty("copyToOtherParty")
     private String copyToOtherParty;
     @JsonProperty("copyNoGiveDetails")
