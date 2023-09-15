@@ -16,7 +16,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 public class SearchCriteria {
 
     @JsonProperty("OtherCaseReferences")
-    private ListTypeItem<String> otherCaseReference;
+    private ListTypeItem<String> otherCaseReferences;
 
     @JsonProperty("SearchParties")
     private ListTypeItem<SearchParty> searchParties;
