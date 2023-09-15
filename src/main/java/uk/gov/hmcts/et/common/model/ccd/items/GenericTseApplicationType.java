@@ -9,8 +9,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecisionType;
 import uk.gov.hmcts.et.common.model.ccd.types.TseRespondType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
-import java.util.List;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @SuperBuilder
 @Data
