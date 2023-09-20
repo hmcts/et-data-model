@@ -39,6 +39,14 @@ public class RespondentSumType {
     private String responseReturnedFromJudge;
     @JsonProperty("respondent_name")
     private String respondentName;
+    @JsonProperty("respondentType")
+    private String respondentType;
+    @JsonProperty("respondentOrganisation")
+    private String respondentOrganisation;
+    @JsonProperty("respondentFirstName")
+    private String respondentFirstName;
+    @JsonProperty("respondentLastName")
+    private String respondentLastName;
     @JsonProperty("respondent_ACAS_question")
     private String respondentAcasQuestion;
     @JsonProperty("respondent_ACAS")
@@ -93,6 +101,8 @@ public class RespondentSumType {
     private String extensionGranted;
     @JsonProperty("extensionDate")
     private String extensionDate;
+    @JsonProperty("extensionResubmitted")
+    private String extensionResubmitted;
     @JsonProperty("et3Vetting")
     private Et3VettingType et3Vetting;
     @JsonProperty("et3VettingCompleted")
@@ -181,4 +191,13 @@ public class RespondentSumType {
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
     private UploadedDocumentType et3ResponseRespondentSupportDocument;
+    @JsonProperty("et3Form")
+    private UploadedDocumentType et3Form;
+
+    @JsonProperty("personalDetailsSection")
+    private String personalDetailsSection;
+    @JsonProperty("employmentDetailsSection")
+    private String employmentDetailsSection;
+    @JsonProperty("claimDetailsSection")
+    private String claimDetailsSection;
 }

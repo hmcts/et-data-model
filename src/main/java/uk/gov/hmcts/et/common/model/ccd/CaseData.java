@@ -12,25 +12,41 @@ import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLink;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
+import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
+import uk.gov.hmcts.et.common.model.hmc.CaseCategory;
+import uk.gov.hmcts.et.common.model.hmc.HearingLocation;
+import uk.gov.hmcts.et.common.model.hmc.HearingWindow;
+import uk.gov.hmcts.et.common.model.hmc.Judiciary;
+import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
+import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
+import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
+import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
 import java.util.List;
@@ -117,6 +133,8 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
+    @JsonProperty("claimantDocumentCollection")
+    private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
@@ -145,6 +163,8 @@ public class CaseData extends Et1CaseData {
     private String targetHearingDate;
     @JsonProperty("claimant")
     private String claimant;
+    @JsonProperty("claimantId")
+    private String claimantId;
     @JsonProperty("respondent")
     private String respondent;
 
@@ -701,6 +721,8 @@ public class CaseData extends Et1CaseData {
     private String icClaimProspectIssues;
     @JsonProperty("icListingIssues")
     private String icListingIssues;
+    @JsonProperty("icListingPreliminaryHearing")
+    private String icListingPreliminaryHearing;
     @JsonProperty("icDdaDisabilityIssues")
     private String icDdaDisabilityIssues;
     @JsonProperty("icOrderForFurtherInformation")
@@ -760,14 +782,14 @@ public class CaseData extends Et1CaseData {
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
     private String et3ResponseShowInset;
-    // ET3 Response - Claimant name page (2)
+    // ET3 Response - Claimant name page (3)
     @JsonProperty("et3ResponseClaimantName")
     private String et3ResponseClaimantName;
     @JsonProperty("et3ResponseIsClaimantNameCorrect")
     private String et3ResponseIsClaimantNameCorrect;
     @JsonProperty("et3ResponseClaimantNameCorrection")
     private String et3ResponseClaimantNameCorrection;
-    // ET3 Response - What is the respondent's name (3)
+    // ET3 Response - What is the respondent's name (4)
     @JsonProperty("et3ResponseNameShowInset")
     private String et3ResponseNameShowInset;
     @JsonProperty("et3ResponseRespondentLegalName")
@@ -780,99 +802,102 @@ public class CaseData extends Et1CaseData {
     private String et3ResponseRespondentPreferredTitle;
     @JsonProperty("et3ResponseRespondentContactName")
     private String et3ResponseRespondentContactName;
-    // ET3 Response - Respondent address (4)
+    // ET3 Response - Respondent address (5)
     @JsonProperty("et3RespondentAddress")
     private Address et3RespondentAddress;
     @JsonProperty("et3ResponseDXAddress")
     private String et3ResponseDXAddress;
-    // ET3 Response - Phone number page (5)
+    // ET3 Response - Phone number page (6)
     @JsonProperty("et3ResponsePhone")
     private String et3ResponsePhone;
-    // ET3 Response - Contact method page (6)
+    // ET3 Response - What is your reference number (7)
+    @JsonProperty("et3ResponseReference")
+    private String et3ResponseReference;
+    // ET3 Response - Contact method page (8)
     @JsonProperty("et3ResponseContactPreference")
     private String et3ResponseContactPreference;
     @JsonProperty("et3ResponseContactReason")
     private String et3ResponseContactReason;
-    // ET3 Response - Hearing format page (7)
+    // ET3 Response - Hearing format page (9)
     @JsonProperty("et3ResponseHearingRepresentative")
     private List<String> et3ResponseHearingRepresentative;
     @JsonProperty("et3ResponseHearingRespondent")
     private List<String> et3ResponseHearingRespondent;
-    // ET3 Response - Respondent's workforce page (8)
+    // ET3 Response - Respondent's workforce page (10)
     @JsonProperty("et3ResponseEmploymentCount")
     private String et3ResponseEmploymentCount;
     @JsonProperty("et3ResponseMultipleSites")
     private String et3ResponseMultipleSites;
     @JsonProperty("et3ResponseSiteEmploymentCount")
     private String et3ResponseSiteEmploymentCount;
-    // ET3 Response - Acas page (9)
+    // ET3 Response - Acas page (11)
     @JsonProperty("et3ResponseAcasAgree")
     private String et3ResponseAcasAgree;
     @JsonProperty("et3ResponseAcasAgreeReason")
     private String et3ResponseAcasAgreeReason;
-    // ET3 Response - Are the employment dates correct page (10)
+    // ET3 Response - Are the employment dates correct page (12)
     @JsonProperty("et3ResponseAreDatesCorrect")
     private String et3ResponseAreDatesCorrect;
-    // ET3 Response - Employment dates page (11)
+    // ET3 Response - Employment dates page (13)
     @JsonProperty("et3ResponseEmploymentStartDate")
     private String et3ResponseEmploymentStartDate;
     @JsonProperty("et3ResponseEmploymentEndDate")
     private String et3ResponseEmploymentEndDate;
     @JsonProperty("et3ResponseEmploymentInformation")
     private String et3ResponseEmploymentInformation;
-    // ET3 Response - Is employment continuing page (12)
+    // ET3 Response - Is employment continuing page (14)
     @JsonProperty("et3ResponseContinuingEmployment")
     private String et3ResponseContinuingEmployment;
-    // ET3 Response - Is claimant job title/description correct? (13)
+    // ET3 Response - Is claimant job title/description correct? (15)
     @JsonProperty("et3ResponseIsJobTitleCorrect")
     private String et3ResponseIsJobTitleCorrect;
     @JsonProperty("et3ResponseCorrectJobTitle")
     private String et3ResponseCorrectJobTitle;
-    // ET3 Response - Claimant total weekly work hours (14)
+    // ET3 Response - Claimant total weekly work hours (16)
     @JsonProperty("et3ResponseClaimantWeeklyHours")
     private String et3ResponseClaimantWeeklyHours;
     @JsonProperty("et3ResponseClaimantCorrectHours")
     private String et3ResponseClaimantCorrectHours;
-    // ET3 Response - Earning details (15)
+    // ET3 Response - Earning details (17)
     @JsonProperty("et3ResponseEarningDetailsCorrect")
     private String et3ResponseEarningDetailsCorrect;
-    // ET3 Response - Correct pay details (16)
+    // ET3 Response - Correct pay details (18)
     @JsonProperty("et3ResponsePayFrequency")
     private String et3ResponsePayFrequency;
     @JsonProperty("et3ResponsePayBeforeTax")
     private String et3ResponsePayBeforeTax;
     @JsonProperty("et3ResponsePayTakehome")
     private String et3ResponsePayTakehome;
-    // ET3 Response - Notice given (17)
+    // ET3 Response - Notice given (19)
     @JsonProperty("et3ResponseIsNoticeCorrect")
     private String et3ResponseIsNoticeCorrect;
     @JsonProperty("et3ResponseCorrectNoticeDetails")
     private String et3ResponseCorrectNoticeDetails;
-    // ET3 Response - pension details (18)
+    // ET3 Response - pension details (20)
     @JsonProperty("et3ResponseIsPensionCorrect")
     private String et3ResponseIsPensionCorrect;
     @JsonProperty("et3ResponsePensionCorrectDetails")
     private String et3ResponsePensionCorrectDetails;
-    // ET3 Response - contest claim (19)
+    // ET3 Response - contest claim (21)
     @JsonProperty("et3ResponseRespondentContestClaim")
     private String et3ResponseRespondentContestClaim;
-    // ET3 Response - explain contest claim (20)
+    // ET3 Response - explain contest claim (22)
     @JsonProperty("et3ResponseContestClaimDocument")
     private List<DocumentTypeItem> et3ResponseContestClaimDocument;
     @JsonProperty("et3ResponseContestClaimDetails")
     private String et3ResponseContestClaimDetails;
-    // ET3 Response - employer claim (21)
+    // ET3 Response - employer claim (23)
     @JsonProperty("et3ResponseEmployerClaim")
     private String et3ResponseEmployerClaim;
-    // ET3 Response - explain employer claim (22)
+    // ET3 Response - explain employer claim (24)
     @JsonProperty("et3ResponseEmployerClaimDetails")
     private String et3ResponseEmployerClaimDetails;
     @JsonProperty("et3ResponseEmployerClaimDocument")
     private UploadedDocumentType et3ResponseEmployerClaimDocument;
-    // ET3 Response - health conditions (23)
+    // ET3 Response - health conditions (25)
     @JsonProperty("et3ResponseRespondentSupportNeeded")
     private String et3ResponseRespondentSupportNeeded;
-    // ET3 Response - Details on health conditions (24)
+    // ET3 Response - Details on health conditions (26)
     @JsonProperty("et3ResponseRespondentSupportDetails")
     private String et3ResponseRespondentSupportDetails;
     @JsonProperty("et3ResponseRespondentSupportDocument")
@@ -918,6 +943,26 @@ public class CaseData extends Et1CaseData {
     private String referredBy;
     @JsonProperty("referralDate")
     private String referralDate;
+
+    //Referral Update
+    @JsonProperty("updateReferralNumber")
+    private String updateReferralNumber;
+    @JsonProperty("updateReferCaseTo")
+    private String updateReferCaseTo;
+    @JsonProperty("updateReferentEmail")
+    private String updateReferentEmail;
+    @JsonProperty("updateIsUrgent")
+    private String updateIsUrgent;
+    @JsonProperty("updateReferralSubject")
+    private String updateReferralSubject;
+    @JsonProperty("updateReferralSubjectSpecify")
+    private String updateReferralSubjectSpecify;
+    @JsonProperty("updateReferralDetails")
+    private String updateReferralDetails;
+    @JsonProperty("updateReferralDocument")
+    private List<DocumentTypeItem> updateReferralDocument;
+    @JsonProperty("updateReferralInstruction")
+    private String updateReferralInstruction;
 
     //Referral Reply
     @JsonProperty("hearingAndReferralDetails")
@@ -976,6 +1021,8 @@ public class CaseData extends Et1CaseData {
     private OrganisationPolicy respondentOrganisationPolicy9;
     @JsonProperty("suggestedHearingVenues")
     private DynamicFixedListType suggestedHearingVenues;
+    @JsonProperty("listedDateInPastWarning")
+    private String listedDateInPastWarning;
     @JsonProperty("noticeOfChangeAnswers0")
     private NoticeOfChangeAnswers noticeOfChangeAnswers0;
     @JsonProperty("noticeOfChangeAnswers1")
@@ -1004,6 +1051,12 @@ public class CaseData extends Et1CaseData {
     private ClaimantTse claimantTse;
 
     //Respondent Tell Something Else
+    @JsonProperty("resTseNotAvailableWarning")
+    private String resTseNotAvailableWarning;
+    @JsonProperty("tseRespondNotAvailableWarning")
+    private String tseRespondNotAvailableWarning;
+    @JsonProperty("respondToTribunalNotAvailableWarning")
+    private String respondToTribunalNotAvailableWarning;
     @JsonProperty("resTseSelectApplication")
     private String resTseSelectApplication;
     @JsonProperty("resTseVariableContent")
@@ -1083,9 +1136,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminAdditionalInformation")
     private String tseAdminAdditionalInformation;
     @JsonProperty("tseAdminResponseRequiredYesDoc")
-    private UploadedDocumentType tseAdminResponseRequiredYesDoc;
+    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredYesDoc;
     @JsonProperty("tseAdminResponseRequiredNoDoc")
-    private UploadedDocumentType tseAdminResponseRequiredNoDoc;
+    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredNoDoc;
     @JsonProperty("tseAdminDecisionMadeBy")
     private String tseAdminDecisionMadeBy;
     @JsonProperty("tseAdminDecisionMadeByFullName")
@@ -1105,13 +1158,18 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseResponseHasSupportingMaterial")
     private String tseResponseHasSupportingMaterial;
     @JsonProperty("tseResponseSupportingMaterial")
-    private List<DocumentTypeItem> tseResponseSupportingMaterial;
+    private List<GenericTypeItem<DocumentType>> tseResponseSupportingMaterial;
     @JsonProperty("tseResponseCopyToOtherParty")
     private String tseResponseCopyToOtherParty;
     @JsonProperty("tseResponseCopyNoGiveDetails")
     private String tseResponseCopyNoGiveDetails;
     @JsonProperty("resTseTableMarkUp")
     private String resTseTableMarkUp;
+    //  if Respondent is responding to Tribunal
+    @JsonProperty("tseRespondingToTribunal")
+    private String tseRespondingToTribunal;
+    @JsonProperty("tseRespondingToTribunalText")
+    private String tseRespondingToTribunalText;
 
     //TSE Admin Respond to an application
     @JsonProperty("tseAdmReplyTableMarkUp")
@@ -1121,7 +1179,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdmReplyAdditionalInformation")
     private String tseAdmReplyAdditionalInformation;
     @JsonProperty("tseAdmReplyAddDocument")
-    private UploadedDocumentType tseAdmReplyAddDocument;
+    private List<GenericTypeItem<DocumentType>> tseAdmReplyAddDocument;
     @JsonProperty("tseAdmReplyIsCmoOrRequest")
     private String tseAdmReplyIsCmoOrRequest;
     @JsonProperty("tseAdmReplyCmoMadeBy")
@@ -1167,7 +1225,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
     private String pseRespondentOrdReqHasSupportingMaterial;
     @JsonProperty("pseRespondentOrdReqUploadDocument")
-    private List<DocumentTypeItem> pseRespondentOrdReqUploadDocument;
+    private List<GenericTypeItem<DocumentType>> pseRespondentOrdReqUploadDocument;
     @JsonProperty("pseRespondentOrdReqCopyToOtherParty")
     private String pseRespondentOrdReqCopyToOtherParty;
     @JsonProperty("pseRespondentOrdReqCopyNoGiveDetails")
@@ -1249,4 +1307,141 @@ public class CaseData extends Et1CaseData {
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
     private String respondNotificationPartyToNotify;
+
+    // Bundles Respondent
+    @JsonProperty("bundlesRespondentPrepareDocNotesShow")
+    private String bundlesRespondentPrepareDocNotesShow;
+
+    @JsonProperty("bundlesRespondentAgreedDocWith")
+    private String bundlesRespondentAgreedDocWith;
+    @JsonProperty("bundlesRespondentAgreedDocWithBut")
+    private String bundlesRespondentAgreedDocWithBut;
+    @JsonProperty("bundlesRespondentAgreedDocWithNo")
+    private String bundlesRespondentAgreedDocWithNo;
+
+    @JsonProperty("bundlesRespondentSelectHearing")
+    private DynamicFixedListType bundlesRespondentSelectHearing;
+
+    @JsonProperty("submitEt3Respondent")
+    private DynamicFixedListType submitEt3Respondent;
+
+    @JsonProperty("bundlesRespondentWhatDocuments")
+    private String bundlesRespondentWhatDocuments;
+
+    @JsonProperty("bundlesRespondentWhoseDocuments")
+    private String bundlesRespondentWhoseDocuments;
+
+    @JsonProperty("bundlesRespondentUploadFile")
+    private UploadedDocumentType bundlesRespondentUploadFile;
+    @JsonProperty("bundlesRespondentCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
+    @JsonProperty("legalrepDocumentCollection")
+    private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    // Case Flags
+    private CaseFlagsType caseFlags;
+    private CaseFlagsType claimantFlags;
+    private CaseFlagsType respondentFlags;
+
+    //et-hearings-api
+    @JsonProperty("autoListFlag")
+    private String autoListFlag;
+
+    @JsonProperty("caseAdditionalSecurityFlag")
+    private String caseAdditionalSecurityFlag;
+    @JsonProperty("caseCategories")
+    private List<CaseCategory> caseCategories;
+    @JsonProperty("caseDeepLink")
+    private String caseDeepLink;
+
+    @JsonProperty("caseInterpreterRequiredFlag")
+    private String caseInterpreterRequiredFlag;
+    @JsonProperty("caseManagementLocationCode")
+    private String caseManagementLocationCode;
+    @JsonProperty("caseSLAStartDate")
+    private String caseSLAStartDate;
+    @JsonProperty("caseRestrictedFlag")
+    private String caseRestrictedFlag;
+
+    @JsonProperty("duration")
+    private Integer duration;
+
+    @JsonProperty("externalCaseReference")
+    private String externalCaseReference;
+
+    @JsonProperty("facilitiesRequiredList")
+    private List<String> facilitiesRequiredList;
+
+    @JsonProperty("hearingChannels")
+    private List<String> hearingChannels;
+    @JsonProperty("hearingInWelshFlag")
+    private String hearingInWelshFlag;
+    @JsonProperty("hearingIsLinkedFlag")
+    private String hearingIsLinkedFlag;
+    @JsonProperty("hearingLocations")
+    private List<HearingLocation> hearingLocations;
+    @JsonProperty("hearingPriorityType")
+    private String hearingPriorityType;
+    @JsonProperty("hearingRequester")
+    private String hearingRequester;
+    @JsonProperty("hearingType")
+    private String hearingType;
+    @JsonProperty("hearingWindow")
+    private HearingWindow hearingWindow;
+    @JsonProperty("nextListedDate")
+    private String nextListedDate;
+    @JsonProperty("caseNameHmctsInternal")
+    private String caseNameHmctsInternal;
+    @JsonProperty("caseManagementCategory")
+    private DynamicFixedListType caseManagementCategory;
+    @JsonProperty("caseManagementLocation")
+    private CaseLocation caseManagementLocation;
+    @JsonProperty("hmctsServiceID")
+    private String hmctsServiceID;
+
+    @JsonProperty("judiciary")
+    private Judiciary judiciary;
+    @JsonProperty("leadJudgeContractType")
+    private String leadJudgeContractType;
+
+    @JsonProperty("listingComments")
+    private String listingComments;
+
+    @JsonProperty("numberOfPhysicalAttendees")
+    private Integer numberOfPhysicalAttendees;
+
+    @JsonProperty("panelRequirements")
+    private PanelRequirements panelRequirements;
+
+    @JsonProperty("parties")
+    private List<PartyDetails> parties;
+
+    @JsonProperty("privateHearingRequiredFlag")
+    private String privateHearingRequiredFlag;
+
+    @JsonProperty("publicCaseName")
+    private String publicCaseName;
+
+    @JsonProperty("screenFlow")
+    private List<ScreenNavigation> screenFlow;
+
+    @JsonProperty("vocabulary")
+    private List<Vocabulary> vocabulary;
+
+    @JsonProperty("caseLinks")
+    private ListTypeItem<CaseLink> caseLinks;
+
+    @JsonProperty("partySelection")
+    private List<String> partySelection;
+
+    @JsonProperty("claimantUnavailability")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailability;
+
+    @JsonProperty("respondentUnavailability")
+    private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
+    @JsonProperty("acasCertificate")
+    private String acasCertificate;
+
+    @JsonProperty("SearchCriteria")
+    private SearchCriteria searchCriteria;
 }

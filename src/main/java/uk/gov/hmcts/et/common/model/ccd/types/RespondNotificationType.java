@@ -14,7 +14,6 @@ import java.util.List;
 @SuperBuilder
 @NoArgsConstructor
 public class RespondNotificationType {
-
     @JsonProperty("respondNotificationDate")
     private String respondNotificationDate;
     @JsonProperty("respondNotificationTitle")
@@ -37,5 +36,6 @@ public class RespondNotificationType {
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
     private String respondNotificationPartyToNotify;
-
+    private String state;
+    private String isClaimantResponseDue;
 }

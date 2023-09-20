@@ -22,6 +22,8 @@ public class ClaimantTse {
     private String copyToOtherPartyYesOrNo;
     @JsonProperty("copyToOtherPartyText")
     private String copyToOtherPartyText;
+    @JsonProperty("storedPending")
+    private String storedPending;
 
     public static final Map<String, String> APP_TYPE_MAP = Map.ofEntries(
             new AbstractMap.SimpleEntry<>("withdraw", "Withdraw all/part of claim"),
