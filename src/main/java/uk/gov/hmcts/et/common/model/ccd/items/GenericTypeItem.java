@@ -8,6 +8,10 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.UUID;
 
+/**
+ * Generic wrapper for TypeItem types.
+ * @deprecated Use {@link Item} instead
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
