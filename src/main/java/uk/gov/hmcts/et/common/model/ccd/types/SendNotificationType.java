@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.Item;
 import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
 
 import java.util.List;

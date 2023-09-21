@@ -1,39 +1,24 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import java.util.UUID;
-
-/**
- * Generic wrapper for TypeItem types.
- * @deprecated Use {@link Item} instead
- */
-@JsonIgnoreProperties(ignoreUnknown = true)
-@Data
 @SuperBuilder
-@NoArgsConstructor
-public class GenericTypeItem<T> {
-
-    @JsonProperty("id")
-    private String id;
-    @JsonProperty("value")
-    private T value;
+public class GenericTypeItem<T> extends Item<T> {
 
     public static <T> GenericTypeItem<T> from(T value) {
-        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
-        typeItem.id = UUID.randomUUID().toString();
-        typeItem.value = value;
-        return typeItem;
+        return new GenericTypeItem<>(Item.from(value));
     }
 
     public static <T> GenericTypeItem<T> from(String id, T value) {
-        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
-        typeItem.id = id;
-        typeItem.value = value;
-        return typeItem;
+        return new GenericTypeItem<>(Item.from(id, value));
+    }
+
+    private GenericTypeItem(Item<T> item) {
+        this.setId(item.getId());
+        this.setValue(item.getValue());
+    }
+
+    public GenericTypeItem() {
+        super();
     }
 }
