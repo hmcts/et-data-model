@@ -1,7 +1,7 @@
 package uk.gov.hmcts.et.common.model.ccd.types;
 
 import org.junit.jupiter.api.Test;
-import uk.gov.hmcts.et.common.model.ccd.items.Item;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,7 +45,7 @@ public class ListTypeItemTest {
 
     @Test
     void from_singularGenericTypeItem() {
-        ListTypeItem<String> listTypeItem = ListTypeItem.from(Item.from("1234", "str"));
+        ListTypeItem<String> listTypeItem = ListTypeItem.from(GenericTypeItem.from("1234", "str"));
 
         assertEquals(1, listTypeItem.size());
         assertEquals("str", listTypeItem.get(0).getValue());
@@ -54,7 +54,7 @@ public class ListTypeItemTest {
 
     @Test
     void from_varargsGenericTypeItem() {
-        ListTypeItem<String> listTypeItem = ListTypeItem.from(Item.from("1"), Item.from("2"));
+        ListTypeItem<String> listTypeItem = ListTypeItem.from(GenericTypeItem.from("1"), GenericTypeItem.from("2"));
 
         assertEquals(2, listTypeItem.size());
         assertEquals("1", listTypeItem.get(0).getValue());
@@ -65,8 +65,8 @@ public class ListTypeItemTest {
 
     @Test
     void concat_varargsListTypeItem() {
-        ListTypeItem<String> listOne = ListTypeItem.from(Item.from("1"), Item.from("2"));
-        ListTypeItem<String> listTwo = ListTypeItem.from(Item.from("3"), Item.from("4"));
+        ListTypeItem<String> listOne = ListTypeItem.from(GenericTypeItem.from("1"), GenericTypeItem.from("2"));
+        ListTypeItem<String> listTwo = ListTypeItem.from(GenericTypeItem.from("3"), GenericTypeItem.from("4"));
 
         ListTypeItem<String> actual = ListTypeItem.concat(listOne, listTwo);
 

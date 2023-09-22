@@ -7,8 +7,8 @@ import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
 @SuperBuilder
 @NoArgsConstructor
-public class DocumentTypeItem extends GenericTypeItem<DocumentType> {
-    public static DocumentTypeItem fromTypeItem(Item<DocumentType> item) {
+public class DocumentTypeItem extends Item<DocumentType> {
+    public static DocumentTypeItem fromTypeItem(GenericTypeItem<DocumentType> item) {
         var documentTypeItem = new DocumentTypeItem();
         documentTypeItem.setId(item.getId());
         documentTypeItem.setValue(item.getValue());
@@ -16,7 +16,7 @@ public class DocumentTypeItem extends GenericTypeItem<DocumentType> {
     }
 
     public static DocumentTypeItem fromUploadedDocument(UploadedDocumentType uploadedDocumentType) {
-        return fromTypeItem(Item.from(DocumentType.from(uploadedDocumentType)));
+        return fromTypeItem(GenericTypeItem.from(DocumentType.from(uploadedDocumentType)));
     }
 
     @Override public String toString() {
