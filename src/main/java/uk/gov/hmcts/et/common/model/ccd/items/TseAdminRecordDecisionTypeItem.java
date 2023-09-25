@@ -1,21 +1,18 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecisionType;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = true)
 @Data
-@SuperBuilder
+@Builder
 @NoArgsConstructor
-public class TseAdminRecordDecisionTypeItem {
-
-    @JsonProperty("id")
+@AllArgsConstructor
+public class TseAdminRecordDecisionTypeItem extends Item<TseAdminRecordDecisionType> {
     private String id;
-    @JsonProperty("value")
     private TseAdminRecordDecisionType value;
-
 }

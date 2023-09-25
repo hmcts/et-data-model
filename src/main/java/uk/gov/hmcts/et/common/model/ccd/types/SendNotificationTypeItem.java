@@ -1,20 +1,19 @@
 package uk.gov.hmcts.et.common.model.ccd.types;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.Item;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = true)
 @Data
-@SuperBuilder
+@Builder
 @NoArgsConstructor
-public class SendNotificationTypeItem {
-
-    @JsonProperty("id")
+@AllArgsConstructor
+public class SendNotificationTypeItem extends Item<SendNotificationType> {
     private String id;
-    @JsonProperty("value")
     private SendNotificationType value;
-
 }

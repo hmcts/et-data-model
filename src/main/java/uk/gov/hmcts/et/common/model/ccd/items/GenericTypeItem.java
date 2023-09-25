@@ -10,13 +10,9 @@ import java.util.UUID;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-@SuperBuilder
 @NoArgsConstructor
 public class GenericTypeItem<T> {
-
-    @JsonProperty("id")
     private String id;
-    @JsonProperty("value")
     private T value;
 
     public static <T> GenericTypeItem<T> from(T value) {

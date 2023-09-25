@@ -1,18 +1,17 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@EqualsAndHashCode(callSuper = true)
 @Data
-@SuperBuilder
+@Builder
 @NoArgsConstructor
-public class GenericTseApplicationTypeItem {
-    @JsonProperty("id")
+@AllArgsConstructor
+public class GenericTseApplicationTypeItem extends Item<GenericTseApplicationType> {
     private String id;
-    @JsonProperty("value")
     private GenericTseApplicationType value;
 }

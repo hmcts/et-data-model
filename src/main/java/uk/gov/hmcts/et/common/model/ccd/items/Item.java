@@ -1,8 +1,5 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
-import lombok.experimental.SuperBuilder;
-
-@SuperBuilder
 public class Item<T> extends GenericTypeItem<T> {
 
     public static <T> Item<T> from(T value) {
