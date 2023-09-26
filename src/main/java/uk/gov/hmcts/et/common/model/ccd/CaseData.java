@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
@@ -11,6 +14,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationType;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
@@ -49,6 +53,7 @@ import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 /**
@@ -1444,4 +1449,44 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
+
+    @Tolerate
+    public void setTseAdminResponseRequiredYesDoc(ListTypeItem<DocumentType> value) {
+        this.tseAdminResponseRequiredYesDoc = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setTseAdminResponseRequiredNoDoc(ListTypeItem<DocumentType> value) {
+        this.tseAdminResponseRequiredNoDoc = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setTseResponseSupportingMaterial(ListTypeItem<DocumentType> value) {
+        this.tseResponseSupportingMaterial = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setTseAdmReplyAddDocument(ListTypeItem<DocumentType> value) {
+        this.tseAdmReplyAddDocument = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setPseRespondentOrdReqUploadDocument(ListTypeItem<DocumentType> value) {
+        this.pseRespondentOrdReqUploadDocument = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setBundlesRespondentCollection(ListTypeItem<HearingBundleType> value) {
+        this.bundlesRespondentCollection = ListTypeItem.toGenericTypeItemList(value);
+    }
+
+    @Tolerate
+    public void setGenericTseApplicationCollection(ListTypeItem<GenericTseApplicationType> value) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
+        this.genericTseApplicationCollection = ListTypeItem.toValueList(value, GenericTseApplicationTypeItem.class);
+    }
+
+    @Tolerate
+    public void setGenericTseApplicationCollection() {
+        this.genericTseApplicationCollection = null;
+    }
 }
