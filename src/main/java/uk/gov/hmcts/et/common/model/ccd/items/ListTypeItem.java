@@ -65,7 +65,8 @@ public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
         return list;
     }
 
-    public static<T,E extends Item<T>>List<E> toValueList(ListTypeItem<T> listTypeItem, Class<E> clazz) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public static<T,E extends Item<T>>List<E> toValueList(ListTypeItem<T> listTypeItem, Class<E> clazz)
+            throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         if (CollectionUtils.isEmpty(listTypeItem)) {
             return null;
         }

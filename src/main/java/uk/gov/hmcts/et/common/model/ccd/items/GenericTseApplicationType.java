@@ -5,8 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import lombok.experimental.Tolerate;
+import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecisionType;
+import uk.gov.hmcts.et.common.model.ccd.types.TseRespondType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -54,4 +58,15 @@ public class GenericTseApplicationType {
     @JsonProperty("adminDecision")
     private List<TseAdminRecordDecisionTypeItem> adminDecision;
 
+    @Tolerate
+    public void setRespondCollection(ListTypeItem<TseRespondType> value)
+            throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
+        this.respondCollection = ListTypeItem.toValueList(value, TseRespondTypeItem.class);
+    }
+
+    @Tolerate
+    public void setAdminDecision(ListTypeItem<TseAdminRecordDecisionType> value)
+            throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
+        this.adminDecision = ListTypeItem.toValueList(value, TseAdminRecordDecisionTypeItem.class);
+    }
 }
