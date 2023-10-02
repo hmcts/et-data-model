@@ -58,7 +58,9 @@ public class TseRespondType {
     @JsonProperty("viewedByClaimant")
     private String viewedByClaimant;
 
-    // Work Allocation enabler, to sort ALL responses across all Applications
+    // Work Allocation enabler
     @JsonProperty("dateTime")
     private String dateTime;
+    @JsonProperty("applicationType")
+    private String applicationType;
 }
