@@ -1342,8 +1342,8 @@ public class CaseData extends Et1CaseData {
     private List<DocumentTypeItem> adrDocumentCollection;
     @JsonProperty("piiDocumentCollection")
     private List<DocumentTypeItem> piiDocumentCollection;
-    @JsonProperty("appealsDocumentCollection")
-    private List<DocumentTypeItem> appealsDocumentCollection;
+    @JsonProperty("appealDocumentCollection")
+    private List<DocumentTypeItem> appealDocumentCollection;
 
     // Case Flags
     private CaseFlagsType caseFlags;
