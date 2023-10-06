@@ -33,6 +33,8 @@ public class TseRespondType {
     private String copyNoGiveDetails;
     @JsonProperty("summaryPdf")
     private UploadedDocumentType summaryPdf;
+    @JsonProperty("storedPending")
+    private String storedPending;
 
     // Admin Reply
     @JsonProperty("enterResponseTitle")
