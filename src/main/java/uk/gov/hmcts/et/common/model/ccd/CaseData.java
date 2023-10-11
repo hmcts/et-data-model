@@ -24,6 +24,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseLink;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
@@ -44,6 +45,7 @@ import uk.gov.hmcts.et.common.model.hmc.Judiciary;
 import uk.gov.hmcts.et.common.model.hmc.PanelRequirements;
 import uk.gov.hmcts.et.common.model.hmc.PartyDetails;
 import uk.gov.hmcts.et.common.model.hmc.ScreenNavigation;
+import uk.gov.hmcts.et.common.model.hmc.UnavailabilityRanges;
 import uk.gov.hmcts.et.common.model.hmc.Vocabulary;
 import uk.gov.hmcts.et.common.model.listing.ListingData;
 
@@ -131,6 +133,8 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
+    @JsonProperty("claimantDocumentCollection")
+    private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
@@ -159,6 +163,8 @@ public class CaseData extends Et1CaseData {
     private String targetHearingDate;
     @JsonProperty("claimant")
     private String claimant;
+    @JsonProperty("claimantId")
+    private String claimantId;
     @JsonProperty("respondent")
     private String respondent;
 
@@ -1332,6 +1338,13 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
+    @JsonProperty("adrDocumentCollection")
+    private List<DocumentTypeItem> adrDocumentCollection;
+    @JsonProperty("piiDocumentCollection")
+    private List<DocumentTypeItem> piiDocumentCollection;
+    @JsonProperty("appealDocumentCollection")
+    private List<DocumentTypeItem> appealDocumentCollection;
+
     // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
@@ -1386,6 +1399,10 @@ public class CaseData extends Et1CaseData {
     private String nextListedDate;
     @JsonProperty("caseNameHmctsInternal")
     private String caseNameHmctsInternal;
+    @JsonProperty("caseManagementCategory")
+    private DynamicFixedListType caseManagementCategory;
+    @JsonProperty("caseManagementLocation")
+    private CaseLocation caseManagementLocation;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
 
@@ -1420,4 +1437,18 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("caseLinks")
     private ListTypeItem<CaseLink> caseLinks;
+
+    @JsonProperty("partySelection")
+    private List<String> partySelection;
+
+    @JsonProperty("claimantUnavailability")
+    private ListTypeItem<UnavailabilityRanges> claimantUnavailability;
+
+    @JsonProperty("respondentUnavailability")
+    private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
+    @JsonProperty("acasCertificate")
+    private String acasCertificate;
+
+    @JsonProperty("SearchCriteria")
+    private SearchCriteria searchCriteria;
 }

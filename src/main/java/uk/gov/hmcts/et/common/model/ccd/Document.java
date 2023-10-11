@@ -13,5 +13,9 @@ public class Document {
     private String binaryUrl;
     @JsonProperty("document_filename")
     private String fileName;
+    @JsonProperty("category_id")
+    private String categoryId;
+    @JsonProperty("upload_timestamp")
+    private String uploadTimestamp;
 
 }
