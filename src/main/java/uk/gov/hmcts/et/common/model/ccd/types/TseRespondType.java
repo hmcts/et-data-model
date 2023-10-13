@@ -19,6 +19,8 @@ public class TseRespondType {
     private String date;
     @JsonProperty("from")
     private String from;
+    @JsonProperty("status")
+    private String status;
 
     // Respondent / Claimant Reply
     @JsonProperty("response")
@@ -33,8 +35,6 @@ public class TseRespondType {
     private String copyNoGiveDetails;
     @JsonProperty("summaryPdf")
     private UploadedDocumentType summaryPdf;
-    @JsonProperty("storedPending")
-    private String storedPending;
 
     // Admin Reply
     @JsonProperty("enterResponseTitle")
