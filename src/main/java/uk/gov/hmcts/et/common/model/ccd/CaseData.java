@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
+import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
@@ -57,6 +59,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
 public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalCorrespondenceAddress")
     private Address tribunalCorrespondenceAddress;
@@ -1444,4 +1447,11 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
+
+    @JsonProperty("bundleConfiguration")
+    private String bundleConfiguration;
+    @JsonProperty("caseBundles")
+    private List<Bundle> caseBundles;
+    @JsonProperty("digitalCaseFile")
+    private List<DocumentTypeItem> digitalCaseFile;
 }
