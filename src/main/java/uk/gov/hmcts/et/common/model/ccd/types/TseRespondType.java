@@ -60,7 +60,7 @@ public class TseRespondType {
     @JsonProperty("viewedByClaimant")
     private String viewedByClaimant;
 
-    // Work Allocation enabler
+    // Work Allocation enablers
     @JsonProperty("dateTime")
     private String dateTime;
     @JsonProperty("applicationType")
