@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import uk.gov.hmcts.et.common.model.ccd.types.LengthOfHearing;
 
 import java.util.List;
 
@@ -13,4 +14,6 @@ public class EtICListForFinalHearing {
     private List<String> etICTypeOfFinalHearing;
     @JsonProperty("etICLengthOfFinalHearing")
     private String etICLengthOfFinalHearing;
+    @JsonProperty("etICLengthOfFinalHearingDetail")
+    private LengthOfHearing etICLengthOfFinalHearingDetail;
 }
