@@ -59,4 +59,10 @@ public class TseRespondType {
     private String selectPartyNotify;
     @JsonProperty("viewedByClaimant")
     private String viewedByClaimant;
+
+    // Work Allocation enablers
+    @JsonProperty("dateTime")
+    private String dateTime;
+    @JsonProperty("applicationType")
+    private String applicationType;
 }
