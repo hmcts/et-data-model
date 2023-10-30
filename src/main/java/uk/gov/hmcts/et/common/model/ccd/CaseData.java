@@ -1338,6 +1338,17 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
+    @JsonProperty("adrDocumentCollection")
+    private List<DocumentTypeItem> adrDocumentCollection;
+    @JsonProperty("piiDocumentCollection")
+    private List<DocumentTypeItem> piiDocumentCollection;
+    @JsonProperty("appealDocumentCollection")
+    private List<DocumentTypeItem> appealDocumentCollection;
+
+    // Claimant Bundles
+    @JsonProperty("bundlesClaimantCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
+    
     // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;

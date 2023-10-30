@@ -27,4 +27,10 @@ public class ReferralReplyType {
     private String replyBy;
     @JsonProperty("replyDate")
     private String replyDate;
+
+    // Work Allocation enablers
+    @JsonProperty("replyDateTime")
+    private String replyDateTime;
+    @JsonProperty("referralSubject")
+    private String referralSubject;
 }
