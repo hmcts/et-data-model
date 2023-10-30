@@ -106,11 +106,15 @@ public class ClaimantTse {
             new AbstractMap.SimpleEntry<>("September", "Medi"),
             new AbstractMap.SimpleEntry<>("October", "Hydref"),
             new AbstractMap.SimpleEntry<>("November", "Tachwedd"),
-            new AbstractMap.SimpleEntry<>("December", "Rhagfyr"),
+            new AbstractMap.SimpleEntry<>("December", "Rhagfyr")
+            );
+
+    public static final Map<String, String> CY_ABBREVIATED_MONTHS_MAP = Map.ofEntries(
             new AbstractMap.SimpleEntry<>("Jan", "Ion"),
             new AbstractMap.SimpleEntry<>("Feb", "Chwe"),
             new AbstractMap.SimpleEntry<>("Mar", "Maw"),
             new AbstractMap.SimpleEntry<>("Apr", "Ebr"),
+            new AbstractMap.SimpleEntry<>("May", "Mai"),
             new AbstractMap.SimpleEntry<>("Jun", "Meh"),
             new AbstractMap.SimpleEntry<>("Jul", "Gor"),
             new AbstractMap.SimpleEntry<>("Aug", "Aws"),
@@ -118,5 +122,5 @@ public class ClaimantTse {
             new AbstractMap.SimpleEntry<>("Oct", "Hyd"),
             new AbstractMap.SimpleEntry<>("Nov", "Tach"),
             new AbstractMap.SimpleEntry<>("Dec", "Rhag")
-            );
+    );
 }
