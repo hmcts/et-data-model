@@ -1454,7 +1454,9 @@ public class CaseData extends Et1CaseData {
     private ListTypeItem<UnavailabilityRanges> respondentUnavailability;
     @JsonProperty("acasCertificate")
     private String acasCertificate;
-
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
+
+    @JsonProperty("preHearingDepositData")
+    private PreHearingDepositData preHearingDepositData;
 }
