@@ -753,6 +753,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
     // ET Initial Consideration - Hearing already listed
+
+    @JsonProperty("etICHearingListedAnswers")
+    private EtICHearingListedAnswers etICHearingListedAnswers;
     @JsonProperty("etICHearingListed")
     private List<String> etICHearingListed;
     @JsonProperty("etICExtendDurationGiveDetails")
@@ -770,6 +773,8 @@ public class CaseData extends Et1CaseData {
     // ET Initial Consideration – Further Info
     @JsonProperty("etICFurtherInformation")
     private List<String> etICFurtherInformation;
+    @JsonProperty("etICFurtherInfoAnswers")
+    private EtICFurtherInfoAnswers etICFurtherInfoAnswers;
     @JsonProperty("etICFurtherInformationHearingAnyOtherDirections")
     private String etICFurtherInformationHearingAnyOtherDirections;
     @JsonProperty("etICFurtherInformationGiveDetails")
