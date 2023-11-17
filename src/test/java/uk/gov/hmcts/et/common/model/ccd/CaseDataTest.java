@@ -3,7 +3,11 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantIndType;
+import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
 
 import static org.junit.Assert.assertEquals;
 
@@ -121,5 +125,17 @@ public class CaseDataTest {
         claimantIndType.setClaimantLastName("Peter");
         caseData.setClaimantIndType(claimantIndType);
         assertEquals("Marcelo Peter", caseData.getClaimantIndType().claimantFullNames());
+    }
+
+    @Test
+    public void setRepCollectionAsListTypeItem() {
+        RepresentedTypeR representedTypeR = RepresentedTypeR.builder().id("1").build();
+        ListTypeItem<RepresentedTypeR> list = ListTypeItem.from(GenericTypeItem.from("id", representedTypeR));
+
+        caseData.setRepCollection(list);
+        RepresentedTypeRItem representedTypeRItem = caseData.getRepCollection().get(0);
+
+        assertEquals("id", representedTypeRItem.getId());
+        assertEquals(representedTypeR, representedTypeRItem.getValue());
     }
 }
