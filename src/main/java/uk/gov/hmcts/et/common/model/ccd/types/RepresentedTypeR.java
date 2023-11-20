@@ -47,4 +47,7 @@ public class RepresentedTypeR {
     private Organisation respondentOrganisation;
     @JsonProperty("myHmctsYesNo")
     private String myHmctsYesNo;
+    /** UUID for identifying the non system user legal rep's organisation for HMC. */
+    @JsonProperty("nonMyHmctsOrganisationId")
+    private String nonMyHmctsOrganisationId;
 }
