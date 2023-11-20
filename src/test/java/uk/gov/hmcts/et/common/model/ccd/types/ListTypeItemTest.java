@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
 
+import java.util.stream.Stream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -61,6 +63,16 @@ public class ListTypeItemTest {
         assertEquals("2", listTypeItem.get(1).getValue());
         assertNotNull(listTypeItem.get(0).getId());
         assertNotNull(listTypeItem.get(1).getId());
+    }
+
+    @Test
+    void from_stream() {
+        ListTypeItem<String> string = ListTypeItem.from(Stream.of(GenericTypeItem.from("first"),
+                GenericTypeItem.from("second")));
+
+        assertEquals(2, string.size());
+        assertEquals("first", string.get(0).getValue());
+        assertEquals("second", string.get(1).getValue());
     }
 
     @Test
