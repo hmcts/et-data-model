@@ -31,7 +31,7 @@ public class ListTypeItem<T> extends ArrayList<TypeItem<T>> {
         return typeItem;
     }
 
-    public static <T> ListTypeItem<T> from(Stream<GenericTypeItem<T>> stream) {
+    public static <T> ListTypeItem<T> from(Stream<TypeItem<T>> stream) {
         return stream.collect(Collectors.toCollection(ListTypeItem::new));
     }
 
