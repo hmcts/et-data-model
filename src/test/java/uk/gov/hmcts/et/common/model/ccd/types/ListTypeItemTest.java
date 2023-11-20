@@ -46,7 +46,7 @@ public class ListTypeItemTest {
     }
 
     @Test
-    void from_singularGenericTypeItem() {
+    void from_singularTypeItem() {
         ListTypeItem<String> listTypeItem = ListTypeItem.from(TypeItem.from("1234", "str"));
 
         assertEquals(1, listTypeItem.size());
@@ -55,7 +55,7 @@ public class ListTypeItemTest {
     }
 
     @Test
-    void from_varargsGenericTypeItem() {
+    void from_varargsTypeItem() {
         ListTypeItem<String> listTypeItem = ListTypeItem.from(TypeItem.from("1"), TypeItem.from("2"));
 
         assertEquals(2, listTypeItem.size());
@@ -67,8 +67,8 @@ public class ListTypeItemTest {
 
     @Test
     void from_stream() {
-        ListTypeItem<String> string = ListTypeItem.from(Stream.of(GenericTypeItem.from("first"),
-                GenericTypeItem.from("second")));
+        ListTypeItem<String> string = ListTypeItem.from(Stream.of(TypeItem.from("first"),
+                TypeItem.from("second")));
 
         assertEquals(2, string.size());
         assertEquals("first", string.get(0).getValue());
