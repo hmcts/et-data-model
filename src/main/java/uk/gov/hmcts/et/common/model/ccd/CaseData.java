@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
@@ -34,6 +35,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
+import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -1462,4 +1464,15 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
+
+    /**
+     * Convenience method for using the new ListTypeItem pattern for setting repCollection.
+     * @param repCollection Collection of respondent representatives
+     */
+    @Tolerate
+    void setRepCollection(ListTypeItem<RepresentedTypeR> repCollection) {
+        this.repCollection = repCollection.stream()
+                .map(o -> RepresentedTypeRItem.builder().id(o.getId()).value(o.getValue()).build())
+                .toList();
+    }
 }
