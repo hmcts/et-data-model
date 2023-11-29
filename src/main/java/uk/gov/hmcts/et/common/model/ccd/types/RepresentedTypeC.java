@@ -2,13 +2,18 @@ package uk.gov.hmcts.et.common.model.ccd.types;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.ccd.Address;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RepresentedTypeC {
-
     @JsonProperty("representative_id")
     private String representativeId;
     @JsonProperty("name_of_representative")
@@ -31,5 +36,7 @@ public class RepresentedTypeC {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
-
+    /** UUID for identifying legal rep's firm. */
+    @JsonProperty("organisationId")
+    private String organisationId;
 }

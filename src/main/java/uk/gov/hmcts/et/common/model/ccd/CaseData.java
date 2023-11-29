@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
@@ -36,6 +37,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
+import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -279,6 +281,8 @@ public class CaseData extends Et1CaseData {
     private String positionTypeCT;
     @JsonProperty("linkedCaseCT")
     private String linkedCaseCT;
+    @JsonProperty("transferredCaseLink")
+    private String transferredCaseLink;
     @JsonProperty("ecmOfficeCT")
     private String ecmOfficeCT;
     @JsonProperty("assignOffice")
@@ -754,6 +758,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
     // ET Initial Consideration - Hearing already listed
+
+    @JsonProperty("etICHearingListedAnswers")
+    private EtICHearingListedAnswers etICHearingListedAnswers;
     @JsonProperty("etICHearingListed")
     private List<String> etICHearingListed;
     @JsonProperty("etICExtendDurationGiveDetails")
@@ -771,6 +778,8 @@ public class CaseData extends Et1CaseData {
     // ET Initial Consideration – Further Info
     @JsonProperty("etICFurtherInformation")
     private List<String> etICFurtherInformation;
+    @JsonProperty("etICFurtherInfoAnswers")
+    private EtICFurtherInfoAnswers etICFurtherInfoAnswers;
     @JsonProperty("etICFurtherInformationHearingAnyOtherDirections")
     private String etICFurtherInformationHearingAnyOtherDirections;
     @JsonProperty("etICFurtherInformationGiveDetails")
@@ -1465,4 +1474,16 @@ public class CaseData extends Et1CaseData {
     private List<Bundle> caseBundles;
     @JsonProperty("digitalCaseFile")
     private List<DocumentTypeItem> digitalCaseFile;
+
+    /**
+     * Convenience method for using the new ListTypeItem pattern for setting repCollection.
+     * @param repCollection Collection of respondent representatives
+     */
+    @Tolerate
+    void setRepCollection(ListTypeItem<RepresentedTypeR> repCollection) {
+        this.repCollection = repCollection.stream()
+                .map(o -> RepresentedTypeRItem.builder().id(o.getId()).value(o.getValue()).build())
+                .toList();
+    }
+
 }

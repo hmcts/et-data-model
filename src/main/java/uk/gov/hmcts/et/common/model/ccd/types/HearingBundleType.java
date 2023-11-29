@@ -25,4 +25,8 @@ public class HearingBundleType {
     private String whoseDocuments;
     @JsonProperty("uploadFile")
     private UploadedDocumentType uploadFile;
+    @JsonProperty("formattedSelectedHearing")
+    private String formattedSelectedHearing;
+    @JsonProperty("uploadDateTime")
+    private String uploadDateTime;
 }
