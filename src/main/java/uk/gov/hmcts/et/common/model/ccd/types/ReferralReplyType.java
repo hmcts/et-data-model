@@ -33,6 +33,4 @@ public class ReferralReplyType {
     private String replyDateTime;
     @JsonProperty("referralSubject")
     private String referralSubject;
-    @JsonProperty("referralNumber")
-    private String referralNumber;
 }

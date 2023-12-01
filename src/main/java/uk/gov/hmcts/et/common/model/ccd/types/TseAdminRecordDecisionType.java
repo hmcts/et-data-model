@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class TseAdminRecordDecisionType {
     @JsonProperty("additionalInformation")
     private String additionalInformation;
     @JsonProperty("responseRequiredDoc")
-    private List<GenericTypeItem<DocumentType>> responseRequiredDoc;
+    private List<TypeItem<DocumentType>> responseRequiredDoc;
     @JsonProperty("decisionMadeBy")
     private String decisionMadeBy;
     @JsonProperty("decisionMadeByFullName")
