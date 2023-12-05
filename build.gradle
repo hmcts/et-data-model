@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '4.0.1'
+version '4.0.0'
 
 java {
     toolchain {
@@ -19,11 +19,11 @@ checkstyle {
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-}
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 
 publishing {
     publications {
@@ -51,6 +51,7 @@ dependencies {
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
     implementation group: 'org.springframework', name: 'spring-core', version: '6.0.12'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.15.2'
+    implementation 'com.github.hmcts:et-data-model:RET-3460-Final-SNAPSHOT'
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
