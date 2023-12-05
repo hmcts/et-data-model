@@ -12,14 +12,14 @@ import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DynamicListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.EccCounterClaimTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTseApplicationType;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingDetailTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
+import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
@@ -1123,7 +1123,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("resTseCopyToOtherPartyTextArea")
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
-    private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
+    private ListTypeItem<GenericTseApplicationType> genericTseApplicationCollection;
 
     //TSE Admin Record a Decision
     @JsonProperty("tseAdminSelectApplication")
@@ -1145,9 +1145,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdminAdditionalInformation")
     private String tseAdminAdditionalInformation;
     @JsonProperty("tseAdminResponseRequiredYesDoc")
-    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredYesDoc;
+    private List<TypeItem<DocumentType>> tseAdminResponseRequiredYesDoc;
     @JsonProperty("tseAdminResponseRequiredNoDoc")
-    private List<GenericTypeItem<DocumentType>> tseAdminResponseRequiredNoDoc;
+    private List<TypeItem<DocumentType>> tseAdminResponseRequiredNoDoc;
     @JsonProperty("tseAdminDecisionMadeBy")
     private String tseAdminDecisionMadeBy;
     @JsonProperty("tseAdminDecisionMadeByFullName")
@@ -1167,7 +1167,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseResponseHasSupportingMaterial")
     private String tseResponseHasSupportingMaterial;
     @JsonProperty("tseResponseSupportingMaterial")
-    private List<GenericTypeItem<DocumentType>> tseResponseSupportingMaterial;
+    private ListTypeItem<DocumentType> tseResponseSupportingMaterial;
     @JsonProperty("tseResponseCopyToOtherParty")
     private String tseResponseCopyToOtherParty;
     @JsonProperty("tseResponseCopyNoGiveDetails")
@@ -1188,7 +1188,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseAdmReplyAdditionalInformation")
     private String tseAdmReplyAdditionalInformation;
     @JsonProperty("tseAdmReplyAddDocument")
-    private List<GenericTypeItem<DocumentType>> tseAdmReplyAddDocument;
+    private ListTypeItem<DocumentType> tseAdmReplyAddDocument;
     @JsonProperty("tseAdmReplyIsCmoOrRequest")
     private String tseAdmReplyIsCmoOrRequest;
     @JsonProperty("tseAdmReplyCmoMadeBy")
@@ -1234,7 +1234,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("pseRespondentOrdReqHasSupportingMaterial")
     private String pseRespondentOrdReqHasSupportingMaterial;
     @JsonProperty("pseRespondentOrdReqUploadDocument")
-    private List<GenericTypeItem<DocumentType>> pseRespondentOrdReqUploadDocument;
+    private List<TypeItem<DocumentType>> pseRespondentOrdReqUploadDocument;
     @JsonProperty("pseRespondentOrdReqCopyToOtherParty")
     private String pseRespondentOrdReqCopyToOtherParty;
     @JsonProperty("pseRespondentOrdReqCopyNoGiveDetails")
@@ -1343,7 +1343,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentUploadFile")
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
-    private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
+    private List<TypeItem<HearingBundleType>> bundlesRespondentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
@@ -1356,7 +1356,7 @@ public class CaseData extends Et1CaseData {
 
     // Claimant Bundles
     @JsonProperty("bundlesClaimantCollection")
-    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
+    private List<TypeItem<HearingBundleType>> bundlesClaimantCollection;
     
     // Case Flags
     private CaseFlagsType caseFlags;

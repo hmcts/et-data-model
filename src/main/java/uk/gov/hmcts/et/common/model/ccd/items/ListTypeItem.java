@@ -12,8 +12,8 @@ import java.util.stream.Stream;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor
-public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
-    public static <T> ListTypeItem<T> from(GenericTypeItem<T> value) {
+public class ListTypeItem<T> extends ArrayList<TypeItem<T>> {
+    public static <T> ListTypeItem<T> from(TypeItem<T> value) {
         ListTypeItem<T> typeItem = new ListTypeItem<>();
         typeItem.add(value);
         return typeItem;
@@ -21,29 +21,29 @@ public class ListTypeItem<T> extends ArrayList<GenericTypeItem<T>> {
     
     public static <T> ListTypeItem<T> from(T value) {
         ListTypeItem<T> typeItem = new ListTypeItem<>();
-        typeItem.add(GenericTypeItem.from(value));
+        typeItem.add(TypeItem.from(value));
         return typeItem;
     }
 
     public static <T> ListTypeItem<T> from(T value, String id) {
         ListTypeItem<T> typeItem = new ListTypeItem<>();
-        typeItem.add(GenericTypeItem.from(id, value));
+        typeItem.add(TypeItem.from(id, value));
         return typeItem;
     }
 
-    public static <T> ListTypeItem<T> from(Stream<GenericTypeItem<T>> stream) {
+    public static <T> ListTypeItem<T> from(Stream<TypeItem<T>> stream) {
         return stream.collect(Collectors.toCollection(ListTypeItem::new));
     }
 
     @SafeVarargs
     public static <T> ListTypeItem<T> from(T...values) {
         return Arrays.stream(values)
-                .map(GenericTypeItem::from)
+                .map(TypeItem::from)
                 .collect(Collectors.toCollection(ListTypeItem::new));
     }
 
     @SafeVarargs
-    public static <T> ListTypeItem<T> from(GenericTypeItem<T>...values) {
+    public static <T> ListTypeItem<T> from(TypeItem<T>...values) {
         return Arrays.stream(values).collect(Collectors.toCollection(ListTypeItem::new));
     }
 
