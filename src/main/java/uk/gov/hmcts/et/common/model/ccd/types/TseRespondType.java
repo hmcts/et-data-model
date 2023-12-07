@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.TypeItem;
-
-import java.util.List;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -28,7 +26,7 @@ public class TseRespondType {
     @JsonProperty("hasSupportingMaterial")
     private String hasSupportingMaterial;
     @JsonProperty("supportingMaterial")
-    private List<TypeItem<DocumentType>> supportingMaterial;
+    private ListTypeItem<DocumentType> supportingMaterial;
     @JsonProperty("copyToOtherParty")
     private String copyToOtherParty;
     @JsonProperty("copyNoGiveDetails")
@@ -42,7 +40,7 @@ public class TseRespondType {
     @JsonProperty("additionalInformation")
     private String additionalInformation;
     @JsonProperty("addDocument")
-    private List<TypeItem<DocumentType>> addDocument;
+    private ListTypeItem<DocumentType> addDocument;
     @JsonProperty("isCmoOrRequest")
     private String isCmoOrRequest;
     @JsonProperty("cmoMadeBy")
