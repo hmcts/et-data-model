@@ -33,5 +33,7 @@ public class PseResponseType {
     private String copyToOtherParty;
     @JsonProperty("copyNoGiveDetails")
     private String copyNoGiveDetails;
+    @JsonProperty("responseState")
+    private String responseState;
 
 }
