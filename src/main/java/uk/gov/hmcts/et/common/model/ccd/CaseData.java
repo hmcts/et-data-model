@@ -1617,7 +1617,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("payTypesOfClaim")
     private List<String> payTypesOfClaim;
     @JsonProperty("whistleblowingYesNo")
-    private String whistleblowingYesNo;
+    private List<String> whistleblowingYesNo;
     @JsonProperty("whistleblowingRegulator")
     private String whistleblowingRegulator;
     @JsonProperty("otherTypeOfClaimDetails")
@@ -1631,8 +1631,13 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tribunalRecommendationDetails")
     private String tribunalRecommendationDetails;
     @JsonProperty("linkedCasesYesNo")
-    private String linkedCasesYesNo;
+    private List<String> linkedCasesYesNo;
     @JsonProperty("linkedCasesDetails")
     private String linkedCasesDetails;
-
+    @JsonProperty("et1SectionOneDateCompleted")
+    private String et1SectionOneDateCompleted;
+    @JsonProperty("et1SectionTwoDateCompleted")
+    private String et1SectionTwoDateCompleted;
+    @JsonProperty("et1SectionThreeDateCompleted")
+    private String et1SectionThreeDateCompleted;
 }
