@@ -1511,8 +1511,6 @@ public class CaseData extends Et1CaseData {
     private List<String> claimantSupportQuestion;
     @JsonProperty("claimantSupportQuestionReason")
     private String claimantSupportQuestionReason;
-    @JsonProperty("claimantSupportDocument")
-    private UploadedDocumentType claimantSupportDocument;
     @JsonProperty("representativeContactPreference")
     private List<String> representativeContactPreference;
     @JsonProperty("contactPreferencePostReason")
@@ -1546,6 +1544,8 @@ public class CaseData extends Et1CaseData {
     private String claimantWorkingNoticePeriodWeeks;
     @JsonProperty("claimantWorkingNoticePeriodEndDate")
     private String claimantWorkingNoticePeriodEndDate;
+    @JsonProperty("claimantNoLongerWorkingQuestion")
+    private List<String> claimantNoLongerWorkingQuestion;
     @JsonProperty("claimantNoLongerWorking")
     private List<String> claimantNoLongerWorking;
     @JsonProperty("claimantNoLongerWorkingMonths")

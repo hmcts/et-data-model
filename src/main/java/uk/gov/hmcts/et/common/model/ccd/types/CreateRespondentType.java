@@ -15,6 +15,8 @@ import uk.gov.hmcts.et.common.model.ccd.Address;
 @AllArgsConstructor
 public class CreateRespondentType {
 
+    @JsonProperty("respondentType")
+    private String respondentType;
     @JsonProperty("respondentFirstName")
     private String respondentFirstName;
     @JsonProperty("respondentLastName")

@@ -31,4 +31,8 @@ public class ClaimantRequestType {
     private List<String> payClaims;
     @JsonProperty("other_claim")
     private String otherClaim;
+    @JsonProperty("linkedCasesYesNo")
+    private List<String> linkedCasesYesNo;
+    @JsonProperty("linkedCases")
+    private String linkedCases;
 }
