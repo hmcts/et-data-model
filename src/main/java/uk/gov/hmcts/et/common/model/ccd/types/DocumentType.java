@@ -23,6 +23,31 @@ public class DocumentType {
     @JsonProperty("shortDescription")
     private String shortDescription;
 
+    @JsonProperty("topLevelDocuments")
+    private String topLevelDocuments;
+    @JsonProperty("startingClaimDocuments")
+    private String startingClaimDocuments;
+    @JsonProperty("responseClaimDocuments")
+    private String responseClaimDocuments;
+    @JsonProperty("initialConsiderationDocuments")
+    private String initialConsiderationDocuments;
+    @JsonProperty("caseManagementDocuments")
+    private String caseManagementDocuments;
+    @JsonProperty("withdrawalSettledDocuments")
+    private String withdrawalSettledDocuments;
+    @JsonProperty("hearingsDocuments")
+    private String hearingsDocuments;
+    @JsonProperty("judgmentAndReasonsDocuments")
+    private String judgmentAndReasonsDocuments;
+    @JsonProperty("reconsiderationDocuments")
+    private String reconsiderationDocuments;
+    @JsonProperty("miscDocuments")
+    private String miscDocuments;
+    @JsonProperty("documentType")
+    private String documentType;
+    @JsonProperty("dateOfCorrespondence")
+    private String dateOfCorrespondence;
+
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
     }
