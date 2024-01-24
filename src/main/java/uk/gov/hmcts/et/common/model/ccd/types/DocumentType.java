@@ -47,6 +47,8 @@ public class DocumentType {
     private String documentType;
     @JsonProperty("dateOfCorrespondence")
     private String dateOfCorrespondence;
+    @JsonProperty("docNumber")
+    private String docNumber;
 
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
