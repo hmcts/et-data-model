@@ -1476,6 +1476,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("digitalCaseFile")
     private DigitalCaseFileType digitalCaseFile;
 
+    private String waRule21ReferralSent;
+
+
     /**
      * Convenience method for using the new ListTypeItem pattern for setting repCollection.
      * @param repCollection Collection of respondent representatives

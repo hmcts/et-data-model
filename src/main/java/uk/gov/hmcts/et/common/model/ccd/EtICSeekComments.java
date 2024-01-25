@@ -15,4 +15,6 @@ public class EtICSeekComments {
     private String etICFinalHearingDetails;
     @JsonProperty("etICPrelimHearingDetails")
     private String etICPrelimHearingDetails;
+    @JsonProperty("etICPrelimHearingYesNo")
+    private String etICPrelimHearingYesNo;
 }
