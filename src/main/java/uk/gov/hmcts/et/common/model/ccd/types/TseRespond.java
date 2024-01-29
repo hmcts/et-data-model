@@ -11,7 +11,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseRespondType {
+public class TseRespond {
 
     @JsonProperty("date")
     private String date;

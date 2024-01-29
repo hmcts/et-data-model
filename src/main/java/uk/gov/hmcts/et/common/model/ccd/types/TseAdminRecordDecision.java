@@ -11,7 +11,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseAdminRecordDecisionType {
+public class TseAdminRecordDecision {
 
     @JsonProperty("date")
     private String date;

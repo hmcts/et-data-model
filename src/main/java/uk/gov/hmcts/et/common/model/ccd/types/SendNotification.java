@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class SendNotificationType {
+public class SendNotification {
 
     @JsonProperty("number")
     private String number; // Unique, incremented value for each application
@@ -59,7 +59,7 @@ public class SendNotificationType {
     @JsonProperty("sendNotificationWhoMadeJudgement")
     private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
-    private ListTypeItem<PseResponseType> respondCollection;
+    private ListTypeItem<PseResponse> respondCollection;
     @JsonProperty("respondNotificationTypeCollection")
     private ListTypeItem<RespondNotificationType> respondNotificationTypeCollection;
     @JsonProperty("notificationState")

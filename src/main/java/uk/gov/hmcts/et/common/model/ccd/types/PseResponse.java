@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class PseResponseType {
+public class PseResponse {
 
     @JsonProperty("date")
     private String date;

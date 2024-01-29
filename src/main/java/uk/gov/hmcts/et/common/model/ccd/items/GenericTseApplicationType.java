@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecisionType;
-import uk.gov.hmcts.et.common.model.ccd.types.TseRespondType;
+import uk.gov.hmcts.et.common.model.ccd.types.TseAdminRecordDecision;
+import uk.gov.hmcts.et.common.model.ccd.types.TseRespond;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -49,9 +49,9 @@ public class GenericTseApplicationType {
     private String claimantResponseRequired;
 
     @JsonProperty("respondCollection")
-    private ListTypeItem<TseRespondType> respondCollection;
+    private ListTypeItem<TseRespond> respondCollection;
 
     @JsonProperty("adminDecision")
-    private ListTypeItem<TseAdminRecordDecisionType> adminDecision;
+    private ListTypeItem<TseAdminRecordDecision> adminDecision;
 
 }

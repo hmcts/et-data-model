@@ -31,7 +31,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
-import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
+import uk.gov.hmcts.et.common.model.ccd.types.HearingBundle;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
@@ -1342,7 +1342,7 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentUploadFile")
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
-    private ListTypeItem<HearingBundleType> bundlesRespondentCollection;
+    private ListTypeItem<HearingBundle> bundlesRespondentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
@@ -1355,8 +1355,8 @@ public class CaseData extends Et1CaseData {
 
     // Claimant Bundles
     @JsonProperty("bundlesClaimantCollection")
-    private ListTypeItem<HearingBundleType> bundlesClaimantCollection;
-    
+    private ListTypeItem<HearingBundle> bundlesClaimantCollection;
+
     // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;

@@ -15,6 +15,6 @@ public class SendNotificationTypeItem {
     @JsonProperty("id")
     private String id;
     @JsonProperty("value")
-    private SendNotificationType value;
+    private SendNotification value;
 
 }
