@@ -8,15 +8,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DynamicFixedListTypeTest {
 
     @Test
-    public void testGetSelectedLabel() {
+    void testGetSelectedLabel() {
         DynamicFixedListType dynamicFixedListType = create(null);
         assertNull(dynamicFixedListType.getSelectedLabel());
         dynamicFixedListType = create(new DynamicValueType("code1", "label1"));
@@ -24,7 +24,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testGetSelectedCode() {
+    void testGetSelectedCode() {
         DynamicFixedListType dynamicFixedListType = create(null);
         assertNull(dynamicFixedListType.getSelectedCode());
         dynamicFixedListType = create(new DynamicValueType("code1", "label1"));
@@ -32,7 +32,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testIsValidCodeForList() {
+    void testIsValidCodeForList() {
         DynamicFixedListType dynamicFixedListType = create(null);
         assertTrue(dynamicFixedListType.isValidCodeForList("code1"));
         assertTrue(dynamicFixedListType.isValidCodeForList("code2"));
@@ -43,7 +43,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithNoOriginal() {
+    void testFromWithNoOriginal() {
         List<DynamicValueType> listItems = createListItems();
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, null);
         verifyListItems(dynamicFixedListType);
@@ -52,7 +52,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithOriginalNoSelectedValue() {
+    void testFromWithOriginalNoSelectedValue() {
         List<DynamicValueType> listItems = createListItems();
         DynamicFixedListType original = new DynamicFixedListType();
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
@@ -62,7 +62,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithOriginalWithDifferentSelectedValue() {
+    void testFromWithOriginalWithDifferentSelectedValue() {
         List<DynamicValueType> listItems = createListItems();
         DynamicFixedListType original = DynamicFixedListType.of(new DynamicValueType("code4", "Code 4"));
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
@@ -72,7 +72,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithOriginalWithSelectedValue() {
+    void testFromWithOriginalWithSelectedValue() {
         List<DynamicValueType> listItems = createListItems();
         DynamicFixedListType original = DynamicFixedListType.of(new DynamicValueType("code2", "Code 2"));
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
@@ -83,7 +83,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithOriginalWithSelectedValueWrongLabel() {
+    void testFromWithOriginalWithSelectedValueWrongLabel() {
         List<DynamicValueType> listItems = createListItems();
         DynamicFixedListType original = DynamicFixedListType.of(new DynamicValueType("code2", "Code X"));
         DynamicFixedListType dynamicFixedListType = DynamicFixedListType.from(listItems, original);
@@ -93,7 +93,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithLabelAndCodeAndSelected() {
+    void testFromWithLabelAndCodeAndSelected() {
         DynamicFixedListType listType = DynamicFixedListType.from("label", "code", true);
         assertEquals(1, listType.getListItems().size());
         assertEquals("code", listType.getListItems().get(0).getCode());
@@ -106,7 +106,7 @@ public class DynamicFixedListTypeTest {
     }
 
     @Test
-    public void testFromWithLabelAndCodeButNotSelected() {
+    void testFromWithLabelAndCodeButNotSelected() {
         DynamicFixedListType listType = DynamicFixedListType.from("label", "code", false);
         assertEquals(1, listType.getListItems().size());
         assertEquals("code", listType.getListItems().get(0).getCode());
