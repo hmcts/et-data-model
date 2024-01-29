@@ -2,13 +2,16 @@ package uk.gov.hmcts.et.common.model.listing.items;
 
 import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.listing.types.BFDateType;
+
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.Assert.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BFDateTypeItemComparatorTest {
+
     @Test
-    public void shouldSortBfDateTypeItemsInAscendingOrder() {
+    void shouldSortBfDateTypeItemsInAscendingOrder() {
         BFDateType bfDateType = new BFDateType();
         bfDateType.setBroughtForwardEnteredDate("2019-12-08");
         bfDateType.setBroughtForwardDate("2019-12-08");

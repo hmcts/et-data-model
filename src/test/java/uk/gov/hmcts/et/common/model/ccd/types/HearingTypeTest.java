@@ -3,12 +3,13 @@ package uk.gov.hmcts.et.common.model.ccd.types;
 import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HearingTypeTest {
+
     @Test
-    public void testHasHearingJudge() {
+    void testHasHearingJudge() {
         var hearingType = new HearingType();
         assertFalse(hearingType.hasHearingJudge());
 
@@ -22,7 +23,7 @@ public class HearingTypeTest {
     }
 
     @Test
-    public void testHasHearingEmployerMember() {
+    void testHasHearingEmployerMember() {
         var hearingType = new HearingType();
         assertFalse(hearingType.hasHearingEmployerMember());
 
@@ -36,7 +37,7 @@ public class HearingTypeTest {
     }
 
     @Test
-    public void testHasHearingEmployeeMember() {
+    void testHasHearingEmployeeMember() {
         var hearingType = new HearingType();
         assertFalse(hearingType.hasHearingEmployeeMember());
 

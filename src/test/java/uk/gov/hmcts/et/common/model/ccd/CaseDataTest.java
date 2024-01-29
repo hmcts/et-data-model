@@ -16,7 +16,7 @@ public class CaseDataTest {
     private CaseData caseData;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    void setUp() throws Exception {
         String json = "{"
                 + " \"caseNotes\" : \"1111\", "
                 + " \"positionType\" : \"Single\", "
@@ -30,7 +30,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void shouldCreateCaseDataFromJson() {
+    void shouldCreateCaseDataFromJson() {
         assertEquals(caseData.getCaseNotes(), "1111");
         assertEquals(caseData.getPositionType(), "Single");
         assertEquals(caseData.getReceiptDate(), "20 Jan 2019");
@@ -40,7 +40,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesOthersTest() {
+    void claimantFullNamesOthersTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Other");
         claimantIndType.setClaimantTitleOther("Mx");
@@ -51,7 +51,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesTest() {
+    void claimantFullNamesTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Mr");
         claimantIndType.setClaimantTitleOther("Mx");
@@ -62,7 +62,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesPreferredTitleOtherTest() {
+    void claimantFullNamesPreferredTitleOtherTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("");
         claimantIndType.setClaimantTitleOther("Mx");
@@ -74,7 +74,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamePreferredTitleTest() {
+    void claimantFullNamePreferredTitleTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle(" ");
         claimantIndType.setClaimantTitleOther("Mx");
@@ -86,7 +86,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamePreferNotToSayTitleTest() {
+    void claimantFullNamePreferNotToSayTitleTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Prefer not to say");
         claimantIndType.setClaimantFirstNames("Anna");
@@ -96,7 +96,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesPreferNotToSayTitleTest() {
+    void claimantFullNamesPreferNotToSayTitleTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle("Prefer not to say");
         claimantIndType.setClaimantFirstNames("Harvey");
@@ -106,7 +106,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesPreferredTitleTest() {
+    void claimantFullNamesPreferredTitleTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantTitle(" ");
         claimantIndType.setClaimantTitleOther("Mx");
@@ -118,7 +118,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void claimantFullNamesPreferNotToSayClaimantPreferredTitleTest() {
+    void claimantFullNamesPreferNotToSayClaimantPreferredTitleTest() {
         ClaimantIndType claimantIndType = new ClaimantIndType();
         claimantIndType.setClaimantPreferredTitle("Prefer not to say");
         claimantIndType.setClaimantFirstNames("Marcelo");
@@ -128,7 +128,7 @@ public class CaseDataTest {
     }
 
     @Test
-    public void setRepCollectionAsListTypeItem() {
+    void setRepCollectionAsListTypeItem() {
         RepresentedTypeR representedTypeR = RepresentedTypeR.builder().id("1").build();
         ListTypeItem<RepresentedTypeR> list = ListTypeItem.from(GenericTypeItem.from("id", representedTypeR));
 

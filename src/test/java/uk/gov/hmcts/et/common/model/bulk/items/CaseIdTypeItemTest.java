@@ -2,13 +2,13 @@ package uk.gov.hmcts.et.common.model.bulk.items;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CaseIdTypeItemTest {
 
     @Test
-    public void shouldCreateCaseIdTypeItem() {
+    void shouldCreateCaseIdTypeItem() {
         var ethosCaseReference = "2500001/2021";
         var caseIdTypeItem = CaseIdTypeItem.from(ethosCaseReference);
 
