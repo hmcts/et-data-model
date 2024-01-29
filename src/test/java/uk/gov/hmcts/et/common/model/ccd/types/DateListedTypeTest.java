@@ -1,6 +1,6 @@
 package uk.gov.hmcts.et.common.model.ccd.types;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 
 import static org.junit.Assert.assertFalse;

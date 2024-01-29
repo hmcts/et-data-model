@@ -35,7 +35,7 @@ public class DynamicFixedListType {
      * @return newly created DynamicFixedListType
      */
     public static DynamicFixedListType from(String label, String code, boolean selected) {
-        DynamicFixedListType listType = DynamicFixedListType.from(List.of(DynamicValueType.create(label, code)));
+        DynamicFixedListType listType = DynamicFixedListType.from(List.of(DynamicValueType.create(code, label)));
         if (selected) {
             listType.setValue(listType.getListItems().get(0));
         }

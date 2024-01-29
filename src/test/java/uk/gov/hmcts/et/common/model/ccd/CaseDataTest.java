@@ -1,8 +1,8 @@
 package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
@@ -15,7 +15,7 @@ public class CaseDataTest {
 
     private CaseData caseData;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         String json = "{"
                 + " \"caseNotes\" : \"1111\", "

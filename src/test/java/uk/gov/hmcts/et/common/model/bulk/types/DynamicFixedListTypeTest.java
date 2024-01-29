@@ -1,6 +1,6 @@
 package uk.gov.hmcts.et.common.model.bulk.types;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -95,17 +95,25 @@ public class DynamicFixedListTypeTest {
     @Test
     public void testFromWithLabelAndCodeAndSelected() {
         DynamicFixedListType listType = DynamicFixedListType.from("label", "code", true);
+        assertEquals(1, listType.getListItems().size());
+        assertEquals("code", listType.getListItems().get(0).getCode());
+        assertEquals("label", listType.getListItems().get(0).getLabel());
+
         assertEquals("code", listType.getSelectedCode());
         assertEquals("label", listType.getSelectedLabel());
-        assertEquals("label", listType.getValue().getLabel());
         assertEquals("code", listType.getValue().getCode());
+        assertEquals("label", listType.getValue().getLabel());
     }
 
     @Test
     public void testFromWithLabelAndCodeButNotSelected() {
         DynamicFixedListType listType = DynamicFixedListType.from("label", "code", false);
-        assertEquals("code", listType.getSelectedCode());
-        assertEquals("label", listType.getSelectedLabel());
+        assertEquals(1, listType.getListItems().size());
+        assertEquals("code", listType.getListItems().get(0).getCode());
+        assertEquals("label", listType.getListItems().get(0).getLabel());
+
+        assertNull(listType.getSelectedCode());
+        assertNull(listType.getSelectedLabel());
         assertNull(listType.getValue());
     }
 

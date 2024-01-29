@@ -1,8 +1,8 @@
 package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -11,7 +11,7 @@ public class AddressTest {
     private Address address;
     private Address addressMissingFields;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         String json = "{"
                 + " \"AddressLine1\" : \"Unit 14\", "

@@ -1,6 +1,6 @@
 package uk.gov.hmcts.et.common.model.listing.items;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.listing.types.BFDateType;
 import java.util.ArrayList;
 import java.util.List;
