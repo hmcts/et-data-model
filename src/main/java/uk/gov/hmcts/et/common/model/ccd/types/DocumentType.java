@@ -49,6 +49,8 @@ public class DocumentType {
     private String dateOfCorrespondence;
     @JsonProperty("docNumber")
     private String docNumber;
+    @JsonProperty("tornadoEmbeddedPdfUrl")
+    private String tornadoEmbeddedPdfUrl;
 
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
