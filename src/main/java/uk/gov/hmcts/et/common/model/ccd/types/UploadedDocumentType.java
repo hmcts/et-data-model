@@ -22,4 +22,6 @@ public class UploadedDocumentType {
     private String categoryId;
     @JsonProperty("upload_timestamp")
     private String uploadTimestamp;
+    @JsonProperty("tornadoEmbeddedPdfUrl")
+    private String tornadoEmbeddedPdfUrl;
 }
