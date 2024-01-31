@@ -53,6 +53,7 @@ public class DocumentType {
     private String docNumber;
     @JsonProperty("excludeFromDcf")
     private List<String> excludeFromDcf;
+
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
     }
