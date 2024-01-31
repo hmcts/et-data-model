@@ -17,4 +17,6 @@ public class EtICListForPreliminaryHearing {
     private String etICGiveDetailsOfHearingNotice;
     @JsonProperty("etICLengthOfPrelimHearing")
     private String etICLengthOfPrelimHearing;
+    @JsonProperty("prelimHearingLengthNumType")
+    private String prelimHearingLengthNumType;
 }

@@ -13,4 +13,6 @@ public class EtICListForFinalHearing {
     private List<String> etICTypeOfFinalHearing;
     @JsonProperty("etICLengthOfFinalHearing")
     private String etICLengthOfFinalHearing;
+    @JsonProperty("finalHearingLengthNumType")
+    private String finalHearingLengthNumType;
 }

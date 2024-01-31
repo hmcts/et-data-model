@@ -17,9 +17,10 @@ public class PseResponseType {
 
     @JsonProperty("date")
     private String date;
-
     @JsonProperty("from")
     private String from;
+    @JsonProperty("status")
+    private String status;
 
     // Response
     @JsonProperty("response")
@@ -32,5 +33,7 @@ public class PseResponseType {
     private String copyToOtherParty;
     @JsonProperty("copyNoGiveDetails")
     private String copyNoGiveDetails;
+    @JsonProperty("responseState")
+    private String responseState;
 
 }
