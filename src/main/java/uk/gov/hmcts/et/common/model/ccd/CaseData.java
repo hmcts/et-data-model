@@ -1417,6 +1417,8 @@ public class CaseData extends Et1CaseData {
     private CaseLocation caseManagementLocation;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
+    @JsonProperty("hmctsCaseCategory")
+    private String hmctsCaseCategory;
 
     @JsonProperty("judiciary")
     private Judiciary judiciary;
