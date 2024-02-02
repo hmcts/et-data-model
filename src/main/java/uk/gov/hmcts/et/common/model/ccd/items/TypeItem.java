@@ -12,22 +12,22 @@ import java.util.UUID;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class GenericTypeItem<T> {
+public class TypeItem<T> {
 
     @JsonProperty("id")
     private String id;
     @JsonProperty("value")
     private T value;
 
-    public static <T> GenericTypeItem<T> from(T value) {
-        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
+    public static <T> TypeItem<T> from(T value) {
+        TypeItem<T> typeItem = new TypeItem<>();
         typeItem.id = UUID.randomUUID().toString();
         typeItem.value = value;
         return typeItem;
     }
 
-    public static <T> GenericTypeItem<T> from(String id, T value) {
-        GenericTypeItem<T> typeItem = new GenericTypeItem<>();
+    public static <T> TypeItem<T> from(String id, T value) {
+        TypeItem<T> typeItem = new TypeItem<>();
         typeItem.id = id;
         typeItem.value = value;
         return typeItem;

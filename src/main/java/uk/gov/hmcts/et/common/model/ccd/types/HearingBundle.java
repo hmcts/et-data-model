@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class HearingBundleType {
+public class HearingBundle {
     @JsonProperty("agreedDocWith")
     private String agreedDocWith;
     @JsonProperty("agreedDocWithBut")

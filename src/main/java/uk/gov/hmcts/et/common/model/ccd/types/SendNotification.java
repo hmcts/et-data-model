@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class SendNotificationType {
+public class SendNotification {
 
     @JsonProperty("number")
     private String number; // Unique, incremented value for each application
@@ -60,9 +59,9 @@ public class SendNotificationType {
     @JsonProperty("sendNotificationWhoMadeJudgement")
     private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
-    private List<PseResponseTypeItem> respondCollection;
+    private ListTypeItem<PseResponse> respondCollection;
     @JsonProperty("respondNotificationTypeCollection")
-    private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
+    private ListTypeItem<RespondNotificationType> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
     private String notificationState;
     @JsonProperty("sendNotificationSubjectString")

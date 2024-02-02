@@ -5,7 +5,8 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.3.2'
+version '5.0'
+
 
 java {
     toolchain {
@@ -19,11 +20,11 @@ checkstyle {
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-}
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 
 publishing {
     publications {

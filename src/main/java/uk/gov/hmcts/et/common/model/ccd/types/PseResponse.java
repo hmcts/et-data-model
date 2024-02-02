@@ -5,15 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
-
-import java.util.List;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class PseResponseType {
+public class PseResponse {
 
     @JsonProperty("date")
     private String date;
@@ -28,7 +26,7 @@ public class PseResponseType {
     @JsonProperty("hasSupportingMaterial")
     private String hasSupportingMaterial;
     @JsonProperty("supportingMaterial")
-    private List<GenericTypeItem<DocumentType>> supportingMaterial;
+    private ListTypeItem<DocumentType> supportingMaterial;
     @JsonProperty("copyToOtherParty")
     private String copyToOtherParty;
     @JsonProperty("copyNoGiveDetails")

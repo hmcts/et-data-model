@@ -5,15 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
-
-import java.util.List;
+import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @SuperBuilder
 @NoArgsConstructor
-public class TseAdminRecordDecisionType {
+public class TseAdminRecordDecision {
 
     @JsonProperty("date")
     private String date;
@@ -32,7 +30,7 @@ public class TseAdminRecordDecisionType {
     @JsonProperty("additionalInformation")
     private String additionalInformation;
     @JsonProperty("responseRequiredDoc")
-    private List<GenericTypeItem<DocumentType>> responseRequiredDoc;
+    private ListTypeItem<DocumentType> responseRequiredDoc;
     @JsonProperty("decisionMadeBy")
     private String decisionMadeBy;
     @JsonProperty("decisionMadeByFullName")
