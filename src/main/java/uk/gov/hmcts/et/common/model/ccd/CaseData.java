@@ -74,6 +74,10 @@ public class CaseData extends Et1CaseData {
     private String ethosCaseReference;
     @JsonProperty("multipleReference")
     private String multipleReference;
+    @JsonProperty("multipleSource")
+    private String multipleSource;
+    @JsonProperty("multipleName")
+    private String multipleName;
     @JsonProperty("multipleReferenceLinkMarkUp")
     private String multipleReferenceLinkMarkUp;
     @JsonProperty("parentMultipleCaseId")
@@ -1357,7 +1361,7 @@ public class CaseData extends Et1CaseData {
     // Claimant Bundles
     @JsonProperty("bundlesClaimantCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
-    
+
     // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
