@@ -145,4 +145,7 @@ public class MultipleData {
     private CaseImporterFile bulkAddSingleCasesImportFile;
     @JsonProperty("isFixCase")
     private String isFixCase;
+
+    private String exampleLeadCaseHearingDetails;
+    private String exampleLeadCaseHearingDetailsLabel;
 }
