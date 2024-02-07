@@ -72,6 +72,8 @@ public class CaseData extends Et1CaseData {
     private String tribunalCorrespondenceEmail;
     @JsonProperty("ethosCaseReference")
     private String ethosCaseReference;
+    @JsonProperty("multipleName")
+    private String multipleName;
     @JsonProperty("multipleReference")
     private String multipleReference;
     @JsonProperty("multipleReferenceLinkMarkUp")
@@ -1357,7 +1359,7 @@ public class CaseData extends Et1CaseData {
     // Claimant Bundles
     @JsonProperty("bundlesClaimantCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
-    
+
     // Case Flags
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
@@ -1418,6 +1420,8 @@ public class CaseData extends Et1CaseData {
     private CaseLocation caseManagementLocation;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
+    @JsonProperty("hmctsCaseCategory")
+    private String hmctsCaseCategory;
 
     @JsonProperty("judiciary")
     private Judiciary judiciary;
