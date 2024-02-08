@@ -1,5 +1,6 @@
 package uk.gov.hmcts.et.common.model.ccd.items;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @SuppressWarnings("checkstyle:MemberName") // needed for the welsh options
 public class FlagDetailType {
     private String name;
