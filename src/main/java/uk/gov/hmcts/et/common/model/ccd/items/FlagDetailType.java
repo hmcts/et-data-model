@@ -14,7 +14,9 @@ public class FlagDetailType {
     private String subTypeValue;
     private String subTypeKey;
     private String otherDescription;
+    private String otherDescription_cy;
     private String flagComment;
+    private String flagComment_cy;
     private String dateTimeModified;
     private String dateTimeCreated;
     private ListTypeItem<String> path;
