@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @SuppressWarnings("checkstyle:MemberName") // needed for the welsh options
 public class FlagDetailType {
     private String name;
