@@ -26,4 +26,5 @@ public class FlagDetailType {
     private String hearingRelevant;
     private String flagCode;
     private String status;
+    private String availableExternally;
 }
