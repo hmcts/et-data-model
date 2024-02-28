@@ -29,6 +29,10 @@ public class ClaimantRequestType {
     private List<String> discriminationClaims;
     @JsonProperty("pay_claims")
     private List<String> payClaims;
+    @JsonProperty("linked_cases")
+    private String linkedCases;
+    @JsonProperty("linked_cases_detail")
+    private String linkedCasesDetail;
     @JsonProperty("other_claim")
     private String otherClaim;
 }
