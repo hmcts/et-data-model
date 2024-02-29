@@ -1,15 +1,15 @@
 package uk.gov.hmcts.et.common.model.ccd.types;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DateListedTypeTest {
 
     @Test
-    public void testHasHearingVenue() {
+    void testHasHearingVenue() {
         var dateListedType = new DateListedType();
         assertFalse(dateListedType.hasHearingVenue());
 
@@ -23,7 +23,7 @@ public class DateListedTypeTest {
     }
 
     @Test
-    public void testHasHearingRoom() {
+    void testHasHearingRoom() {
         var dateListedType = new DateListedType();
         assertFalse(dateListedType.hasHearingRoom());
 
@@ -37,7 +37,7 @@ public class DateListedTypeTest {
     }
 
     @Test
-    public void testHasHearingClerk() {
+    void testHasHearingClerk() {
         var dateListedType = new DateListedType();
         assertFalse(dateListedType.hasHearingClerk());
 
