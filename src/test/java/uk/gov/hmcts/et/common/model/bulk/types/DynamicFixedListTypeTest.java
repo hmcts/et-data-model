@@ -94,7 +94,7 @@ public class DynamicFixedListTypeTest {
 
     @Test
     void testFromWithLabelAndCodeAndSelected() {
-        DynamicFixedListType listType = DynamicFixedListType.from("label", "code", true);
+        DynamicFixedListType listType = DynamicFixedListType.from("code", "label", true);
         assertEquals(1, listType.getListItems().size());
         assertEquals("code", listType.getListItems().get(0).getCode());
         assertEquals("label", listType.getListItems().get(0).getLabel());
@@ -107,7 +107,7 @@ public class DynamicFixedListTypeTest {
 
     @Test
     void testFromWithLabelAndCodeButNotSelected() {
-        DynamicFixedListType listType = DynamicFixedListType.from("label", "code", false);
+        DynamicFixedListType listType = DynamicFixedListType.from("code", "label", false);
         assertEquals(1, listType.getListItems().size());
         assertEquals("code", listType.getListItems().get(0).getCode());
         assertEquals("label", listType.getListItems().get(0).getLabel());
