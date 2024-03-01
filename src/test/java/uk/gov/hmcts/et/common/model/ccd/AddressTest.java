@@ -1,18 +1,17 @@
 package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AddressTest {
     private Address address;
     private Address addressMissingFields;
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeEach
+    void setUp() throws Exception {
         String json = "{"
                 + " \"AddressLine1\" : \"Unit 14\", "
                 + " \"AddressLine2\" : \"3 Edgar Buildings\", "
@@ -36,25 +35,25 @@ public class AddressTest {
     }
 
     @Test
-    public void shouldCreateAddressFromJson() {
-        assertThat(address.getAddressLine1(), is("Unit 14"));
-        assertThat(address.getAddressLine2(), is("3 Edgar Buildings"));
-        assertThat(address.getAddressLine3(), is("George Street"));
-        assertThat(address.getPostTown(), is("Bath"));
-        assertThat(address.getCounty(), is("Somerset"));
-        assertThat(address.getPostCode(), is("BA1 2FJ"));
-        assertThat(address.getCountry(), is("England"));
+    void shouldCreateAddressFromJson() {
+        assertEquals(address.getAddressLine1(), "Unit 14");
+        assertEquals(address.getAddressLine2(), "3 Edgar Buildings");
+        assertEquals(address.getAddressLine3(), "George Street");
+        assertEquals(address.getPostTown(), "Bath");
+        assertEquals(address.getCounty(), "Somerset");
+        assertEquals(address.getPostCode(), "BA1 2FJ");
+        assertEquals(address.getCountry(), "England");
     }
 
     @Test
-    public void shouldReturnAddressAllFields() {
-        assertThat(address.toString(), is("Unit 14, 3 Edgar Buildings, George Street, "
-                + "Bath, Somerset, BA1 2FJ, England"));
+    void shouldReturnAddressAllFields() {
+        assertEquals(address.toString(), "Unit 14, 3 Edgar Buildings, George Street, "
+                + "Bath, Somerset, BA1 2FJ, England");
     }
 
     @Test
-    public void shouldReturnAddressMissingFields() {
-        assertThat(addressMissingFields.toString(), is("Unit 14, Bath, Somerset, BA1 2FJ, England"));
+    void shouldReturnAddressMissingFields() {
+        assertEquals(addressMissingFields.toString(), "Unit 14, Bath, Somerset, BA1 2FJ, England");
     }
 
 }
