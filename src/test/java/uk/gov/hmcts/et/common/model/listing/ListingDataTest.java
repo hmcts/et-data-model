@@ -1,15 +1,15 @@
 package uk.gov.hmcts.et.common.model.listing;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ListingDataTest {
 
     @Test
-    public void testHasListingVenueReturnsTrue() {
+    void testHasListingVenueReturnsTrue() {
         var listingData = new ListingData();
         listingData.setListingVenue(new DynamicFixedListType("value"));
 
@@ -17,7 +17,7 @@ public class ListingDataTest {
     }
 
     @Test
-    public void testHasListingVenueReturnsFalseWhenSelectedValueIsNull() {
+    void testHasListingVenueReturnsFalseWhenSelectedValueIsNull() {
         var listingData = new ListingData();
         listingData.setListingVenue(new DynamicFixedListType());
 
@@ -25,7 +25,7 @@ public class ListingDataTest {
     }
 
     @Test
-    public void testHasListingVenueReturnsFalseWhenPropertyIsNull() {
+    void testHasListingVenueReturnsFalseWhenPropertyIsNull() {
         var listingData = new ListingData();
         listingData.setListingVenue(null);
 
