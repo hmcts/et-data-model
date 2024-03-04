@@ -147,4 +147,7 @@ public class MultipleData {
     private CaseImporterFile bulkAddSingleCasesImportFile;
     @JsonProperty("isFixCase")
     private String isFixCase;
+
+    @JsonProperty("batchCaseStayed")
+    private String batchCaseStayed;
 }
