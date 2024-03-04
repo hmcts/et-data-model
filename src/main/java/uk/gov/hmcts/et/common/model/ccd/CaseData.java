@@ -141,6 +141,8 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
+    @JsonProperty("uploadDocumentCollection")
+    private List<DocumentTypeItem> uploadDocumentCollection;
     @JsonProperty("claimantDocumentCollection")
     private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
