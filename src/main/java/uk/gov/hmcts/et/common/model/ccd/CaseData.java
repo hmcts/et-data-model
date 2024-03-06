@@ -1267,6 +1267,8 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationAdditionalInfo;
     @JsonProperty("sendNotificationNotify")
     private String sendNotificationNotify;
+    @JsonProperty("sendNotificationNotifyLeadCase")
+    private String sendNotificationNotifyLeadCase;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
@@ -1483,6 +1485,9 @@ public class CaseData extends Et1CaseData {
     private DigitalCaseFileType digitalCaseFile;
 
     private String waRule21ReferralSent;
+
+    @JsonProperty("batchCaseStayed")
+    private String batchCaseStayed;
 
 
     /**
