@@ -28,7 +28,7 @@ import java.util.List;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class Et1CaseData extends BaseCaseData {
     @JsonProperty("typeOfClaim")
     private List<String> typeOfClaim;

@@ -30,7 +30,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class MultipleData extends BaseCaseData {
 
     @JsonProperty("caseIdCollection")
