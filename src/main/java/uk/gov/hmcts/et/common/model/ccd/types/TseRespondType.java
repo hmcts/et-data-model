@@ -19,8 +19,8 @@ public class TseRespondType {
     private String date;
     @JsonProperty("from")
     private String from;
-    @JsonProperty("status")
-    private String status;
+    @JsonProperty("responseState")
+    private String responseState;
 
     // Respondent / Claimant Reply
     @JsonProperty("response")
