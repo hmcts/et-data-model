@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.items.CaseIdTypeItem;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
@@ -16,6 +17,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
+import uk.gov.hmcts.et.common.model.generic.BaseCaseData;
 import uk.gov.hmcts.et.common.model.multiples.items.CaseMultipleTypeItem;
 import uk.gov.hmcts.et.common.model.multiples.items.SubMultipleTypeItem;
 import uk.gov.hmcts.et.common.model.multiples.types.MoveCasesType;
@@ -28,7 +30,8 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MultipleData {
+@EqualsAndHashCode(callSuper=false)
+public class MultipleData extends BaseCaseData {
 
     @JsonProperty("caseIdCollection")
     private List<CaseIdTypeItem> caseIdCollection;
