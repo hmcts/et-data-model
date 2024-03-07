@@ -141,6 +141,8 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
+    @JsonProperty("addDocumentCollection")
+    private List<DocumentTypeItem> addDocumentCollection;
     @JsonProperty("claimantDocumentCollection")
     private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
@@ -1265,6 +1267,8 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationAdditionalInfo;
     @JsonProperty("sendNotificationNotify")
     private String sendNotificationNotify;
+    @JsonProperty("sendNotificationNotifyLeadCase")
+    private String sendNotificationNotifyLeadCase;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
