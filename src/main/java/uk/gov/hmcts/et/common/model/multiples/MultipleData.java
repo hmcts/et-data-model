@@ -2,11 +2,15 @@ package uk.gov.hmcts.et.common.model.multiples;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.items.CaseIdTypeItem;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
@@ -21,6 +25,9 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class MultipleData {
 
     @JsonProperty("caseIdCollection")
@@ -196,4 +203,83 @@ public class MultipleData {
     private String sendNotificationEccQuestion;
     @JsonProperty("sendNotificationWhoMadeJudgement")
     private String sendNotificationWhoMadeJudgement;
+
+    //Referral
+    @JsonProperty("referralCollection")
+    private List<ReferralTypeItem> referralCollection;
+    @JsonProperty("referralHearingDetails")
+    private String referralHearingDetails;
+    @JsonProperty("selectReferral")
+    private DynamicFixedListType selectReferral;
+    //Referral Type
+    @JsonProperty("referCaseTo")
+    private String referCaseTo;
+    @JsonProperty("referentEmail")
+    private String referentEmail;
+    @JsonProperty("isUrgent")
+    private String isUrgent;
+    @JsonProperty("referralSubject")
+    private String referralSubject;
+    @JsonProperty("referralSubjectSpecify")
+    private String referralSubjectSpecify;
+    @JsonProperty("referralDetails")
+    private String referralDetails;
+    @JsonProperty("referralDocument")
+    private List<DocumentTypeItem> referralDocument;
+    @JsonProperty("referralInstruction")
+    private String referralInstruction;
+    @JsonProperty("referredBy")
+    private String referredBy;
+    @JsonProperty("referralDate")
+    private String referralDate;
+
+    //Referral Update
+    @JsonProperty("updateReferralNumber")
+    private String updateReferralNumber;
+    @JsonProperty("updateReferCaseTo")
+    private String updateReferCaseTo;
+    @JsonProperty("updateReferentEmail")
+    private String updateReferentEmail;
+    @JsonProperty("updateIsUrgent")
+    private String updateIsUrgent;
+    @JsonProperty("updateReferralSubject")
+    private String updateReferralSubject;
+    @JsonProperty("updateReferralSubjectSpecify")
+    private String updateReferralSubjectSpecify;
+    @JsonProperty("updateReferralDetails")
+    private String updateReferralDetails;
+    @JsonProperty("updateReferralDocument")
+    private List<DocumentTypeItem> updateReferralDocument;
+    @JsonProperty("updateReferralInstruction")
+    private String updateReferralInstruction;
+
+    //Referral Reply
+    @JsonProperty("hearingAndReferralDetails")
+    private String hearingAndReferralDetails;
+    @JsonProperty("directionTo")
+    private String directionTo;
+    @JsonProperty("replyToEmailAddress")
+    private String replyToEmailAddress;
+    @JsonProperty("isUrgentReply")
+    private String isUrgentReply;
+    @JsonProperty("directionDetails")
+    private String directionDetails;
+    @JsonProperty("replyDocument")
+    private List<DocumentTypeItem> replyDocument;
+    @JsonProperty("replyGeneralNotes")
+    private String replyGeneralNotes;
+    @JsonProperty("replyTo")
+    private String replyTo;
+    @JsonProperty("replyDetails")
+    private String replyDetails;
+    @JsonProperty("isJudge")
+    private String isJudge;
+
+    //Close Referral
+    @JsonProperty("closeReferralHearingDetails")
+    private String closeReferralHearingDetails;
+    @JsonProperty("confirmCloseReferral")
+    private List<String> confirmCloseReferral;
+    @JsonProperty("closeReferralGeneralNotes")
+    private String closeReferralGeneralNotes;
 }
