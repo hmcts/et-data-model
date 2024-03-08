@@ -3,6 +3,7 @@ package uk.gov.hmcts.et.common.model.ccd;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import uk.gov.hmcts.et.common.model.ccd.items.JurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AdditionalCaseInfoType;
@@ -17,6 +18,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
 import uk.gov.hmcts.et.common.model.ccd.types.TriageQuestions;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
+import uk.gov.hmcts.et.common.model.generic.BaseCaseData;
 
 import java.util.List;
 
@@ -26,7 +28,8 @@ import java.util.List;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class Et1CaseData {
+@EqualsAndHashCode(callSuper = false)
+public class Et1CaseData extends BaseCaseData {
     @JsonProperty("typeOfClaim")
     private List<String> typeOfClaim;
     @JsonProperty("typesOfClaim")
