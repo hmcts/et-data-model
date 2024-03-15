@@ -51,6 +51,8 @@ public class DocumentType {
     private String dateOfCorrespondence;
     @JsonProperty("docNumber")
     private String docNumber;
+    @JsonProperty("tornadoEmbeddedPdfUrl")
+    private String tornadoEmbeddedPdfUrl;
     @JsonProperty("excludeFromDcf")
     private List<String> excludeFromDcf;
 
