@@ -51,8 +51,6 @@ public class DocumentType {
     private String dateOfCorrespondence;
     @JsonProperty("docNumber")
     private String docNumber;
-    @JsonProperty("documentIndex")
-    private String documentIndex;
     @JsonProperty("excludeFromDcf")
     private List<String> excludeFromDcf;
 
