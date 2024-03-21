@@ -51,10 +51,10 @@ public class DocumentType {
     private String dateOfCorrespondence;
     @JsonProperty("docNumber")
     private String docNumber;
-    @JsonProperty("documentIndex")
-    private String documentIndex;
     @JsonProperty("excludeFromDcf")
     private List<String> excludeFromDcf;
+    @JsonProperty("documentIndex")
+    private String documentIndex;
 
     public static DocumentType from(UploadedDocumentType uploadedDocument) {
         return DocumentType.builder().uploadedDocument(uploadedDocument).build();
