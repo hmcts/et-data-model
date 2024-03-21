@@ -37,15 +37,14 @@ public class Address {
 
     public String toAddressHtml() {
         StringBuilder claimantAddressStr = new StringBuilder();
-        claimantAddressStr.append("<br/>" + addressLine1);
+        claimantAddressStr.append("<br/>").append(addressLine1);
         if (!Strings.isNullOrEmpty(addressLine2)) {
-            claimantAddressStr.append("<br/>" + addressLine2);
+            claimantAddressStr.append("<br/>").append(addressLine2);
         }
         if (!Strings.isNullOrEmpty(addressLine3)) {
-            claimantAddressStr.append("<br/>" + addressLine3);
+            claimantAddressStr.append("<br/>").append(addressLine3);
         }
-        claimantAddressStr.append("<br/>" + postTown)
-                .append("<br/>" + postCode)
+        claimantAddressStr.append("<br/>").append(postTown).append("<br/>").append(postCode)
                 .append("<br/><br/>");
 
         return claimantAddressStr.toString();
