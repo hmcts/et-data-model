@@ -182,6 +182,8 @@ public class MultipleData extends BaseCaseData {
     private String sendNotificationNotify;
     @JsonProperty("sendNotificationNotifyLeadCase")
     private String sendNotificationNotifyLeadCase;
+    @JsonProperty("sendNotificationNotifyAll")
+    private String sendNotificationNotifyAll;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
