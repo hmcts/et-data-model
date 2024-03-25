@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.6.0'
+version '3.6.5'
 
 java {
     toolchain {
@@ -15,7 +15,7 @@ java {
 
 checkstyle {
     maxWarnings = 0
-    toolVersion = '10.12.3'
+    toolVersion = '10.14.2'
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
@@ -37,7 +37,7 @@ publishing {
 }
 
 ext {
-    lombokVersion = '1.18.28'
+    lombokVersion = '1.18.32'
 }
 
 dependencies {
