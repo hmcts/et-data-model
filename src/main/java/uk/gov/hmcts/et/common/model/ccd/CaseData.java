@@ -1372,6 +1372,10 @@ public class CaseData extends Et1CaseData {
     private CaseFlagsType caseFlags;
     private CaseFlagsType claimantFlags;
     private CaseFlagsType respondentFlags;
+    private CaseFlagsType claimantInternalFlags;
+    private CaseFlagsType claimantExternalFlags;
+    private CaseFlagsType respondentInternalFlags;
+    private CaseFlagsType respondentExternalFlags;
 
     //et-hearings-api
     @JsonProperty("autoListFlag")
