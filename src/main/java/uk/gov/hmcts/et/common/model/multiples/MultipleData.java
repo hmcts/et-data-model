@@ -182,6 +182,8 @@ public class MultipleData extends BaseCaseData {
     private String sendNotificationNotify;
     @JsonProperty("sendNotificationNotifyLeadCase")
     private String sendNotificationNotifyLeadCase;
+    @JsonProperty("sendNotificationNotifyAll")
+    private String sendNotificationNotifyAll;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
@@ -285,4 +287,9 @@ public class MultipleData extends BaseCaseData {
     private List<String> confirmCloseReferral;
     @JsonProperty("closeReferralGeneralNotes")
     private String closeReferralGeneralNotes;
+
+    //Document collection
+    private List<DocumentTypeItem> documentCollection;
+    private List<DocumentTypeItem> claimantDocumentCollection;
+    private List<DocumentTypeItem> legalrepDocumentCollection;
 }
