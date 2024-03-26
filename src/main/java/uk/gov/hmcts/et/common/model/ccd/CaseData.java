@@ -1132,6 +1132,8 @@ public class CaseData extends Et1CaseData {
     private String resTseCopyToOtherPartyTextArea;
     @JsonProperty("genericTseApplicationCollection")
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
+    @JsonProperty("tseApplicationStoredCollection")
+    private List<GenericTseApplicationTypeItem> tseApplicationStoredCollection;
 
     //TSE Admin Record a Decision
     @JsonProperty("tseAdminSelectApplication")
