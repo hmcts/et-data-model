@@ -73,4 +73,6 @@ public class SendNotificationType {
     private String sendNotificationResponsesCount;
     @JsonProperty("sendNotificationSentBy")
     private String sendNotificationSentBy;
+    @JsonProperty("notificationSentFrom")
+    private String notificationSentFrom;
 }
