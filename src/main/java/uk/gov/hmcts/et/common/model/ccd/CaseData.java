@@ -1370,6 +1370,8 @@ public class CaseData extends Et1CaseData {
 
     // Case Flags
     private CaseFlagsType caseFlags;
+    private CaseFlagsType claimantFlags;
+    private CaseFlagsType respondentFlags;
     private CaseFlagsType claimantInternalFlags;
     private CaseFlagsType claimantExternalFlags;
     private CaseFlagsType respondentInternalFlags;
