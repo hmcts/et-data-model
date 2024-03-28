@@ -21,4 +21,8 @@ public class CaseFlagsType {
     private String roleOnCase;
     @JsonProperty("details")
     private ListTypeItem<FlagDetailType> details;
+    @JsonProperty("groupId")
+    private String groupId;
+    @JsonProperty("visibility")
+    private String visibility;
 }
