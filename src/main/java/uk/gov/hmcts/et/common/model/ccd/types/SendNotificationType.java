@@ -61,6 +61,8 @@ public class SendNotificationType {
     private String sendNotificationWhoMadeJudgement;
     @JsonProperty("respondCollection")
     private List<PseResponseTypeItem> respondCollection;
+    @JsonProperty("respondStoredCollection")
+    private List<PseResponseTypeItem> respondStoredCollection;
     @JsonProperty("respondNotificationTypeCollection")
     private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
@@ -73,4 +75,6 @@ public class SendNotificationType {
     private String sendNotificationResponsesCount;
     @JsonProperty("sendNotificationSentBy")
     private String sendNotificationSentBy;
+    @JsonProperty("notificationSentFrom")
+    private String notificationSentFrom;
 }

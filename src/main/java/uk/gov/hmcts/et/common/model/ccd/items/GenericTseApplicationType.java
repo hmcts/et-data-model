@@ -50,6 +50,8 @@ public class GenericTseApplicationType {
 
     @JsonProperty("respondCollection")
     private List<TseRespondTypeItem> respondCollection;
+    @JsonProperty("respondStoredCollection")
+    private List<TseRespondTypeItem> respondStoredCollection;
 
     @JsonProperty("adminDecision")
     private List<TseAdminRecordDecisionTypeItem> adminDecision;
