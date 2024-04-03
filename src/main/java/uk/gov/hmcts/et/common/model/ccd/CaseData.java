@@ -142,6 +142,8 @@ public class CaseData extends Et1CaseData {
     private String userLocation;
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
+    @JsonProperty("addDocumentCollection")
+    private List<DocumentTypeItem> addDocumentCollection;
     @JsonProperty("claimantDocumentCollection")
     private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
@@ -1266,6 +1268,8 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationAdditionalInfo;
     @JsonProperty("sendNotificationNotify")
     private String sendNotificationNotify;
+    @JsonProperty("sendNotificationNotifyLeadCase")
+    private String sendNotificationNotifyLeadCase;
     @JsonProperty("sendNotificationSelectHearing")
     private DynamicFixedListType sendNotificationSelectHearing;
     @JsonProperty("sendNotificationCaseManagement")
@@ -1290,6 +1294,8 @@ public class CaseData extends Et1CaseData {
     private String sendNotificationEccQuestion;
     @JsonProperty("sendNotificationWhoMadeJudgement")
     private String sendNotificationWhoMadeJudgement;
+    @JsonProperty("notificationSentFrom")
+    private String notificationSentFrom;
 
     @JsonProperty("selectNotificationDropdown")
     private DynamicFixedListType selectNotificationDropdown;
@@ -1482,6 +1488,9 @@ public class CaseData extends Et1CaseData {
     private DigitalCaseFileType digitalCaseFile;
 
     private String waRule21ReferralSent;
+
+    @JsonProperty("batchCaseStayed")
+    private String batchCaseStayed;
 
 
     /**
