@@ -81,10 +81,14 @@ public class RespondentSumType {
     private String responseRespondentEmail;
     @JsonProperty("responseRespondentContactPreference")
     private String responseRespondentContactPreference;
+
     @JsonProperty("responseReceived")
     private String responseReceived;
     @JsonProperty("responseReceivedDate")
     private String responseReceivedDate;
+    @JsonProperty("responseReceivedCount")
+    private Integer responseReceivedCount; // for WA Tasks
+
     @JsonProperty("responseRespondentNameQuestion")
     private String responseRespondentNameQuestion;
     @JsonProperty("responseRespondentName")
