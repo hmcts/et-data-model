@@ -87,7 +87,7 @@ public class RespondentSumType {
     @JsonProperty("responseReceivedDate")
     private String responseReceivedDate;
     @JsonProperty("responseReceivedCount")
-    private Integer responseReceivedCount; // for WA Tasks
+    private String responseReceivedCount; // for WA Tasks
 
     @JsonProperty("responseRespondentNameQuestion")
     private String responseRespondentNameQuestion;
