@@ -16,4 +16,6 @@ public class SendNotificationTypeMultiple extends SendNotificationType {
     private String sendNotificationNotifyLeadCase;
     @JsonProperty("sendNotificationNotifyAll")
     private String sendNotificationNotifyAll;
+    @JsonProperty("sendNotificationNotifySelected")
+    private String sendNotificationNotifySelected;
 }
