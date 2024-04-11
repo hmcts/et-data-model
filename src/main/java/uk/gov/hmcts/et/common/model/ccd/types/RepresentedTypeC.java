@@ -39,4 +39,6 @@ public class RepresentedTypeC {
     /** UUID for identifying legal rep's firm. */
     @JsonProperty("organisationId")
     private String organisationId;
+    @JsonProperty("myHmctsOrganisation")
+    private Organisation myHmctsOrganisation;
 }
