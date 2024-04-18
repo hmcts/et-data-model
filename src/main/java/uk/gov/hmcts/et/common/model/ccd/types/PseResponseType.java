@@ -19,8 +19,6 @@ public class PseResponseType {
     private String date;
     @JsonProperty("from")
     private String from;
-    @JsonProperty("status")
-    private String status;
 
     // Response
     @JsonProperty("response")
