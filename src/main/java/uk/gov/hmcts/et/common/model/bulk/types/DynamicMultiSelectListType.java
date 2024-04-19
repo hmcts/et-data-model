@@ -17,14 +17,15 @@ import java.util.stream.Collectors;
 @Data
 public class DynamicMultiSelectListType {
 
-    private List<DynamicValueType> values;
+    private List<DynamicValueType> value;
     @JsonProperty("list_items")
     private List<DynamicValueType> listItems;
 
     public static DynamicMultiSelectListType of(List<DynamicValueType> values) {
         Objects.requireNonNull(values);
         DynamicMultiSelectListType dynamicMultiSelectListType = new DynamicMultiSelectListType();
-        dynamicMultiSelectListType.values = values;
+        dynamicMultiSelectListType.value = values;
+        dynamicMultiSelectListType.listItems = values;
         return dynamicMultiSelectListType;
     }
 
@@ -124,7 +125,7 @@ public class DynamicMultiSelectListType {
     }
 
     public DynamicMultiSelectListType(List<DynamicValueType> values) {
-        this.values = values;
+        this.value = values;
     }
 
     public DynamicMultiSelectListType() {
