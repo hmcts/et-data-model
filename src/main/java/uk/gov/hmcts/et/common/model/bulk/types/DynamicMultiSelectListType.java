@@ -3,7 +3,6 @@ package uk.gov.hmcts.et.common.model.bulk.types;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.Getter;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -17,38 +16,33 @@ import java.util.stream.Collectors;
 @Data
 public class DynamicMultiSelectListType {
 
-    private List<DynamicValueType> values;
+    private List<DynamicValueType> value;
     @JsonProperty("list_items")
     private List<DynamicValueType> listItems;
 
     public static DynamicMultiSelectListType of(List<DynamicValueType> values) {
         Objects.requireNonNull(values);
         DynamicMultiSelectListType dynamicMultiSelectListType = new DynamicMultiSelectListType();
-        dynamicMultiSelectListType.values = values;
+        dynamicMultiSelectListType.value = values;
+        dynamicMultiSelectListType.listItems = values;
         return dynamicMultiSelectListType;
     }
 
     /**
      * Create a new DynamicMultiSelectListType with multiple items and optionally select it.
-     * @param code Code to be used to identify the selected option
-     * @param label Label to show for the selected option
+     *
+     * @param code     Code to be used to identify the selected option
+     * @param label    Label to show for the selected option
      * @param selected Optionally set the first item as selected
      * @return newly created DynamicMultiSelectListType
      */
     public DynamicMultiSelectListType from(String code, String label, boolean selected) {
-        DynamicMultiSelectListType listType = DynamicMultiSelectListType.from(List.of(DynamicMultiSelectListType.create(code, label)));
+        DynamicMultiSelectListType listType = DynamicMultiSelectListType.from(
+                List.of(DynamicMultiSelectListType.create(code, label)));
         if (selected) {
             listType.setValue(listType.getListItems().get(0));
         }
         return listType;
-    }
-
-
-    private void setValue(DynamicValueType dynamicValueType) {
-    }
-
-    private static DynamicValueType create(String code, String label) {
-        return null;
     }
 
     public static DynamicMultiSelectListType from(List<DynamicValueType> listItems) {
@@ -57,7 +51,8 @@ public class DynamicMultiSelectListType {
         return dynamicMultiSelectListType;
     }
 
-    public static DynamicMultiSelectListType from(List<DynamicValueType> selectListItems, DynamicMultiSelectListType original) {
+    public static DynamicMultiSelectListType from(List<DynamicValueType> selectListItems,
+                                                  DynamicMultiSelectListType original) {
         DynamicMultiSelectListType dynamicMultiSelectListType = DynamicMultiSelectListType.from(selectListItems);
 
         if (original == null) {
@@ -94,13 +89,21 @@ public class DynamicMultiSelectListType {
         return dynamicMultiSelectListType;
     }
 
+    private void setValue(DynamicValueType dynamicValueType) {
+    }
+
+    private static DynamicValueType create(String code, String label) {
+        return null;
+    }
+
     private DynamicValueType getValue() {
         return null;
     }
 
-    private static DynamicMultiSelectListType recreateDynamicMultiSelectListType(List<DynamicValueType> currentListItems,
-                                                                                 DynamicValueType selectedValue,
-                                                                                 DynamicValueType originalValue) {
+    private static DynamicMultiSelectListType recreateDynamicMultiSelectListType(
+            List<DynamicValueType> currentListItems,
+            DynamicValueType selectedValue,
+            DynamicValueType originalValue) {
         DynamicValueType existingDynamicValueType = new DynamicValueType();
         existingDynamicValueType.setCode(selectedValue.getCode());
         existingDynamicValueType.setLabel(selectedValue.getLabel());
@@ -124,31 +127,32 @@ public class DynamicMultiSelectListType {
     }
 
     public DynamicMultiSelectListType(List<DynamicValueType> values) {
-        this.values = values;
+        this.value = values;
     }
 
     public DynamicMultiSelectListType() {
     }
 
     public static Optional<DynamicValueType> getSelectedValue(DynamicMultiSelectListType dynamicMultiSelectListType) {
-        return dynamicMultiSelectListType != null ? Optional.ofNullable(dynamicMultiSelectListType.getValue()) : Optional.empty();
+        return dynamicMultiSelectListType != null
+                ? Optional.ofNullable(dynamicMultiSelectListType.getValue()) : Optional.empty();
     }
 
-//    public static Optional<String> getSelectedLabel(DynamicMultiSelectListType dynamicMultiSelectListType) {
-//        if (dynamicMultiSelectListType != null && dynamicMultiSelectListType.getValue() != null) {
-//            return Optional.of(dynamicMultiSelectListType.getSelectedLabel());
-//        } else {
-//            return Optional.empty();
-//        }
-//    }
+    //    public static Optional<String> getSelectedLabel(DynamicMultiSelectListType dynamicMultiSelectListType) {
+    //        if (dynamicMultiSelectListType != null && dynamicMultiSelectListType.getValue() != null) {
+    //            return Optional.of(dynamicMultiSelectListType.getSelectedLabel());
+    //        } else {
+    //            return Optional.empty();
+    //        }
+    //    }
 
-//    public String getSelectedLabel() {
-//        return values != null ? values.getLabel() : null;
-//    }
-//
-//    public String getSelectedCode() {
-//        return values != null ? values.getCode() : null;
-//    }
+    //    public String getSelectedLabel() {
+    //        return values != null ? values.getLabel() : null;
+    //    }
+    //
+    //    public String getSelectedCode() {
+    //        return values != null ? values.getCode() : null;
+    //    }
 
     public boolean isValidCodeForList(String code) {
         if (CollectionUtils.isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
