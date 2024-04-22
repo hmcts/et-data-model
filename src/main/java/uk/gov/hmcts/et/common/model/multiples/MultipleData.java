@@ -290,11 +290,19 @@ public class MultipleData extends BaseCaseData {
     @JsonProperty("closeReferralGeneralNotes")
     private String closeReferralGeneralNotes;
 
-    //Document collection
+    //Document collections
     @JsonProperty("documentCollection")
     private List<DocumentTypeItem> documentCollection;
     @JsonProperty("ClaimantDocumentCollection")
     private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    //multiplesDocumentsTabTitles
+    @JsonProperty("multiplesDocumentsTabTitle")
+    private List<DocumentTypeItem> multiplesDocumentsTabTitle;
+    @JsonProperty("multiplesClaimantDocumentsTabTitle")
+    private List<DocumentTypeItem> multiplesClaimantDocumentsTabTitle;
+    @JsonProperty("multiplesRespondentDocumentsTabTitle")
+    private List<DocumentTypeItem> multiplesRespondentsDocumentsTabTitle;
 }

@@ -104,4 +104,7 @@ public class BaseCaseData {
     @JsonProperty("documentSelect")
     private DynamicMultiSelectListType documentSelect;
 
+    //documentAccess
+    @JsonProperty("documentAccess")
+    private String documentAccess;
 }

@@ -146,13 +146,13 @@ public class DynamicMultiSelectListType {
     //        }
     //    }
 
-    //    public String getSelectedLabel() {
-    //        return values != null ? values.getLabel() : null;
-    //    }
-    //
-    //    public String getSelectedCode() {
-    //        return values != null ? values.getCode() : null;
-    //    }
+//        public String getSelectedLabel() {
+//            return value != null ? value.getLabel() : null;
+//        }
+//
+//        public String getSelectedCode() {
+//            return value != null ? value.getCode() : null;
+//        }
 
     public boolean isValidCodeForList(String code) {
         if (CollectionUtils.isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
