@@ -37,6 +37,6 @@ public class PseResponseType {
     // Work Allocation enablers
     @JsonProperty("dateTime")
     private String dateTime;
-    @JsonProperty("sendNotificationSubject")
-    private List<String> sendNotificationSubject;
+    @JsonProperty("isECC")
+    private String isECC;
 }
