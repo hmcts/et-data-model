@@ -1671,5 +1671,7 @@ public class CaseData extends Et1CaseData {
     private String et1SectionThreeDateCompleted;
     @JsonProperty("claimantRepresentativeOrganisationPolicy")
     private OrganisationPolicy claimantRepresentativeOrganisationPolicy;
+    @JsonProperty("downloadDraftEt1Date")
+    private String downloadDraftEt1Date;
 
 }
