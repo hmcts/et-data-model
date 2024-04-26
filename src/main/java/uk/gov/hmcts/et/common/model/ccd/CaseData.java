@@ -35,6 +35,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.DigitalCaseFileType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
+import uk.gov.hmcts.et.common.model.ccd.types.DraftAndSignJudgement;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
@@ -1451,6 +1452,9 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("parties")
     private List<PartyDetails> parties;
+
+    @JsonProperty("draftAndSignJudgement")
+    private DraftAndSignJudgement draftAndSignJudgement;
 
     @JsonProperty("privateHearingRequiredFlag")
     private String privateHearingRequiredFlag;
