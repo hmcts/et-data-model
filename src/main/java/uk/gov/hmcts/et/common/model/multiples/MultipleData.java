@@ -16,7 +16,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
-import uk.gov.hmcts.et.common.model.ccd.types.NotificationExtract;
+import uk.gov.hmcts.et.common.model.ccd.types.NotificationsExtract;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.generic.BaseCaseData;
 import uk.gov.hmcts.et.common.model.multiples.items.CaseMultipleTypeItem;
@@ -213,7 +213,7 @@ public class MultipleData extends BaseCaseData {
     private String sendNotificationWhoMadeJudgement;
 
     @JsonProperty("notificationsExtract")
-    private NotificationExtract notificationsExtract;
+    private NotificationsExtract notificationsExtract;
 
     //Referral
     @JsonProperty("referralCollection")

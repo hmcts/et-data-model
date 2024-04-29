@@ -6,7 +6,7 @@ import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class NotificationExtract {
+public class NotificationsExtract {
     @JsonProperty("notificationsExtractFile")
     private UploadedDocumentType notificationsExtractFile;
     @JsonProperty("extractDateTime")
