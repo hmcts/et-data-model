@@ -1655,8 +1655,6 @@ public class CaseData extends Et1CaseData {
     private List<String> claimSuccessful;
     @JsonProperty("compensationDetails")
     private String compensationDetails;
-    @JsonProperty("compensationAmount")
-    private String compensationAmount;
     @JsonProperty("tribunalRecommendationDetails")
     private String tribunalRecommendationDetails;
     @JsonProperty("linkedCasesYesNo")
