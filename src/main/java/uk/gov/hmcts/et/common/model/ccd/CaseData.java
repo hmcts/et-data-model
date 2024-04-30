@@ -1632,6 +1632,8 @@ public class CaseData extends Et1CaseData {
     private String respondentNoAcasCertificateReason;
     @JsonProperty("addAdditionalRespondentPreamble")
     private String addAdditionalRespondentPreamble;
+    @JsonProperty("addAdditionalRespondent")
+    private String addAdditionalRespondent;
     @JsonProperty("et1ReppedRespondentCollection")
     private List<GenericTypeItem<CreateRespondentType>> et1ReppedRespondentCollection;
 
