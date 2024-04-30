@@ -1672,8 +1672,8 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("downloadDraftEt1Date")
     private String downloadDraftEt1Date;
     @JsonProperty("hearingContactLanguage")
-    private String hearingContactLanguage;
+    private List<String> hearingContactLanguage;
     @JsonProperty("contactLanguageQuestion")
-    private String contactLanguageQuestion;
+    private List<String> contactLanguageQuestion;
 
 }
