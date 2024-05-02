@@ -298,11 +298,4 @@ public class MultipleData extends BaseCaseData {
     @JsonProperty("legalrepDocumentCollection")
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
-    //multiplesDocumentsTabTitles
-    @JsonProperty("multiplesDocumentsTabTitle")
-    private List<DocumentTypeItem> multiplesDocumentsTabTitle;
-    @JsonProperty("multiplesClaimantDocumentsTabTitle")
-    private List<DocumentTypeItem> multiplesClaimantDocumentsTabTitle;
-    @JsonProperty("multiplesRespondentDocumentsTabTitle")
-    private List<DocumentTypeItem> multiplesRespondentsDocumentsTabTitle;
 }

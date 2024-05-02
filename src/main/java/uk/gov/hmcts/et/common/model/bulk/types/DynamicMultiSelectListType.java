@@ -36,7 +36,7 @@ public class DynamicMultiSelectListType {
      * @param selected Optionally set the first item as selected
      * @return newly created DynamicMultiSelectListType
      */
-    public DynamicMultiSelectListType from(String code, String label, boolean selected) {
+    public static DynamicMultiSelectListType from(String code, String label, boolean selected) {
         DynamicMultiSelectListType listType = DynamicMultiSelectListType.from(
                 List.of(DynamicMultiSelectListType.create(code, label)));
         if (selected) {
@@ -96,7 +96,7 @@ public class DynamicMultiSelectListType {
         return null;
     }
 
-    private DynamicValueType getValue() {
+    DynamicValueType getValue() {
         return null;
     }
 
@@ -138,21 +138,6 @@ public class DynamicMultiSelectListType {
                 ? Optional.ofNullable(dynamicMultiSelectListType.getValue()) : Optional.empty();
     }
 
-    //    public static Optional<String> getSelectedLabel(DynamicMultiSelectListType dynamicMultiSelectListType) {
-    //        if (dynamicMultiSelectListType != null && dynamicMultiSelectListType.getValue() != null) {
-    //            return Optional.of(dynamicMultiSelectListType.getSelectedLabel());
-    //        } else {
-    //            return Optional.empty();
-    //        }
-    //    }
-
-//        public String getSelectedLabel() {
-//            return value != null ? value.getLabel() : null;
-//        }
-//
-//        public String getSelectedCode() {
-//            return value != null ? value.getCode() : null;
-//        }
 
     public boolean isValidCodeForList(String code) {
         if (CollectionUtils.isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
@@ -164,5 +149,20 @@ public class DynamicMultiSelectListType {
         }
 
         return false;
+    }
+
+    public List<Object> getSelectedLabels() {
+        return List.of();
+    }
+
+    public void setSelectedValues(List<DynamicValueType> selectedValues) {
+    }
+
+    public List<Object> getSelectedCodes() {
+        return List.of();
+    }
+
+    public Object getSelectedLabel() {
+        return null;
     }
 }

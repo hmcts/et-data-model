@@ -7,6 +7,7 @@ import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicMultiSelectListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -102,7 +103,7 @@ public class BaseCaseData {
 
     //documentSelect
     @JsonProperty("documentSelect")
-    private DynamicMultiSelectListType documentSelect;
+    private JSONObject documentSelect;
 
     //documentAccess
     @JsonProperty("documentAccess")
