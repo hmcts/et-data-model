@@ -99,12 +99,4 @@ public class BaseCaseData {
     private List<DocumentTypeItem> documentCollection;
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
-
-    //documentSelect
-    @JsonProperty("documentSelect")
-    private DynamicMultiSelectListType documentSelect;
-
-    //documentAccess
-    @JsonProperty("documentAccess")
-    private String documentAccess;
 }
