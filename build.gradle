@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version 'v3.9.0-beta-jon-v6'
+version 'v3.9.3-beta'
 
 java {
     toolchain {
