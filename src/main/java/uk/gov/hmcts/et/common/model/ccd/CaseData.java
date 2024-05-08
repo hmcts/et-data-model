@@ -1376,6 +1376,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("removeBundleDropDownSelectedParty")
     private String removeBundleDropDownSelectedParty;
 
+    @JsonProperty("hearingBundleRemoveReason")
+    private String hearingBundleRemoveReason;
+
     @JsonProperty("adrDocumentCollection")
     private List<DocumentTypeItem> adrDocumentCollection;
     @JsonProperty("piiDocumentCollection")
