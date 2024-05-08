@@ -34,4 +34,9 @@ public class PseResponseType {
     @JsonProperty("responseState")
     private String responseState;
 
+    // Work Allocation enablers
+    @JsonProperty("dateTime")
+    private String dateTime;
+    @JsonProperty("isECC")
+    private String isECC;
 }
