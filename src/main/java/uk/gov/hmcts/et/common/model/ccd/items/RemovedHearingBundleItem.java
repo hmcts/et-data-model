@@ -11,10 +11,6 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 public class RemovedHearingBundleItem {
-
-    @JsonProperty("id")
-    private String bundleId;
-
     @JsonProperty("bundleName")
     private String bundleName;
 
