@@ -1367,7 +1367,7 @@ public class CaseData extends Et1CaseData {
     private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
 
     // Remove Hearing Bundle
-    @JsonProperty("removedBundleItemsCollection")
+    @JsonProperty("removedHearingBundlesCollection")
     private List<RemovedHearingBundleItem> removedHearingBundlesCollection;
 
     @JsonProperty("removeHearingBundleSelect")
