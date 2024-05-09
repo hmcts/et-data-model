@@ -21,9 +21,6 @@ public class RemovedHearingBundleItem {
     @JsonProperty("removedDateTime")
     private String removedDateTime;
 
-    @JsonProperty("removedBy")
-    private String removedBy;
-
     @JsonProperty("removedReason")
     private String removedReason;
 }
