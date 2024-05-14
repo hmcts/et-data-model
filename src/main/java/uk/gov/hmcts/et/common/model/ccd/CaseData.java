@@ -140,12 +140,8 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType clerkResponsible;
     @JsonProperty("userLocation")
     private String userLocation;
-    @JsonProperty("documentCollection")
-    private List<DocumentTypeItem> documentCollection;
     @JsonProperty("addDocumentCollection")
     private List<DocumentTypeItem> addDocumentCollection;
-    @JsonProperty("claimantDocumentCollection")
-    private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
@@ -1359,8 +1355,6 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
-    @JsonProperty("legalrepDocumentCollection")
-    private List<DocumentTypeItem> legalrepDocumentCollection;
 
     // Claimant Bundles
     @JsonProperty("bundlesClaimantCollection")

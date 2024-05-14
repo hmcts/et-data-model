@@ -9,6 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.items.CaseIdTypeItem;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
+import uk.gov.hmcts.et.common.model.bulk.types.DynamicMultiSelectListType;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
@@ -296,11 +297,22 @@ public class MultipleData extends BaseCaseData {
     @JsonProperty("closeReferralGeneralNotes")
     private String closeReferralGeneralNotes;
 
-    //Document collection
+    //Document collections
     private List<DocumentTypeItem> documentCollection;
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
     private List<GenericTypeItem<CaseNote>> multipleCaseNotesCollection;
     private CaseNote caseNote;
+
+    //multiplesDocumentsTabTitles
+    private List<DocumentTypeItem> multiplesDocumentsTabTitle;
+    private List<DocumentTypeItem> multiplesClaimantDocumentsTabTitle;
+    private List<DocumentTypeItem> multiplesRespondentsDocumentsTabTitle;
+
+    //documentSelect
+    private DynamicMultiSelectListType documentSelect;
+
+    //documentAccess
+    private String documentAccess;
 }

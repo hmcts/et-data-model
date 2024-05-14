@@ -98,5 +98,4 @@ public class BaseCaseData {
     private List<DocumentTypeItem> documentCollection;
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
-
 }
