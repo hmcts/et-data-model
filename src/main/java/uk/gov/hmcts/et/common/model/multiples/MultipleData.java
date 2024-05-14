@@ -27,6 +27,7 @@ import uk.gov.hmcts.et.common.model.multiples.types.MoveCasesType;
 import uk.gov.hmcts.et.common.model.multiples.types.SubMultipleActionType;
 
 import java.util.List;
+import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -300,6 +301,10 @@ public class MultipleData extends BaseCaseData {
     private List<DocumentTypeItem> documentCollection;
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    //Collection of Legal Reps with access to the case
+    @JsonProperty("legalRepCollection")
+    private Map<String, List<String>> legalRepCollection;
 
     private List<GenericTypeItem<CaseNote>> multipleCaseNotesCollection;
     private CaseNote caseNote;
