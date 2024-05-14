@@ -21,6 +21,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.RemovedHearingBundleItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
@@ -1355,16 +1356,29 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("bundlesRespondentCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
 
+    // Claimant Bundles
+    @JsonProperty("bundlesClaimantCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
+
+    // Remove Hearing Bundle
+    @JsonProperty("removedHearingBundlesCollection")
+    private List<GenericTypeItem<RemovedHearingBundleItem>> removedHearingBundlesCollection;
+
+    @JsonProperty("removeHearingBundleSelect")
+    private DynamicFixedListType removeHearingBundleSelect;
+
+    @JsonProperty("removeBundleDropDownSelectedParty")
+    private String removeBundleDropDownSelectedParty;
+
+    @JsonProperty("hearingBundleRemoveReason")
+    private String hearingBundleRemoveReason;
+
     @JsonProperty("adrDocumentCollection")
     private List<DocumentTypeItem> adrDocumentCollection;
     @JsonProperty("piiDocumentCollection")
     private List<DocumentTypeItem> piiDocumentCollection;
     @JsonProperty("appealDocumentCollection")
     private List<DocumentTypeItem> appealDocumentCollection;
-
-    // Claimant Bundles
-    @JsonProperty("bundlesClaimantCollection")
-    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
 
     // Case Flags
     private CaseFlagsType caseFlags;
