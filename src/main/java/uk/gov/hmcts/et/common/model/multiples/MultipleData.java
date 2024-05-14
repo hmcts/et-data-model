@@ -301,11 +301,11 @@ public class MultipleData extends BaseCaseData {
     private List<DocumentTypeItem> documentCollection;
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
-   
+
     private List<GenericTypeItem<CaseNote>> multipleCaseNotesCollection;
     private CaseNote caseNote;
-  
-      //multiplesDocumentsTabTitles
+
+    //multiplesDocumentsTabTitles
     private List<DocumentTypeItem> multiplesDocumentsTabTitle;
     private List<DocumentTypeItem> multiplesClaimantDocumentsTabTitle;
     private List<DocumentTypeItem> multiplesRespondentsDocumentsTabTitle;
