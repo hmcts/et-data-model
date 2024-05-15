@@ -1489,13 +1489,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
 
-    @JsonProperty("bundleConfiguration")
-    private String bundleConfiguration;
-    @JsonProperty("caseBundles")
-    private List<Bundle> caseBundles;
-    @JsonProperty("digitalCaseFile")
-    private DigitalCaseFileType digitalCaseFile;
-
     private String waRule21ReferralSent;
 
     @JsonProperty("batchCaseStayed")
