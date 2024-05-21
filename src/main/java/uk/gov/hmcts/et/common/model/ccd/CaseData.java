@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
-import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
@@ -1489,13 +1488,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
-
-    @JsonProperty("bundleConfiguration")
-    private String bundleConfiguration;
-    @JsonProperty("caseBundles")
-    private List<Bundle> caseBundles;
-    @JsonProperty("digitalCaseFile")
-    private DigitalCaseFileType digitalCaseFile;
 
     private String waRule21ReferralSent;
 
