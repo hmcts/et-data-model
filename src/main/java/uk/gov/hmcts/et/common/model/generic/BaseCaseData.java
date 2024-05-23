@@ -110,4 +110,5 @@ public class BaseCaseData {
     @JsonProperty("caseBundles")
     private List<Bundle> caseBundles;
 
+    private String nextListedDate;
 }
