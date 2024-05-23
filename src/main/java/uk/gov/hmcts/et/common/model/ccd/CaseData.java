@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
-import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
@@ -21,6 +20,7 @@ import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.RemovedHearingBundleItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
@@ -34,7 +34,6 @@ import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
 import uk.gov.hmcts.et.common.model.ccd.types.CreateRespondentType;
-import uk.gov.hmcts.et.common.model.ccd.types.DigitalCaseFileType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
@@ -140,12 +139,8 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType clerkResponsible;
     @JsonProperty("userLocation")
     private String userLocation;
-    @JsonProperty("documentCollection")
-    private List<DocumentTypeItem> documentCollection;
     @JsonProperty("addDocumentCollection")
     private List<DocumentTypeItem> addDocumentCollection;
-    @JsonProperty("claimantDocumentCollection")
-    private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
@@ -1359,8 +1354,23 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
-    @JsonProperty("legalrepDocumentCollection")
-    private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    // Claimant Bundles
+    @JsonProperty("bundlesClaimantCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
+
+    // Remove Hearing Bundle
+    @JsonProperty("removedHearingBundlesCollection")
+    private List<GenericTypeItem<RemovedHearingBundleItem>> removedHearingBundlesCollection;
+
+    @JsonProperty("removeHearingBundleSelect")
+    private DynamicFixedListType removeHearingBundleSelect;
+
+    @JsonProperty("removeBundleDropDownSelectedParty")
+    private String removeBundleDropDownSelectedParty;
+
+    @JsonProperty("hearingBundleRemoveReason")
+    private String hearingBundleRemoveReason;
 
     @JsonProperty("adrDocumentCollection")
     private List<DocumentTypeItem> adrDocumentCollection;
@@ -1368,10 +1378,6 @@ public class CaseData extends Et1CaseData {
     private List<DocumentTypeItem> piiDocumentCollection;
     @JsonProperty("appealDocumentCollection")
     private List<DocumentTypeItem> appealDocumentCollection;
-
-    // Claimant Bundles
-    @JsonProperty("bundlesClaimantCollection")
-    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
 
     // Case Flags
     private CaseFlagsType caseFlags;
@@ -1481,13 +1487,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
-
-    @JsonProperty("bundleConfiguration")
-    private String bundleConfiguration;
-    @JsonProperty("caseBundles")
-    private List<Bundle> caseBundles;
-    @JsonProperty("digitalCaseFile")
-    private DigitalCaseFileType digitalCaseFile;
 
     private String waRule21ReferralSent;
 
