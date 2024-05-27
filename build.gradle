@@ -15,7 +15,7 @@ java {
 
 checkstyle {
     maxWarnings = 0
-    toolVersion = '10.16.0'
+    toolVersion = '10.17.0'
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
