@@ -107,8 +107,6 @@ public class MultipleData extends BaseCaseData {
     @JsonProperty("batchRemoveRespondentRep")
     private String batchRemoveRespondentRep;
 
-    @JsonProperty("managingOffice")
-    private String managingOffice;
     @JsonProperty("fileLocation")
     private DynamicFixedListType fileLocation;
     @JsonProperty("fileLocationGlasgow")

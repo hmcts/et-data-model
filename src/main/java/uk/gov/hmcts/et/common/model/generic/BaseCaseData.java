@@ -7,6 +7,7 @@ import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
 import uk.gov.hmcts.et.common.model.ccd.types.DigitalCaseFileType;
 
 import java.util.List;
@@ -111,4 +112,9 @@ public class BaseCaseData {
     private List<Bundle> caseBundles;
 
     private String nextListedDate;
+
+    @JsonProperty("caseManagementLocation")
+    private CaseLocation caseManagementLocation;
+    @JsonProperty("managingOffice")
+    private String managingOffice;
 }
