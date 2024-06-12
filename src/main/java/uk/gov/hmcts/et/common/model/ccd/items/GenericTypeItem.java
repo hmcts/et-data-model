@@ -32,4 +32,8 @@ public class GenericTypeItem<T> {
         typeItem.value = value;
         return typeItem;
     }
+
+    public boolean itemEquals(T value) {
+        return value.equals(this.value);
+    }
 }
