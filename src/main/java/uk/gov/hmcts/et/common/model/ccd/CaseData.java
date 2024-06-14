@@ -1135,6 +1135,8 @@ public class CaseData extends Et1CaseData {
     private String claimantTseSelectApplication;
     @JsonProperty("claimantTseNotAvailableWarning")
     private String claimantTseNotAvailableWarning;
+    @JsonProperty("claimantTseRule92")
+    private String claimantTseRule92;
     @JsonProperty("claimantTseDocument13")
     private UploadedDocumentType claimantTseDocument13;
     @JsonProperty("claimantTseTextBox13")
