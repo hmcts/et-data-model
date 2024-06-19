@@ -319,4 +319,7 @@ public class MultipleData extends BaseCaseData {
 
     //documentAccess
     private String documentAccess;
+
+    @JsonProperty("multipleNote")
+    private String multipleNote;
 }
