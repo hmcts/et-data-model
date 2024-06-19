@@ -4,8 +4,11 @@ import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -87,5 +90,56 @@ public class ListTypeItemTest {
         assertEquals("2", actual.get(1).getValue());
         assertEquals("3", actual.get(2).getValue());
         assertEquals("4", actual.get(3).getValue());
+    }
+
+    @Test
+    void addDistinct() {
+        ListTypeItem<String> list = ListTypeItem.from("1");
+        list.addDistinct("1");
+        list.addDistinct("2");
+
+        assertEquals(2, list.size());
+    }
+
+    @Test
+    void includes() {
+        ListTypeItem<String> list = ListTypeItem.from("1", "2", "3");
+        assertTrue(list.includes("1"));
+        assertFalse(list.includes("4"));
+    }
+
+    @Test
+    void addAsItem() {
+        ListTypeItem<String> list = new ListTypeItem<String>();
+        list.addAsItem("1");
+
+        assertEquals("1", list.get(0).getValue());
+    }
+
+    @Test
+    void findFirst() {
+        ListTypeItem<String> list = ListTypeItem.from("1", "2", "3");
+
+        var actual = list.findFirst(o -> o.equals("1"));
+
+        assertEquals("1", actual.get());
+    }
+
+    @Test
+    void filter() {
+        ListTypeItem<String> list = ListTypeItem.from("1", "2", "3");
+
+        var actual = list.filter(o -> o.equals("1")).collect(Collectors.toList());
+
+        assertEquals("1", actual.get(0));
+    }
+
+    @Test
+    void mapTest() {
+        ListTypeItem<String> list = ListTypeItem.from("1");
+
+        var actual = list.map(o -> o + "1").collect(Collectors.toList());
+
+        assertEquals("11", actual.get(0));
     }
 }
