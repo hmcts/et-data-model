@@ -1133,8 +1133,8 @@ public class CaseData extends Et1CaseData {
     // Claimant tell something else
     @JsonProperty("claimantTseSelectApplication")
     private String claimantTseSelectApplication;
-    @JsonProperty("claimantTseNotAvailableWarning")
-    private String claimantTseNotAvailableWarning;
+//    @JsonProperty("claimantTseNotAvailableWarning")
+//    private String claimantTseNotAvailableWarning;
     @JsonProperty("claimantTseRule92")
     private String claimantTseRule92;
     @JsonProperty("claimantTseDocument13")
