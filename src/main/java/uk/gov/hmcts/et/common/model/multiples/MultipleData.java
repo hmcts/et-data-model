@@ -10,11 +10,7 @@ import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.items.CaseIdTypeItem;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicMultiSelectListType;
-import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
-import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.*;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseNote;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
@@ -97,7 +93,7 @@ public class MultipleData extends BaseCaseData {
     private String batchRemoveClaimantRep;
 
     @JsonProperty("batchUpdateJurisdiction")
-    private DynamicFixedListType batchUpdateJurisdiction;
+    private List<JurCodesTypeItem> batchUpdateJurisdiction;
     @JsonProperty("batchUpdateRespondent")
     private DynamicFixedListType batchUpdateRespondent;
     @JsonProperty("batchUpdateJudgment")
