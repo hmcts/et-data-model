@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Tolerate;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
-import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.AddressLabelTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.BFActionTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.DepositTypeItem;
@@ -21,19 +20,19 @@ import uk.gov.hmcts.et.common.model.ccd.items.HearingTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.JudgementTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ListTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.RemovedHearingBundleItem;
 import uk.gov.hmcts.et.common.model.ccd.items.RepresentedTypeRItem;
 import uk.gov.hmcts.et.common.model.ccd.items.VettingJurCodesTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsAttributesType;
 import uk.gov.hmcts.et.common.model.ccd.types.AddressLabelsSelectionType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseFlagsType;
 import uk.gov.hmcts.et.common.model.ccd.types.CaseLink;
-import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.ChangeOrganisationRequest;
 import uk.gov.hmcts.et.common.model.ccd.types.CompanyPremisesType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
-import uk.gov.hmcts.et.common.model.ccd.types.DigitalCaseFileType;
+import uk.gov.hmcts.et.common.model.ccd.types.CreateRespondentType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
@@ -139,12 +138,8 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType clerkResponsible;
     @JsonProperty("userLocation")
     private String userLocation;
-    @JsonProperty("documentCollection")
-    private List<DocumentTypeItem> documentCollection;
     @JsonProperty("addDocumentCollection")
     private List<DocumentTypeItem> addDocumentCollection;
-    @JsonProperty("claimantDocumentCollection")
-    private List<DocumentTypeItem> claimantDocumentCollection;
     @JsonProperty("correspondenceScotType")
     private CorrespondenceScotType correspondenceScotType;
     @JsonProperty("correspondenceType")
@@ -1358,8 +1353,23 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType bundlesRespondentUploadFile;
     @JsonProperty("bundlesRespondentCollection")
     private List<GenericTypeItem<HearingBundleType>> bundlesRespondentCollection;
-    @JsonProperty("legalrepDocumentCollection")
-    private List<DocumentTypeItem> legalrepDocumentCollection;
+
+    // Claimant Bundles
+    @JsonProperty("bundlesClaimantCollection")
+    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
+
+    // Remove Hearing Bundle
+    @JsonProperty("removedHearingBundlesCollection")
+    private List<GenericTypeItem<RemovedHearingBundleItem>> removedHearingBundlesCollection;
+
+    @JsonProperty("removeHearingBundleSelect")
+    private DynamicFixedListType removeHearingBundleSelect;
+
+    @JsonProperty("removeBundleDropDownSelectedParty")
+    private String removeBundleDropDownSelectedParty;
+
+    @JsonProperty("hearingBundleRemoveReason")
+    private String hearingBundleRemoveReason;
 
     @JsonProperty("adrDocumentCollection")
     private List<DocumentTypeItem> adrDocumentCollection;
@@ -1367,10 +1377,6 @@ public class CaseData extends Et1CaseData {
     private List<DocumentTypeItem> piiDocumentCollection;
     @JsonProperty("appealDocumentCollection")
     private List<DocumentTypeItem> appealDocumentCollection;
-
-    // Claimant Bundles
-    @JsonProperty("bundlesClaimantCollection")
-    private List<GenericTypeItem<HearingBundleType>> bundlesClaimantCollection;
 
     // Case Flags
     private CaseFlagsType caseFlags;
@@ -1426,14 +1432,10 @@ public class CaseData extends Et1CaseData {
     private String hearingType;
     @JsonProperty("hearingWindow")
     private HearingWindow hearingWindow;
-    @JsonProperty("nextListedDate")
-    private String nextListedDate;
     @JsonProperty("caseNameHmctsInternal")
     private String caseNameHmctsInternal;
     @JsonProperty("caseManagementCategory")
     private DynamicFixedListType caseManagementCategory;
-    @JsonProperty("caseManagementLocation")
-    private CaseLocation caseManagementLocation;
     @JsonProperty("hmctsServiceID")
     private String hmctsServiceID;
     @JsonProperty("hmctsCaseCategory")
@@ -1485,13 +1487,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("SearchCriteria")
     private SearchCriteria searchCriteria;
 
-    @JsonProperty("bundleConfiguration")
-    private String bundleConfiguration;
-    @JsonProperty("caseBundles")
-    private List<Bundle> caseBundles;
-    @JsonProperty("digitalCaseFile")
-    private DigitalCaseFileType digitalCaseFile;
-
     private String waRule21ReferralSent;
 
     @JsonProperty("batchCaseStayed")
@@ -1508,5 +1503,181 @@ public class CaseData extends Et1CaseData {
                 .map(o -> RepresentedTypeRItem.builder().id(o.getId()).value(o.getValue()).build())
                 .toList();
     }
+
+    @JsonProperty("et1ReppedTriageAddress")
+    private Address et1ReppedTriageAddress;
+    @JsonProperty("et1ReppedTriageYesNo")
+    private String et1ReppedTriageYesNo;
+    @JsonProperty("et1ClaimStatuses")
+    private String et1ClaimStatuses;
+
+    @JsonProperty("et1ReppedSectionOne")
+    private String et1ReppedSectionOne;
+    @JsonProperty("et1ReppedSectionTwo")
+    private String et1ReppedSectionTwo;
+    @JsonProperty("et1ReppedSectionThree")
+    private String et1ReppedSectionThree;
+
+    @JsonProperty("claimantFirstName")
+    private String claimantFirstName;
+    @JsonProperty("claimantLastName")
+    private String claimantLastName;
+    @JsonProperty("claimantDateOfBirth")
+    private String claimantDateOfBirth;
+    @JsonProperty("claimantSex")
+    private List<String> claimantSex;
+    @JsonProperty("claimantPreferredTitle")
+    private String claimantPreferredTitle;
+    @JsonProperty("claimantContactAddress")
+    private Address claimantContactAddress;
+    @JsonProperty("representativeAttendHearing")
+    private List<String> representativeAttendHearing;
+    @JsonProperty("claimantAttendHearing")
+    private List<String> claimantAttendHearing;
+    @JsonProperty("claimantSupportQuestion")
+    private List<String> claimantSupportQuestion;
+    @JsonProperty("claimantSupportQuestionReason")
+    private String claimantSupportQuestionReason;
+    @JsonProperty("representativeContactPreference")
+    private List<String> representativeContactPreference;
+    @JsonProperty("contactPreferencePostReason")
+    private String contactPreferencePostReason;
+    @JsonProperty("representativePhoneNumber")
+    private String representativePhoneNumber;
+    @JsonProperty("representativeReferenceNumber")
+    private String representativeReferenceNumber;
+
+    @JsonProperty("didClaimantWorkForOrg")
+    private List<String> didClaimantWorkForOrg;
+    @JsonProperty("claimantStillWorking")
+    private List<String> claimantStillWorking;
+    @JsonProperty("claimantJobTitle")
+    private String claimantJobTitle;
+    @JsonProperty("claimantStartDate")
+    private String claimantStartDate;
+    @JsonProperty("claimantEndDate")
+    private String claimantEndDate;
+    @JsonProperty("claimantStillWorkingNoticePeriod")
+    private List<String> claimantStillWorkingNoticePeriod;
+    @JsonProperty("claimantStillWorkingNoticePeriodMonths")
+    private String claimantStillWorkingNoticePeriodMonths;
+    @JsonProperty("claimantStillWorkingNoticePeriodWeeks")
+    private String claimantStillWorkingNoticePeriodWeeks;
+    @JsonProperty("claimantWorkingNoticePeriod")
+    private List<String> claimantWorkingNoticePeriod;
+    @JsonProperty("claimantWorkingNoticePeriodMonths")
+    private String claimantWorkingNoticePeriodMonths;
+    @JsonProperty("claimantWorkingNoticePeriodWeeks")
+    private String claimantWorkingNoticePeriodWeeks;
+    @JsonProperty("claimantWorkingNoticePeriodEndDate")
+    private String claimantWorkingNoticePeriodEndDate;
+    @JsonProperty("claimantNoLongerWorkingQuestion")
+    private List<String> claimantNoLongerWorkingQuestion;
+    @JsonProperty("claimantNoLongerWorking")
+    private List<String> claimantNoLongerWorking;
+    @JsonProperty("claimantNoLongerWorkingMonths")
+    private String claimantNoLongerWorkingMonths;
+    @JsonProperty("claimantNoLongerWorkingWeeks")
+    private String claimantNoLongerWorkingWeeks;
+    @JsonProperty("claimantNoLongerWorkingPay")
+    private String claimantNoLongerWorkingPay;
+    @JsonProperty("claimantAverageWeeklyWorkHours")
+    private String claimantAverageWeeklyWorkHours;
+    @JsonProperty("claimantPayBeforeTax")
+    private String claimantPayBeforeTax;
+    @JsonProperty("claimantPayAfterTax")
+    private String claimantPayAfterTax;
+    @JsonProperty("claimantPayType")
+    private List<String> claimantPayType;
+    @JsonProperty("claimantPensionContribution")
+    private List<String> claimantPensionContribution;
+    @JsonProperty("claimantWeeklyPension")
+    private String claimantWeeklyPension;
+    @JsonProperty("claimantEmployeeBenefits")
+    private List<String> claimantEmployeeBenefits;
+    @JsonProperty("claimantBenefits")
+    private String claimantBenefits;
+    @JsonProperty("claimantNewJob")
+    private List<String> claimantNewJob;
+    @JsonProperty("claimantNewJobStartDate")
+    private String claimantNewJobStartDate;
+    @JsonProperty("claimantNewJobPayBeforeTax")
+    private String claimantNewJobPayBeforeTax;
+    @JsonProperty("claimantNewJobPayPeriod")
+    private List<String> claimantNewJobPayPeriod;
+
+    @JsonProperty("respondentType")
+    private String respondentType;
+    @JsonProperty("respondentOrganisationName")
+    private String respondentOrganisationName;
+    @JsonProperty("respondentFirstName")
+    private String respondentFirstName;
+    @JsonProperty("respondentLastName")
+    private String respondentLastName;
+    @JsonProperty("respondentAddress")
+    private Address respondentAddress;
+    @JsonProperty("didClaimantWorkAtSameAddressPreamble")
+    private String didClaimantWorkAtSameAddressPreamble;
+    @JsonProperty("didClaimantWorkAtSameAddress")
+    private String didClaimantWorkAtSameAddress;
+    @JsonProperty("claimantWorkAddressYes")
+    private Address claimantWorkAddressYes;
+    @JsonProperty("respondentAcasYesNo")
+    private String respondentAcasYesNo;
+    @JsonProperty("respondentAcasNumber")
+    private String respondentAcasNumber;
+    @JsonProperty("respondentNoAcasCertificateReason")
+    private String respondentNoAcasCertificateReason;
+    @JsonProperty("addAdditionalRespondentPreamble")
+    private String addAdditionalRespondentPreamble;
+    @JsonProperty("addAdditionalRespondent")
+    private String addAdditionalRespondent;
+    @JsonProperty("et1ReppedRespondentCollection")
+    private List<GenericTypeItem<CreateRespondentType>> et1ReppedRespondentCollection;
+
+    @JsonProperty("et1SectionThreeClaimDetails")
+    private String et1SectionThreeClaimDetails;
+    @JsonProperty("et1SectionThreeDocumentUpload")
+    private UploadedDocumentType et1SectionThreeDocumentUpload;
+    @JsonProperty("et1SectionThreeTypeOfClaim")
+    private List<String> et1SectionThreeTypeOfClaim;
+    @JsonProperty("discriminationTypesOfClaim")
+    private List<String> discriminationTypesOfClaim;
+    @JsonProperty("payTypesOfClaim")
+    private List<String> payTypesOfClaim;
+    @JsonProperty("whistleblowingYesNo")
+    private List<String> whistleblowingYesNo;
+    @JsonProperty("whistleblowingRegulator")
+    private String whistleblowingRegulator;
+    @JsonProperty("otherTypeOfClaimDetails")
+    private String otherTypeOfClaimDetails;
+    @JsonProperty("claimSuccessful")
+    private List<String> claimSuccessful;
+    @JsonProperty("compensationDetails")
+    private String compensationDetails;
+    @JsonProperty("tribunalRecommendationDetails")
+    private String tribunalRecommendationDetails;
+    @JsonProperty("linkedCasesYesNo")
+    private List<String> linkedCasesYesNo;
+    @JsonProperty("linkedCasesDetails")
+    private String linkedCasesDetails;
+    @JsonProperty("et1SectionOneDateCompleted")
+    private String et1SectionOneDateCompleted;
+    @JsonProperty("et1SectionTwoDateCompleted")
+    private String et1SectionTwoDateCompleted;
+    @JsonProperty("et1SectionThreeDateCompleted")
+    private String et1SectionThreeDateCompleted;
+    @JsonProperty("claimantRepresentativeOrganisationPolicy")
+    private OrganisationPolicy claimantRepresentativeOrganisationPolicy;
+    @JsonProperty("downloadDraftEt1Date")
+    private String downloadDraftEt1Date;
+    @JsonProperty("hearingContactLanguage")
+    private List<String> hearingContactLanguage;
+    @JsonProperty("claimantHearingContactLanguage")
+    private List<String> claimantHearingContactLanguage;
+    @JsonProperty("contactLanguageQuestion")
+    private List<String> contactLanguageQuestion;
+    @JsonProperty("requiresSubmissionDocuments")
+    private String requiresSubmissionDocuments;
 
 }

@@ -19,6 +19,8 @@ public class PseResponseType {
     private String date;
     @JsonProperty("from")
     private String from;
+    @JsonProperty("author")
+    private String author;
 
     // Response
     @JsonProperty("response")
@@ -34,4 +36,9 @@ public class PseResponseType {
     @JsonProperty("responseState")
     private String responseState;
 
+    // Work Allocation enablers
+    @JsonProperty("dateTime")
+    private String dateTime;
+    @JsonProperty("isECC")
+    private String isECC;
 }

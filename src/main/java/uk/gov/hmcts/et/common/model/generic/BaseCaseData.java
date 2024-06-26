@@ -4,8 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
+import uk.gov.hmcts.et.common.model.bundle.Bundle;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.ReferralTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.types.CaseLocation;
+import uk.gov.hmcts.et.common.model.ccd.types.DigitalCaseFileType;
 
 import java.util.List;
 
@@ -99,4 +102,19 @@ public class BaseCaseData {
     private List<DocumentTypeItem> claimantDocumentCollection;
     private List<DocumentTypeItem> legalrepDocumentCollection;
 
+    @JsonProperty("digitalCaseFile")
+    private DigitalCaseFileType digitalCaseFile;
+
+    @JsonProperty("bundleConfiguration")
+    private String bundleConfiguration;
+
+    @JsonProperty("caseBundles")
+    private List<Bundle> caseBundles;
+
+    private String nextListedDate;
+
+    @JsonProperty("caseManagementLocation")
+    private CaseLocation caseManagementLocation;
+    @JsonProperty("managingOffice")
+    private String managingOffice;
 }

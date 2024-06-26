@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.ccd.Address;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @Builder
@@ -39,4 +41,12 @@ public class RepresentedTypeC {
     /** UUID for identifying legal rep's firm. */
     @JsonProperty("organisationId")
     private String organisationId;
+    @JsonProperty("myHmctsOrganisation")
+    private Organisation myHmctsOrganisation;
+    @JsonProperty("hearingContactLanguage")
+    private List<String> hearingContactLanguage;
+    @JsonProperty("contactLanguageQuestion")
+    private List<String> contactLanguageQuestion;
+    @JsonProperty("representativeAttendHearing")
+    private List<String> representativeAttendHearing;
 }
