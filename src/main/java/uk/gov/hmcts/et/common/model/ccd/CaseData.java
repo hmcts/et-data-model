@@ -1130,6 +1130,20 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseApplicationStoredCollection")
     private List<GenericTseApplicationTypeItem> tseApplicationStoredCollection;
 
+    // Claimant tell something else
+    @JsonProperty("claimantTseSelectApplication")
+    private String claimantTseSelectApplication;
+    @JsonProperty("claimantTseRule92")
+    private String claimantTseRule92;
+    @JsonProperty("claimantTseRespNotAvailable")
+    private String claimantTseRespNotAvailable;
+    @JsonProperty("claimantTseDocument13")
+    private UploadedDocumentType claimantTseDocument13;
+    @JsonProperty("claimantTseTextBox13")
+    private String claimantTseTextBox13;
+    @JsonProperty("claimantTseRule92AnsNoGiveDetails")
+    private String claimantTseRule92AnsNoGiveDetails;
+
     //TSE Admin Record a Decision
     @JsonProperty("tseAdminSelectApplication")
     private DynamicFixedListType tseAdminSelectApplication;
