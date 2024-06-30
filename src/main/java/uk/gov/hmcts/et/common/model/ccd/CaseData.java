@@ -1141,6 +1141,8 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType claimantTseDocument13;
     @JsonProperty("claimantTseTextBox13")
     private String claimantTseTextBox13;
+    @JsonProperty("claimantTseRule92AnsNoGiveDetails")
+    private String claimantTseRule92AnsNoGiveDetails;
 
     //TSE Admin Record a Decision
     @JsonProperty("tseAdminSelectApplication")
