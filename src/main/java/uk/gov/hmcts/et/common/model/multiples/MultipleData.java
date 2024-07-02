@@ -20,6 +20,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CaseNote;
 import uk.gov.hmcts.et.common.model.ccd.types.CasePreAcceptType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceScotType;
 import uk.gov.hmcts.et.common.model.ccd.types.CorrespondenceType;
+import uk.gov.hmcts.et.common.model.ccd.types.DynamicListType;
 import uk.gov.hmcts.et.common.model.ccd.types.NotificationsExtract;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.SubCaseLegalRepDetails;
@@ -95,6 +96,8 @@ public class MultipleData extends BaseCaseData {
     private DynamicFixedListType batchUpdateClaimantRep;
     @JsonProperty("batchRemoveClaimantRep")
     private String batchRemoveClaimantRep;
+
+    private ListTypeItem<DynamicListType> batchUpdateJurisdictionList;
 
     @JsonProperty("batchUpdateJurisdiction")
     private DynamicFixedListType batchUpdateJurisdiction;
