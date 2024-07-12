@@ -1137,6 +1137,54 @@ public class CaseData extends Et1CaseData {
     private String claimantTseRule92;
     @JsonProperty("claimantTseRespNotAvailable")
     private String claimantTseRespNotAvailable;
+    @JsonProperty("claimantTseDocument1")
+    private UploadedDocumentType claimantTseDocument1;
+    @JsonProperty("claimantTseTextBox1")
+    private String claimantTseTextBox1;
+    @JsonProperty("claimantTseDocument2")
+    private UploadedDocumentType claimantTseDocument2;
+    @JsonProperty("claimantTseTextBox2")
+    private String claimantTseTextBox2;
+    @JsonProperty("claimantTseDocument3")
+    private UploadedDocumentType claimantTseDocument3;
+    @JsonProperty("claimantTseTextBox3")
+    private String claimantTseTextBox3;
+    @JsonProperty("claimantTseDocument4")
+    private UploadedDocumentType claimantTseDocument4;
+    @JsonProperty("claimantTseTextBox4")
+    private String claimantTseTextBox4;
+    @JsonProperty("claimantTseDocument5")
+    private UploadedDocumentType claimantTseDocument5;
+    @JsonProperty("claimantTseTextBox5")
+    private String claimantTseTextBox5;
+    @JsonProperty("claimantTseDocument6")
+    private UploadedDocumentType claimantTseDocument6;
+    @JsonProperty("claimantTseTextBox6")
+    private String claimantTseTextBox6;
+    @JsonProperty("claimantTseDocument7")
+    private UploadedDocumentType claimantTseDocument7;
+    @JsonProperty("claimantTseTextBox7")
+    private String claimantTseTextBox7;
+    @JsonProperty("claimantTseDocument8")
+    private UploadedDocumentType claimantTseDocument8;
+    @JsonProperty("claimantTseTextBox8")
+    private String claimantTseTextBox8;
+    @JsonProperty("claimantTseDocument9")
+    private UploadedDocumentType claimantTseDocument9;
+    @JsonProperty("claimantTseTextBox9")
+    private String claimantTseTextBox9;
+    @JsonProperty("claimantTseDocument10")
+    private UploadedDocumentType claimantTseDocument10;
+    @JsonProperty("claimantTseTextBox10")
+    private String claimantTseTextBox10;
+    @JsonProperty("claimantTseDocument11")
+    private UploadedDocumentType claimantTseDocument11;
+    @JsonProperty("claimantTseTextBox11")
+    private String claimantTseTextBox11;
+    @JsonProperty("claimantTseDocument12")
+    private UploadedDocumentType claimantTseDocument12;
+    @JsonProperty("claimantTseTextBox12")
+    private String claimantTseTextBox12;
     @JsonProperty("claimantTseDocument13")
     private UploadedDocumentType claimantTseDocument13;
     @JsonProperty("claimantTseTextBox13")
