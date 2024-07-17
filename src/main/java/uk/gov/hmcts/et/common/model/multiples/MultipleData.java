@@ -91,6 +91,8 @@ public class MultipleData extends BaseCaseData {
     private String batchUpdateType;
     @JsonProperty("batchUpdateCase")
     private String batchUpdateCase;
+    @JsonProperty("liveCases")
+    private String liveCases;
 
     @JsonProperty("batchUpdateClaimantRep")
     private DynamicFixedListType batchUpdateClaimantRep;
