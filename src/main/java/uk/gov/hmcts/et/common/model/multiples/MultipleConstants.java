@@ -17,5 +17,6 @@ public final class MultipleConstants {
     public static final String HEADER_4 = "Flag2";
     public static final String HEADER_5 = "Flag3";
     public static final String HEADER_6 = "Flag4";
+    public static final String HEADER_7 = "Claimant";
 
 }
