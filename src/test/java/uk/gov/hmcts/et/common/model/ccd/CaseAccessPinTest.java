@@ -1,26 +1,27 @@
 package uk.gov.hmcts.et.common.model.ccd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CaseAccessPinTest {
 
+    private static final int EXPIRY_PERIOD = 180;
+    private static final int CASE_ACCESS_PIN_LENGTH = 12;
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
     @Test
     public void testDeserializeCaseAccessPin() throws IOException {
-        LocalDate dateNow = LocalDate.now();
+        String dateNow = LocalDateTime.now().plusDays(EXPIRY_PERIOD).format(DATE_TIME_FORMATTER);
         String json = "{\"expiryDate\":\"" + dateNow + "\",\"caseAccessibleRoles\":[\"[DEFENDANT]\"]}";
-        CaseAccessPin caseAccessPin =
-                new ObjectMapper().registerModule(new JavaTimeModule())
-                        .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
-                .readValue(json, CaseAccessPin.class);
+        CaseAccessPin caseAccessPin = new ObjectMapper().readValue(json, CaseAccessPin.class);
 
         assertThat(caseAccessPin.getAccessCode()).isNotBlank();
         assertThat(caseAccessPin.getExpiryDate()).isEqualTo(dateNow);
@@ -29,13 +30,13 @@ public class CaseAccessPinTest {
 
     @Test
     public void testCaseAccessPinBuilder() {
-        LocalDate dateNow = LocalDate.now();
 
+        String dateNow = LocalDate.now().plusDays(EXPIRY_PERIOD).format(DATE_TIME_FORMATTER);
         CaseAccessPin caseAccessPin = new CaseAccessPin.Builder()
                 .expiryDate(dateNow)
                 .caseAccessibleRoles(List.of("[DEFENDANT]", "[CITIZEN]"))
                 .build();
-        assertThat(caseAccessPin.getAccessCode()).hasSize(12);
+        assertThat(caseAccessPin.getAccessCode()).hasSize(CASE_ACCESS_PIN_LENGTH);
         assertThat(caseAccessPin.getExpiryDate()).isEqualTo(dateNow);
         assertThat(caseAccessPin.getCaseAccessibleRoles()).contains("[DEFENDANT]");
     }

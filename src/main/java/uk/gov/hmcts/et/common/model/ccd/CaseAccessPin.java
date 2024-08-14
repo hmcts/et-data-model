@@ -7,7 +7,6 @@ import lombok.Data;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.security.SecureRandom;
-import java.time.LocalDate;
 import java.util.List;
 
 
@@ -20,7 +19,7 @@ public class CaseAccessPin {
     @JsonProperty("accessCode")
     private final String accessCode;
     @JsonProperty("expiryDate")
-    private final LocalDate expiryDate;
+    private final String expiryDate;
     @JsonProperty("caseAccessibleRoles")
     private final List<String> caseAccessibleRoles;
 
@@ -33,7 +32,7 @@ public class CaseAccessPin {
     @JsonPOJOBuilder(withPrefix = "")
     public static class Builder {
         private final String accessCode;
-        private LocalDate expiryDate;
+        private String expiryDate;
         private List<String> caseAccessibleRoles;
 
         private static final String CASE_ACCESS_PIN_ALLOWED_CHARS = "ABCDEFGHJKLMNPRSTVWXYZ23456789";
@@ -52,7 +51,7 @@ public class CaseAccessPin {
                     new SecureRandom());
         }
 
-        public Builder expiryDate(LocalDate expiryDate) {
+        public Builder expiryDate(String expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
