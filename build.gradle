@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.17.1'
+version '3.17.2'
 
 java {
     toolchain {
@@ -49,13 +49,13 @@ dependencies {
     implementation group: 'com.google.guava', name: 'guava', version: '33.2.1-jre'
     implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.16.0'
-    implementation group: 'org.springframework', name: 'spring-core', version: '6.1.11'
+    implementation group: 'org.springframework', name: 'spring-core', version: '6.1.12'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.17.2'
 
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.26.3'
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '3.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
 }
 
 jar {

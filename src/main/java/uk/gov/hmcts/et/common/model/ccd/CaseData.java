@@ -283,6 +283,10 @@ public class CaseData extends Et1CaseData {
     private String linkedCaseCT;
     @JsonProperty("transferredCaseLink")
     private String transferredCaseLink;
+    @JsonProperty("transferredCaseLinkSourceCaseId")
+    private String transferredCaseLinkSourceCaseId;
+    @JsonProperty("transferredCaseLinkSourceCaseTypeId")
+    private String transferredCaseLinkSourceCaseTypeId;
     @JsonProperty("ecmOfficeCT")
     private String ecmOfficeCT;
     @JsonProperty("assignOffice")
