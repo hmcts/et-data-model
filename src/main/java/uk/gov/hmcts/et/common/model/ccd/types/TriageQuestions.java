@@ -8,6 +8,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class TriageQuestions {
+    @JsonProperty("postcode")
+    private String postcode;
     @JsonProperty("claimJurisdiction")
     private String claimJurisdiction;
     @JsonProperty("claimantRepresentedQuestion")
