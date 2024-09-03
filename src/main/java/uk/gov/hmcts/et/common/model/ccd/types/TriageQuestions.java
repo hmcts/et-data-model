@@ -10,6 +10,8 @@ import java.util.List;
 public class TriageQuestions {
     @JsonProperty("postcode")
     private String postcode;
+    @JsonProperty("claimJurisdiction")
+    private String claimJurisdiction;
     @JsonProperty("claimantRepresentedQuestion")
     private String claimantRepresentedQuestion;
     @JsonProperty("caseType")
