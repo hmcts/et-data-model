@@ -1266,8 +1266,8 @@ public class CaseData extends Et1CaseData {
     private String claimantRepResponseText;
     @JsonProperty("claimantRepResponseHasSupportingMaterial")
     private String claimantRepResponseHasSupportingMaterial;
-    @JsonProperty("claimantRepResponseSupportingMaterial")
-    private List<GenericTypeItem<DocumentType>> claimantRepResponseSupportingMaterial;
+    @JsonProperty("claimantRepResSupportingMaterial")
+    private List<GenericTypeItem<DocumentType>> claimantRepResSupportingMaterial;
     @JsonProperty("claimantRepResponseCopyToOtherParty")
     private String claimantRepResponseCopyToOtherParty;
     @JsonProperty("claimantRepResponseCopyNoGiveDetails")
