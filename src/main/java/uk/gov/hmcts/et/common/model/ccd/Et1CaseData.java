@@ -18,6 +18,8 @@ import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
 import uk.gov.hmcts.et.common.model.ccd.types.TriageQuestions;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
+import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3CaseDetailsLinksStatuses;
+import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3HubLinksStatuses;
 import uk.gov.hmcts.et.common.model.generic.BaseCaseData;
 
 import java.util.List;
@@ -81,4 +83,9 @@ public class Et1CaseData extends BaseCaseData {
     // Citizen hub
     @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
+    // ET3 Links
+    @JsonProperty("et3CaseDetailsLinksStatuses")
+    private ET3CaseDetailsLinksStatuses et3CaseDetailsLinksStatuses;
+    @JsonProperty("et3HubLinksStatuses")
+    private ET3HubLinksStatuses et3HubLinksStatuses;
 }
