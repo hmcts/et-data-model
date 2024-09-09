@@ -18,6 +18,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
 import uk.gov.hmcts.et.common.model.ccd.types.TriageQuestions;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
+import uk.gov.hmcts.et.common.model.generic.BaseCaseData;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Et1CaseData extends Et3CaseData {
+public class Et1CaseData extends BaseCaseData {
     @JsonProperty("typeOfClaim")
     private List<String> typeOfClaim;
     @JsonProperty("typesOfClaim")
