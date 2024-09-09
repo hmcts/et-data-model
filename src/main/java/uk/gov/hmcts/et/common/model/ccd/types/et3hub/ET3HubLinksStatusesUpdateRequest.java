@@ -1,4 +1,4 @@
-package uk.gov.hmcts.et.common.model.ccd.types.responsehub;
+package uk.gov.hmcts.et.common.model.ccd.types.et3hub;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

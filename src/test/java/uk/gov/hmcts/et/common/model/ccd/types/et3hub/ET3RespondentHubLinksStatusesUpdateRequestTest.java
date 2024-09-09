@@ -1,10 +1,8 @@
-package uk.gov.hmcts.et.common.model.ccd.types;
+package uk.gov.hmcts.et.common.model.ccd.types.et3hub;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
-import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3HubLinksStatuses;
-import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3HubLinksStatusesUpdateRequest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
