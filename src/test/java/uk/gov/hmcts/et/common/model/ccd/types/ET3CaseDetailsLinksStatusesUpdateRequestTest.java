@@ -4,6 +4,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3CaseDetailsLinksStatuses;
+import uk.gov.hmcts.et.common.model.ccd.types.responsehub.ET3CaseDetailsLinksStatusesUpdateRequest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
