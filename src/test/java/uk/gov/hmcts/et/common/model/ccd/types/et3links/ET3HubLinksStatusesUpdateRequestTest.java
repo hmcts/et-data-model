@@ -14,14 +14,14 @@ public class ET3HubLinksStatusesUpdateRequestTest {
     @Test
     void testET3HubLinksStatusesUpdateRequestType() {
 
-        ET3HubLinksStatusesUpdateRequest eT3HubLinksStatusesUpdateRequest =
+        ET3HubLinksStatusesUpdateRequest et3HubLinksStatusesUpdateRequest =
                 ET3HubLinksStatusesUpdateRequest.builder().build();
 
-        assertTrue(StringUtils.isBlank(eT3HubLinksStatusesUpdateRequest.getCaseId()));
-        assertTrue(StringUtils.isBlank(eT3HubLinksStatusesUpdateRequest.getCaseTypeId()));
-        assertTrue(ObjectUtils.isEmpty(eT3HubLinksStatusesUpdateRequest.getEt3HubLinksStatuses()));
+        assertTrue(StringUtils.isBlank(et3HubLinksStatusesUpdateRequest.getCaseId()));
+        assertTrue(StringUtils.isBlank(et3HubLinksStatusesUpdateRequest.getCaseTypeId()));
+        assertTrue(ObjectUtils.isEmpty(et3HubLinksStatusesUpdateRequest.getEt3HubLinksStatuses()));
 
-        ET3HubLinksStatusesUpdateRequest et3ET3HubLinksStatusesUpdateRequestNotEmpty =
+        ET3HubLinksStatusesUpdateRequest et3HubLinksStatusesUpdateRequestNotEmpty =
                 ET3HubLinksStatusesUpdateRequest
                         .builder()
                         .caseId(TEST_CASE_ID)
@@ -29,10 +29,10 @@ public class ET3HubLinksStatusesUpdateRequestTest {
                         .et3HubLinksStatuses(new ET3HubLinksStatuses())
                         .build();
 
-        assertTrue(StringUtils.isNotBlank(et3ET3HubLinksStatusesUpdateRequestNotEmpty.getCaseId()));
-        assertTrue(StringUtils.isNotBlank(et3ET3HubLinksStatusesUpdateRequestNotEmpty.getCaseTypeId()));
+        assertTrue(StringUtils.isNotBlank(et3HubLinksStatusesUpdateRequestNotEmpty.getCaseId()));
+        assertTrue(StringUtils.isNotBlank(et3HubLinksStatusesUpdateRequestNotEmpty.getCaseTypeId()));
         assertTrue(ObjectUtils.isNotEmpty(
-                et3ET3HubLinksStatusesUpdateRequestNotEmpty.getEt3HubLinksStatuses()));
+                et3HubLinksStatusesUpdateRequestNotEmpty.getEt3HubLinksStatuses()));
 
     }
 
