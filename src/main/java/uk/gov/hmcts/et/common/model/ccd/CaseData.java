@@ -1770,5 +1770,7 @@ public class CaseData extends Et1CaseData {
     private List<String> contactLanguageQuestion;
     @JsonProperty("requiresSubmissionDocuments")
     private String requiresSubmissionDocuments;
+    @JsonProperty("legalRepDocumentsMarkdown")
+    private String legalRepDocumentsMarkdown;
 
 }
