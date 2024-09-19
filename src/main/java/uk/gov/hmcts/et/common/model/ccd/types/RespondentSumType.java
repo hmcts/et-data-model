@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.ccd.Address;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.types.et3links.ET3CaseDetailsLinksStatuses;
+import uk.gov.hmcts.et.common.model.ccd.types.et3links.ET3HubLinksStatuses;
 
 import java.util.List;
 
@@ -204,4 +206,12 @@ public class RespondentSumType {
     private String employmentDetailsSection;
     @JsonProperty("claimDetailsSection")
     private String claimDetailsSection;
+
+    //ET3 fields
+    @JsonProperty("idamId")
+    private String idamId;
+    @JsonProperty("et3CaseDetailsLinksStatuses")
+    private ET3CaseDetailsLinksStatuses et3CaseDetailsLinksStatuses;
+    @JsonProperty("et3HubLinksStatuses")
+    private ET3HubLinksStatuses et3HubLinksStatuses;
 }
