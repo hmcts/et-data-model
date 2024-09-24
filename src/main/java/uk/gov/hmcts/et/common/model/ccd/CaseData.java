@@ -1527,8 +1527,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("draftAndSignJudgement")
     private DraftAndSignJudgement draftAndSignJudgement;
-    @JsonProperty("draftAndSignJudgementDocument")
-    private List<DocumentTypeItem> draftAndSignJudgementDocuments;
 
     @JsonProperty("privateHearingRequiredFlag")
     private String privateHearingRequiredFlag;
