@@ -2,10 +2,11 @@ plugins {
     id 'java'
     id 'maven-publish'
     id 'checkstyle'
+    id 'io.freefair.lombok' version '8.10'
 }
 
 group 'com.github.hmcts'
-version '3.17.6'
+version '3.17.7'
 
 java {
     toolchain {
