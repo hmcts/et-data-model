@@ -6,7 +6,7 @@ import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class EtICDoNotListHearing {
+public class EtICHearingNotListedDoNotListHearing {
     @JsonProperty("etICDoNotListHearingDirections")
     private String etICDoNotListHearingDirections;
 }
