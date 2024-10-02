@@ -24,9 +24,15 @@ public class Et3RequestTest {
         Et3Request et3Request = generateEt3Request();
         assertTrue(ObjectUtils.isNotEmpty(et3Request));
 
-        assertEquals(Et3RequestTestConstants.CASE_ID, et3Request.getCaseId());
+        assertEquals(Et3RequestTestConstants.CASE_SUBMISSION_REFERENCE, et3Request.getCaseSubmissionReference());
         assertEquals(Et3RequestTestConstants.REQUEST_TYPE, et3Request.getRequestType());
-        assertEquals(Et3RequestTestConstants.CASE_TYPE, et3Request.getCaseType());
+        assertEquals(Et3RequestTestConstants.CASE_TYPE_ID, et3Request.getCaseTypeId());
+        assertEquals(Et3RequestTestConstants.CASE_DETAILS_LINKS_SECTION_ID, et3Request.getCaseDetailsLinksSectionId());
+        assertEquals(Et3RequestTestConstants.CASE_DETAILS_LINKS_SECTION_STATUS,
+                et3Request.getCaseDetailsLinksSectionStatus());
+        assertEquals(Et3RequestTestConstants.RESPONSE_HUB_LINKS_SECTION_ID, et3Request.getResponseHubLinksSectionId());
+        assertEquals(Et3RequestTestConstants.RESPONSE_HUB_LINKS_SECTION_STATUS,
+                et3Request.getResponseHubLinksSectionStatus());
         assertEquals(Et3RequestTestConstants.RESPONSE_STATUS, et3Request.getRespondent().getResponseStatus());
         assertEquals(Et3RequestTestConstants.RESPONSE_TO_CLAIM, et3Request.getRespondent().getResponseToClaim());
         assertEquals(Et3RequestTestConstants.REJECTION_REASON, et3Request.getRespondent().getRejectionReason());

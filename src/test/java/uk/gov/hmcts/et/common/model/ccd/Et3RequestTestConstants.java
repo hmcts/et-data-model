@@ -2,9 +2,13 @@ package uk.gov.hmcts.et.common.model.ccd;
 
 public final class Et3RequestTestConstants {
 
-    public static final String CASE_ID = "1727450902054862";
+    public static final String CASE_SUBMISSION_REFERENCE = "1727450902054862";
     public static final String REQUEST_TYPE = "update";
-    public static final String CASE_TYPE = "ET_EnglandWales";
+    public static final String CASE_TYPE_ID = "ET_EnglandWales";
+    public static final String CASE_DETAILS_LINKS_SECTION_ID = "respondentResponse";
+    public static final String CASE_DETAILS_LINKS_SECTION_STATUS = "inProgress";
+    public static final String RESPONSE_HUB_LINKS_SECTION_ID = "contactDetails";
+    public static final String RESPONSE_HUB_LINKS_SECTION_STATUS = "inProgress";
     public static final String RESPONSE_STATUS = "Progressing";
     public static final String RESPONSE_TO_CLAIM = "Test response to claim";
     public static final String REJECTION_REASON = "Test rejection reason";
