@@ -19,12 +19,20 @@ import uk.gov.hmcts.et.common.model.ccd.types.RespondentSumType;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class Et3Request {
-    @JsonProperty("caseId")
-    private String caseId;
+    @JsonProperty("caseSubmissionReference")
+    private String caseSubmissionReference;
     @JsonProperty("requestType")
     private String requestType;
-    @JsonProperty("caseType")
-    private String caseType;
+    @JsonProperty("caseTypeId")
+    private String caseTypeId;
+    @JsonProperty("caseDetailsLinksSectionId")
+    private String caseDetailsLinksSectionId;
+    @JsonProperty("caseDetailsLinksSectionStatus")
+    private String caseDetailsLinksSectionStatus;
+    @JsonProperty("responseHubLinksSectionId")
+    private String responseHubLinksSectionId;
+    @JsonProperty("responseHubLinksSectionStatus")
+    private String responseHubLinksSectionStatus;
     @JsonProperty("respondent")
     private RespondentSumType respondent;
 }

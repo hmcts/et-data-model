@@ -1,7 +1,11 @@
 {
-  "caseId": "1727450902054862",
+  "caseSubmissionReference": "1727450902054862",
   "requestType": "update",
-  "caseType": "ET_EnglandWales",
+  "caseTypeId": "ET_EnglandWales",
+  "caseDetailsLinksSectionId": "respondentResponse",
+  "caseDetailsLinksSectionStatus": "inProgress",
+  "responseHubLinksSectionId": "contactDetails",
+  "responseHubLinksSectionStatus": "inProgress",
   "respondent":
   {
     "response_status": "Progressing",
