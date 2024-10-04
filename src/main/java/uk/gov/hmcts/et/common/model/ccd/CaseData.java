@@ -760,6 +760,8 @@ public class CaseData extends Et1CaseData {
     private EtICListForFinalHearing etICHearingNotListedListForFinalHearing;
     @JsonProperty("etICHearingNotListedUDLHearing")
     private EtIcudlHearing etICHearingNotListedUDLHearing;
+    @JsonProperty("etICHearingNotListedDoNotListHearingDirections")
+    private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
     // ET Initial Consideration - Hearing already listed
@@ -1776,5 +1778,22 @@ public class CaseData extends Et1CaseData {
     private String requiresSubmissionDocuments;
     @JsonProperty("legalRepDocumentsMarkdown")
     private String legalRepDocumentsMarkdown;
+
+    @JsonProperty("claimantSelectNotification")
+    private DynamicFixedListType claimantSelectNotification;
+    @JsonProperty("claimantNotificationTableMarkdown")
+    private String claimantNotificationTableMarkdown;
+    @JsonProperty("claimantNotificationResponseText")
+    private String claimantNotificationResponseText;
+    @JsonProperty("claimantNotificationSupportingMaterial")
+    private String claimantNotificationSupportingMaterial;
+    @JsonProperty("claimantNotificationDocuments")
+    private List<GenericTypeItem<DocumentType>> claimantNotificationDocuments;
+    @JsonProperty("isRespondentSystemUser")
+    private String isRespondentSystemUser;
+    @JsonProperty("claimantNotificationCopyToOtherParty")
+    private String claimantNotificationCopyToOtherParty;
+    @JsonProperty("claimantNotificationsCopyNoDetails")
+    private String claimantNotificationsCopyNoDetails;
 
 }
