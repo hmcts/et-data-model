@@ -1258,6 +1258,31 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("tseRespondingToTribunalText")
     private String tseRespondingToTribunalText;
 
+    // Claimant Representative Response
+    @JsonProperty("claimantRepRespondSelectApplication")
+    private DynamicFixedListType claimantRepRespondSelectApplication;
+    @JsonProperty("claimantRepResponseIntro")
+    private String claimantRepResponseIntro;
+    @JsonProperty("claimantRepResponseTable")
+    private String claimantRepResponseTable;
+    @JsonProperty("claimantRepResponseText")
+    private String claimantRepResponseText;
+    @JsonProperty("claimantRepResponseHasSupportingMaterial")
+    private String claimantRepResponseHasSupportingMaterial;
+    @JsonProperty("claimantRepResSupportingMaterial")
+    private List<GenericTypeItem<DocumentType>> claimantRepResSupportingMaterial;
+    @JsonProperty("claimantRepResponseCopyToOtherParty")
+    private String claimantRepResponseCopyToOtherParty;
+    @JsonProperty("claimantRepResponseCopyNoGiveDetails")
+    private String claimantRepResponseCopyNoGiveDetails;
+    @JsonProperty("resClaimantRepTableMarkUp")
+    private String resClaimantRepTableMarkUp;
+    // if Claimant Representative is responding to Tribunal
+    @JsonProperty("claimantRepResToTribunal")
+    private String claimantRepRespondingToTribunal;
+    @JsonProperty("claimantRepResToTribunalText")
+    private String claimantRepRespondingToTribunalText;
+
     //TSE Admin Respond to an application
     @JsonProperty("tseAdmReplyTableMarkUp")
     private String tseAdmReplyTableMarkUp;
