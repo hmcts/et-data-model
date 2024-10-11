@@ -11,6 +11,14 @@ import java.util.List;
 public class EtIcudlHearing {
     @JsonProperty("etICEJSitAlone")
     private String etIcejSitAlone;
+    @JsonProperty("etICIssueStandardDirections")
+    private String etICIssueStandardDirections;
+    @JsonProperty("etICUdlGiveReasonsIsd")
+    private String etICUdlGiveReasonsIsd;
+
+    /* Candidate for removable - Start */
+    /* These fields are not used in the configs
+    *  Left in to prevent possible breaking change */
     @JsonProperty("etICUDLGiveReasons")
     private List<String> etIcudlGiveReasons;
     @JsonProperty("etICUDLDisputeOnFacts")
@@ -27,6 +35,8 @@ public class EtIcudlHearing {
     private String etIcudlConcurrentProceedings;
     @JsonProperty("etICUDLOther")
     private String etIcudlOther;
+    /* Candidate for removable - end */
+
     @JsonProperty("etICUDLHearFormat")
     private String etIcudlHearFormat;
     @JsonProperty("etICUDLCVPIssue")
