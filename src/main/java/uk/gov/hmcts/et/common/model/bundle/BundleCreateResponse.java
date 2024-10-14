@@ -17,9 +17,9 @@ public class BundleCreateResponse {
     @JsonProperty("data")
     public BundleData data;
     @JsonProperty("errors")
-    public List<Object> errors = null;
+    public List<String> errors;
     @JsonProperty("warnings")
-    public List<Object> warnings = null;
+    public List<String> warnings;
     @JsonProperty("documentTaskId")
     public Integer documentTaskId;
 
