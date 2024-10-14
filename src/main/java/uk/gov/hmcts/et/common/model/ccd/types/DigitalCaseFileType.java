@@ -9,6 +9,8 @@ import lombok.Data;
 public class DigitalCaseFileType {
     @JsonProperty("uploadedDocument")
     private UploadedDocumentType uploadedDocument;
+    @JsonProperty("status")
+    private String status;
     @JsonProperty("dateGenerated")
     private String dateGenerated;
 }
