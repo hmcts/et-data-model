@@ -764,6 +764,8 @@ public class CaseData extends Et1CaseData {
     private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+    @JsonProperty("etICHearingNotListedOtherDirections")
+    private String etICHearingNotListedOtherDirections;
     // ET Initial Consideration - Hearing already listed
 
     @JsonProperty("etICHearingListedAnswers")
