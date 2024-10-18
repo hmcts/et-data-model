@@ -222,8 +222,6 @@ public class RespondentSumType {
     private String et3Status;
     @JsonProperty("et3IsRespondentAddressCorrect")
     private String et3IsRespondentAddressCorrect;
-    @JsonProperty("et3ContactPreferencePostReason")
-    private String et3ContactPreferencePostReason;
     @JsonProperty("contactDetailsSection")
     private String contactDetailsSection;
     @JsonProperty("employerDetailsSection")
