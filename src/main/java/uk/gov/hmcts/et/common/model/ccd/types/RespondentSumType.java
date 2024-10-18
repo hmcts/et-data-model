@@ -218,6 +218,12 @@ public class RespondentSumType {
     private String et3ResponseLanguagePreference;
     @JsonProperty("et3ResponseHearingRespondentNoDetails")
     private String et3ResponseHearingRespondentNoDetails;
+    @JsonProperty("et3Status")
+    private String et3Status;
+    @JsonProperty("et3IsRespondentAddressCorrect")
+    private String et3IsRespondentAddressCorrect;
+    @JsonProperty("et3ContactPreferencePostReason")
+    private String et3ContactPreferencePostReason;
     @JsonProperty("contactDetailsSection")
     private String contactDetailsSection;
     @JsonProperty("employerDetailsSection")
@@ -230,10 +236,4 @@ public class RespondentSumType {
     private String contestClaimSection;
     @JsonProperty("employersContractClaimSection")
     private String employersContractClaimSection;
-    @JsonProperty("et3Status")
-    private String et3Status;
-    @JsonProperty("et3IsRespondentAddressCorrect")
-    private String et3IsRespondentAddressCorrect;
-    @JsonProperty("et3ContactPreferencePostReason")
-    private String et3ContactPreferencePostReason;
 }
