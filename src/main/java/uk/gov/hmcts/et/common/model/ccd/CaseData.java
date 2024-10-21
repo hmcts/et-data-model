@@ -805,6 +805,8 @@ public class CaseData extends Et1CaseData {
     private List<DocumentTypeItem> icDocumentCollection2;
     @JsonProperty("icDocumentCollection3")
     private List<DocumentTypeItem> icDocumentCollection3;
+    @JsonProperty("icAllDocumentCollection")
+    private List<DocumentTypeItem> icAllDocumentCollection;
 
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
