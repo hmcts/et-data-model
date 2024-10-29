@@ -715,6 +715,10 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
     private String etInitialConsiderationRespondent;
+    @JsonProperty("icHearingPanelPreference")
+    private String icHearingPanelPreference;
+    @JsonProperty("icHearingPanelPreferenceReason")
+    private String icHearingPanelPreferenceReason;
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
     @JsonProperty("etInitialConsiderationJurisdictionCodes")
