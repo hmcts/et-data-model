@@ -18,6 +18,8 @@ public class ET3HubLinksStatuses {
     private String payPensionBenefitDetails;
     @JsonProperty("contestClaim")
     private String contestClaim;
+    @JsonProperty("employersContractClaim")
+    private String employersContractClaim;
     @JsonProperty("checkYorAnswers")
     private String checkYorAnswers;
 

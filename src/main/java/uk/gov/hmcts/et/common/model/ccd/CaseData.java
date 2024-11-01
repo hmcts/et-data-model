@@ -715,6 +715,10 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
     private String etInitialConsiderationRespondent;
+    @JsonProperty("icHearingPanelPreference")
+    private String icHearingPanelPreference;
+    @JsonProperty("icHearingPanelPreferenceReason")
+    private String icHearingPanelPreferenceReason;
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
     @JsonProperty("etIcHearingPanelPreference")
@@ -766,6 +770,8 @@ public class CaseData extends Et1CaseData {
     private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+    @JsonProperty("etICHearingNotListedOtherDirections")
+    private String etICHearingNotListedOtherDirections;
     // ET Initial Consideration - Hearing already listed
 
     @JsonProperty("etICHearingListedAnswers")
