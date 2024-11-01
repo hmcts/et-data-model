@@ -721,6 +721,8 @@ public class CaseData extends Et1CaseData {
     private String icHearingPanelPreferenceReason;
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
+    @JsonProperty("etIcHearingPanelPreference")
+    private String etIcHearingPanelPreference;
     @JsonProperty("etInitialConsiderationJurisdictionCodes")
     private String etInitialConsiderationJurisdictionCodes;
     @JsonProperty("icReceiptET3FormIssues")
