@@ -39,6 +39,8 @@ public class HearingType {
     private String hearingNotes;
     @JsonProperty("judge")
     private DynamicFixedListType judge;
+    @JsonProperty("additionalJudge")
+    private DynamicFixedListType additionalJudge;
     @JsonProperty("Hearing_Glasgow")
     private DynamicFixedListType hearingGlasgow;
     @JsonProperty("Hearing_Aberdeen")
