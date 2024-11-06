@@ -20,4 +20,8 @@ public class ClaimantHearingPreference {
     private String contactLanguage;
     @JsonProperty("hearing_language")
     private String hearingLanguage;
+    @JsonProperty("claimant_hearing_panel_preference")
+    private String claimantHearingPanelPreference;
+    @JsonProperty("claimant_hearing_panel_preference_why")
+    private String claimantHearingPanelPreferenceWhy;
 }

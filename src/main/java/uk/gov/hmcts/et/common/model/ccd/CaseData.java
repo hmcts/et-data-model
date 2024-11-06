@@ -325,6 +325,12 @@ public class CaseData extends Et1CaseData {
     // Hearing Details fields
     @JsonProperty("hearingDetailsHearing")
     private DynamicFixedListType hearingDetailsHearing;
+    @JsonProperty("uploadHearingNotesDocument")
+    private Document uploadHearingNotesDocument;
+    @JsonProperty("doesHearingNotesDocExist")
+    private String doesHearingNotesDocExist;
+    @JsonProperty("removeHearingNotesDocument")
+    private List<String> removeHearingNotesDocument;
     @JsonProperty("hearingDetailsStatus")
     private String hearingDetailsStatus;
     @JsonProperty("hearingDetailsPostponedBy")
@@ -721,6 +727,8 @@ public class CaseData extends Et1CaseData {
     private String icRespondentHearingPanelPreferenceReason;
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
+    @JsonProperty("etIcHearingPanelPreference")
+    private String etIcHearingPanelPreference;
     @JsonProperty("etInitialConsiderationJurisdictionCodes")
     private String etInitialConsiderationJurisdictionCodes;
     @JsonProperty("icReceiptET3FormIssues")
