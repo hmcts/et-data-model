@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.18.13'
+version '3.18.14'
 
 java {
     toolchain {
@@ -16,7 +16,7 @@ java {
 
 checkstyle {
     maxWarnings = 0
-    toolVersion = '10.20.0'
+    toolVersion = '10.19.0'
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
