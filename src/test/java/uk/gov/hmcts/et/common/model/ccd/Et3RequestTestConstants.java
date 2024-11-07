@@ -9,6 +9,7 @@ public final class Et3RequestTestConstants {
     public static final String CASE_DETAILS_LINKS_SECTION_STATUS = "inProgress";
     public static final String RESPONSE_HUB_LINKS_SECTION_ID = "contactDetails";
     public static final String RESPONSE_HUB_LINKS_SECTION_STATUS = "inProgress";
+    public static final String RESPONDENT_CCD_ID = "123456789";
     public static final String RESPONSE_STATUS = "Progressing";
     public static final String RESPONSE_TO_CLAIM = "Test response to claim";
     public static final String REJECTION_REASON = "Test rejection reason";
