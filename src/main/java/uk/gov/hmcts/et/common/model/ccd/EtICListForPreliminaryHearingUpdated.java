@@ -11,14 +11,14 @@ import java.util.List;
 public class EtICListForPreliminaryHearingUpdated {
     @JsonProperty("etICTypeOfPreliminaryHearing")
     private List<String> etICTypeOfPreliminaryHearing;
-    @JsonProperty("etICPurposeOfPreliminaryHearing")
-    private List<String> etICPurposeOfPreliminaryHearing;
-    @JsonProperty("etICGiveDetailsOfHearingNotice")
-    private String etICGiveDetailsOfHearingNotice;
     @JsonProperty("etICLengthOfPrelimHearing")
     private String etICLengthOfPrelimHearing;
     @JsonProperty("prelimHearingLengthNumType")
     private String prelimHearingLengthNumType;
+    @JsonProperty("etICPurposeOfPreliminaryHearing")
+    private List<String> etICPurposeOfPreliminaryHearing;
+    @JsonProperty("etICGiveDetailsOfHearingNotice")
+    private String etICGiveDetailsOfHearingNotice;
     @JsonProperty("etICIsPreliminaryHearingWithMembers")
     private String etICIsPreliminaryHearingWithMembers;
     @JsonProperty("etICIsPreliminaryHearingWithMembersReason")

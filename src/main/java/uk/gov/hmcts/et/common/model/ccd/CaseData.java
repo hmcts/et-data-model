@@ -775,6 +775,10 @@ public class CaseData extends Et1CaseData {
     private EtIcudlHearing etICHearingNotListedUDLHearing;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+
+    //New fields to replace the hidden "hearing not listed" related fields
+    @JsonProperty("etICHearingNotListedListUpdated")
+    private List<String> etICHearingNotListedListUpdated;
     @JsonProperty("etICHearingNotListedListForPrelimHearingUpdated")
     private EtICListForPreliminaryHearingUpdated etICHearingNotListedListForPrelimHearingUpdated;
     @JsonProperty("etICHearingNotListedListForFinalHearingUpdated")
