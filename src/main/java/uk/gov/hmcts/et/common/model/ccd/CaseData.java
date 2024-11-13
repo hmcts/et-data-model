@@ -764,6 +764,7 @@ public class CaseData extends Et1CaseData {
     // ET Initial Consideration - Hearing Not Listed
     @JsonProperty("etICHearingNotListedList")
     private List<String> etICHearingNotListedList;
+
     @JsonProperty("etICHearingNotListedSeekComments")
     private EtICSeekComments etICHearingNotListedSeekComments;
     @JsonProperty("etICHearingNotListedListForPrelimHearing")
@@ -772,10 +773,18 @@ public class CaseData extends Et1CaseData {
     private EtICListForFinalHearing etICHearingNotListedListForFinalHearing;
     @JsonProperty("etICHearingNotListedUDLHearing")
     private EtIcudlHearing etICHearingNotListedUDLHearing;
-    @JsonProperty("etICHearingNotListedDoNotListHearingDirections")
-    private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+
+    //New fields to replace the hidden "hearing not listed" related fields
+    @JsonProperty("etICHearingNotListedListUpdated")
+    private List<String> etICHearingNotListedListUpdated;
+    @JsonProperty("etICHearingNotListedListForPrelimHearingUpdated")
+    private EtICListForPreliminaryHearingUpdated etICHearingNotListedListForPrelimHearingUpdated;
+    @JsonProperty("etICHearingNotListedListForFinalHearingUpdated")
+    private EtICListForFinalHearingUpdated etICHearingNotListedListForFinalHearingUpdated;
+    @JsonProperty("etICHearingNotListedDoNotListHearingDirections")
+    private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedOtherDirections")
     private String etICHearingNotListedOtherDirections;
     // ET Initial Consideration - Hearing already listed
