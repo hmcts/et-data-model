@@ -9,18 +9,18 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtICListForPreliminaryHearingUpdated {
-    @JsonProperty("etICTypeOfPreliminaryHearing")
+    @JsonProperty("etICTypeOfPreliminaryHearingV2")
     private List<String> etICTypeOfPreliminaryHearing;
-    @JsonProperty("etICPurposeOfPreliminaryHearing")
+    @JsonProperty("etICPurposeOfPreliminaryHearingV2")
     private List<String> etICPurposeOfPreliminaryHearing;
-    @JsonProperty("etICGiveDetailsOfHearingNotice")
+    @JsonProperty("etICGiveDetailsOfHearingNoticeV2")
     private String etICGiveDetailsOfHearingNotice;
-    @JsonProperty("etICLengthOfPrelimHearing")
+    @JsonProperty("etICLengthOfPrelimHearingV2")
     private String etICLengthOfPrelimHearing;
-    @JsonProperty("prelimHearingLengthNumType")
+    @JsonProperty("prelimHearingLengthNumTypeV2")
     private String prelimHearingLengthNumType;
-    @JsonProperty("etICIsPreliminaryHearingWithMembers")
+    @JsonProperty("etICIsPreliminaryHearingWithMembersV2")
     private String etICIsPreliminaryHearingWithMembers;
-    @JsonProperty("etICIsPreliminaryHearingWithMembersReason")
+    @JsonProperty("etICIsPreliminaryHearingWithMembersReasonV2")
     private String etICIsPreliminaryHearingWithMembersReason;
 }
