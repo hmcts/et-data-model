@@ -18,7 +18,7 @@ public class EtICListForFinalHearingUpdated {
     @JsonProperty("etICFinalHearingIsEJSitAlone")
     private String etICFinalHearingIsEJSitAlone;
     @JsonProperty("etICFinalHearingIsEJSitAloneReason")
-    private String etICFinalHearingIsEJSitAloneReason;
+    private List<String> etICFinalHearingIsEJSitAloneReason;
     @JsonProperty("etICFinalHearingIsEJSitAloneFurtherDetails")
     private String etICFinalHearingIsEJSitAloneFurtherDetails;
 }
