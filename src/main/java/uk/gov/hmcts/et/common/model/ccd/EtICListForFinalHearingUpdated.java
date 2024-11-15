@@ -9,11 +9,11 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class EtICListForFinalHearingUpdated {
-    @JsonProperty("etICTypeOfFinalHearing")
+    @JsonProperty("etICTypeOfFinalHearingV2")
     private List<String> etICTypeOfFinalHearing;
-    @JsonProperty("etICLengthOfFinalHearing")
+    @JsonProperty("etICLengthOfFinalHearingV2")
     private String etICLengthOfFinalHearing;
-    @JsonProperty("finalHearingLengthNumType")
+    @JsonProperty("finalHearingLengthNumTypeV2")
     private String finalHearingLengthNumType;
     @JsonProperty("etICFinalHearingIsEJSitAlone")
     private String etICFinalHearingIsEJSitAlone;
