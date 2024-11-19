@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'maven-publish'
     id 'checkstyle'
-    id 'io.freefair.lombok' version '8.10.2'
+    id 'io.freefair.lombok' version '8.11'
 }
 
 group 'com.github.hmcts'
@@ -38,7 +38,7 @@ publishing {
 }
 
 ext {
-    lombokVersion = '1.18.34'
+    lombokVersion = '1.18.36'
 }
 
 dependencies {
