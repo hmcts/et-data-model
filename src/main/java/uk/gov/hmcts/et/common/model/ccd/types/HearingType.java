@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
+import uk.gov.hmcts.et.common.model.ccd.Document;
 import uk.gov.hmcts.et.common.model.ccd.items.DateListedTypeItem;
 
 import java.util.List;
@@ -52,6 +53,8 @@ public class HearingType {
     private List<String> hearingFormat;
     @JsonProperty("judicialMediation")
     private String judicialMediation;
+    @JsonProperty("hearingNotesDocument")
+    private Document hearingNotesDocument;
 
     public boolean hasHearingJudge() {
         return judge != null && judge.getValue() != null;
