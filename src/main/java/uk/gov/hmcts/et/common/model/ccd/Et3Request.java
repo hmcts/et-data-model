@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import uk.gov.hmcts.et.common.model.ccd.types.RespondentSumType;
+import uk.gov.hmcts.et.common.model.ccd.items.RespondentSumTypeItem;
 
 /**
  * Model to update or submit ET3 form.
@@ -34,5 +34,5 @@ public class Et3Request {
     @JsonProperty("responseHubLinksSectionStatus")
     private String responseHubLinksSectionStatus;
     @JsonProperty("respondent")
-    private RespondentSumType respondent;
+    private RespondentSumTypeItem respondent;
 }
