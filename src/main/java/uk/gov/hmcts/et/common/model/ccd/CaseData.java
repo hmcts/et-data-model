@@ -821,6 +821,16 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("etInitialConsiderationRule28")
     private EtInitialConsiderationRule28 etInitialConsiderationRule28;
 
+    // Initial Consideration Document Collections
+    @JsonProperty("icDocumentCollection1")
+    private List<DocumentTypeItem> icDocumentCollection1;
+    @JsonProperty("icDocumentCollection2")
+    private List<DocumentTypeItem> icDocumentCollection2;
+    @JsonProperty("icDocumentCollection3")
+    private List<DocumentTypeItem> icDocumentCollection3;
+    @JsonProperty("icAllDocumentCollection")
+    private List<DocumentTypeItem> icAllDocumentCollection;
+
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
     private String et3ResponseShowInset;
