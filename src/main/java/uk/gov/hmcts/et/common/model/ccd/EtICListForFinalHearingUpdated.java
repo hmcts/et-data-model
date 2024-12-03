@@ -11,6 +11,10 @@ import java.util.List;
 public class EtICListForFinalHearingUpdated {
     @JsonProperty("etICTypeOfFinalHearingV2")
     private List<String> etICTypeOfFinalHearing;
+    @JsonProperty("etICTypeOfVideoHearingOrder")
+    private String etICTypeOfVideoHearingOrder;
+    @JsonProperty("etICTypeOfF2fHearingOrder")
+    private String etICTypeOfF2fHearingOrder;
     @JsonProperty("etICLengthOfFinalHearingV2")
     private String etICLengthOfFinalHearing;
     @JsonProperty("finalHearingLengthNumTypeV2")
