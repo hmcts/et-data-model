@@ -12,9 +12,9 @@ public class EtICListForFinalHearingUpdated {
     @JsonProperty("etICTypeOfFinalHearingV2")
     private List<String> etICTypeOfFinalHearing;
     @JsonProperty("etICTypeOfVideoHearingOrder")
-    private String etICTypeOfVideoHearingOrder;
+    private List<String> etICTypeOfVideoHearingOrder;
     @JsonProperty("etICTypeOfF2fHearingOrder")
-    private String etICTypeOfF2fHearingOrder;
+    private List<String> etICTypeOfF2fHearingOrder;
     @JsonProperty("etICHearingOrderBUCompliance")
     private String etICHearingOrderBUCompliance;
     @JsonProperty("etICLengthOfFinalHearingV2")
