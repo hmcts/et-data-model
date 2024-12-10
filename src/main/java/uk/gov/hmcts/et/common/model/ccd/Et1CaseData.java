@@ -15,6 +15,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.ClaimantType;
 import uk.gov.hmcts.et.common.model.ccd.types.ClaimantWorkAddressType;
 import uk.gov.hmcts.et.common.model.ccd.types.NewEmploymentType;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeC;
+import uk.gov.hmcts.et.common.model.ccd.types.TTL;
 import uk.gov.hmcts.et.common.model.ccd.types.TaskListCheckType;
 import uk.gov.hmcts.et.common.model.ccd.types.TriageQuestions;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.HubLinksStatuses;
@@ -81,4 +82,6 @@ public class Et1CaseData extends BaseCaseData {
     // Citizen hub
     @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
+    @JsonProperty("ttl")
+    private TTL ttl;
 }

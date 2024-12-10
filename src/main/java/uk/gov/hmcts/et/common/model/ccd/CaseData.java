@@ -1622,7 +1622,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("batchCaseStayed")
     private String batchCaseStayed;
 
-
     /**
      * Convenience method for using the new ListTypeItem pattern for setting repCollection.
      * @param repCollection Collection of respondent representatives
