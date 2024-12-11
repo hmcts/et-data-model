@@ -7,10 +7,10 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class TTL {
-    @JsonProperty("systemTTL")
+    @JsonProperty("SystemTTL")
     private String systemTTL;
-    @JsonProperty("overrideTTL")
+    @JsonProperty("OverrideTTL")
     private String overrideTTL;
-    @JsonProperty("suspendedTTL")
-    private String suspendedTTL;
+    @JsonProperty("Suspended")
+    private String suspended;
 }
