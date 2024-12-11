@@ -723,10 +723,10 @@ public class CaseData extends Et1CaseData {
     private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
     private String etInitialConsiderationRespondent;
-    @JsonProperty("icHearingPanelPreference")
-    private String icHearingPanelPreference;
-    @JsonProperty("icHearingPanelPreferenceReason")
-    private String icHearingPanelPreferenceReason;
+    @JsonProperty("icRespondentHearingPanelPreference")
+    private String icRespondentHearingPanelPreference;
+    @JsonProperty("icRespondentHearingPanelPreferenceReason")
+    private String icRespondentHearingPanelPreferenceReason;
     @JsonProperty("etInitialConsiderationHearing")
     private String etInitialConsiderationHearing;
     @JsonProperty("etIcHearingPanelPreference")
@@ -766,6 +766,7 @@ public class CaseData extends Et1CaseData {
     // ET Initial Consideration - Hearing Not Listed
     @JsonProperty("etICHearingNotListedList")
     private List<String> etICHearingNotListedList;
+
     @JsonProperty("etICHearingNotListedSeekComments")
     private EtICSeekComments etICHearingNotListedSeekComments;
     @JsonProperty("etICHearingNotListedListForPrelimHearing")
@@ -774,10 +775,18 @@ public class CaseData extends Et1CaseData {
     private EtICListForFinalHearing etICHearingNotListedListForFinalHearing;
     @JsonProperty("etICHearingNotListedUDLHearing")
     private EtIcudlHearing etICHearingNotListedUDLHearing;
-    @JsonProperty("etICHearingNotListedDoNotListHearingDirections")
-    private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedAnyOtherDirections")
     private String etICHearingNotListedAnyOtherDirections;
+
+    //New fields to replace the hidden "hearing not listed" related fields
+    @JsonProperty("etICHearingNotListedListUpdated")
+    private List<String> etICHearingNotListedListUpdated;
+    @JsonProperty("etICHearingNotListedListForPrelimHearingUpdated")
+    private EtICListForPreliminaryHearingUpdated etICHearingNotListedListForPrelimHearingUpdated;
+    @JsonProperty("etICHearingNotListedListForFinalHearingUpdated")
+    private EtICListForFinalHearingUpdated etICHearingNotListedListForFinalHearingUpdated;
+    @JsonProperty("etICHearingNotListedDoNotListHearingDirections")
+    private String etICHearingNotListedDoNotListHearingDirections;
     @JsonProperty("etICHearingNotListedOtherDirections")
     private String etICHearingNotListedOtherDirections;
     // ET Initial Consideration - Hearing already listed
@@ -813,6 +822,16 @@ public class CaseData extends Et1CaseData {
     private EtInitialConsiderationRule27 etInitialConsiderationRule27;
     @JsonProperty("etInitialConsiderationRule28")
     private EtInitialConsiderationRule28 etInitialConsiderationRule28;
+
+    // Initial Consideration Document Collections
+    @JsonProperty("icDocumentCollection1")
+    private List<DocumentTypeItem> icDocumentCollection1;
+    @JsonProperty("icDocumentCollection2")
+    private List<DocumentTypeItem> icDocumentCollection2;
+    @JsonProperty("icDocumentCollection3")
+    private List<DocumentTypeItem> icDocumentCollection3;
+    @JsonProperty("icAllDocumentCollection")
+    private List<DocumentTypeItem> icAllDocumentCollection;
 
     // ET3 Response
     @JsonProperty("et3ResponseShowInset")
