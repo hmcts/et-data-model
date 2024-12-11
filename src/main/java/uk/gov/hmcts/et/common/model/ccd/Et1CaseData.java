@@ -82,6 +82,6 @@ public class Et1CaseData extends BaseCaseData {
     // Citizen hub
     @JsonProperty("hubLinksStatuses")
     private HubLinksStatuses hubLinksStatuses;
-    @JsonProperty("ttl")
+    @JsonProperty("TTL")
     private TTL ttl;
 }
