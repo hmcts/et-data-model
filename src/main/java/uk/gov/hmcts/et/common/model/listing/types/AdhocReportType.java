@@ -57,6 +57,8 @@ public class AdhocReportType {
     private String hearingSitAlone;
     @JsonProperty("hearingJudge")
     private String hearingJudge;
+    @JsonProperty("additionalJudge")
+    private String additionalJudge;
     @JsonProperty("judgeType")
     private String judgeType;
     @JsonProperty("judgementDateSent")

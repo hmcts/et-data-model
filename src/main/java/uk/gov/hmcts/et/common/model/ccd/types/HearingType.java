@@ -62,6 +62,10 @@ public class HearingType {
         return judge != null && judge.getValue() != null;
     }
 
+    public boolean hasAdditionalHearingJudge() {
+        return additionalJudge != null && additionalJudge.getValue() != null;
+    }
+
     public boolean hasHearingEmployerMember() {
         return hearingERMember != null && hearingERMember.getValue() != null;
     }
