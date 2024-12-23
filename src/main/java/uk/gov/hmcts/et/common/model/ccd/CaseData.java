@@ -293,6 +293,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("assignOffice")
     private DynamicFixedListType assignOffice;
 
+    @JsonProperty("retrospectiveTTL")
+    private String retrospectiveTTL;
+
     @JsonProperty("stateAPI")
     private String stateAPI;
 
