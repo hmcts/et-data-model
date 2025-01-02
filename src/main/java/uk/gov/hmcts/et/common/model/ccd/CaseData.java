@@ -294,6 +294,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("assignOffice")
     private DynamicFixedListType assignOffice;
 
+    @JsonProperty("retrospectiveTTL")
+    private String retrospectiveTTL;
+
     @JsonProperty("stateAPI")
     private String stateAPI;
 
@@ -1625,7 +1628,6 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("batchCaseStayed")
     private String batchCaseStayed;
-
 
     /**
      * Convenience method for using the new ListTypeItem pattern for setting repCollection.
