@@ -39,6 +39,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
+import uk.gov.hmcts.et.common.model.ccd.types.RespondentTse;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -1103,6 +1104,9 @@ public class CaseData extends Et1CaseData {
     // Claimant TSE
     @JsonProperty("claimantTse")
     private ClaimantTse claimantTse;
+
+    // Respondent TSE
+    private RespondentTse respondentTse;
 
     //Respondent Tell Something Else
     @JsonProperty("resTseNotAvailableWarning")
