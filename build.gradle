@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.18.23'
+version '3.18.26'
 
 java {
     toolchain {
