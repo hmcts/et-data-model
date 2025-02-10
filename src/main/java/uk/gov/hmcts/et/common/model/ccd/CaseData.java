@@ -1836,4 +1836,12 @@ public class CaseData extends Et1CaseData {
     private String claimantNotificationsCopyNoDetails;
     @JsonProperty("uploadOrRemoveDcf")
     private String uploadOrRemoveDcf;
+
+    // Migration fields ECM to Reform
+    @JsonProperty("ecmCaseLink")
+    private String ecmCaseLink;
+    @JsonProperty("ecmFeeGroupReference")
+    private String ecmFeeGroupReference;
+    @JsonProperty("migratedFromEcm")
+    private String migratedFromEcm;
 }
