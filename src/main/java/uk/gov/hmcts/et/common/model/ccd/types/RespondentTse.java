@@ -7,8 +7,12 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class RespondentTse {
+    @JsonProperty("respondentIdamId")
+    private String respondentIdamId;
     @JsonProperty("contactApplicationType")
     private String contactApplicationType;
+    @JsonProperty("contactApplicationClaimantType")
+    private String contactApplicationClaimantType;
     @JsonProperty("contactApplicationText")
     private String contactApplicationText;
     @JsonProperty("contactApplicationFile")
