@@ -21,8 +21,8 @@ public class GenericTseApplicationType {
     private String type; // Amend details
     @JsonProperty("applicant")
     private String applicant; // Either Respondent or Claimant
-    @JsonProperty("applicantId")
-    private String applicantId;
+    @JsonProperty("applicantIdamId")
+    private String applicantIdamId;
     @JsonProperty("date")
     private String date;
     @JsonProperty("documentUpload")
