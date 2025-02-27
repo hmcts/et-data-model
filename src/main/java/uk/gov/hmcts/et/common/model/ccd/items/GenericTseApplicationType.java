@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.types.TseStatusType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 
 import java.util.List;
@@ -44,8 +43,6 @@ public class GenericTseApplicationType {
     private String closeApplicationNotes;
     @JsonProperty("applicationState")
     private String applicationState;
-    @JsonProperty("respondentState")
-    private List<TseStatusType> respondentState;
     // If there are tribunal requests/orders that required a response from Respondent
     @JsonProperty("respondentResponseRequired")
     private String respondentResponseRequired;
