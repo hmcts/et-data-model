@@ -120,7 +120,7 @@ public class RespondentSumType {
     @JsonProperty("et3VettingCompleted")
     private String et3VettingCompleted;
 
-    // ET3 Response
+    // ET3 Respons
     @JsonProperty("et3ResponseIsClaimantNameCorrect")
     private String et3ResponseIsClaimantNameCorrect;
     @JsonProperty("et3ResponseClaimantNameCorrection")
