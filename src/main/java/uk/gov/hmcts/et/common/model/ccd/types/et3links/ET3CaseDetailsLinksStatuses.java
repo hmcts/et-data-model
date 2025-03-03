@@ -20,6 +20,8 @@ public class ET3CaseDetailsLinksStatuses {
     private String respondentRequestsAndApplications;
     @JsonProperty("claimantApplications")
     private String claimantApplications;
+    @JsonProperty("otherRespondentApplications")
+    private String otherRespondentApplications;
     @JsonProperty("contactTribunal")
     private String contactTribunal;
     @JsonProperty("tribunalOrders")
