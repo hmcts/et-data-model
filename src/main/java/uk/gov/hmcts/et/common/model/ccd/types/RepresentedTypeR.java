@@ -41,8 +41,8 @@ public class RepresentedTypeR {
     private String representativeMobileNumber;
     @JsonProperty("representative_email_address")
     private String representativeEmailAddress;
-    @JsonProperty("representative_contact_preference")
-    private String representativeContactPreference;
+    @JsonProperty("representative_preference")
+    private String representativePreference;
     @JsonProperty("representative_contact_preference_post_reason")
     private String representativeContactPreferencePostReason;
     @JsonProperty("respondentOrganisation")
