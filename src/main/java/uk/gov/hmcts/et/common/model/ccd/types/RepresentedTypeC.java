@@ -38,6 +38,8 @@ public class RepresentedTypeC {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
+    @JsonProperty("representative_contact_preference_post_reason")
+    private String representativeContactPreferencePostReason;
     /** UUID for identifying legal rep's firm. */
     @JsonProperty("organisationId")
     private String organisationId;
