@@ -49,4 +49,6 @@ public class RepresentedTypeC {
     private List<String> contactLanguageQuestion;
     @JsonProperty("representativeAttendHearing")
     private List<String> representativeAttendHearing;
+    @JsonProperty("representative_dx_address")
+    private String representativeDXAddress;
 }
