@@ -21,6 +21,8 @@ public class TseRespondType {
     private String from;
 
     // Respondent / Claimant Reply
+    @JsonProperty("fromIdamId")
+    private String fromIdamId;
     @JsonProperty("response")
     private String response;
     @JsonProperty("hasSupportingMaterial")

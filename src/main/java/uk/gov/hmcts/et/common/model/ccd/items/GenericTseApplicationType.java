@@ -21,6 +21,8 @@ public class GenericTseApplicationType {
     private String type; // Amend details
     @JsonProperty("applicant")
     private String applicant; // Either Respondent or Claimant
+    @JsonProperty("applicantIdamId")
+    private String applicantIdamId;
     @JsonProperty("date")
     private String date;
     @JsonProperty("documentUpload")
@@ -41,6 +43,8 @@ public class GenericTseApplicationType {
     private String closeApplicationNotes;
     @JsonProperty("applicationState")
     private String applicationState;
+    @JsonProperty("respondentState")
+    private List<TseStatusTypeItem> respondentState;
     // If there are tribunal requests/orders that required a response from Respondent
     @JsonProperty("respondentResponseRequired")
     private String respondentResponseRequired;

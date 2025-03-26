@@ -39,6 +39,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
+import uk.gov.hmcts.et.common.model.ccd.types.RespondentTse;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
@@ -292,6 +293,9 @@ public class CaseData extends Et1CaseData {
     private String ecmOfficeCT;
     @JsonProperty("assignOffice")
     private DynamicFixedListType assignOffice;
+
+    @JsonProperty("retrospectiveTTL")
+    private String retrospectiveTTL;
 
     @JsonProperty("stateAPI")
     private String stateAPI;
@@ -1106,6 +1110,9 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("claimantTse")
     private ClaimantTse claimantTse;
 
+    // Respondent TSE
+    private RespondentTse respondentTse;
+
     //Respondent Tell Something Else
     @JsonProperty("resTseNotAvailableWarning")
     private String resTseNotAvailableWarning;
@@ -1624,7 +1631,6 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("batchCaseStayed")
     private String batchCaseStayed;
 
-
     /**
      * Convenience method for using the new ListTypeItem pattern for setting repCollection.
      * @param repCollection Collection of respondent representatives
@@ -1830,5 +1836,14 @@ public class CaseData extends Et1CaseData {
     private String claimantNotificationCopyToOtherParty;
     @JsonProperty("claimantNotificationsCopyNoDetails")
     private String claimantNotificationsCopyNoDetails;
+    @JsonProperty("uploadOrRemoveDcf")
+    private String uploadOrRemoveDcf;
 
+    // Migration fields ECM to Reform
+    @JsonProperty("ecmCaseLink")
+    private String ecmCaseLink;
+    @JsonProperty("ecmFeeGroupReference")
+    private String ecmFeeGroupReference;
+    @JsonProperty("migratedFromEcm")
+    private String migratedFromEcm;
 }
