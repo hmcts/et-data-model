@@ -315,6 +315,8 @@ public class CaseData extends Et1CaseData {
     private String allocateHearingSitAlone;
     @JsonProperty("allocateHearingJudge")
     private DynamicFixedListType allocateHearingJudge;
+    @JsonProperty("allocateHearingAdditionalJudge")
+    private DynamicFixedListType allocateHearingAdditionalJudge;
     @JsonProperty("allocateHearingEmployerMember")
     private DynamicFixedListType allocateHearingEmployerMember;
     @JsonProperty("allocateHearingEmployeeMember")
