@@ -92,6 +92,7 @@ public class Et1CaseData extends BaseCaseData {
      * This field doesn't have any business meaning. It is only used to get value from EXUI and map that value
      * to claimantHearingPreference's claimantHearingPanelPreferenceReason value.
      */
+    @JsonProperty("tmpClaimantHearingPanelPreference")
     private String tmpClaimantHearingPanelPreference;
     /**
      * This field is temporary field to get claimant's hearing panel preference
@@ -100,6 +101,7 @@ public class Et1CaseData extends BaseCaseData {
      * This field doesn't have any business meaning. It is only used to get value from EXUI and map that value
      * to claimantHearingPreference's claimantHearingPanelPreferenceWhy value.
      */
+    @JsonProperty("tmpClaimantHearingPanelPreferenceReason")
     private String tmpClaimantHearingPanelPreferenceReason;
 
 }
