@@ -660,6 +660,11 @@ public class CaseData extends Et1CaseData {
     private String et3GeneralNotesRespondentAddress;
     @JsonProperty("et3GeneralNotesAddressMatch")
     private String et3GeneralNotesAddressMatch;
+    // ET3 Respondents Hearing Panel Preference page
+    @JsonProperty("et3ResponseHearingPanelPreference")
+    private String et3ResponseHearingPanelPreference;
+    @JsonProperty("et3ResponseHearingPanelPreferenceReason")
+    private String et3ResponseHearingPanelPreferenceReason;
     // ET3 Case Listed Page
     @JsonProperty("et3HearingDetails")
     private String et3HearingDetails;
