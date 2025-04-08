@@ -104,6 +104,6 @@ public class Et1CaseData extends BaseCaseData {
      * to claimantHearingPreference's claimantHearingPanelPreferenceWhy value.
      */
     @JsonProperty("tmpClaimantHearingPanelPrefReason")
-    private String tmpClaimantHearingPanelPreferenceReason;
+    private String tmpClaimantHearingPanelPrefReason;
 
 }
