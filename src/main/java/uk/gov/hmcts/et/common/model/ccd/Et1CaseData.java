@@ -97,7 +97,8 @@ public class Et1CaseData extends BaseCaseData {
     /**
      * This field is temporary field to get claimant's hearing panel preference
      * It is defined because rule for showing this field on EXUI should be dependent to the value of the
-     * temporary field tmpClaimantHearingPanelPreference.
+     * temporary field tmpClaimantHearingPanelPreference. JSON property name is tmpClaimantHearingPanelPrefReason
+     * because long field names cause  value too long for type character varying(70) error on EXUI.
      * This field doesn't have any business meaning. It is only used to get value from EXUI and map that value
      * to claimantHearingPreference's claimantHearingPanelPreferenceWhy value.
      */
