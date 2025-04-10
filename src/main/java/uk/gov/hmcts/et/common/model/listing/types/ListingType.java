@@ -24,8 +24,6 @@ public class ListingType {
     private String positionType;
     @JsonProperty("hearingJudgeName")
     private String hearingJudgeName;
-    @JsonProperty("additionalJudge")
-    private String additionalJudge;
     @JsonProperty("hearingEEMember")
     private String hearingEEMember;
     @JsonProperty("hearingERMember")
