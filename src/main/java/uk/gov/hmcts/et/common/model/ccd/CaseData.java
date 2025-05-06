@@ -1846,4 +1846,7 @@ public class CaseData extends Et1CaseData {
     private String ecmFeeGroupReference;
     @JsonProperty("migratedFromEcm")
     private String migratedFromEcm;
+
+    @JsonProperty("acasCertificateRequired")
+    private String acasCertificateRequired;
 }
