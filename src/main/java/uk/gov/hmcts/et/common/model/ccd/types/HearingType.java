@@ -39,6 +39,8 @@ public class HearingType {
     private String hearingNotes;
     @JsonProperty("judge")
     private DynamicFixedListType judge;
+    @JsonProperty("additionalJudge")
+    private DynamicFixedListType additionalJudge;
     @JsonProperty("Hearing_Glasgow")
     private DynamicFixedListType hearingGlasgow;
     @JsonProperty("Hearing_Aberdeen")
@@ -58,6 +60,10 @@ public class HearingType {
 
     public boolean hasHearingJudge() {
         return judge != null && judge.getValue() != null;
+    }
+
+    public boolean hasAdditionalHearingJudge() {
+        return additionalJudge != null && additionalJudge.getValue() != null;
     }
 
     public boolean hasHearingEmployerMember() {
