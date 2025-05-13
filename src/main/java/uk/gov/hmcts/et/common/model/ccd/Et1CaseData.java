@@ -84,4 +84,26 @@ public class Et1CaseData extends BaseCaseData {
     private HubLinksStatuses hubLinksStatuses;
     @JsonProperty("TTL")
     private TTL ttl;
+    /**
+     * This field is temporary field to get claimant's hearing panel preference
+     * It is defined because unfortunately, existing EXUI configuration's (et-ccd-definitions)
+     * claimant hearing preference model's claimant hearing panel preference field complex type value wordings
+     * are different from the ones that needs to be defined on solicitor's case creation ones.
+     * This field doesn't have any business meaning. It is only used to get value from EXUI and map that value
+     * to claimantHearingPreference's claimantHearingPanelPreferenceReason value.
+     */
+    @JsonProperty("tmpClaimantHearingPanelPreference")
+    private String tmpClaimantHearingPanelPreference;
+    /**
+     * This field is temporary field to get claimant's hearing panel preference
+     * It is defined because rule for showing this field on EXUI should be dependent to the value of the
+     * temporary field tmpClaimantHearingPanelPreference. JSON property name is tmpClaimantHearingPanelPrefReason
+     * because long field names cause  value too long for type character varying(70) error on EXUI if used with
+     * MAX length option.
+     * This field doesn't have any business meaning. It is only used to get value from EXUI and map that value
+     * to claimantHearingPreference's claimantHearingPanelPreferenceWhy value.
+     */
+    @JsonProperty("tmpClaimantHearingPanelPrefReason")
+    private String tmpClaimantHearingPanelPrefReason;
+
 }
