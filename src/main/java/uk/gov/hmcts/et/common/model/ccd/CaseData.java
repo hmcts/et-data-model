@@ -1849,6 +1849,4 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
-    @JsonProperty("interventionRequired")
-    private String interventionRequired;
 }
