@@ -18,4 +18,6 @@ public class AdditionalCaseInfoType {
     private String digitalFile;
     @JsonProperty("reasonableAdjustment")
     private String reasonableAdjustment;
+    @JsonProperty("interventionRequired")
+    private String interventionRequired;
 }
