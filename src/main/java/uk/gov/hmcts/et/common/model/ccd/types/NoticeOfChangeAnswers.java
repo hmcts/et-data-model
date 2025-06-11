@@ -11,12 +11,9 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class NoticeOfChangeAnswers {
-    @JsonProperty("respondentName")
+    @JsonProperty("partyName")
     private final String respondentName;
 
-    @JsonProperty("claimantFirstName")
-    private final String claimantFirstName;
-    
-    @JsonProperty("claimantLastName")
-    private final String claimantLastName;
+    @JsonProperty("caseReference")
+    private final String caseReference;
 }
