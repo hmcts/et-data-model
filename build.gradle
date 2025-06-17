@@ -6,11 +6,11 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '3.18.34'
+version '4.1.0'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 

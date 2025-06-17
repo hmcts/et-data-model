@@ -37,7 +37,7 @@ public class DynamicFixedListType {
     public static DynamicFixedListType from(String code, String label, boolean selected) {
         DynamicFixedListType listType = DynamicFixedListType.from(List.of(DynamicValueType.create(code, label)));
         if (selected) {
-            listType.setValue(listType.getListItems().get(0));
+            listType.setValue(listType.getListItems().getFirst());
         }
         return listType;
     }
@@ -69,7 +69,7 @@ public class DynamicFixedListType {
             List<DynamicValueType> listWithOnlyOriginalCode = getListItemsWithOnlyOriginalCode(selectListItems,
                 selectedValue.get());
             if (!listWithOnlyOriginalCode.isEmpty()) {
-                selectedValue.get().setLabel(listWithOnlyOriginalCode.get(0).getLabel());
+                selectedValue.get().setLabel(listWithOnlyOriginalCode.getFirst().getLabel());
                 dynamicFixedListType.setValue(original.getValue());
                 return dynamicFixedListType;
             }
