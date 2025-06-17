@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version '4.1.0'
+version '4.2.0'
 
 java {
     toolchain {
@@ -33,6 +33,17 @@ publishing {
             groupId project.group
             artifactId 'et-data-model'
             version project.version
+        }
+    }
+
+    repositories {
+        maven {
+            name = "AzureArtifacts"
+            url = uri("https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1")
+            credentials {
+                username = System.getenv("AZURE_DEVOPS_ARTIFACT_USERNAME")
+                password = System.getenv("AZURE_DEVOPS_ARTIFACT_TOKEN")
+            }
         }
     }
 }
