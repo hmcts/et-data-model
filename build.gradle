@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.github.hmcts'
-version = '4.2.2'
+version System.getenv('RELEASE_VERSION') ?: 'DEV-SNAPSHOT'
 
 java {
     toolchain {
