@@ -207,6 +207,8 @@ public class RespondentSumType {
     private UploadedDocumentType et3Form;
     @JsonProperty("et3FormWelsh")
     private UploadedDocumentType et3FormWelsh;
+    @JsonProperty("et3NotificationAcceptedDate")
+    private String et3NotificationAcceptedDate;
 
     @JsonProperty("personalDetailsSection")
     private String personalDetailsSection;
