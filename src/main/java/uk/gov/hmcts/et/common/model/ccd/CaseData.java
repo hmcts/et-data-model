@@ -1690,6 +1690,8 @@ public class CaseData extends Et1CaseData {
     private String representativePhoneNumber;
     @JsonProperty("representativeReferenceNumber")
     private String representativeReferenceNumber;
+    @JsonProperty("representativeAddress")
+    private Address representativeAddress;
 
     @JsonProperty("didClaimantWorkForOrg")
     private List<String> didClaimantWorkForOrg;
