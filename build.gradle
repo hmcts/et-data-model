@@ -10,7 +10,7 @@ version System.getenv('RELEASE_VERSION') ?: "DEV-SNAPSHOT-${new Date().format('y
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(19)
     }
 }
 
