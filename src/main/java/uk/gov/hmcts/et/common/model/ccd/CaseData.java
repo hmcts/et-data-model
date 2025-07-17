@@ -1836,6 +1836,8 @@ public class CaseData extends Et1CaseData {
     private String claimantNotificationCopyToOtherParty;
     @JsonProperty("claimantNotificationsCopyNoDetails")
     private String claimantNotificationsCopyNoDetails;
+    @JsonProperty("claimantRepresentativeOrganisationUsers")
+    private List<OrganisationUsersIdamUser> claimantRepresentativeOrganisationUsers;
     @JsonProperty("uploadOrRemoveDcf")
     private String uploadOrRemoveDcf;
 
