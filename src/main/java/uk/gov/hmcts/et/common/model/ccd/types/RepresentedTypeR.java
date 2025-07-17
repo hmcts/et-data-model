@@ -43,6 +43,8 @@ public class RepresentedTypeR {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
+    @JsonProperty("representative_preference_reason")
+    private String representativePreferenceReason;
     @JsonProperty("respondentOrganisation")
     private Organisation respondentOrganisation;
     @JsonProperty("myHmctsYesNo")
@@ -50,4 +52,6 @@ public class RepresentedTypeR {
     /** UUID for identifying the non system user legal rep's organisation for HMC. */
     @JsonProperty("nonMyHmctsOrganisationId")
     private String nonMyHmctsOrganisationId;
+    @JsonProperty("representativeContactLanguage")
+    private String representativeContactLanguage;
 }
