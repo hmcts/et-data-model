@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.ccd.Address;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 
 import java.util.List;
 
@@ -50,5 +51,5 @@ public class RepresentedTypeC {
     @JsonProperty("representativeAttendHearing")
     private List<String> representativeAttendHearing;
     @JsonProperty("organisationUsers")
-    private List<OrganisationUsersIdamUser> organisationUsers;
+    private List<GenericTypeItem<OrganisationUsersIdamUser>> organisationUsers;
 }
