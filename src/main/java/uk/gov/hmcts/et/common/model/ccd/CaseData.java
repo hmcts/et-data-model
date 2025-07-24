@@ -1849,4 +1849,11 @@ public class CaseData extends Et1CaseData {
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
+
+    @JsonProperty("uploadHearingBundlesParty")
+    private String uploadHearingBundlesParty;
+    @JsonProperty("uploadHearingBundlesSelectHearing")
+    private DynamicFixedListType uploadHearingBundlesSelectHearing;
+    @JsonProperty("uploadHearingBundlesUploadFile")
+    private UploadedDocumentType uploadHearingBundlesUploadFile;
 }
