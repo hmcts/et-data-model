@@ -20,4 +20,6 @@ public class AdditionalCaseInfoType {
     private String reasonableAdjustment;
     @JsonProperty("interventionRequired")
     private String interventionRequired;
+    @JsonProperty("reservedToJudge")
+    private String reservedToJudge;
 }
