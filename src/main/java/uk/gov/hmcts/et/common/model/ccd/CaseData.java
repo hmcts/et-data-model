@@ -1850,20 +1850,22 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
 
-    @JsonProperty("uploadHearingBundlesParty")
-    private String uploadHearingBundlesParty;
-    @JsonProperty("uploadHearingBundlesSelectHearing")
-    private DynamicFixedListType uploadHearingBundlesSelectHearing;
-    @JsonProperty("uploadHearingBundlesUploadFile")
-    private UploadedDocumentType uploadHearingBundlesUploadFile;
-    @JsonProperty("uploadHearingBundlesAgreedWith")
-    private String uploadHearingBundlesAgreedWith;
-    @JsonProperty("uploadHearingBundlesAgreedWithDisputed")
-    private String uploadHearingBundlesAgreedWithDisputed;
-    @JsonProperty("uploadHearingBundlesAgreedWithNo")
-    private String uploadHearingBundlesAgreedWithNo;
-    @JsonProperty("uploadHearingBundlesWhatAreDocuments")
-    private String uploadHearingBundlesWhatAreDocuments;
-    @JsonProperty("uploadHearingBundlesWhoseDocuments")
-    private String uploadHearingBundlesWhoseDocuments;
+    @JsonProperty("uploadHearingDocumentsSelectPastOrFutureHearing")
+    private String uploadHearingDocumentsSelectPastOrFutureHearing;
+    @JsonProperty("uploadHearingDocumentsSelectPastHearing")
+    private DynamicFixedListType uploadHearingDocumentsSelectPastHearing;
+    @JsonProperty("uploadHearingDocumentsSelectFutureHearing")
+    private DynamicFixedListType uploadHearingDocumentsSelectFutureHearing;
+    @JsonProperty("uploadHearingDocumentsUploadFile")
+    private UploadedDocumentType uploadHearingDocumentsUploadFile;
+    @JsonProperty("uploadHearingDocumentsWhatAreDocuments")
+    private String uploadHearingDocumentsWhatAreDocuments;
+    @JsonProperty("uploadHearingDocumentsWhatAreDocumentsOther")
+    private String uploadHearingDocumentsWhatAreDocumentsOther;
+    @JsonProperty("uploadHearingDocumentsWhoseDocuments")
+    private String uploadHearingDocumentsWhoseDocuments;
+    @JsonProperty("hearingDocumentCollection")
+    private List<GenericTypeItem<HearingBundleType>> hearingDocumentCollection;
+    @JsonProperty("uploadHearingDocumentsDateSubmitted")
+    private String uploadHearingDocumentsDateSubmitted;
 }
