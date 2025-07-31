@@ -42,6 +42,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
 import uk.gov.hmcts.et.common.model.ccd.types.RespondentTse;
 import uk.gov.hmcts.et.common.model.ccd.types.RestrictedReportingType;
 import uk.gov.hmcts.et.common.model.ccd.types.SendNotificationTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.types.UploadHearingDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.UploadedDocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.citizenhub.ClaimantTse;
 import uk.gov.hmcts.et.common.model.hmc.CaseCategory;
@@ -1856,16 +1857,10 @@ public class CaseData extends Et1CaseData {
     private DynamicFixedListType uploadHearingDocumentsSelectPastHearing;
     @JsonProperty("uploadHearingDocumentsSelectFutureHearing")
     private DynamicFixedListType uploadHearingDocumentsSelectFutureHearing;
-    @JsonProperty("uploadHearingDocumentsUploadFile")
-    private UploadedDocumentType uploadHearingDocumentsUploadFile;
-    @JsonProperty("uploadHearingDocumentsWhatAreDocuments")
-    private String uploadHearingDocumentsWhatAreDocuments;
-    @JsonProperty("uploadHearingDocumentsWhatAreDocumentsOther")
-    private String uploadHearingDocumentsWhatAreDocumentsOther;
+    @JsonProperty("uploadHearingDocumentType")
+    private List<GenericTypeItem<UploadHearingDocumentType>> uploadHearingDocumentType;
     @JsonProperty("uploadHearingDocumentsWhoseDocuments")
     private String uploadHearingDocumentsWhoseDocuments;
-    @JsonProperty("hearingDocumentCollection")
-    private List<GenericTypeItem<HearingBundleType>> hearingDocumentCollection;
     @JsonProperty("uploadHearingDocumentsDateSubmitted")
     private String uploadHearingDocumentsDateSubmitted;
 }

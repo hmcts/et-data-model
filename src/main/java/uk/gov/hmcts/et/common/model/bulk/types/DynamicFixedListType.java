@@ -3,7 +3,6 @@ package uk.gov.hmcts.et.common.model.bulk.types;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -11,6 +10,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -101,13 +102,13 @@ public class DynamicFixedListType {
     private static List<DynamicValueType> getListItemsWithOriginalCodeAndLabel(List<DynamicValueType> items,
                                                               DynamicValueType selectedValue) {
         return items.stream().filter(i -> i.getCode().equals(selectedValue.getCode())
-            && i.getLabel().equals(selectedValue.getLabel())).collect(Collectors.toList());
+            && i.getLabel().equals(selectedValue.getLabel())).toList();
     }
 
     private static List<DynamicValueType> getListItemsWithOnlyOriginalCode(List<DynamicValueType> items,
                                                                            DynamicValueType selectedValue) {
         return items.stream().filter(i -> i.getCode().equals(selectedValue.getCode())
-            && !i.getLabel().equals(selectedValue.getLabel())).collect(Collectors.toList());
+            && !i.getLabel().equals(selectedValue.getLabel())).toList();
     }
 
     public DynamicFixedListType(String value) {
@@ -138,7 +139,7 @@ public class DynamicFixedListType {
     }
 
     public boolean isValidCodeForList(String code) {
-        if (CollectionUtils.isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
+        if (isNotEmpty(listItems) && StringUtils.isNotBlank(code)) {
             for (var dynamicValueType : listItems) {
                 if (dynamicValueType.getCode().equals(code)) {
                     return true;
@@ -147,5 +148,15 @@ public class DynamicFixedListType {
         }
 
         return false;
+    }
+
+    /**
+     * Sets the first item in the list as selected.
+     * If the list is empty, this method does nothing.
+     */
+    public void setFirstItemAsSelected() {
+        if (isNotEmpty(listItems)) {
+            value = listItems.getFirst();
+        }
     }
 }
