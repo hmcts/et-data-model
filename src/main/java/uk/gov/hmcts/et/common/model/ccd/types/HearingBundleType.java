@@ -21,6 +21,8 @@ public class HearingBundleType {
     private String hearing;
     @JsonProperty("whatDocuments")
     private String whatDocuments;
+    @JsonProperty("whatDocumentsOther")
+    private String whatDocumentsOther;
     @JsonProperty("whoseDocuments")
     private String whoseDocuments;
     @JsonProperty("uploadFile")
@@ -29,4 +31,9 @@ public class HearingBundleType {
     private String formattedSelectedHearing;
     @JsonProperty("uploadDateTime")
     private String uploadDateTime;
+    // Submitted date is the date when the bundle was submitted to the tribunal and is different from the upload date.
+    @JsonProperty("submittedDate")
+    private String submittedDate;
+    @JsonProperty("uploadedBy")
+    private String uploadedBy;
 }
