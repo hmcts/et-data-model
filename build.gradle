@@ -54,7 +54,7 @@ ext {
 
 dependencies {
     implementation 'javax.validation:validation-api:2.0.1.Final'
-    implementation 'org.hibernate.validator:hibernate-validator:6.2.5.Final'
+    implementation 'org.hibernate.validator:hibernate-validator:9.0.1.Final'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.19.2'
