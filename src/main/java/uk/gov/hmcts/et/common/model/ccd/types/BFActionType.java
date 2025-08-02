@@ -27,5 +27,7 @@ public class BFActionType {
     private String cleared;
     @JsonProperty("notes")
     private String notes;
-
+    //flag to track if a wa task is already created for an expired bf due date
+    @JsonProperty("isWaTaskCreated")
+    private String isWaTaskCreated;
 }
