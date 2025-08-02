@@ -1855,6 +1855,10 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("migratedFromEcm")
     private String migratedFromEcm;
 
+    // NOC fields - to find if any claimant representative has been removed.
+    @JsonProperty("claimantRepresentativeRemoved")
+    private String claimantRepresentativeRemoved;
+
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
 }
