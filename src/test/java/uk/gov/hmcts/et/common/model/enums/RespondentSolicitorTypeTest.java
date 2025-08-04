@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
 public class RespondentSolicitorTypeTest {
 
     private static final String INDEX_OUT_OF_BOUNDS_NEGATIVE = "Index out of bounds for RespondentSolicitorType: -1";
@@ -49,8 +48,10 @@ public class RespondentSolicitorTypeTest {
 
     @Test
     void fromLabel_ValidLabels() {
-        assertEquals(RespondentSolicitorType.SOLICITORA, RespondentSolicitorType.fromLabel(RESPONDENT_SOLICITOR_TYPE_A));
-        assertEquals(RespondentSolicitorType.SOLICITORJ, RespondentSolicitorType.fromLabel(RESPONDENT_SOLICITOR_TYPE_J));
+        assertEquals(RespondentSolicitorType.SOLICITORA,
+                RespondentSolicitorType.fromLabel(RESPONDENT_SOLICITOR_TYPE_A));
+        assertEquals(RespondentSolicitorType.SOLICITORJ,
+                RespondentSolicitorType.fromLabel(RESPONDENT_SOLICITOR_TYPE_J));
     }
 
     @Test

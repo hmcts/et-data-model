@@ -44,6 +44,7 @@ public enum RespondentSolicitorType {
         }
         throw new IllegalArgumentException("No RespondentSolicitorType found for label: " + label);
     }
+
     /**
      * Checks if the provided label is a valid RespondentSolicitorType label.
      *
