@@ -76,3 +76,11 @@ jar {
 test {
     useJUnitPlatform()
 }
+
+tasks.register('printVersion') {
+    doLast {
+        println "Publishing version: ${project.version}"
+    }
+}
+
+publishToMavenLocal.dependsOn printVersion
