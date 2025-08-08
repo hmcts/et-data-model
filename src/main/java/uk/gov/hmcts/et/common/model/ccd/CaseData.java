@@ -1859,6 +1859,13 @@ public class CaseData extends Et1CaseData {
     // NOC fields - to find if any claimant representative has been removed.
     @JsonProperty("claimantRepresentativeRemoved")
     private String claimantRepresentativeRemoved;
+    // new fields: et3RepresentativeContactChangeOption and claimantRepresentativeContactChangeOption
+    // to determine whether the representative's contact information should be updated using the
+    // MyHMCTS address or a manually entered address.
+    @JsonProperty("et3RepresentativeContactChangeOption")
+    private String et3RepresentativeContactChangeOption;
+    @JsonProperty("claimantRepresentativeContactChangeOption")
+    private String claimantRepresentativeContactChangeOption;
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
