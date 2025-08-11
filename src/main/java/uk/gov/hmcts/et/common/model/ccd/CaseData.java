@@ -1862,10 +1862,8 @@ public class CaseData extends Et1CaseData {
     // new fields: et3RepresentativeContactChangeOption and claimantRepresentativeContactChangeOption
     // to determine whether the representative's contact information should be updated using the
     // MyHMCTS address or a manually entered address.
-    @JsonProperty("et3RepresentativeContactChangeOption")
-    private String et3RepresentativeContactChangeOption;
-    @JsonProperty("claimantRepresentativeContactChangeOption")
-    private String claimantRepresentativeContactChangeOption;
+    @JsonProperty("representativeContactChangeOption")
+    private String representativeContactChangeOption;
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
