@@ -1880,4 +1880,6 @@ public class CaseData extends Et1CaseData {
     private String uploadHearingDocumentsWhoseDocuments;
     @JsonProperty("uploadHearingDocumentsDateSubmitted")
     private String uploadHearingDocumentsDateSubmitted;
+    @JsonProperty("myHmctsAddressText")
+    private String myHmctsAddressText;
 }
