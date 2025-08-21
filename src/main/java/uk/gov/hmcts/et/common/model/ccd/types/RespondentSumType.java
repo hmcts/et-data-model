@@ -41,6 +41,8 @@ public class RespondentSumType {
     private String responseReturnedFromJudge;
     @JsonProperty("respondent_name")
     private String respondentName;
+    @JsonProperty("respondentEcc")
+    private String respondentEcc;
 
     @JsonProperty("respondent_hearing_panel_preference")
     private String respondentHearingPanelPreference;
