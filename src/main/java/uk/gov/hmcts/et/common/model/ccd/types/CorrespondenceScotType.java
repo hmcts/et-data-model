@@ -53,4 +53,8 @@ public class CorrespondenceScotType {
     private DynamicFixedListType dynamicHearingNumber;
     @JsonProperty("letterAddress")
     private String letterAddress;
+    @JsonProperty("dynamicRespondentsWithEcc")
+    private DynamicFixedListType dynamicRespondentsWithEcc;
+    @JsonProperty("flipRespondentAndClaimantValues")
+    private String flipRespondentAndClaimantValues;
 }
