@@ -724,7 +724,8 @@ public class CaseData extends Et1CaseData {
     private String et3AdditionalInformation;
 
     // ET Initial Consideration
-
+    @JsonProperty("initialConsiderationBeforeYouStart")
+    private String initialConsiderationBeforeYouStart;
     @JsonProperty("etInitialConsiderationDocument")
     private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
@@ -1686,7 +1687,6 @@ public class CaseData extends Et1CaseData {
     private String representativePhoneNumber;
     @JsonProperty("representativeReferenceNumber")
     private String representativeReferenceNumber;
-
     @JsonProperty("didClaimantWorkForOrg")
     private List<String> didClaimantWorkForOrg;
     @JsonProperty("claimantStillWorking")
