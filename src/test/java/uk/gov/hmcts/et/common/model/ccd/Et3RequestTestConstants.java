@@ -13,6 +13,7 @@ public final class Et3RequestTestConstants {
     public static final String RESPONSE_STATUS = "Progressing";
     public static final String RESPONSE_TO_CLAIM = "Test response to claim";
     public static final String REJECTION_REASON = "Test rejection reason";
+    public static final String RESPONDENT_ECC = "Test Respondent ECC";
     public static final String REJECTION_REASON_OTHER = "Test other rejection reason";
     public static final String RESPONSE_OUT_OF_TIME = "No";
     public static final String RESPONSE_NOT_ON_PRESCRIBED_FORM = "No";

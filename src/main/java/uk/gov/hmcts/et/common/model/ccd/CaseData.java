@@ -162,6 +162,8 @@ public class CaseData extends Et1CaseData {
     private String counterClaim;
     @JsonProperty("eccCases")
     private List<EccCounterClaimTypeItem> eccCases;
+    @JsonProperty("respondentsWithEcc")
+    private String respondentsWithEcc;
     @JsonProperty("restrictedReporting")
     private RestrictedReportingType restrictedReporting;
     @JsonProperty("printHearingDetails")
