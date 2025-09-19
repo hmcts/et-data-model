@@ -1,0 +1,15 @@
+{
+  "ChangeOrganisationRequest": {
+    "OrganisationToAdd": {
+      "OrganisationID": "Test Organisation to Add ID",
+      "OrganisationName": "Test Organisation to Add Name"
+    },
+    "OrganisationToRemove": {
+      "OrganisationID": "Test Organisation to Remove ID",
+      "OrganisationName": "Test Organisation to Remove Name"
+    },
+    "CaseRoleId": "Test Case Role ID",
+    "ApprovalStatus": "1"
+  },
+  "RespondentName": "Test Respondent"
+}
