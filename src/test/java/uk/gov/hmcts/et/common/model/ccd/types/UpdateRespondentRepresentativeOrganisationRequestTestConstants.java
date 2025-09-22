@@ -8,4 +8,8 @@ public final class UpdateRespondentRepresentativeOrganisationRequestTestConstant
     public static final String CASE_ROLE_ID = "Test Case Role ID";
     public static final String APPROVAL_STATUS = "APPROVED";
     public static final String RESPONDENT_NAME = "Test Respondent";
+
+    private UpdateRespondentRepresentativeOrganisationRequestTestConstants() {
+        //Utility classes should not have a public or default constructor.
+    }
 }

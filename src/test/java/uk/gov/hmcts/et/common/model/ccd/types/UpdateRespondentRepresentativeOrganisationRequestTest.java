@@ -25,22 +25,37 @@ public class UpdateRespondentRepresentativeOrganisationRequestTest {
         UpdateRespondentRepresentativeOrganisationRequest updateRespondentRepresentativeOrganisationRequest =
                 generateUpdateRespondentRepresentativeOrganisationRequest();
         assertTrue(ObjectUtils.isNotEmpty(updateRespondentRepresentativeOrganisationRequest));
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_ADD_ORGANISATION_ID, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getOrganisationToAdd().getOrganisationID());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_ADD_ORGANISATION_NAME, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getOrganisationToAdd().getOrganisationName());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_REMOVE_ORGANISATION_ID, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getOrganisationToRemove().getOrganisationID());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_REMOVE_ORGANISATION_NAME, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getOrganisationToRemove().getOrganisationName());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.CASE_ROLE_ID, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getCaseRoleId().getSelectedCode());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.APPROVAL_STATUS, updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest().getApprovalStatus().toString());
-        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.RESPONDENT_NAME, updateRespondentRepresentativeOrganisationRequest.getRespondentName());
+        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_ADD_ORGANISATION_ID,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getOrganisationToAdd().getOrganisationID());
+        assertEquals(
+                UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_ADD_ORGANISATION_NAME,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getOrganisationToAdd().getOrganisationName());
+        assertEquals(
+                UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_REMOVE_ORGANISATION_ID,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getOrganisationToRemove().getOrganisationID());
+        assertEquals(
+                UpdateRespondentRepresentativeOrganisationRequestTestConstants.ORGANISATION_TO_REMOVE_ORGANISATION_NAME,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getOrganisationToRemove().getOrganisationName());
+        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.CASE_ROLE_ID,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getCaseRoleId().getSelectedCode());
+        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.APPROVAL_STATUS,
+                updateRespondentRepresentativeOrganisationRequest.getChangeOrganisationRequest()
+                        .getApprovalStatus().toString());
+        assertEquals(UpdateRespondentRepresentativeOrganisationRequestTestConstants.RESPONDENT_NAME,
+                updateRespondentRepresentativeOrganisationRequest.getRespondentName());
     }
 
     private static UpdateRespondentRepresentativeOrganisationRequest
-    generateUpdateRespondentRepresentativeOrganisationRequest() throws IOException, URISyntaxException {
+        generateUpdateRespondentRepresentativeOrganisationRequest() throws IOException, URISyntaxException {
         String json = new String(Files.readAllBytes(Paths.get(Objects.requireNonNull(Thread.currentThread()
                 .getContextClassLoader().getResource(
                         UPDATE_RESPONDENT_REPRESENTATIVE_ORGANISATION_REQUEST_FILE_PATH)).toURI())));
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(json, UpdateRespondentRepresentativeOrganisationRequest.class);
     }
-
 }
