@@ -48,6 +48,8 @@ public class UpdateRespondentRepresentativeRequestTest {
                         .getApprovalStatus().toString());
         assertEquals(UpdateRespondentRepresentativeRequestTestConstants.TEST_RESPONDENT_NAME,
                 updateRespondentRepresentativeRequest.getRespondentName());
+        assertEquals(UpdateRespondentRepresentativeRequestTestConstants.TEST_REPRESENTATIVE_REMOVED_NO,
+                updateRespondentRepresentativeRequest.getRepresentativeRemoved());
     }
 
     private static UpdateRespondentRepresentativeRequest generateUpdateRespondentRepresentativeRequest()

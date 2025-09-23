@@ -11,8 +11,10 @@ import lombok.extern.jackson.Jacksonized;
 @Jacksonized
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UpdateRespondentRepresentativeRequest {
-    @JsonProperty("ChangeOrganisationRequest")
+    @JsonProperty("changeOrganisationRequest")
     private ChangeOrganisationRequest changeOrganisationRequest;
-    @JsonProperty("RespondentName")
+    @JsonProperty("respondentName")
     private String respondentName;
+    @JsonProperty("representativeRemoved")
+    private String representativeRemoved;
 }
