@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
-
-import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
