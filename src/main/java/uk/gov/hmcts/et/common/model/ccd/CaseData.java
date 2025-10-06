@@ -1865,6 +1865,10 @@ public class CaseData extends Et1CaseData {
     // MyHMCTS address or a manually entered address.
     @JsonProperty("representativeContactChangeOption")
     private String representativeContactChangeOption;
+    // Unable to remove respondent representative from repCollection as a respondent (remove legal representation).
+    // To resolve this problem added new field to identify which respondent representatives needs to be removed.
+    @JsonProperty
+    private List<RepresentedTypeR> repCollectionToRemove;
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
