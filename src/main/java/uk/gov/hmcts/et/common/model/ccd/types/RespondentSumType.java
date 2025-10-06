@@ -43,6 +43,8 @@ public class RespondentSumType {
     private String respondentName;
     @JsonProperty("respondentEcc")
     private String respondentEcc;
+    @JsonProperty("respondentEccReply")
+    private String respondentEccReply;
 
     @JsonProperty("respondent_hearing_panel_preference")
     private String respondentHearingPanelPreference;

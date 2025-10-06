@@ -44,6 +44,8 @@ public class Et3RequestTest {
                 et3Request.getRespondent().getValue().getRejectionReasonOther());
         assertEquals(Et3RequestTestConstants.RESPONDENT_ECC,
                 et3Request.getRespondent().getValue().getRespondentEcc());
+        assertEquals(Et3RequestTestConstants.RESPONDENT_ECC_REPLY,
+                et3Request.getRespondent().getValue().getRespondentEccReply());
         assertEquals(Et3RequestTestConstants.RESPONSE_OUT_OF_TIME,
                 et3Request.getRespondent().getValue().getResponseOutOfTime());
         assertEquals(Et3RequestTestConstants.RESPONSE_NOT_ON_PRESCRIBED_FORM,
