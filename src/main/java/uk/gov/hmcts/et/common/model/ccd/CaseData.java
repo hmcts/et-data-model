@@ -1867,8 +1867,8 @@ public class CaseData extends Et1CaseData {
     private String representativeContactChangeOption;
     // Unable to remove respondent representative from repCollection as a respondent (remove legal representation).
     // To resolve this problem added new field to identify which respondent representatives needs to be removed.
-    @JsonProperty
-    private List<RepresentedTypeR> repCollectionToRemove;
+    @JsonProperty("repCollectionToRemove")
+    private List<RepresentedTypeRItem> repCollectionToRemove;
 
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
