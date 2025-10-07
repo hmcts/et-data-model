@@ -459,6 +459,15 @@ public class CaseData extends Et1CaseData {
     private String rule121fTextArea;
     @JsonProperty("et1SubstantiveDefectsGeneralNotes")
     private String et1SubstantiveDefectsGeneralNotes;
+    @JsonProperty("icEt1SubstantiveDefects")
+    private String icEt1SubstantiveDefects;
+    @JsonProperty("icEt1ReferralToJudgeOrLOListWithDetails")
+    private String icEt1ReferralToJudgeOrLOListWithDetails;
+    @JsonProperty("icEt1ReferralToREJOrVPListWithDetails")
+    private String icEt1ReferralToREJOrVPListWithDetails;
+    @JsonProperty("icEt1OtherReferralListDetails")
+    private String icEt1OtherReferralListDetails;
+
 
     // ET1 Vetting - Jurisdiction codes
     @JsonProperty("areTheseCodesCorrect")
@@ -724,6 +733,11 @@ public class CaseData extends Et1CaseData {
     private String et3AdditionalInformation;
 
     // ET Initial Consideration
+    @JsonProperty("icEt1VettingIssuesDetail")
+    private String icEt1VettingIssuesDetail;
+    @JsonProperty("icEt3ProcessingIssuesDetail")
+    private String icEt3ProcessingIssuesDetail;
+
     @JsonProperty("initialConsiderationBeforeYouStart")
     private String initialConsiderationBeforeYouStart;
     @JsonProperty("etInitialConsiderationDocument")
