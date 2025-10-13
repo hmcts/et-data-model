@@ -15,6 +15,7 @@
       "rejection_reason_other": "Test other rejection reason",
       "respondentEcc": "Test Respondent ECC",
       "respondentEccReply": "Test Respondent ECC Reply",
+      "respondentEccReplyCount": "1",
       "responseOutOfTime": "No",
       "responseNotOnPrescribedForm": "No",
       "responseRequiredInfoAbsent": "Yes",
