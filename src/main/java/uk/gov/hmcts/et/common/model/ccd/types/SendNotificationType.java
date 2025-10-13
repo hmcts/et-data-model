@@ -9,6 +9,7 @@ import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.items.DocumentTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
 import uk.gov.hmcts.et.common.model.ccd.items.PseResponseTypeItem;
+import uk.gov.hmcts.et.common.model.ccd.items.PseStatusTypeItem;
 
 import java.util.List;
 
@@ -67,6 +68,8 @@ public class SendNotificationType {
     private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
     private String notificationState;
+    @JsonProperty("respondentState")
+    private List<PseStatusTypeItem> respondentState;
     @JsonProperty("sendNotificationSubjectString")
     private String sendNotificationSubjectString;
     @JsonProperty("sendNotificationResponseTribunalTable")
