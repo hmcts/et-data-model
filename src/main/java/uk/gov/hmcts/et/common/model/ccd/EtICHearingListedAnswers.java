@@ -18,6 +18,14 @@ public class EtICHearingListedAnswers {
 
     @JsonProperty("etICIsHearingWithJudgeOrMembers")
     private String etICIsHearingWithJudgeOrMembers;
+
+    @JsonProperty("etICIsHearingWithJsa")
+    private String etICIsHearingWithJsa;
+    @JsonProperty("etICIsHearingWithMembersLabel")
+    private String etICIsHearingWithMembersLabel;
+    @JsonProperty("etICIsHearingWithMembers")
+    private String etICIsHearingWithMembers;
+
     @JsonProperty("etICIsHearingWithJudgeOrMembersReason")
     private List<String> etICIsHearingWithJudgeOrMembersReason;
     @JsonProperty("etICIsHearingWithJudgeOrMembersFurtherDetails")
@@ -25,4 +33,7 @@ public class EtICHearingListedAnswers {
 
     @JsonProperty("etICHearingAnyOtherDirections")
     private String etICHearingAnyOtherDirections;
+
+    @JsonProperty("etInitialConsiderationListedHearingType")
+    private String etInitialConsiderationListedHearingType;
 }
