@@ -21,6 +21,4 @@ public class RespondentTse {
     private String copyToOtherPartyYesOrNo;
     @JsonProperty("copyToOtherPartyText")
     private String copyToOtherPartyText;
-    @JsonProperty("storedApplicationId")
-    private String storedApplicationId;
 }
