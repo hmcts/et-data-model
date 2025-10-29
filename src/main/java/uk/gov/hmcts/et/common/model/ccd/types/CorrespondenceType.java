@@ -55,4 +55,8 @@ public class CorrespondenceType {
     private String hearingNumber;
     @JsonProperty("dynamicHearingNumber")
     private DynamicFixedListType dynamicHearingNumber;
+    @JsonProperty("dynamicRespondentsWithEcc")
+    private DynamicFixedListType dynamicRespondentsWithEcc;
+    @JsonProperty("flipRespondentAndClaimantValues")
+    private String flipRespondentAndClaimantValues;
 }
