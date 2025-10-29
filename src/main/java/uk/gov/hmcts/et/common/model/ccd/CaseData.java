@@ -726,7 +726,8 @@ public class CaseData extends Et1CaseData {
     private String et3AdditionalInformation;
 
     // ET Initial Consideration
-
+    @JsonProperty("initialConsiderationBeforeYouStart")
+    private String initialConsiderationBeforeYouStart;
     @JsonProperty("etInitialConsiderationDocument")
     private UploadedDocumentType etInitialConsiderationDocument;
     @JsonProperty("etInitialConsiderationRespondent")
@@ -1184,6 +1185,8 @@ public class CaseData extends Et1CaseData {
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
     @JsonProperty("tseApplicationStoredCollection")
     private List<GenericTseApplicationTypeItem> tseApplicationStoredCollection;
+    @JsonProperty("tseRespondentStoredCollection")
+    private List<GenericTseApplicationTypeItem> tseRespondentStoredCollection;
 
     // Claimant tell something else
     @JsonProperty("claimantTseSelectApplication")
@@ -1688,7 +1691,6 @@ public class CaseData extends Et1CaseData {
     private String representativePhoneNumber;
     @JsonProperty("representativeReferenceNumber")
     private String representativeReferenceNumber;
-
     @JsonProperty("didClaimantWorkForOrg")
     private List<String> didClaimantWorkForOrg;
     @JsonProperty("claimantStillWorking")
