@@ -250,4 +250,6 @@ public class RespondentSumType {
     private String contestClaimSection;
     @JsonProperty("employersContractClaimSection")
     private String employersContractClaimSection;
+    @JsonProperty("representativeRemoved")
+    private String representativeRemoved;
 }
