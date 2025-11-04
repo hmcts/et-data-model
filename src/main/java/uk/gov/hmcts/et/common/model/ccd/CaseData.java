@@ -870,17 +870,23 @@ public class CaseData extends Et1CaseData {
     private Address et3RespondentAddress;
     @JsonProperty("et3ResponseDXAddress")
     private String et3ResponseDXAddress;
-    // ET3 Response - Phone number page (6)
-    @JsonProperty("et3ResponsePhone")
-    private String et3ResponsePhone;
-    // ET3 Response - What is your reference number (7)
-    @JsonProperty("et3ResponseReference")
-    private String et3ResponseReference;
-    // ET3 Response - Contact method page (8)
+    // ET3 Response - Representative Contact method, page (6)
     @JsonProperty("et3ResponseContactPreference")
     private String et3ResponseContactPreference;
     @JsonProperty("et3ResponseContactReason")
     private String et3ResponseContactReason;
+    // ET3 Response - Representative Contact language, page (6)
+    @JsonProperty("et3ResponseContactLanguage")
+    private String et3ResponseContactLanguage;
+    // ET3 Response - Representative Phone number page (6)
+    @JsonProperty("et3ResponsePhone")
+    private String et3ResponsePhone;
+    // ET3 Response - Representative reference number (6)
+    @JsonProperty("et3ResponseAddress")
+    private Address et3ResponseAddress;
+    // ET3 Response - Representative reference number (6)
+    @JsonProperty("et3ResponseReference")
+    private String et3ResponseReference;
     // ET3 Response - Hearing format page (9)
     @JsonProperty("et3ResponseHearingRepresentative")
     private List<String> et3ResponseHearingRepresentative;
@@ -1691,6 +1697,8 @@ public class CaseData extends Et1CaseData {
     private String representativePhoneNumber;
     @JsonProperty("representativeReferenceNumber")
     private String representativeReferenceNumber;
+    @JsonProperty("representativeAddress")
+    private Address representativeAddress;
     @JsonProperty("didClaimantWorkForOrg")
     private List<String> didClaimantWorkForOrg;
     @JsonProperty("claimantStillWorking")
@@ -1853,6 +1861,19 @@ public class CaseData extends Et1CaseData {
     @JsonProperty("migratedFromEcm")
     private String migratedFromEcm;
 
+    // NOC fields - to find if any claimant representative has been removed.
+    @JsonProperty("claimantRepresentativeRemoved")
+    private String claimantRepresentativeRemoved;
+    // new fields: et3RepresentativeContactChangeOption and claimantRepresentativeContactChangeOption
+    // to determine whether the representative's contact information should be updated using the
+    // MyHMCTS address or a manually entered address.
+    @JsonProperty("representativeContactChangeOption")
+    private String representativeContactChangeOption;
+    // Unable to remove respondent representative from repCollection as a respondent (remove legal representation).
+    // To resolve this problem added new field to identify which respondent representatives needs to be removed.
+    @JsonProperty("repCollectionToRemove")
+    private List<RepresentedTypeRItem> repCollectionToRemove;
+
     @JsonProperty("acasCertificateRequired")
     private String acasCertificateRequired;
 
@@ -1868,7 +1889,9 @@ public class CaseData extends Et1CaseData {
     private String uploadHearingDocumentsWhoseDocuments;
     @JsonProperty("uploadHearingDocumentsDateSubmitted")
     private String uploadHearingDocumentsDateSubmitted;
-
+    @JsonProperty("myHmctsAddressText")
+    private String myHmctsAddressText;
+  
     @JsonProperty("caseNotesCollection")
     private List<GenericTypeItem<CaseNote>> caseNotesCollection;
     @JsonProperty("addCaseNote")
