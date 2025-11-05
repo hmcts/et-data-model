@@ -64,6 +64,8 @@ public class SendNotificationType {
     private List<PseResponseTypeItem> respondCollection;
     @JsonProperty("respondStoredCollection")
     private List<PseResponseTypeItem> respondStoredCollection;
+    @JsonProperty("respondentRespondStoredCollection")
+    private List<PseResponseTypeItem> respondentRespondStoredCollection;
     @JsonProperty("respondNotificationTypeCollection")
     private List<GenericTypeItem<RespondNotificationType>> respondNotificationTypeCollection;
     @JsonProperty("notificationState")
