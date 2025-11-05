@@ -35,6 +35,8 @@ public class DocumentType {
     private String initialConsiderationDocuments;
     @JsonProperty("caseManagementDocuments")
     private String caseManagementDocuments;
+    @JsonProperty("eccDocuments")
+    private String eccDocuments;
     @JsonProperty("withdrawalSettledDocuments")
     private String withdrawalSettledDocuments;
     @JsonProperty("hearingsDocuments")

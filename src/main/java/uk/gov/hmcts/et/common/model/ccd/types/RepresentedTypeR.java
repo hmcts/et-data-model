@@ -8,6 +8,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.hmcts.et.common.model.bulk.types.DynamicFixedListType;
 import uk.gov.hmcts.et.common.model.ccd.Address;
+import uk.gov.hmcts.et.common.model.ccd.items.GenericTypeItem;
+
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -43,6 +46,8 @@ public class RepresentedTypeR {
     private String representativeEmailAddress;
     @JsonProperty("representative_preference")
     private String representativePreference;
+    @JsonProperty("representative_preference_reason")
+    private String representativePreferenceReason;
     @JsonProperty("respondentOrganisation")
     private Organisation respondentOrganisation;
     @JsonProperty("myHmctsYesNo")
@@ -50,4 +55,8 @@ public class RepresentedTypeR {
     /** UUID for identifying the non system user legal rep's organisation for HMC. */
     @JsonProperty("nonMyHmctsOrganisationId")
     private String nonMyHmctsOrganisationId;
+    @JsonProperty("representativeContactLanguage")
+    private String representativeContactLanguage;
+    @JsonProperty("organisationUsers")
+    private List<GenericTypeItem<OrganisationUsersIdamUser>> organisationUsers;
 }
