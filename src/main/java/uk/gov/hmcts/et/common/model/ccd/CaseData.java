@@ -1191,6 +1191,8 @@ public class CaseData extends Et1CaseData {
     private List<GenericTseApplicationTypeItem> genericTseApplicationCollection;
     @JsonProperty("tseApplicationStoredCollection")
     private List<GenericTseApplicationTypeItem> tseApplicationStoredCollection;
+    @JsonProperty("tseRespondentStoredCollection")
+    private List<GenericTseApplicationTypeItem> tseRespondentStoredCollection;
 
     // Claimant tell something else
     @JsonProperty("claimantTseSelectApplication")
