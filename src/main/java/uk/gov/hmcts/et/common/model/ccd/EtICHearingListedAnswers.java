@@ -21,15 +21,28 @@ public class EtICHearingListedAnswers {
 
     @JsonProperty("etICIsHearingWithJsa")
     private String etICIsHearingWithJsa;
-    @JsonProperty("etICIsHearingWithMembersLabel")
-    private String etICIsHearingWithMembersLabel;
+    @JsonProperty("etICIsHearingWithJsaReasonOther")
+    private String etICIsHearingWithJsaReasonOther;
     @JsonProperty("etICIsHearingWithMembers")
     private String etICIsHearingWithMembers;
 
     @JsonProperty("etICIsHearingWithJudgeOrMembersReason")
     private List<String> etICIsHearingWithJudgeOrMembersReason;
+    @JsonProperty("etICIsHearingWithJudgeOrMembersReasonOther")
+    private String etICIsHearingWithJudgeOrMembersReasonOther;
+
     @JsonProperty("etICIsHearingWithJudgeOrMembersFurtherDetails")
     private String etICIsHearingWithJudgeOrMembersFurtherDetails;
+
+    @JsonProperty("etICIsFinalHearingWithJudgeOrMembersJsaReason")
+    private List<String> etICIsFinalHearingWithJudgeOrMembersJsaReason;
+    @JsonProperty("etICJsaFinalHearingReasonOther")
+    private String etICJsaFinalHearingReasonOther;
+
+    @JsonProperty("etICIsFinalHearingWithJudgeOrMembersReason")
+    private List<String> etICIsFinalHearingWithJudgeOrMembersReason;
+    @JsonProperty("etICMembersFinalHearingReasonOther")
+    private String etICMembersFinalHearingReasonOther;
 
     @JsonProperty("etICHearingAnyOtherDirections")
     private String etICHearingAnyOtherDirections;
