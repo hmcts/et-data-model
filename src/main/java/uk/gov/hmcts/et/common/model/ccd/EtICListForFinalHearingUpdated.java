@@ -23,6 +23,16 @@ public class EtICListForFinalHearingUpdated {
     private String finalHearingLengthNumType;
     @JsonProperty("etICFinalHearingIsEJSitAlone")
     private String etICFinalHearingIsEJSitAlone;
+
+    @JsonProperty("etICFinalHearingIsEJSitAloneReasonYes")
+    private List<String> etICFinalHearingIsEJSitAloneReasonYes;
+    @JsonProperty("etICFinalHearingIsEJSitAloneReasonYesOther")
+    private String etICFinalHearingIsEJSitAloneReasonYesOther;
+    @JsonProperty("etICFinalHearingIsEJSitAloneReasonNo")
+    private List<String> etICFinalHearingIsEJSitAloneReasonNo;
+    @JsonProperty("etICFinalHearingIsEJSitAloneReasonNoOther")
+    private String etICFinalHearingIsEJSitAloneReasonNoOther;
+
     @JsonProperty("etICFinalHearingIsEJSitAloneReason")
     private String etICFinalHearingIsEJSitAloneReason;
     @JsonProperty("etICFinalHearingIsEJSitAloneFurtherDetails")
