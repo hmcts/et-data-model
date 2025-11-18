@@ -36,6 +36,8 @@ public class RespondNotificationType {
     private String respondNotificationFullName;
     @JsonProperty("respondNotificationPartyToNotify")
     private String respondNotificationPartyToNotify;
+    @JsonProperty("dateTime")
+    private String dateTime;
     private String state;
     private String isClaimantResponseDue;
 }

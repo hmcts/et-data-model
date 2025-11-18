@@ -19,6 +19,8 @@ public class PseResponseType {
     private String date;
     @JsonProperty("from")
     private String from;
+    @JsonProperty("fromIdamId")
+    private String fromIdamId;
     @JsonProperty("author")
     private String author;
 
