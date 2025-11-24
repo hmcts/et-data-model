@@ -35,6 +35,16 @@ public class EtICListForFinalHearingUpdated {
 
     @JsonProperty("etICFinalHearingIsEJSitAloneReason")
     private String etICFinalHearingIsEJSitAloneReason;
+    @JsonProperty("etICNoLFinalHearingIsEJSitAloneReasonsJsa")
+    private List<String> etICNoLFinalHearingIsEJSitAloneReasonsJsa;
+    @JsonProperty("etICNoLFinalHearingIsEJSitAloneReasonsJsaOther")
+    private String  etICNoLFinalHearingIsEJSitAloneReasonsJsaOther;
+
+    @JsonProperty("etICNoLFinalHearingIsEJSitAloneReasonsMembers")
+    private List<String> etICNoLFinalHearingIsEJSitAloneReasonsMembers;
+    @JsonProperty("etICNoLFinalHearingIsEJSitAloneReasonsMembersOther")
+    private String etICNoLFinalHearingIsEJSitAloneReasonsMembersOther;
+
     @JsonProperty("etICFinalHearingIsEJSitAloneFurtherDetails")
     private String etICFinalHearingIsEJSitAloneFurtherDetails;
 }
