@@ -39,6 +39,9 @@ public class EtICHearingListedAnswers {
     @JsonProperty("etICJsaFinalHearingReasonOther")
     private String etICJsaFinalHearingReasonOther;
 
+    @JsonProperty("etICJsaCmPreliminaryHearingReasonOther")
+    private String etICJsaCmPreliminaryHearingReasonOther;
+
     @JsonProperty("etICIsFinalHearingWithJudgeOrMembersReason")
     private List<String> etICIsFinalHearingWithJudgeOrMembersReason;
     @JsonProperty("etICMembersFinalHearingReasonOther")
