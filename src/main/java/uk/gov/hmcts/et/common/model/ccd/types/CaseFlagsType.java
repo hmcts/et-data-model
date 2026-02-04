@@ -19,6 +19,10 @@ public class CaseFlagsType {
     private String partyName;
     @JsonProperty("roleOnCase")
     private String roleOnCase;
+    @JsonProperty("groupId")
+    private String groupId;
+    @JsonProperty("visibility")
+    private String visibility;
     @JsonProperty("details")
     private ListTypeItem<FlagDetailType> details;
 }
