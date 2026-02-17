@@ -49,7 +49,7 @@ publishing {
 }
 
 ext {
-    lombokVersion = '1.18.38'
+    lombokVersion = '1.18.42'
 }
 
 dependencies {
