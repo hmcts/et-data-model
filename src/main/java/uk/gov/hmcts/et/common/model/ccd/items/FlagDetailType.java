@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-@SuppressWarnings("checkstyle:MemberName") // needed for the welsh options
+@SuppressWarnings("checkstyle:MemberName") // needed for the Welsh options
 public class FlagDetailType {
     private String name;
     private String name_cy;
@@ -28,5 +28,6 @@ public class FlagDetailType {
     private String hearingRelevant;
     private String flagCode;
     private String status;
+    private String requestReason;
     private String availableExternally;
 }
