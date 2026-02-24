@@ -37,6 +37,7 @@ import uk.gov.hmcts.et.common.model.ccd.types.CreateRespondentType;
 import uk.gov.hmcts.et.common.model.ccd.types.DocumentType;
 import uk.gov.hmcts.et.common.model.ccd.types.DraftAndSignJudgement;
 import uk.gov.hmcts.et.common.model.ccd.types.HearingBundleType;
+import uk.gov.hmcts.et.common.model.ccd.types.NextHearingDetails;
 import uk.gov.hmcts.et.common.model.ccd.types.NoticeOfChangeAnswers;
 import uk.gov.hmcts.et.common.model.ccd.types.OrganisationPolicy;
 import uk.gov.hmcts.et.common.model.ccd.types.RepresentedTypeR;
@@ -132,6 +133,8 @@ public class CaseData extends Et1CaseData {
     private List<HearingTypeItem> hearingCollection;
     @JsonProperty("hearingDetailsCollection")
     private List<HearingDetailTypeItem> hearingDetailsCollection;
+    @JsonProperty("nextHearingDetails")
+    private NextHearingDetails nextHearingDetails;
     @JsonProperty("depositType")
     private List<DepositTypeItem> depositCollection;
     @JsonProperty("judgementCollection")

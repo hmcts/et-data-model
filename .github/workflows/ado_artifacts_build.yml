@@ -67,6 +67,15 @@ jobs:
           AZURE_DEVOPS_ARTIFACT_TOKEN: ${{ secrets.AZURE_DEVOPS_ARTIFACT_TOKEN }}
           RELEASE_VERSION: ${{ steps.set_release_version.outputs.release_version }}
         shell: bash
+
+      - name: Create GitHub Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          gh release create "${{ steps.set_release_version.outputs.release_version }}" \
+            --title "${{ steps.set_release_version.outputs.release_version }}" \
+            --generate-notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Comment Release Version
         if: github.event_name == 'pull_request'
         run: |
